@@ -19,7 +19,7 @@
   transition: filter 300ms;
 }
 
-.gradientName {
+.gradientText {
   background: -webkit-linear-gradient(132deg, #00ff2a 50%, #f2ff00);
   background-clip: text;
   -webkit-background-clip: text;
@@ -48,7 +48,9 @@
   height: 100%;
   padding: 1px;
   border-radius: 50%;
-  background: linear-gradient(60deg, #00ff2a, #f2ff00);
+  // background: linear-gradient(60deg, #00ff2a, #f2ff00);
+  background: linear-gradient(60deg, #00ff73, #f2ff00);
+
   z-index: -1;
   transform: scale(1.1);
 }
@@ -153,4 +155,121 @@ button:hover {
 
 .top-position {
   background-color: transparent;
+}
+
+// presentation disposition
+.presentationContainer {
+  display: flex;
+  gap: 96px;
+  height: 450px;
+  width: 100%;
+}
+
+.presentationContainerLeft {
+  padding-top: 70px;
+}
+
+.presentationUnderline {
+  left: 219px;
+  top: 130px;
+}
+.composantContainer {
+  min-width: 350px;
+  height: 350px;
+}
+.tailwindIcon {
+  right: 40px;
+  top: 289px;
+}
+.reactIcon {
+  left: 12px;
+  top: 57px;
+}
+.nodeIcon {
+  top: 72px;
+  right: 2px;
+}
+.composantIcon {
+  width: 180px;
+}
+// grid -- mes projets
+.gridProject {
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  height: 250px;
+}
+// grid -- skills
+.gridSkills {
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  height: 170px;
+}
+.projectContainer {
+  width: 81.3%;
+}
+
+// responsive < 950px
+@media screen and (max-width: 1020px) {
+  .presentationContainer {
+    gap: 8px;
+    height: auto;
+    flex-direction: column;
+  }
+  .presentationContainerLeft {
+    padding-top: 55px;
+  }
+  .presentationUnderline {
+    left: 300px;
+    top: 117px;
+  }
+  .presentationText {
+    text-align: center;
+  }
+  .gridIcon {
+    display: none;
+  }
+  .composantContainer {
+    min-width: 290px;
+    height: 290px;
+  }
+  .composantIcon {
+    width: 160px;
+  }
+  .tailwindIcon {
+    right: 26px;
+    top: 234px;
+  }
+  .reactIcon {
+    left: -5px;
+    top: 64px;
+  }
+  .nodeIcon {
+    top: 40px;
+    right: 8px;
+  }
+  .gridProject {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    height: 270px;
+  }
+  .gridProject :nth-child(3) {
+    grid-column: 1/-1;
+  }
+}
+
+// responsive < 710px
+@media screen and (max-width: 710px) {
+  .gridProject {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    height: 480px;
+  }
+  .gridSkills {
+    height: auto;
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .gridSkills :nth-child(1) {
+    grid-row: 2/2;
+  }
+  .projectContainer {
+    width: 92%;
+  }
 }

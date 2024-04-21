@@ -17,7 +17,7 @@ import github from "../assets/github.svg";
 function SkillsIn4Column() {
   return (
     <>
-      <div className="grid-cols-custom4 mt-2 grid h-[270px] w-full gap-4 rounded-xl">
+      <div className="gridSkills mt-2 grid w-full gap-4 rounded-xl">
         <div className="flex flex-col gap-2 rounded-xl py-4">
           <div className="mb-2 text-xl font-semibold text-green-100">
             Design

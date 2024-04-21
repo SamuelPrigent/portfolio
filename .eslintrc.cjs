@@ -7,8 +7,8 @@ export default {
     // tailwind
     "plugin:tailwindcss/recommended",
     // i add
-    // "plugin:@typescript-eslint/recommended", // replace by next
-    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/recommended", // this or next
+    // "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
