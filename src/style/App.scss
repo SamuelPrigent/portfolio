@@ -86,6 +86,7 @@
   z-index: 0;
   border-radius: 50%;
   background-image: linear-gradient(120deg, #00ff6242 30%, #ddff0051);
+  // background-image: linear-gradient(120deg, #0048ff42 30%, #00d9ff51);
   filter: blur(90px);
 }
 // ========= fin container image style =========
@@ -100,15 +101,15 @@
 .greenButton {
   background-color: #add269;
   color: #243600;
-  padding: 0 20px;
-  line-height: 38px;
+  padding: 4px 20px;
+  height: auto;
 }
 
 .grayButton {
   background-color: #32363f;
   color: #fffff5db;
-  padding: 0 20px;
-  line-height: 38px;
+  padding: 4px 20px;
+  height: auto;
 }
 
 .greenButton:hover,
@@ -125,13 +126,21 @@ button:hover {
 }
 
 .greenSvg {
-  filter: invert(50%) grayscale(100%) sepia(100%) hue-rotate(27deg)
+  filter: invert(50%) grayscale(100%) sepia(100%) hue-rotate(26deg)
     saturate(7488%);
 }
 
 .badgeSectionColor {
   background-color: #243600;
   color: #00ff2a;
+}
+
+// badge
+.badgeIconColor {
+  background-color: #243600;
+  border: 2px solid #7bff00;
+  z-index: 20;
+  padding: 5px;
 }
 
 // header scrolled
