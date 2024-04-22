@@ -15,7 +15,7 @@ import underline from "./assets/underline.svg";
 //
 import react from "./assets/logo-react.svg";
 import tailwind from "./assets/logo-tailwindcss.svg";
-import node from "./assets/logo-express.svg";
+import express from "./assets/logo-express.svg";
 //
 import kasa from "./assets/preview-kasa.png";
 import fifo from "./assets/preview-fifo.png";
@@ -23,6 +23,7 @@ import lespetitsplats from "./assets/preview-lespetitsplats.png";
 //
 
 function App() {
+  // scroll header
   window.addEventListener("scroll", function () {
     const header = document.querySelector("#header");
     if (header) {
@@ -104,39 +105,51 @@ function App() {
                 Fullstack
               </div>
               <div className="mt-[22px] flex flex-wrap justify-center gap-2 text-[14px]">
-                <Button
-                  radius="full"
-                  className="greenButton flex h-[38px] gap-2"
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/samuel-prigent/"
                 >
-                  <img src={linkedin} height={18} width={18} alt="Code" />
-                  LinkedIn
-                </Button>
-                <Button
-                  radius="full"
-                  className="grayButton flex h-[38px] gap-2"
+                  <Button
+                    radius="full"
+                    className="greenButton flex h-[38px] gap-2"
+                  >
+                    <img src={linkedin} height={18} width={18} alt="Code" />
+                    LinkedIn
+                  </Button>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/SamuelPrigent?tab=repositories"
                 >
-                  <img
-                    className="whiteSvg"
-                    src={github}
-                    height={18}
-                    width={18}
-                    alt="Code"
-                  />
-                  Github
-                </Button>
-                <Button
-                  radius="full"
-                  className="grayButton flex h-[38px] gap-2"
-                >
-                  <img
-                    className="whiteSvg"
-                    src={mail}
-                    height={18}
-                    width={18}
-                    alt="Code"
-                  />
-                  samuel.prigent@yahoo.fr
-                </Button>
+                  <Button
+                    radius="full"
+                    className="grayButton flex h-[38px] gap-2"
+                  >
+                    <img
+                      className="whiteSvg"
+                      src={github}
+                      height={18}
+                      width={18}
+                      alt="Code"
+                    />
+                    Github
+                  </Button>
+                </a>
+                <a href="mailto:samuel.prigent@yahoo.fr">
+                  <Button
+                    radius="full"
+                    className="grayButton flex h-[38px] gap-2"
+                  >
+                    <img
+                      className="whiteSvg"
+                      src={mail}
+                      height={18}
+                      width={18}
+                      alt="Code"
+                    />
+                    samuel.prigent@yahoo.fr
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="composantContainer relative top-[34px] m-auto flex aspect-square items-center justify-center text-center">
@@ -153,10 +166,10 @@ function App() {
                   alt="logo react"
                 />
               </div>
-              {/* node icon */}
-              <div className="badgeIconColor nodeIcon absolute  flex items-center justify-center rounded-full">
+              {/* express icon */}
+              <div className="badgeIconColor expressIcon absolute  flex items-center justify-center rounded-full">
                 <img
-                  src={node}
+                  src={express}
                   className="greenSvg"
                   height={25}
                   width={25}
@@ -193,7 +206,11 @@ function App() {
             <div>🚀</div>
           </Badge>
           <div className="gridProject mt-2 grid w-full gap-4 rounded-xl">
-            <div className="group relative overflow-hidden rounded-xl text-start hover:cursor-pointer">
+            <a
+              target="_blank"
+              href="https://github.com/SamuelPrigent/FIFO"
+              className="group relative overflow-hidden rounded-xl text-start hover:cursor-pointer"
+            >
               <div className="absolute inset-0 h-full w-full rounded-xl">
                 <img
                   className="brightness-85 absolute inset-0 m-auto h-[98%] w-[99%] rounded-[10px] object-cover object-top"
@@ -210,9 +227,13 @@ function App() {
                   apporté à la scalabilité.
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className="group relative overflow-hidden rounded-xl text-start hover:cursor-pointer">
+            <a
+              target="_blank"
+              href="https://samuelprigent.github.io/Kasa/"
+              className="group relative overflow-hidden rounded-xl text-start hover:cursor-pointer"
+            >
               <div className="absolute inset-0 h-full w-full rounded-xl">
                 <img
                   className="brightness-85 absolute inset-0 m-auto h-[99%] w-[99%] rounded-[10px] object-cover object-top"
@@ -228,9 +249,13 @@ function App() {
                   navigation fluide, accompagné d'une interface intuitive.
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div className="group relative overflow-hidden rounded-xl text-start hover:cursor-pointer">
+            <a
+              target="_blank"
+              href="https://samuelprigent.github.io/LesPetitsPlats/"
+              className="group relative overflow-hidden rounded-xl text-start hover:cursor-pointer"
+            >
               <div className="absolute inset-0 h-full w-full rounded-xl">
                 <img
                   className="brightness-85 absolute inset-0 m-auto h-[99%] w-[99%] rounded-[10px] object-cover object-top"
@@ -248,7 +273,7 @@ function App() {
                   simple, ingrédients, appareils, ustensiles).
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
