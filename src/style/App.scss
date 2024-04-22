@@ -162,7 +162,7 @@ button:hover {
   display: flex;
   gap: 96px;
   height: 450px;
-  width: 100%;
+  padding: 35px 40px 0px;
 }
 
 .presentationContainerLeft {
@@ -212,6 +212,10 @@ button:hover {
 }
 .headerPadding {
   padding: 8px 28px 8px;
+  justify-content: space-between;
+}
+.headerRightDiv {
+  gap: 16px;
 }
 
 // responsive < 950px
@@ -297,6 +301,9 @@ button:hover {
   .presentationUnderline {
     display: none;
   }
+  .presentationContainer {
+    padding: 30px 0px;
+  }
   .presentationContainer :nth-child(3) {
     font-size: 35px;
   }
@@ -313,6 +320,11 @@ button:hover {
   }
 
   .headerPadding {
+    gap: 16px;
+    justify-content: start;
     padding: 7px 12px 7px;
+  }
+  .headerRightDiv {
+    gap: 6px;
   }
 }

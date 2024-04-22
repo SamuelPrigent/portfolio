@@ -42,7 +42,7 @@ function App() {
       {/* Header */}
       <div
         id="header"
-        className="headerPadding top-position fixed top-0 z-40 flex h-[60px] w-full items-center justify-between"
+        className="headerPadding top-position fixed top-0 z-40 flex h-[60px] w-full items-center"
       >
         <div className="flex items-center gap-2">
           <img
@@ -54,7 +54,7 @@ function App() {
           />
           <div className="gradientText text-lg font-semibold">SamUX</div>
         </div>
-        <div className="flex gap-4">
+        <div className="headerRightDiv flex">
           <a
             href="#Projects"
             className="px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
@@ -78,120 +78,118 @@ function App() {
       </div>
       {/* Presentation */}
       <div className="m-0 box-border flex min-w-full bg-[#1b1b1f] ">
-        <div className="max-w-11/12 m-auto flex items-center justify-around px-10 pt-[35px]">
-          <div className="presentationContainer">
-            <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg text-start font-bold ">
-              <img
-                className="gridIcon z-1 absolute left-[0px] top-[45px]"
-                src={grid}
-                height={30}
-                width={30}
-                alt="grille"
-              />
-              <img
-                className="presentationUnderline absolute rotate-[358deg]"
-                src={underline}
-                height={30}
-                width={150}
-                alt="underline"
-              />
-              <div className="presentationText gradientText z-10 text-5xl leading-tight">
-                Samuel Prigent
-              </div>
-              <div className="presentationText z-10 text-7xl leading-tight text-white">
-                Developpeur
-              </div>
-              <div className="presentationText voidTextWithBordure z-10 font-mono text-7xl leading-none">
-                Fullstack
-              </div>
-              <div className="mt-[22px] flex flex-wrap justify-center gap-2 text-[14px]">
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/samuel-prigent/"
-                >
-                  <Button
-                    radius="full"
-                    className="greenButton flex h-[38px] gap-2"
-                  >
-                    <img src={linkedin} height={18} width={18} alt="Code" />
-                    LinkedIn
-                  </Button>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://github.com/SamuelPrigent?tab=repositories"
-                >
-                  <Button
-                    radius="full"
-                    className="grayButton flex h-[38px] gap-2"
-                  >
-                    <img
-                      className="whiteSvg"
-                      src={github}
-                      height={18}
-                      width={18}
-                      alt="Code"
-                    />
-                    Github
-                  </Button>
-                </a>
-                <a href="mailto:samuel.prigent@yahoo.fr">
-                  <Button
-                    radius="full"
-                    className="grayButton flex h-[38px] gap-2"
-                  >
-                    <img
-                      className="whiteSvg"
-                      src={mail}
-                      height={18}
-                      width={18}
-                      alt="Code"
-                    />
-                    samuel.prigent@yahoo.fr
-                  </Button>
-                </a>
-              </div>
+        <div className="presentationContainer max-w-11/12 m-auto flex items-center justify-around">
+          <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg text-start font-bold ">
+            <img
+              className="gridIcon z-1 absolute left-[0px] top-[45px]"
+              src={grid}
+              height={30}
+              width={30}
+              alt="grille"
+            />
+            <img
+              className="presentationUnderline absolute rotate-[358deg]"
+              src={underline}
+              height={30}
+              width={150}
+              alt="underline"
+            />
+            <div className="presentationText gradientText z-10 text-5xl leading-tight">
+              Samuel Prigent
             </div>
-            <div className="composantContainer relative top-[34px] m-auto flex aspect-square items-center justify-center text-center">
-              <div className="gradientBorder absolute left-0 right-0 h-full w-full rounded-full"></div>
-              <div className="radiantBackground z-10"> </div>
-              <div className="textureBackground z-20"></div>
-              {/* react icon */}
-              <div className="badgeIconColor reactIcon absolute  flex items-center justify-center rounded-full">
-                <img
-                  src={react}
-                  className="greenSvg"
-                  height={25}
-                  width={25}
-                  alt="logo react"
-                />
-              </div>
-              {/* express icon */}
-              <div className="badgeIconColor expressIcon absolute  flex items-center justify-center rounded-full">
-                <img
-                  src={express}
-                  className="greenSvg"
-                  height={25}
-                  width={25}
-                  alt="logo react"
-                />
-              </div>
-              {/* tailwind */}
-              <div className="badgeIconColor tailwindIcon absolute flex items-center justify-center rounded-full">
-                <img
-                  src={tailwind}
-                  className="greenSvg"
-                  height={25}
-                  width={25}
-                  alt="logo react"
-                />
-              </div>
+            <div className="presentationText z-10 text-7xl leading-tight text-white">
+              Developpeur
+            </div>
+            <div className="presentationText voidTextWithBordure z-10 font-mono text-7xl leading-none">
+              Fullstack
+            </div>
+            <div className="mt-[22px] flex flex-wrap justify-center gap-2 text-[14px]">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/samuel-prigent/"
+              >
+                <Button
+                  radius="full"
+                  className="greenButton flex h-[38px] gap-2"
+                >
+                  <img src={linkedin} height={18} width={18} alt="Code" />
+                  LinkedIn
+                </Button>
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/SamuelPrigent?tab=repositories"
+              >
+                <Button
+                  radius="full"
+                  className="grayButton flex h-[38px] gap-2"
+                >
+                  <img
+                    className="whiteSvg"
+                    src={github}
+                    height={18}
+                    width={18}
+                    alt="Code"
+                  />
+                  Github
+                </Button>
+              </a>
+              <a href="mailto:samuel.prigent@yahoo.fr">
+                <Button
+                  radius="full"
+                  className="grayButton flex h-[38px] gap-2"
+                >
+                  <img
+                    className="whiteSvg"
+                    src={mail}
+                    height={18}
+                    width={18}
+                    alt="Code"
+                  />
+                  samuel.prigent@yahoo.fr
+                </Button>
+              </a>
+            </div>
+          </div>
+          <div className="composantContainer relative top-[34px] m-auto flex aspect-square items-center justify-center text-center">
+            <div className="gradientBorder absolute left-0 right-0 h-full w-full rounded-full"></div>
+            <div className="radiantBackground z-10"> </div>
+            <div className="textureBackground z-20"></div>
+            {/* react icon */}
+            <div className="badgeIconColor reactIcon absolute  flex items-center justify-center rounded-full">
               <img
-                src={composant}
-                alt="composant"
-                className="composantIcon z-30 aspect-square select-none"
+                src={react}
+                className="greenSvg"
+                height={25}
+                width={25}
+                alt="logo react"
               />
             </div>
+            {/* express icon */}
+            <div className="badgeIconColor expressIcon absolute  flex items-center justify-center rounded-full">
+              <img
+                src={express}
+                className="greenSvg"
+                height={25}
+                width={25}
+                alt="logo react"
+              />
+            </div>
+            {/* tailwind */}
+            <div className="badgeIconColor tailwindIcon absolute flex items-center justify-center rounded-full">
+              <img
+                src={tailwind}
+                className="greenSvg"
+                height={25}
+                width={25}
+                alt="logo react"
+              />
+            </div>
+            <img
+              src={composant}
+              alt="composant"
+              className="composantIcon z-30 aspect-square select-none"
+            />
           </div>
         </div>
       </div>
