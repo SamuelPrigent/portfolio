@@ -279,7 +279,7 @@ function App() {
       {/* Skills */}
       <div
         id="Skills"
-        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pb-[100px] pt-[70px]"
+        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pb-[100px] pt-[50px]"
       >
         <div className="relative m-auto flex h-auto w-10/12 flex-col gap-5">
           <Badge className="badgeSectionColor start m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
