@@ -194,10 +194,7 @@ function App() {
         </div>
       </div>
       {/* projets */}
-      <div
-        id="Projects"
-        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pt-[110px]"
-      >
+      <div id="Projects" className="projectContainerFull flex bg-[#1b1b1f]">
         <div className="projectContainer flex h-auto flex-col gap-6">
           <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
             <div>Mes projets</div>
