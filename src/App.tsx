@@ -1,6 +1,6 @@
 // radix css
 import "@radix-ui/themes/styles.css";
-import { Button, Badge, Switch } from "@radix-ui/themes";
+import { Button, Badge } from "@radix-ui/themes";
 import "./style/App.scss"; // custom css after radix
 // components
 import SkillsIn4Column from "./components/skillsIn4Column";
@@ -64,15 +64,15 @@ function App() {
             href="#Skills"
             className="px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
           >
-            Skills
+            Compétences
           </a>
-          <Switch
+          {/* <Switch
             size="2"
             variant="surface"
             color="gray"
             className=" my-auto rounded-full bg-[#414141]"
             defaultChecked
-          />
+          /> */}
         </div>
       </div>
       {/* Presentation */}
@@ -185,9 +185,9 @@ function App() {
       {/* projets */}
       <div
         id="Projects"
-        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pt-[100px]"
+        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pt-[110px]"
       >
-        <div className="projectContainer m-auto flex h-auto flex-col gap-5">
+        <div className="projectContainer m-auto flex h-auto flex-col gap-8">
           <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
             <div>Mes projets</div>
             <div>🚀</div>
@@ -201,7 +201,7 @@ function App() {
                   alt="screen site fifo"
                 />
               </div>
-              <div className="absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] border-2 border-[#2d302c] bg-[#1f221fc1] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
+              <div className="absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] bg-[#212321de] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
                 <div className="text-xl font-bold text-green-100">FIFO</div>
                 <div className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-[2]">
                   Conception d'un système de file d’attente prioritaire (FIFO :
@@ -220,7 +220,7 @@ function App() {
                   alt="screen site kasa"
                 />
               </div>
-              <div className="absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] border-2 border-[#2d302c] bg-[#1f221fc1] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
+              <div className="absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] bg-[#212321de] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
                 <div className="text-xl font-bold text-green-100">Kasa </div>
                 <div className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-[2]">
                   Développement front de l’application avec une intégration
@@ -238,7 +238,7 @@ function App() {
                   alt="screen site les petits plats"
                 />
               </div>
-              <div className="absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] border-2 border-[#2d302c] bg-[#1f221fc1] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
+              <div className="absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] bg-[#212321de] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
                 <div className="text-xl font-bold text-green-100">
                   Les Petits Plats
                 </div>
@@ -256,11 +256,11 @@ function App() {
       {/* Skills */}
       <div
         id="Skills"
-        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pb-[90px] pt-[70px]"
+        className="m-0 box-border flex min-w-full bg-[#1b1b1f] pb-[100px] pt-[70px]"
       >
         <div className="relative m-auto flex h-auto w-10/12 flex-col gap-5">
           <Badge className="badgeSectionColor start m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
-            <div>Skills</div>
+            <div>Compétences</div>
           </Badge>
           <SkillsIn4Column />
         </div>
