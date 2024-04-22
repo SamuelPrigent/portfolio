@@ -42,7 +42,7 @@ function App() {
       {/* Header */}
       <div
         id="header"
-        className="top-position fixed top-0 z-40 flex h-[60px] w-full items-center justify-between px-7 py-2"
+        className="headerPadding top-position fixed top-0 z-40 flex h-[60px] w-full items-center justify-between"
       >
         <div className="flex items-center gap-2">
           <img
