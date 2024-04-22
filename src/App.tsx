@@ -42,7 +42,7 @@ function App() {
       {/* Header */}
       <div
         id="header"
-        className="headerPadding top-position fixed top-0 z-40 flex h-[60px] w-full items-center"
+        className="header top-position fixed top-0 z-40 flex w-full items-center"
       >
         <div className="flex items-center gap-2">
           <img
@@ -198,7 +198,7 @@ function App() {
         id="Projects"
         className="m-0 box-border flex min-w-full bg-[#1b1b1f] pt-[110px]"
       >
-        <div className="projectContainer flex h-auto flex-col gap-8">
+        <div className="projectContainer flex h-auto flex-col gap-6">
           <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
             <div>Mes projets</div>
             <div>🚀</div>
