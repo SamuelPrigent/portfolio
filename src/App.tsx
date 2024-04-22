@@ -103,7 +103,7 @@ function App() {
             <div className="presentationText voidTextWithBordure z-10 font-mono text-7xl leading-none">
               Fullstack
             </div>
-            <div className="mt-[22px] flex flex-wrap justify-center gap-2 text-[14px]">
+            <div className="mt-[22px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px]">
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/samuel-prigent/"
@@ -112,7 +112,7 @@ function App() {
                   radius="full"
                   className="greenButton flex h-[38px] gap-2"
                 >
-                  <img src={linkedin} height={18} width={18} alt="Code" />
+                  <img src={linkedin} height={17} width={17} alt="Code" />
                   LinkedIn
                 </Button>
               </a>
