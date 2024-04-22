@@ -5,13 +5,13 @@ import "./style/App.scss"; // custom css after radix
 // components
 import SkillsIn4Column from "./components/skillsIn4Column";
 // icons
-import composant from "./assets/composant2.svg";
-import grid from "./assets/grid2.svg";
+import composant from "./assets/composant3.svg";
+import grid from "./assets/grid3.svg";
+import underline from "./assets/underline3.svg";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.svg";
 import mail from "./assets/mail.svg";
 import leaf from "./assets/leaf.svg";
-import underline from "./assets/underline2.svg";
 //
 import react from "./assets/logo-react.svg";
 import tailwind from "./assets/logo-tailwindcss.svg";
@@ -214,7 +214,7 @@ function App() {
                 />
               </div>
               <div className="transparentBackground absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
-                <div className="projectTitleText text-xl font-bold ">FIFO</div>
+                <div className="titleText text-xl font-bold ">FIFO</div>
                 <div className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-[2]">
                   Conception d'un système de file d’attente prioritaire (FIFO :
                   First In First Out), permettant l’ajout d’actions variées,
@@ -237,7 +237,7 @@ function App() {
                 />
               </div>
               <div className="transparentBackground absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
-                <div className="projectTitleText text-xl font-bold">Kasa </div>
+                <div className="titleText text-xl font-bold">Kasa </div>
                 <div className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-[2]">
                   Développement front de l’application avec une intégration
                   responsive, la mise en place de React Router permettant une
@@ -259,7 +259,7 @@ function App() {
                 />
               </div>
               <div className="transparentBackground absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0">
-                <div className="projectTitleText text-xl font-bold ">
+                <div className="titleText text-xl font-bold ">
                   Les Petits Plats
                 </div>
                 <div className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-[2]">

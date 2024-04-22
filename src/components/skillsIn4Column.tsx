@@ -19,9 +19,7 @@ function SkillsIn4Column() {
     <>
       <div className="gridSkills mt-2 grid w-full gap-4 rounded-xl">
         <div className="flex flex-col gap-2 rounded-xl py-4">
-          <div className="mb-2 text-xl font-semibold text-green-100">
-            Design
-          </div>
+          <div className="titleText mb-2 text-xl font-semibold">Design</div>
           <div className="mx-auto my-0 flex gap-1">
             <img
               src={tailwindcss}
@@ -56,9 +54,7 @@ function SkillsIn4Column() {
         </div>
 
         <div className="flex flex-col gap-2 rounded-xl py-4">
-          <div className="mb-2 text-xl font-semibold text-green-100">
-            Front-end
-          </div>
+          <div className="titleText mb-2 text-xl font-semibold">Front-end</div>
           <div className="mx-auto my-0 flex gap-1 ">
             <img
               src={react}
@@ -91,9 +87,7 @@ function SkillsIn4Column() {
           </div>
         </div>
         <div className="flex flex-col gap-2 rounded-xl py-4">
-          <div className="mb-2 text-xl font-semibold text-green-100">
-            Back-end
-          </div>
+          <div className="titleText mb-2 text-xl font-semibold">Back-end</div>
           <div className="mx-auto my-0 flex gap-1">
             <img
               src={node}
@@ -126,9 +120,7 @@ function SkillsIn4Column() {
           </div>
         </div>
         <div className="flex flex-col gap-2 rounded-xl py-4">
-          <div className="mb-2 text-xl font-semibold text-green-100">
-            Autres
-          </div>
+          <div className="titleText mb-2 text-xl font-semibold">Autres</div>
           <div className="mx-auto my-0 flex gap-1">
             <img
               src={git}
