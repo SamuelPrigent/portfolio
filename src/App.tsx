@@ -15,7 +15,7 @@ import underline from "./assets/underline.svg";
 //
 import react from "./assets/logo-react.svg";
 import tailwind from "./assets/logo-tailwindcss.svg";
-import node from "./assets/logo-node.svg";
+import node from "./assets/logo-express.svg";
 //
 import kasa from "./assets/preview-kasa.png";
 import fifo from "./assets/preview-fifo.png";
