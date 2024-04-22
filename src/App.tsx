@@ -5,18 +5,18 @@ import "./style/App.scss"; // custom css after radix
 // components
 import SkillsIn4Column from "./components/skillsIn4Column";
 // icons
-import composant from "./assets/composant3.svg";
-import grid from "./assets/grid3.svg";
-import underline from "./assets/underline3.svg";
+import composant from "./assets/composant.svg";
+import grid from "./assets/grid.svg";
+import underline from "./assets/underline.svg";
+import leaf from "./assets/leaf.svg";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.svg";
 import mail from "./assets/mail.svg";
-import leaf from "./assets/leaf.svg";
-//
+// icons around big logo
 import react from "./assets/logo-react.svg";
 import tailwind from "./assets/logo-tailwindcss.svg";
 import express from "./assets/logo-express.svg";
-//
+// projects img
 import kasa from "./assets/preview-kasa.png";
 import fifo from "./assets/preview-fifo.png";
 import lespetitsplats from "./assets/preview-lespetitsplats.png";
@@ -45,13 +45,7 @@ function App() {
         className="header top-position fixed top-0 z-40 flex w-full items-center"
       >
         <div className="flex items-center gap-2">
-          <img
-            className="greenSvg"
-            src={leaf}
-            height={22}
-            width={22}
-            alt="tonerre"
-          />
+          <img src={leaf} height={22} width={22} alt="tonerre" />
           <div className="gradientText text-lg font-semibold">SamUX</div>
         </div>
         <div className="headerRightDiv flex">
@@ -81,14 +75,14 @@ function App() {
         <div className="presentationContainer max-w-11/12 m-auto flex items-center justify-around">
           <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg text-start font-bold ">
             <img
-              className="gridIcon z-1 absolute left-[0px] top-[45px]"
+              className="gridIcon z-1 absolute left-[0px] top-[48px]"
               src={grid}
               height={30}
               width={30}
               alt="grille"
             />
             <img
-              className="presentationUnderline absolute rotate-[358deg]"
+              className="presentationUnderline absolute"
               src={underline}
               height={30}
               width={150}
