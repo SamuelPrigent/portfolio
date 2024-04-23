@@ -1,6 +1,6 @@
 // radix css
 import "@radix-ui/themes/styles.css";
-import { Button, Badge } from "@radix-ui/themes";
+import { Badge } from "@radix-ui/themes";
 import "./style/App.scss"; // custom css after radix
 // components
 import SkillsIn4Column from "./components/skillsIn4Column";
@@ -51,13 +51,13 @@ function App() {
         <div className="headerRightDiv flex">
           <a
             href="#Projects"
-            className="px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
+            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
           >
             Mes projets
           </a>
           <a
             href="#Skills"
-            className="px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
+            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
           >
             Compétences
           </a>
@@ -99,49 +99,39 @@ function App() {
             </div>
             <div className="mt-[22px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px]">
               <a
+                className="greenButton flex h-[38px] items-center justify-center gap-2 rounded-full font-semibold"
                 target="_blank"
                 href="https://www.linkedin.com/in/samuel-prigent/"
               >
-                <Button
-                  radius="full"
-                  className="greenButton flex h-[38px] gap-2"
-                >
-                  <img src={linkedin} height={17} width={17} alt="Code" />
-                  LinkedIn
-                </Button>
+                <img src={linkedin} height={17} width={17} alt="Code" />
+                LinkedIn
               </a>
               <a
+                className="grayButton flex h-[38px] items-center justify-center gap-2 rounded-full font-medium"
                 target="_blank"
                 href="https://github.com/SamuelPrigent?tab=repositories"
               >
-                <Button
-                  radius="full"
-                  className="grayButton flex h-[38px] gap-2"
-                >
-                  <img
-                    className="whiteSvg"
-                    src={github}
-                    height={18}
-                    width={18}
-                    alt="Code"
-                  />
-                  Github
-                </Button>
+                <img
+                  className="whiteSvg"
+                  src={github}
+                  height={18}
+                  width={18}
+                  alt="Code"
+                />
+                Github
               </a>
-              <a href="mailto:samuel.prigent@yahoo.fr">
-                <Button
-                  radius="full"
-                  className="grayButton flex h-[38px] gap-2"
-                >
-                  <img
-                    className="whiteSvg"
-                    src={mail}
-                    height={18}
-                    width={18}
-                    alt="Code"
-                  />
-                  samuel.prigent@yahoo.fr
-                </Button>
+              <a
+                className="grayButton flex h-[38px] items-center justify-center gap-2 rounded-full font-medium"
+                href="mailto:samuel.prigent@yahoo.fr"
+              >
+                <img
+                  className="whiteSvg"
+                  src={mail}
+                  height={18}
+                  width={18}
+                  alt="Code"
+                />
+                samuel.prigent@yahoo.fr
               </a>
             </div>
           </div>
