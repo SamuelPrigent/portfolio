@@ -40,17 +40,17 @@ function App() {
       <Header />
       {/* Presentation */}
       <div className="backgroundColor m-0 box-border flex min-w-full">
-        <div className="presentationContainer max-w-11/12 m-auto flex items-center justify-around">
-          <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg text-start font-bold ">
+        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[35px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
+          <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[55px] ">
             <img
-              className="gridIcon z-1 absolute left-[0px] top-[48px]"
+              className="gridIcon z-1 absolute left-[0px] top-[48px] max-lg:hidden"
               src={grid}
               height={30}
               width={30}
               alt="grille"
             />
             <img
-              className="presentationUnderline absolute"
+              className="presentationUnderline absolute left-[219px] top-[130px] max-lg:left-[300px] max-lg:top-[115px] max-sm:left-[57%] max-sm:top-[104px] max-sm:h-[12px]"
               src={underline}
               height={30}
               width={150}
@@ -58,23 +58,23 @@ function App() {
             />
             <div
               id="name"
-              className="presentationText gradientText z-10 text-5xl leading-tight"
+              className="presentationText gradientText z-10 text-5xl leading-tight max-lg:text-center max-md:text-[45px] max-sm:text-[38px]"
             >
               Samuel Prigent
             </div>
             <div
               id="developpeur"
-              className="presentationText z-10 text-7xl leading-tight text-white"
+              className="presentationText z-10 text-7xl leading-tight text-white max-lg:text-center max-md:text-[55px] max-sm:text-[50px]"
             >
               Developpeur
             </div>
             <div
               id="fullstack"
-              className="presentationText voidTextWithBordure z-10 font-mono text-7xl leading-none"
+              className="presentationText voidTextWithBordure z-10 font-mono text-7xl leading-none max-lg:text-center max-md:text-[55px] max-sm:text-[50px]"
             >
               Fullstack
             </div>
-            <div className="linkPadding mt-[22px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px]">
+            <div className="linkPadding mb-2 mt-[22px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px] max-lg:px-[16px]">
               <a
                 className="greenButton flex h-[38px] items-center justify-center gap-2 rounded-full font-semibold"
                 target="_blank"
@@ -112,12 +112,12 @@ function App() {
               </a>
             </div>
           </div>
-          <div className="composantContainer relative top-[34px] m-auto flex aspect-square items-center justify-center text-center">
+          <div className="composantContainer relative top-[34px] m-auto flex aspect-square items-center justify-center text-center max-lg:h-[290px] max-lg:min-w-[290px] max-sm:h-[250px] max-sm:min-w-[250px]">
             <div className="gradientBorder absolute left-0 right-0 h-full w-full rounded-full"></div>
             <div className="radiantBackground z-10"> </div>
             <div className="textureBackground z-20"></div>
             {/* react icon */}
-            <div className="badgeIconColor reactIcon absolute  flex items-center justify-center rounded-full">
+            <div className="badgeIconColor reactIcon absolute flex items-center justify-center rounded-full max-lg:left-[-5px] max-lg:top-[64px] max-sm:top-[57px] max-sm:size-[35px]">
               <img
                 src={react}
                 className="greenSvg"
@@ -127,7 +127,7 @@ function App() {
               />
             </div>
             {/* express icon */}
-            <div className="badgeIconColor expressIcon absolute  flex items-center justify-center rounded-full">
+            <div className="badgeIconColor expressIcon absolute flex items-center justify-center rounded-full max-lg:right-[8px] max-lg:top-[40px] max-sm:top-[32px] max-sm:size-[35px]">
               <img
                 src={express}
                 className="greenSvg"
@@ -137,7 +137,7 @@ function App() {
               />
             </div>
             {/* tailwind */}
-            <div className="badgeIconColor tailwindIcon absolute flex items-center justify-center rounded-full">
+            <div className="badgeIconColor tailwindIcon absolute flex items-center justify-center rounded-full max-lg:right-[26px] max-lg:top-[234px] max-sm:right-[40px] max-sm:top-[212px] max-sm:size-[35px]">
               <img
                 src={tailwind}
                 className="greenSvg"
@@ -149,19 +149,22 @@ function App() {
             <img
               src={composant}
               alt="composant"
-              className="composantIcon z-30 aspect-square select-none"
+              className="composantIcon z-30 aspect-square select-none max-lg:w-[160px] max-sm:w-[130px]"
             />
           </div>
         </div>
       </div>
       {/* Projets */}
-      <div id="Projects" className="projectContainerFull backgroundColor flex">
-        <div className="projectContainer flex h-auto flex-col gap-6">
+      <div
+        id="Projects"
+        className="backgroundColor m-0 flex w-full pt-[110px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
+      >
+        <div className="projectContainer m-auto flex h-auto w-[87%] flex-col gap-6 rounded-[16px] px-[25px] pb-[30px] pt-[20px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
           <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
             <div>Mes projets</div>
             <div>🚀</div>
           </Badge>
-          <div className="gridProject mt-2 grid w-full gap-4 rounded-xl">
+          <div className="gridProject mt-2 grid h-[250px] w-full grid-cols-custom3 gap-4 rounded-xl max-lg:h-[270px] max-lg:grid-cols-custom2 max-md:h-[480px] max-md:grid-cols-custom1">
             <ProjectList />
           </div>
         </div>
