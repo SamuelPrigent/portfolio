@@ -27,38 +27,11 @@
 // $transparentBackground : #212321de;
 // $titleText : #dcfce7;
 
-// --- blue version ---
-// $darkBackgroud: #15151b;
-// $gradientText: -webkit-linear-gradient(132deg, #0099ff 50%, #00f7ff);
-// $gradientBorder: linear-gradient(60deg, #00d9ff, #74c7dd);
-// $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='447' height='447' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2300697F' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2300A2B9'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-// $radiantBackground: linear-gradient(120deg, #0048ff42 30%, #00d9ff51);
-// $voidTextBordure: #20c9ffe3;
-// @mixin linkedInButton {
-//   background-color: #54badf;
-//   color: #002236;
-// }
-// $filterToColor: invert(50%) grayscale(100%) sepia(100%) hue-rotate(184deg)
-//   saturate(7488%);
-// @mixin badgeColor {
-//   background-color: #08233c;
-//   color: #00ddff;
-// }
-// @mixin badgeIconColor {
-//   background-color: #002b36;
-//   border: 2px solid #00ccff;
-// }
-// @mixin projectContainer {
-//   background-color: #2325272e;
-//   border: 1px solid #252729;
-// }
-// $transparentBackground: #182737d4;
-// $titleText: #dcf1fc;
-
 // --- yellow version ---
 // $darkBackgroud: #1b1a15;
 $darkBackgroud: #23221c;
-$gradientText: -webkit-linear-gradient(132deg, #ad9038 50%, #ffea00);
+// $gradientText: -webkit-linear-gradient(132deg, #ad9038 50%, #ffea00);
+$gradientText: -webkit-linear-gradient(160deg, #ffea00 50%, #b29439);
 $gradientBorder: linear-gradient(60deg, #ffd900, #f9de11);
 $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='385' height='385' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%237C6700' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23C4B800'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
 // url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='447' height='447' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%237F7A00' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23B9AD00'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
@@ -85,13 +58,9 @@ $filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(16deg)
 }
 $transparentBackground: #1f1d18d4;
 $titleText: #fcf4dc;
+$outlineColor: #e2b926;
 
 // =========================
-
-a:focus {
-  outline: 2px solid #269ae2;
-  box-shadow: 0 0 0 2px transparent;
-}
 
 #root {
   margin: 0;
@@ -100,6 +69,17 @@ a:focus {
   text-align: center;
   background-color: #1b1b1f;
   color: white;
+}
+
+:where(.radix-themes) {
+  background-color: #1b1b1f !important;
+}
+
+a:not(:active):focus {
+  border: none;
+  outline: none;
+  outline: 2.5px solid $outlineColor;
+  outline-offset: 2.5px;
 }
 
 ::selection {
@@ -273,13 +253,15 @@ a.greenButton:hover {
 .tailwindIcon {
   right: 40px;
   top: 289px;
+  // right: 154px;
+  // top: 329px;
 }
 .reactIcon {
-  left: 12px;
-  top: 57px;
+  top: 74px;
+  left: 2px;
 }
 .expressIcon {
-  top: 72px;
+  top: 74px;
   right: 2px;
 }
 .composantIcon {
@@ -325,6 +307,11 @@ a.greenButton:hover {
 }
 .transparentBackground {
   background-color: $transparentBackground;
+}
+
+.linkPadding {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 // responsive < 950px
@@ -376,6 +363,10 @@ a.greenButton:hover {
   .gridProject :nth-child(3) {
     grid-column: 1/-1;
   }
+  .linkPadding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 // responsive < 710px
@@ -403,11 +394,11 @@ a.greenButton:hover {
     border: 0px solid transparent;
     background-color: transparent;
   }
-  .presentationContainer :nth-child(3) {
+  #name {
     font-size: 45px;
   }
-  .presentationContainer :nth-child(4),
-  .presentationContainer :nth-child(5) {
+  #developpeur,
+  #fullstack {
     font-size: 55px;
   }
 }
@@ -417,19 +408,19 @@ a.greenButton:hover {
     padding-top: 55px;
   }
   .presentationUnderline {
-    top: 100px;
-    left: 55%;
-    height: 10px;
+    top: 104px;
+    left: 57%;
+    height: 12px;
   }
   .presentationContainer {
     padding: 30px 0px;
   }
-  .presentationContainer :nth-child(3) {
-    font-size: 35px;
+  #name {
+    font-size: 38px;
   }
-  .presentationContainer :nth-child(4),
-  .presentationContainer :nth-child(5) {
-    font-size: 45px;
+  #developpeur,
+  #fullstack {
+    font-size: 50px;
   }
   .composantContainer {
     min-width: 250px;
