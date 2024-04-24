@@ -42,7 +42,7 @@ function App() {
     <>
       <Header />
       <div className="overflow-hidden">
-        <Spotlight className="left-[-10px] top-[40px]" fill="#d6bb77e5" />
+        <Spotlight className="left-[0px] top-[62px]" fill="#d6bb77e5" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
         <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[35px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
