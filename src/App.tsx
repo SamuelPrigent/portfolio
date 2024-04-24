@@ -7,6 +7,9 @@ import Header from "./components/Header.tsx";
 import SkillsList from "./components/SkillsList.tsx";
 import ProjectList from "./components/ProjectList.tsx";
 import Footer from "./components/Footer.tsx";
+// TEST
+import { Spotlight } from "./components/Spotlight.tsx";
+//
 // icons
 import composant from "./assets/composant.svg";
 import grid from "./assets/grid.svg";
@@ -38,7 +41,9 @@ function App() {
   return (
     <>
       <Header />
-      {/* Presentation */}
+      <div className="overflow-hidden">
+        <Spotlight className="left-[-10px] top-[40px]" fill="#d6bb77e5" />
+      </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
         <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[35px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
           <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[55px] ">

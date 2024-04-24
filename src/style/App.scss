@@ -28,7 +28,8 @@
 
 // --- yellow version ---
 // $darkBackgroud: #1b1a15;
-$darkBackgroud: #23221c;
+// $darkBackgroud: #23221c;
+$darkBackgroud: #24211c;
 // $gradientText: -webkit-linear-gradient(160deg, #ffea00 50%, #b29439);
 $gradientText: -webkit-linear-gradient(160deg, #ffea00 50%, #a78f42);
 $gradientBorder: linear-gradient(60deg, #ffd900, #f9de11);
@@ -67,6 +68,7 @@ $outlineColor: #e2b926;
   text-align: center;
   background-color: #1b1b1f;
   color: white;
+  overflow: hidden;
 }
 
 :where(.radix-themes) {
