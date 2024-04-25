@@ -8,6 +8,9 @@ export default {
       lg: "1020px",
     },
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "Avenir", "sans-serif"],
+      },
       gridTemplateColumns: {
         custom1: "repeat(1, minmax(100px, 1fr))",
         custom2: "repeat(2, minmax(100px, 1fr))",

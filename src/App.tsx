@@ -7,12 +7,9 @@ import Header from "./components/Header.tsx";
 import SkillsList from "./components/SkillsList.tsx";
 import ProjectList from "./components/ProjectList.tsx";
 import Footer from "./components/Footer.tsx";
-// TEST
 import { Spotlight } from "./components/Spotlight.tsx";
-//
 // icons
 import composant from "./assets/composant.svg";
-import grid from "./assets/grid.svg";
 import underline from "./assets/underline.svg";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.svg";
@@ -42,20 +39,13 @@ function App() {
     <>
       <Header />
       <div className="overflow-hidden">
-        <Spotlight className="left-[0px] top-[62px]" fill="#d6bb77e5" />
+        <Spotlight className="left-[0px] top-[62px] z-50" fill="#d6bb77e5" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
         <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[35px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
-          <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[55px] ">
+          <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[60px] ">
             <img
-              className="gridIcon z-1 absolute left-[0px] top-[48px] max-lg:hidden"
-              src={grid}
-              height={30}
-              width={30}
-              alt="grille"
-            />
-            <img
-              className="presentationUnderline absolute left-[219px] top-[130px] max-lg:left-[300px] max-lg:top-[115px] max-sm:left-[57%] max-sm:top-[104px] max-sm:h-[12px]"
+              className="presentationUnderline absolute left-[190px] top-[131px] opacity-65 max-lg:left-[300px] max-lg:top-[122px] max-md:top-[117px] max-sm:left-[54%] max-sm:top-[110px] max-sm:h-[12px] lg:w-[175px]"
               src={underline}
               height={30}
               width={150}
@@ -63,23 +53,23 @@ function App() {
             />
             <div
               id="name"
-              className="presentationText gradientText z-10 text-5xl leading-tight max-lg:text-center max-md:text-[45px] max-sm:text-[38px]"
+              className="presentationText gradientText z-10 mb-[5px] text-5xl leading-tight max-lg:text-center max-md:text-[45px] max-sm:text-[38px]"
             >
               Samuel Prigent
             </div>
             <div
               id="developpeur"
-              className="presentationText z-10 text-7xl leading-tight text-white max-lg:text-center max-md:text-[55px] max-sm:text-[50px]"
+              className="presentationText z-10 font-poppins text-[65px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[60px] max-md:text-[55px] max-sm:text-[50px]"
             >
               Developpeur
             </div>
             <div
               id="fullstack"
-              className="presentationText voidTextWithBordure z-10 font-mono text-7xl leading-none max-lg:text-center max-md:text-[55px] max-sm:text-[50px]"
+              className="presentationText voidTextWithBordure z-10 font-poppins text-[80px] font-semibold leading-none max-lg:text-center max-lg:text-[70px] max-md:text-[60px] max-sm:text-[55px]"
             >
               Fullstack
             </div>
-            <div className="linkPadding mb-2 mt-[22px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px] max-lg:px-[16px]">
+            <div className="linkPadding mb-2 mt-[20px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px] max-lg:px-[16px]">
               <a
                 className="greenButton flex h-[38px] items-center justify-center gap-2 rounded-full font-semibold"
                 target="_blank"
@@ -121,7 +111,6 @@ function App() {
             <div className="gradientBorder absolute left-0 right-0 h-full w-full rounded-full"></div>
             <div className="radiantBackground z-10"> </div>
             <div className="textureBackground z-20"></div>
-            {/* react icon */}
             <div className="badgeIconColor reactIcon absolute flex items-center justify-center rounded-full max-lg:left-[-5px] max-lg:top-[64px] max-sm:top-[57px] max-sm:size-[35px]">
               <img
                 src={react}
@@ -131,7 +120,6 @@ function App() {
                 alt="logo react"
               />
             </div>
-            {/* express icon */}
             <div className="badgeIconColor expressIcon absolute flex items-center justify-center rounded-full max-lg:right-[8px] max-lg:top-[40px] max-sm:top-[32px] max-sm:size-[35px]">
               <img
                 src={express}
@@ -141,7 +129,6 @@ function App() {
                 alt="logo react"
               />
             </div>
-            {/* tailwind */}
             <div className="badgeIconColor tailwindIcon absolute flex items-center justify-center rounded-full max-lg:right-[26px] max-lg:top-[234px] max-sm:right-[40px] max-sm:top-[212px] max-sm:size-[35px]">
               <img
                 src={tailwind}
@@ -159,7 +146,6 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Projets */}
       <div
         id="Projects"
         className="backgroundColor m-0 flex w-full pt-[110px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
@@ -174,7 +160,6 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Skills */}
       <div
         id="Skills"
         className="backgroundColor m-0 box-border flex min-w-full pb-[100px] pt-[50px]"
@@ -186,7 +171,6 @@ function App() {
           <SkillsList />
         </div>
       </div>
-      {/* Footer */}
       <Footer />
     </>
   );
