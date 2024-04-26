@@ -42,10 +42,10 @@ function App() {
         <Spotlight className="left-[0px] top-[62px] z-50" fill="#d6bb77e5" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
-        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[35px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
+        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[80px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
           <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[60px] ">
             <img
-              className="presentationUnderline absolute left-[190px] top-[131px] opacity-65 max-lg:left-[300px] max-lg:top-[122px] max-md:top-[117px] max-sm:left-[54%] max-sm:top-[110px] max-sm:h-[12px] lg:w-[175px]"
+              className="presentationUnderline absolute left-[190px] top-[131px] opacity-65 max-lg:left-[300px] max-lg:top-[122px] max-md:top-[117px] max-sm:left-[54%] max-sm:top-[107px] max-sm:h-[12px] lg:w-[175px]"
               src={underline}
               height={30}
               width={150}
@@ -53,19 +53,19 @@ function App() {
             />
             <div
               id="name"
-              className="presentationText gradientText z-10 mb-[5px] text-5xl leading-tight max-lg:text-center max-md:text-[45px] max-sm:text-[38px]"
+              className="presentationText gradientText z-10 mb-[5px] text-5xl leading-tight max-lg:text-center max-md:text-[45px] max-sm:text-[35px]"
             >
               Samuel Prigent
             </div>
             <div
               id="developpeur"
-              className="presentationText z-10 font-poppins text-[65px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[60px] max-md:text-[55px] max-sm:text-[50px]"
+              className="presentationText z-10 font-poppins text-[65px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[60px] max-md:text-[55px] max-sm:text-[45px]"
             >
               Developpeur
             </div>
             <div
               id="fullstack"
-              className="presentationText voidTextWithBordure z-10 font-poppins text-[80px] font-semibold leading-none max-lg:text-center max-lg:text-[70px] max-md:text-[60px] max-sm:text-[55px]"
+              className="presentationText voidTextWithBordure z-10 font-poppins text-[80px] font-semibold leading-none max-lg:text-center max-lg:text-[70px] max-md:text-[60px] max-sm:text-[50px]"
             >
               Fullstack
             </div>
@@ -148,12 +148,12 @@ function App() {
       </div>
       <div
         id="Projects"
-        className="backgroundColor m-0 flex w-full pt-[110px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
+        className="backgroundColor m-0 flex w-full pt-[160px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
       >
-        <div className="projectContainer m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[25px] pb-[30px] pt-[20px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
+        <div className="projectContainer m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[15px] pb-[30px] pt-[20px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
           <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
-            <div>Mes projets</div>
             <div>🚀</div>
+            <div>Mes projets</div>
           </Badge>
           <div className="gridProject mt-2 grid h-[250px] w-full grid-cols-custom3 gap-4 rounded-xl max-lg:h-[270px] max-lg:grid-cols-custom2 max-md:h-[480px] max-md:grid-cols-custom1">
             <ProjectList />
@@ -162,7 +162,7 @@ function App() {
       </div>
       <div
         id="Skills"
-        className="backgroundColor m-0 box-border flex min-w-full pb-[100px] pt-[50px]"
+        className="backgroundColor m-0 box-border flex min-w-full pb-[150px] pt-[100px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
         <div className="relative m-auto flex h-auto w-10/12 flex-col gap-5">
           <Badge className="badgeSectionColor start m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
