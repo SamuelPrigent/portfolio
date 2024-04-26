@@ -19,7 +19,7 @@ import github from "../assets/github.svg";
 function SkillsList() {
   return (
     <>
-      <div className="gridSkills max-md:grid-cols-custom2 mt-2 grid w-full gap-4 rounded-xl max-md:h-auto max-md:px-[30px] max-sm:px-[15px]">
+      <div className="gridSkills mt-2 grid w-full max-w-[1300px] gap-4 rounded-xl max-md:h-auto max-md:grid-cols-custom2 max-md:px-[30px] max-sm:px-[15px]">
         <div className="flex flex-col gap-2 rounded-xl py-4">
           <div className="titleText mb-2 text-xl font-semibold">Design</div>
           <SkillElement src={tailwindcss} text={"Tailwind"} />
