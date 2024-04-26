@@ -150,7 +150,7 @@ function App() {
         id="Projects"
         className="backgroundColor m-0 flex w-full pt-[160px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
       >
-        <div className="projectContainer m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[15px] pb-[30px] pt-[20px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
+        <div className="projectContainer m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[20px] pb-[30px] pt-[25px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
           <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
             <div>🚀</div>
             <div>Mes projets</div>
