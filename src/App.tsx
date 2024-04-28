@@ -37,7 +37,6 @@ function App() {
     <>
       <Header />
       <div className="overflow-hidden">
-        {/* <Spotlight className="left-[180px] top-[100px] z-50" fill="#bcae91e1" /> */}
         <Spotlight className="left-[0px] top-[62px] z-50" fill="#d7bf7fe4" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
