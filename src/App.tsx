@@ -110,7 +110,7 @@ function App() {
             </div>
           </div>
           <div className="composantContainer relative top-[34px] m-auto flex aspect-square items-center justify-center text-center max-lg:h-[290px] max-lg:min-w-[290px] max-sm:h-[250px] max-sm:min-w-[250px]">
-            <div className="gradientBorder absolute left-0 right-0 h-full w-full rounded-full"></div>
+            <div className="gradientBorder absolute left-0 right-0 h-full w-full rounded-full saturate-[0.8]"></div>
             <div className="radiantBackground z-10"> </div>
             <div className="textureBackground z-20"></div>
             <div className="badgeIconColor reactIcon absolute flex items-center justify-center rounded-full max-lg:left-[-5px] max-lg:top-[64px] max-sm:top-[57px] max-sm:size-[35px]">
