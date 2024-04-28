@@ -138,7 +138,7 @@ function App() {
             <img
               src={composant}
               alt="svg composant"
-              className="composantIcon z-30 aspect-square select-none max-lg:w-[160px] max-sm:w-[130px]"
+              className="composantIcon z-30 aspect-square w-[170px] select-none max-lg:w-[160px] max-sm:w-[130px]"
             />
           </div>
         </div>
