@@ -6,8 +6,6 @@ import express from "../assets/logo-express.svg";
 import mongodb from "../assets/logo-mongodb.svg";
 import node from "../assets/logo-node.svg";
 import vitest from "../assets/logo-vitest.svg";
-// import shadcn from "../assets/logo-shadcn.svg";
-// import css from "../assets/logo-css.svg";
 
 export default function SkillsGrid() {
   return (
@@ -26,7 +24,6 @@ export default function SkillsGrid() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            {/* <img className="whiteSvg" width={23} src={react} alt="logo react" /> */}
             <div className="titleText text-xl font-semibold">React</div>
             <div className="line-clamp-3 text-sm text-medGray">
               Spécialisé en React et Next, je développe un code évolutif et
@@ -44,12 +41,6 @@ export default function SkillsGrid() {
               alt="logo tailwind"
             />
             <div className="text-4xl font-light text-[#EFEFCD]">+</div>
-            {/* <img
-              className="lightYellowSvg aspect-square"
-              width={36}
-              src={shadcn}
-              alt="logo shadcn"
-            /> */}
             <img
               className="lightYellowSvg aspect-square"
               width={36}
@@ -58,7 +49,6 @@ export default function SkillsGrid() {
             />
           </div>
           <div className="relative flex flex-col gap-1">
-            {/* <img className="whiteSvg" width={23} src={tailwind} /> */}
             <div className="titleText text-xl font-semibold">Design</div>
             <div className="line-clamp-3 text-sm text-medGray">
               Intégration avec tailwind en utilisant des librairies de
@@ -74,16 +64,10 @@ export default function SkillsGrid() {
               className="lightYellowSvg z-20 aspect-square"
               width={65}
               src={typescript}
-              alt="logo radix ui"
+              alt="logo typescript"
             />
           </div>
           <div className="flex flex-col gap-1">
-            {/* <img
-              className="whiteSvg"
-              width={23}
-              src={typescript}
-              alt="logo typescript"
-            /> */}
             <div className="titleText text-xl font-semibold">Typescript</div>
             <div className="line-clamp-3 text-sm text-medGray">
               Typescript me permet de repérer les erreurs plus rapidement tout
@@ -115,7 +99,6 @@ export default function SkillsGrid() {
             />
           </div>
           <div className="flex flex-col gap-1">
-            {/* <img className="whiteSvg" width={23} src={node} alt="logo node" /> */}
             <div className="titleText text-xl font-semibold">Backend</div>
             <div className="line-clamp-3 text-sm text-medGray">
               Avec Node.js, Express et MongoDB, je crée des solutions backend
@@ -132,16 +115,10 @@ export default function SkillsGrid() {
               className="lightYellowSvg z-20 aspect-square"
               width={70}
               src={vitest}
-              alt="logo radix ui"
+              alt="logo vitest"
             />
           </div>
           <div className="flex flex-col gap-1">
-            {/* <img
-              className="whiteSvg"
-              width={23}
-              src={vitest}
-              alt="logo vitest"
-            /> */}
             <div className="titleText text-xl font-semibold">Vitest</div>
             <div className="line-clamp-3 text-sm text-medGray">
               Ecriture de test Back et Front à l'aide de librairie tel que
@@ -149,7 +126,6 @@ export default function SkillsGrid() {
             </div>
           </div>
         </div>
-
         {/* end grid skills */}
       </div>
     </>

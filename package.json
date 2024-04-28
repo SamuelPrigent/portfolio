@@ -10,7 +10,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@radix-ui/themes": "^3.0.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.1.7",
     "react": "^18.2.0",

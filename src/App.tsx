@@ -1,7 +1,4 @@
-// radix css
-import "@radix-ui/themes/styles.css";
-// import { Badge } from "@radix-ui/themes";
-import "./style/App.scss"; // custom css after radix
+import "./style/App.scss"; // custom css after radix or shadcn imports
 // components
 import Header from "./components/Header.tsx";
 import ProjectList from "./components/ProjectList.tsx";
@@ -15,7 +12,7 @@ import underline from "./assets/underline.svg";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.svg";
 import mail from "./assets/mail.svg";
-// icons around big logo
+// icons around composant svg
 import react from "./assets/logo-react.svg";
 import tailwind from "./assets/logo-tailwindcss.svg";
 import express from "./assets/logo-express.svg";
@@ -41,7 +38,7 @@ function App() {
       <Header />
       <div className="overflow-hidden">
         {/* <Spotlight className="left-[180px] top-[100px] z-50" fill="#bcae91e1" /> */}
-        <Spotlight className="left-[0px] top-[62px] z-50" fill="#d6bb77e5" />
+        <Spotlight className="left-[0px] top-[62px] z-50" fill="#d7bf7fe4" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
         <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[80px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
