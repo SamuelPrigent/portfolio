@@ -12,7 +12,7 @@ const SkillElement: React.FC<SkillElementProps> = ({ src, text }) => {
           className="whiteSvg"
           height={18}
           width={18}
-          alt="logo react"
+          alt={`logo ${src}`}
         />
         <div className="text-lg text-gray-50">{text}</div>
       </div>

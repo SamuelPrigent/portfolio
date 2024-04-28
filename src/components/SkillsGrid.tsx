@@ -83,19 +83,19 @@ export default function SkillsGrid() {
               className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
               width={67}
               src={node}
-              alt="logo radix ui"
+              alt="logo node"
             />
             <img
               className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
               width={65}
               src={express}
-              alt="logo radix ui"
+              alt="logo express"
             />
             <img
               className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
               width={65}
               src={mongodb}
-              alt="logo"
+              alt="logo mongodb"
             />
           </div>
           <div className="flex flex-col gap-1">

@@ -48,7 +48,7 @@ function App() {
               src={underline}
               height={30}
               width={150}
-              alt="underline"
+              alt="img underline"
             />
             <div
               id="name"
@@ -87,7 +87,7 @@ function App() {
                   src={github}
                   height={18}
                   width={18}
-                  alt="Code"
+                  alt="logo github"
                 />
                 Github
               </a>
@@ -100,7 +100,7 @@ function App() {
                   src={mail}
                   height={18}
                   width={18}
-                  alt="Code"
+                  alt="logo mail"
                 />
                 samuel.prigent@yahoo.fr
               </a>
@@ -125,7 +125,7 @@ function App() {
                 className="yellowSvg"
                 height={25}
                 width={25}
-                alt="logo react"
+                alt="logo express"
               />
             </div>
             <div className="badgeIconColor tailwindIcon absolute flex items-center justify-center rounded-full max-lg:right-[26px] max-lg:top-[234px] max-sm:right-[40px] max-sm:top-[212px] max-sm:size-[35px]">
@@ -134,12 +134,12 @@ function App() {
                 className="yellowSvg"
                 height={25}
                 width={25}
-                alt="logo react"
+                alt="logo tailwind"
               />
             </div>
             <img
               src={composant}
-              alt="composant"
+              alt="svg composant"
               className="composantIcon z-30 aspect-square select-none max-lg:w-[160px] max-sm:w-[130px]"
             />
           </div>

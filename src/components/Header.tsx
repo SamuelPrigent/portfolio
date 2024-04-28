@@ -8,7 +8,7 @@ function Header() {
     >
       <div className="header z-40 flex w-full max-w-[1300px] items-center max-sm:h-[48px] max-sm:gap-[16px] max-sm:px-[12px] max-sm:py-[7px]">
         <div className="flex items-center gap-2">
-          <img src={leaf} height={22} width={22} alt="tonerre" />
+          <img src={leaf} height={22} width={22} alt="logo feuille" />
           <div className="gradientText text-lg font-semibold">SamUX</div>
         </div>
         <div className="headerRightDiv flex max-sm:gap-[6px]">
