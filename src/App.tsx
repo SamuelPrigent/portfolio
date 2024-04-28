@@ -4,7 +4,6 @@ import Header from "./components/Header.tsx";
 import ProjectList from "./components/ProjectList.tsx";
 import Footer from "./components/Footer.tsx";
 import SkillsGrid from "./components/SkillsGrid.tsx";
-// import SkillsList from "./components/SkillsList.tsx";
 import { Spotlight } from "./components/Spotlight.tsx";
 // icons
 import composant from "./assets/composant.svg";
@@ -149,14 +148,9 @@ function App() {
         className="backgroundColor m-0 flex w-full pt-[160px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
       >
         <div className="projectContainer m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[20px] pb-[35px] pt-[25px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
-          {/* test */}
           <div className="m-auto  flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-2xl font-semibold leading-tight text-yellow-50">
             🚀 Mes projets
           </div>
-          {/* <Badge className="badgeSectionColor m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
-            <div>🚀</div>
-            <div>Mes projets</div>
-          </Badge> */}
           <div className="gridProject mt-2 grid h-[250px] w-full grid-cols-custom3 gap-4 rounded-xl max-lg:h-[340px] max-lg:grid-cols-custom2 max-md:h-[480px] max-md:grid-cols-custom1">
             <ProjectList />
           </div>
@@ -167,17 +161,10 @@ function App() {
         className="backgroundColor m-0 box-border flex min-w-full pb-[162px] pt-[100px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
         <div className="relative m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-4 max-md:w-full max-md:px-[25px]">
-          {/* test */}
           <div className="m-auto flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-2xl font-semibold leading-tight text-yellow-50">
             Technologies
           </div>
-          {/* badge */}
-          {/* <Badge className="badgeSectionColor start m-auto flex gap-2 rounded-lg px-4 py-2 text-lg font-semibold leading-tight ">
-            <div>📒</div>
-            <div>Technologies</div>
-          </Badge> */}
           <SkillsGrid />
-          {/* <SkillsList /> */}
         </div>
       </div>
       <Footer />
