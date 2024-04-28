@@ -42,7 +42,7 @@ function App() {
         <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[80px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
           <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[60px] ">
             <img
-              className="presentationUnderline absolute left-[190px] top-[131px] opacity-65 max-lg:left-[300px] max-lg:top-[122px] max-md:top-[117px] max-sm:left-[54%] max-sm:top-[107px] max-sm:h-[12px] lg:w-[175px]"
+              className="presentationUnderline absolute left-[200px] top-[131px] max-lg:left-[300px] max-lg:top-[122px] max-md:left-[57%] max-md:top-[117px] max-sm:left-[54%] max-sm:top-[107px] max-sm:h-[12px] lg:w-[175px]"
               src={underline}
               height={30}
               width={150}
@@ -68,7 +68,7 @@ function App() {
             </div>
             <div className="linkPadding mb-2 mt-[20px] flex flex-wrap justify-center gap-2 gap-y-3 text-[14px] max-lg:px-[16px]">
               <a
-                className="greenButton flex h-[38px] items-center justify-center gap-2 rounded-full font-semibold"
+                className="yellowButton flex h-[38px] items-center justify-center gap-2 rounded-full font-semibold"
                 target="_blank"
                 href="https://www.linkedin.com/in/samuel-prigent/"
               >
