@@ -21,7 +21,7 @@ function Header() {
           href="#Skills"
           className="rounded-lg px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
         >
-          Compétences
+          Technologies
         </a>
       </div>
     </div>

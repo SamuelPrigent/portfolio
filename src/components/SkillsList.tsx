@@ -15,11 +15,13 @@ import mongodb from "../assets/logo-mongodb.svg";
 // logo autres
 import git from "../assets/logo-git.svg";
 import github from "../assets/github.svg";
+import vitest from "../assets/logo-vitest.svg";
 
 function SkillsList() {
   return (
     <>
-      <div className="gridSkills mt-2 grid w-full max-w-[1300px] gap-4 rounded-xl max-md:h-auto max-md:grid-cols-custom2 max-md:px-[30px] max-sm:px-[15px]">
+      {/* <div className="mx-auto mt-[30px] h-[6px] w-[89%] rounded-full bg-black opacity-20"></div> */}
+      <div className="gridSkills grid w-full max-w-[1300px] gap-4 rounded-xl max-md:h-auto max-md:grid-cols-custom2 max-md:px-[30px] max-sm:px-[15px]">
         <div className="flex flex-col gap-2 rounded-xl py-4">
           <div className="titleText mb-2 text-xl font-semibold">Design</div>
           <SkillElement src={tailwindcss} text={"Tailwind"} />
@@ -42,6 +44,7 @@ function SkillsList() {
           <div className="titleText mb-2 text-xl font-semibold">Autres</div>
           <SkillElement src={git} text={"Git"} />
           <SkillElement src={github} text={"Github"} />
+          <SkillElement src={vitest} text={"Vitest"} />
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -8,6 +10,9 @@ export default {
       lg: "1020px",
     },
     extend: {
+      colors: {
+        medGray: "#A3A3A3",
+      },
       fontFamily: {
         poppins: ["Poppins", "Avenir", "sans-serif"],
       },
@@ -34,5 +39,20 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        ".area-1n1": {
+          gridArea: "inherit",
+        },
+        ".area-1n2": {
+          gridArea: "1 / 2",
+        },
+        ".area-2n2": {
+          gridArea: "2 / 2",
+        },
+      };
+      addUtilities(newUtilities, ["responsive"]);
+    }),
+  ],
 };

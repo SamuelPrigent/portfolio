@@ -30,7 +30,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({
         </div>
         <div
           aria-hidden="false"
-          className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-[2]"
+          className="text-normal line-clamp-[7] text-gray-300 max-[1020px]:line-clamp-3"
         >
           {desc}
         </div>
