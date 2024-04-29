@@ -160,11 +160,6 @@ function App() {
         id="Skills"
         className="backgroundColor relative m-0 box-border flex min-w-full pb-[160px] pt-[100px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
-        <div>
-          <div className="pointer-events-none absolute left-[50px] top-[160px] transform-gpu blur-3xl lg:transform-gpu">
-            <div className="polygon aspect-[1155/578] w-[72.1875rem] bg-gradient-to-tr from-[#dbd19a] to-[#dfb88b] opacity-[0.08]"></div>
-          </div>
-        </div>
         <div className="relative m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-4 max-md:w-full max-md:px-[25px]">
           <div className="m-auto flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-[22px] font-semibold leading-tight text-yellow-50">
             Technologies
