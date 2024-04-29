@@ -39,13 +39,9 @@ $outlineColor: #e5c242;
   width: 100%;
   min-height: 100vh;
   text-align: center;
-  background-color: #1b1b1f;
+  background-color: $darkBackgroud;
   color: white;
   overflow: hidden;
-}
-
-:where(.radix-themes) {
-  background-color: #1b1b1f !important;
 }
 
 a:not(:active):focus {
@@ -315,6 +311,27 @@ a.yellowButton:hover {
     linear-gradient(60deg, #241c1058, #2a271f87);
   background-repeat: no-repeat;
   background-size: 500% 500%;
+}
+
+.polygon {
+  clip-path: polygon(
+    74.1% 44.1%,
+    100% 61.6%,
+    97.5% 26.9%,
+    85.5% 0.1%,
+    80.7% 2%,
+    72.5% 32.5%,
+    60.2% 62.4%,
+    52.4% 68.1%,
+    47.5% 58.3%,
+    45.2% 34.5%,
+    27.5% 76.7%,
+    0.1% 64.9%,
+    17.9% 100%,
+    27.6% 76.8%,
+    76.1% 97.7%,
+    74.1% 44.1%
+  );
 }
 
 // responsive < 950px

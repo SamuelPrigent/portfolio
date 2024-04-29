@@ -13,7 +13,7 @@ export default function SkillsGrid() {
       {/* grid */}
       <div className="grid grid-cols-3 gap-4 pt-[15px] max-lg:grid-cols-2 max-sm:grid-cols-1">
         {/* react */}
-        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#383530] bg-[#1F1E1A] p-5 text-start text-white">
+        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#373633] bg-[#1F1E1A] p-5 text-start text-white">
           <div className="backgroundTexture2 relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#6e63510f] py-3">
             <div className="radiantBackgroundSmall2 z-10"></div>
             <img
@@ -32,7 +32,7 @@ export default function SkillsGrid() {
           </div>
         </div>
         {/* tailwind */}
-        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#383530] bg-[#211F1C] p-5 text-start text-white">
+        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#373633] bg-[#211F1C] p-5 text-start text-white">
           <div className="tailwindGradient flex h-[120px] w-full items-center justify-center gap-[25px] rounded-lg">
             <img
               className="lightYellowSvg aspect-square"
@@ -57,7 +57,7 @@ export default function SkillsGrid() {
           </div>
         </div>
         {/* typescript */}
-        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#383530] bg-[#211F1C] p-5 text-start text-white max-lg:area-2n2 max-sm:area-1n1">
+        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#373633] bg-[#211F1C] p-5 text-start text-white max-lg:area-2n2 max-sm:area-1n1">
           <div className="backgroundTexture2 relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg bg-[#6e63510f]">
             <div className="radiantBackgroundSmall2 z-10"></div>
             <img
@@ -76,7 +76,7 @@ export default function SkillsGrid() {
           </div>
         </div>
         {/* Backend */}
-        <div className="col-span-2 flex flex-col justify-between gap-4 rounded-xl border border-[#383530] bg-[#211F1C] p-5 text-start text-white max-lg:col-span-1">
+        <div className="col-span-2 flex flex-col justify-between gap-4 rounded-xl border border-[#373633] bg-[#211F1C] p-5 text-start text-white max-lg:col-span-1">
           <div className="backgroundTexture3 relative flex h-[120px] w-full items-center justify-center gap-[55px] overflow-hidden rounded-lg px-5 max-lg:gap-[40px] max-md:gap-[30px]">
             <div className="radiantBackgroundSmall3 z-10"> </div>
             <img
@@ -108,7 +108,7 @@ export default function SkillsGrid() {
           </div>
         </div>
         {/* Testing */}
-        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#383530] bg-[#211F1C] p-5 text-start text-white">
+        <div className="flex flex-col justify-between gap-4 rounded-xl border border-[#373633] bg-[#211F1C] p-5 text-start text-white">
           <div className="relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg">
             <div className="radiantBackgroundSmall z-10"> </div>
             <img

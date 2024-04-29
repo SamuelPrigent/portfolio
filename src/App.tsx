@@ -39,7 +39,7 @@ function App() {
         <Spotlight className="left-[0px] top-[62px] z-50" fill="#d7bf7fe4" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
-        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[80px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
+        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[90px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
           <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[60px] ">
             <img
               className="presentationUnderline absolute left-[200px] top-[131px] max-lg:left-[300px] max-lg:top-[122px] max-md:left-[57%] max-md:top-[117px] max-sm:left-[54%] max-sm:top-[107px] max-sm:h-[12px] lg:w-[175px]"
@@ -145,10 +145,10 @@ function App() {
       </div>
       <div
         id="Projects"
-        className="backgroundColor m-0 flex w-full pt-[160px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
+        className="backgroundColor m-0 mt-[60px] flex w-full pt-[100px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
       >
         <div className="projectContainer m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[20px] pb-[35px] pt-[25px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
-          <div className="m-auto  flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-2xl font-semibold leading-tight text-yellow-50">
+          <div className="m-auto  flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-[22px] font-semibold leading-tight text-yellow-50">
             🚀 Mes projets
           </div>
           <div className="gridProject mt-2 grid h-[250px] w-full grid-cols-custom3 gap-4 rounded-xl max-lg:h-[340px] max-lg:grid-cols-custom2 max-md:h-[480px] max-md:grid-cols-custom1">
@@ -158,10 +158,15 @@ function App() {
       </div>
       <div
         id="Skills"
-        className="backgroundColor m-0 box-border flex min-w-full pb-[162px] pt-[100px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
+        className="backgroundColor relative m-0 box-border flex min-w-full pb-[160px] pt-[100px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
+        <div>
+          <div className="pointer-events-none absolute left-[50px] top-[160px] transform-gpu blur-3xl lg:transform-gpu">
+            <div className="polygon aspect-[1155/578] w-[72.1875rem] bg-gradient-to-tr from-[#dbd19a] to-[#dfb88b] opacity-[0.08]"></div>
+          </div>
+        </div>
         <div className="relative m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-4 max-md:w-full max-md:px-[25px]">
-          <div className="m-auto flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-2xl font-semibold leading-tight text-yellow-50">
+          <div className="m-auto flex w-fit rounded-lg bg-[#1c1916] px-4 py-2 font-poppins text-[22px] font-semibold leading-tight text-yellow-50">
             Technologies
           </div>
           <SkillsGrid />
