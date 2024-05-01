@@ -1,4 +1,3 @@
-// import
 import react from "../assets/logo-react.svg";
 import tailwind from "../assets/logo-tailwindcss.svg";
 import typescript from "../assets/logo-typescript.svg";

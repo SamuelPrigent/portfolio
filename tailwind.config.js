@@ -14,7 +14,7 @@ export default {
         medGray: "#A3A3A3",
       },
       fontFamily: {
-        poppins: ["Poppins", "Avenir", "sans-serif"],
+        poppins: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       gridTemplateColumns: {
         custom1: "repeat(1, minmax(100px, 1fr))",
