@@ -1,7 +1,7 @@
 import react from "../assets/logo-react.svg";
 import tailwind from "../assets/logo-tailwindcss.svg";
 import typescript from "../assets/logo-typescript.svg";
-import radixui from "../assets/logo-radixui.svg";
+import shadcn from "../assets/logo-shadcn.svg";
 import express from "../assets/logo-express.svg";
 import mongodb from "../assets/logo-mongodb.svg";
 import node from "../assets/logo-node.svg";
@@ -63,15 +63,15 @@ export default function SkillsGrid() {
             <img
               className="lightYellowSvg aspect-square"
               width={36}
-              src={radixui}
-              alt="logo radixui"
+              src={shadcn}
+              alt="logo shadcn"
             />
           </div>
           <div className="relative flex flex-col gap-1">
             <div className="titleText text-xl font-semibold">Design</div>
             <div className="line-clamp-3 text-sm text-medGray">
               Intégration avec tailwind en utilisant des librairies de
-              composants non stylisés comme Radix ou Shadcn.
+              composants non stylisés comme Shadcn ou Radixui.
             </div>
           </div>
         </div>
