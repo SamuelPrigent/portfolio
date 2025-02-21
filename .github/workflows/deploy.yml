@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
+          node-version: "18.16"
           cache: "npm"
 
       - name: Install dependencies
@@ -36,20 +36,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Debug Build Output
-        run: ls -la # Vérifie les fichiers après build
-
-      - name: Debug Dist Folder
-        run: ls -la ./dist || echo "⚠️ Dossier dist/ introuvable"
-
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: "./dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v1
