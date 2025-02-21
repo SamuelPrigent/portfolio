@@ -1,16 +1,67 @@
-$darkBackgroud: #24231d;
-$gradientText: -webkit-linear-gradient(160deg, #e4d853 50%, rgb(153 140 52));
-$darkBackgroud: #24211c;
-$gradientBorder: linear-gradient(60deg, #ffd900, #f9de11);
 $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='411' height='411' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23918936' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23C0B03B'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-$radiantBackground: linear-gradient(120deg, #c2ae6014 30%, #b5aa5f24);
-$voidTextBordure: #ffeb5a;
-@mixin linkedInButton {
-  background-color: #f1d225;
-  color: #362b00;
+
+// paper theme
+// $darkBackgroud: hsl(0deg 0% 11%);
+// $elementBackground: hsla(20, 0%, 6%, 0.31);
+// $radiantBackground: linear-gradient(120deg, #c2ae6014 30%, #b5aa5f24);
+// $gradientText: -webkit-linear-gradient(160deg, #e4d853 50%, rgb(153 140 52));
+// $gradientBorder: linear-gradient(60deg, #ffd900, #f9de11);
+// $voidTextBordure: #ffeb5a;
+// $filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(16deg)
+//   saturate(7488%) saturate(0.6);
+// $transparentBackground: #1f1d18d4;
+// $titleText: #fcf4dc;
+// $outlineColor: #e5c242;
+// $sectionTitleBackground: rgb(22, 23, 28);
+// $projectContainerBorder: #252629;
+// $styleGradient : linear-gradient(60deg, #4c3e48, #9b6d25);
+// $testGradient: linear-gradient(122deg, #ffc60e 30%, #f313ffd0);
+// $skillsSvg : invert(47%) sepia(1) hue-rotate(12deg) contrast(1000%) saturate(0.1)
+// brightness(1);
+// $reactTypescriptGradient: linear-gradient(122deg, #6c5446 30%, #ffe0137c);
+
+// galaxy theme
+$darkBackgroud: #00092a;
+$voidTextBordure: #5af3ff;
+$elementBackground: hsla(20, 0%, 6%, 0.31);
+$radiantBackground: linear-gradient(120deg, #609bc214 30%, #5f89b524);
+$gradientText: -webkit-linear-gradient(160deg, #53c7e4 50%, rgb(52, 62, 153));
+$gradientBorder: linear-gradient(60deg, #00d9ff, #11e2f9);
+$maskStroke: rgb(172 198 207 / 30%);
+$filterUnderline: saturate(0.9) brightness(1.2) hue-rotate(137deg) opacity(0.8);
+$filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(145deg)
+  saturate(7488%) saturate(0.6) brightness(2);
+$transparentBackground: rgb(17 24 41 / 83%);
+$titleText: #dcf1fc;
+$outlineColor: #42b7e5;
+$sectionTitleBackground: rgb(22, 23, 28);
+$darkBorder: #12192f;
+// $styleGradient: linear-gradient(60deg, #3b486a, #167ac2);
+$styleGradient: linear-gradient(60deg, #121c33, #1889db);
+$testGradient: linear-gradient(122deg, #620eff 30%, #13e7ffd0);
+$skillsSvg: invert(47%) sepia(1) hue-rotate(223deg) contrast(1000%)
+  saturate(0.1) brightness(0.94);
+$reactTypescriptGradient: linear-gradient(
+  122deg,
+  #15207f 30%,
+  rgba(1, 1, 6, 0.49)
+);
+
+@mixin projectContainer {
+  background-color: $elementBackground;
+  border: 1px solid $darkBorder;
 }
-$filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(16deg)
-  saturate(7488%) saturate(0.6);
+
+@mixin linkedInButton {
+  // yellow
+  //   background-color: #f1d225;
+  //   color: #362b00;
+  //   white
+  background-color: #effaff;
+  color: black;
+}
+
+// ==== Start OLD ====
 @mixin badgeColor {
   background-color: #3c3408;
   color: #ffee00;
@@ -18,17 +69,51 @@ $filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(16deg)
 @mixin badgeIconColor {
   background-color: #2e2500;
   border: 1.5px solid #fff700;
-  // border: 1.5px solid #fffb88;
 }
-@mixin projectContainer {
-  background-color: rgba(23, 21, 19, 0.18);
-  border: 1px solid #292825;
-}
-$transparentBackground: #1f1d18d4;
-$titleText: #fcf4dc;
-$outlineColor: #e5c242;
+// ==== End OLD ====
 
 // =========================
+
+.sectionTitle {
+  background-color: $sectionTitleBackground;
+}
+
+.mask {
+  mask-image: linear-gradient(to bottom right, #fff, transparent, transparent);
+  stroke: $maskStroke;
+  fill: rgb(156 163 175 / 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+#arrow {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -20px;
+  border-radius: 100%;
+  transform: rotate(180deg);
+  padding: 10px;
+  height: 44px;
+  filter: opacity(0.95);
+}
+
+#arrow.hideArrow {
+  opacity: 0;
+  transform: translateY(40px) rotate(180deg);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.showArrow {
+  display: flex;
+}
+
+#Projects {
+  flex-direction: column;
+}
 
 #root {
   margin: 0;
@@ -67,8 +152,21 @@ a:not(:active):focus {
 }
 
 .presentationUnderline {
-  filter: saturate(0.9) brightness(1.2) hue-rotate(7deg) opacity(0.8);
+  //   filter: saturate(0.9) brightness(1.2) hue-rotate(7deg) opacity(0.8);
+  filter: $filterUnderline;
 }
+
+.projectGradient {
+  background-image: linear-gradient(to top, hsl(38, 3%, 13%), hsl(43, 3%, 11%));
+}
+
+// .footerGradient {
+//     background-image: linear-gradient(
+//       to bottom,
+//       $darkBackgroud,
+//       hsl(180, 4%, 11%)
+//     );
+// }
 
 // texture border
 .gradientBorder {
@@ -138,7 +236,7 @@ a:not(:active):focus {
   height: 60%;
   z-index: 0;
   border-radius: 50%;
-  background-image: linear-gradient(122deg, #ffc60e 30%, #f313ffd0);
+  background-image: $testGradient;
   filter: blur(70px);
 }
 
@@ -149,7 +247,7 @@ a:not(:active):focus {
   height: 60%;
   z-index: 0;
   border-radius: 50%;
-  background-image: linear-gradient(122deg, #6c5446 30%, #ffe0137c);
+  background-image: $reactTypescriptGradient;
   filter: blur(70px);
 }
 
@@ -166,6 +264,21 @@ a:not(:active):focus {
     rgba(56, 49, 36, 0.82)
   );
   filter: blur(90px);
+}
+
+.radiantBackgroundSmall4 {
+  position: absolute;
+  top: 20%;
+  width: 60%;
+  height: 65%;
+  z-index: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    297deg,
+    rgba(33, 36, 66, 0.661) 30%,
+    rgb(15, 15, 23)
+  );
+  filter: blur(40px);
 }
 
 .voidTextWithBordure {
@@ -210,8 +323,7 @@ a.yellowButton:hover {
 }
 
 .lightYellowSvg {
-  filter: invert(47%) sepia(1) hue-rotate(12deg) contrast(1000%) saturate(0.1)
-    brightness(1);
+  filter: $skillsSvg;
 }
 
 .badgeSectionColor {
@@ -238,10 +350,6 @@ a.yellowButton:hover {
   background-color: transparent;
 }
 
-.composantContainer {
-  min-width: 350px;
-  height: 350px;
-}
 .tailwindIcon {
   right: 40px;
   top: 289px;
@@ -262,6 +370,12 @@ a.yellowButton:hover {
 .projectContainer {
   @include projectContainer;
 }
+
+.skillsElement {
+  border: 1px solid $darkBorder;
+  background-color: $elementBackground;
+}
+
 .header {
   padding: 8px 28px 8px;
   justify-content: space-between;
@@ -283,8 +397,8 @@ a.yellowButton:hover {
   animation: texture-spin infinite 40s linear;
 }
 
-.tailwindGradient {
-  background: linear-gradient(60deg, #4c3e48, #9b6d25);
+.styleGradient {
+  background: $styleGradient;
 }
 
 .darkGradient {

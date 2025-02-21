@@ -24,7 +24,7 @@ const ProjectElement: React.FC<ProjectElementProps> = ({
           alt={`Image de ${src}`}
         />
       </div>
-      <div className="transparentBackground absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] p-6 backdrop-blur-[3px] transition-opacity group-hover:opacity-0 group-focus:opacity-0">
+      <div className="transparentBackground absolute inset-0 flex h-full w-full flex-col gap-1 rounded-[11px] p-6 backdrop-blur-[2.5px] transition-opacity group-hover:opacity-0 group-focus:opacity-0">
         <div aria-hidden="false" className="titleText text-xl font-bold ">
           {title}
         </div>

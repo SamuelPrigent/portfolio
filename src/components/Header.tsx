@@ -26,14 +26,14 @@ function Header() {
             width={18}
             alt="logo SamUX"
           />
-          <div className="gradientText text-lg font-semibold">SamUX</div>
+          <div className="text-lg font-semibold text-white">SamUX</div>
         </div>
         <HeaderRightDiv className="flex max-sm:gap-[6px]">
           <a
             href="#Projects"
             className="rounded-lg px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
           >
-            Mes projets
+            Projets
           </a>
           <a
             href="#Skills"
