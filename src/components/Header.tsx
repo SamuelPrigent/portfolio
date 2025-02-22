@@ -31,13 +31,13 @@ function Header() {
         <HeaderRightDiv className="flex max-sm:gap-[6px]">
           <a
             href="#Projects"
-            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
+            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-blue-50 hover:cursor-pointer"
           >
             Projets
           </a>
           <a
             href="#Skills"
-            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-green-50 hover:cursor-pointer"
+            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-blue-50 hover:cursor-pointer"
           >
             Technologies
           </a>

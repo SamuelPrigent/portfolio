@@ -1,3 +1,5 @@
+import styled from "styled-components";
+// assets
 import react from "../assets/logo-react.svg";
 import styledcomponent from "../assets/logo-styledcomponent.svg";
 import typescript from "../assets/logo-typescript.svg";
@@ -5,8 +7,7 @@ import radixui from "../assets/logo-radixui.svg";
 import express from "../assets/logo-express.svg";
 import mongodb from "../assets/logo-mongodb.svg";
 import node from "../assets/logo-node.svg";
-import vitest from "../assets/logo-vitest.svg";
-import styled from "styled-components";
+import jest from "../assets/jest.svg";
 
 // styled component
 const BackgroundTextureFront = styled.div`
@@ -34,6 +35,11 @@ export default function SkillsGrid() {
     <>
       {/* grid */}
       <div className="grid grid-cols-3 gap-4 pt-[15px] max-lg:grid-cols-2 max-sm:grid-cols-1">
+        {/* === template for border gradient === */}
+        {/* <div className="borderGradient">  */}
+        {/* <div className="w-[100%]">element</div> */}
+        {/* </div> */}
+
         {/* react */}
         <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
           <BackgroundTextureFront className="relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#6e63510f] py-3">
@@ -47,7 +53,7 @@ export default function SkillsGrid() {
           </BackgroundTextureFront>
           <div className="flex flex-col gap-1">
             <div className="titleText text-xl font-semibold">React</div>
-            <div className="line-clamp-3 text-sm text-medGray">
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
               Spécialisé en React et Next, je développe un code évolutif et
               maintenable axé sur la scalabilité.
             </div>
@@ -62,7 +68,7 @@ export default function SkillsGrid() {
               src={radixui}
               alt="logo shadcn"
             />
-            <div className="text-4xl font-light text-[#EFEFCD]">+</div>
+            <div className="text-4xl font-light text-[#cde8ef]">+</div>
             <img
               className="lightYellowSvg aspect-square"
               width={36}
@@ -72,7 +78,7 @@ export default function SkillsGrid() {
           </div>
           <div className="relative flex flex-col gap-1">
             <div className="titleText text-xl font-semibold">Design</div>
-            <div className="line-clamp-3 text-sm text-medGray">
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
               Utilisation de la librairie Radix UI avec Styled-Components pour
               du style in js.
             </div>
@@ -91,7 +97,7 @@ export default function SkillsGrid() {
           </BackgroundTextureFront>
           <div className="flex flex-col gap-1">
             <div className="titleText text-xl font-semibold">Typescript</div>
-            <div className="line-clamp-3 text-sm text-medGray">
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
               Typescript me permet de repérer les erreurs plus rapidement tout
               en restant productif.
             </div>
@@ -122,7 +128,7 @@ export default function SkillsGrid() {
           </BackgroundTextureBack>
           <div className="flex flex-col gap-1">
             <div className="titleText text-xl font-semibold">Backend</div>
-            <div className="line-clamp-3 text-sm text-medGray">
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
               Avec Node.js, Express et MongoDB, je crée des solutions backend
               qui sont à la fois flexibles dans la gestion des données et
               sécurisées.
@@ -136,15 +142,15 @@ export default function SkillsGrid() {
             <img
               className="lightYellowSvg z-20 aspect-square"
               width={70}
-              src={vitest}
+              src={jest}
               alt="logo vitest"
             />
           </div>
           <div className="flex flex-col gap-1">
-            <div className="titleText text-xl font-semibold">Vitest</div>
-            <div className="line-clamp-3 text-sm text-medGray">
-              Ecriture de test Back et Front à l'aide de librairie tel que
-              Vitest, Mocha ou Jest.
+            <div className="titleText text-xl font-semibold">Testing</div>
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
+              Ecriture de test Back et Front à l'aide de librairies tel que
+              Jest, Cypress et Mocha.
             </div>
           </div>
         </div>

@@ -16,15 +16,17 @@ const StyledImage = styled.img`
   z-index: 30;
   user-select: none;
   width: 100%;
-  position: relative;
-  top: 38.5px;
 `;
 
 export default function PresentationRight() {
   return (
     <div className="composantContainer relative top-[50px] m-auto flex aspect-square items-center justify-center text-center max-lg:h-[300px] max-lg:min-w-[300px] max-sm:h-[250px] max-sm:min-w-[250px]">
       <PicContainer>
-        <StyledImage src={picOfMe} alt="svg composant" />
+        <StyledImage
+          src={picOfMe}
+          alt="svg composant"
+          className="positionPicOfMe"
+        />
       </PicContainer>
     </div>
   );

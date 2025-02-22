@@ -10,6 +10,38 @@ import SkillsGrid from "./components/SkillsGrid.tsx";
 // assets
 import arrow from "./assets/arrow.svg";
 import BubbleBackground from "./components/BubbleBackground.tsx";
+import BackgroundGrid from "./components/BackgroundGrid.tsx";
+
+// const GradientBorderBox = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   font-size: 16px;
+//   font-weight: bold;
+//   position: relative;
+//   border-radius: 10px;
+//   background: #161838;
+//   z-index: 1;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     border-radius: 10px;
+//     padding: 2px;
+//     background: linear-gradient(0deg, #00092a 0, #292b47);
+//     z-index: -1;
+
+//     /* Définir d'abord le masque */
+//     -webkit-mask:
+//       linear-gradient(#fff 0 0) padding-box,
+//       linear-gradient(#fff 0 0);
+//     /* Puis les propriétés de composition */
+//     -webkit-mask-composite: xor;
+//     mask-composite: exclude;
+//   }
+// `;
 
 function App() {
   // scroll header
@@ -38,46 +70,22 @@ function App() {
 
   return (
     <>
+      <BackgroundGrid />
       <Header />
       <div className="overflow-hidden">
         <Spotlight className="left-[90px] top-[40px] z-50" fill="#dad5b6e2" />
       </div>
       <div className="backgroundColor m-0 box-border flex min-w-full">
-        {/* ---- array ---- */}
-        <svg
-          aria-hidden="true"
-          className="mask pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
-        >
-          <defs>
-            <pattern
-              id=":r2:"
-              width="80"
-              height="80"
-              patternUnits="userSpaceOnUse"
-              x="-1"
-              y="-1"
-            >
-              <path d="M.5 80V.5H80" fill="none" strokeDasharray="0"></path>
-            </pattern>
-          </defs>
-          <rect
-            width="100%"
-            height="100%"
-            strokeWidth="0"
-            fill="url(#:r2:)"
-          ></rect>
-          {/* ---- array ---- */}
-        </svg>
-        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[105px] max-lg:h-auto max-lg:flex-col max-lg:gap-[15px] max-sm:px-0 max-sm:py-[30px]">
+        <div className="presentationContainer max-w-11/12 m-auto flex h-[450px] items-center justify-around gap-[96px] px-[40px] pb-0 pt-[105px] max-lg:h-auto max-lg:flex-col max-lg:gap-[5px] max-sm:px-0 max-sm:py-[60px]">
           <PresentationLeft />
           <PresentationRight />
         </div>
       </div>
       <div
         id="Projects"
-        className="backgroundColor m-0 mt-[60px] flex w-full pt-[220px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[55px]"
+        className="backgroundColor m-0 mt-[60px] flex w-full pt-[260px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[25px]"
       >
-        <img id="arrow" src={arrow}></img>
+        <img id="arrow" src={arrow} className=""></img>
         <div className="projectContainer z-10 m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[20px] pb-[35px] pt-[25px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
           <div className="sectionTitle m-auto flex w-fit rounded-lg px-5 py-2 font-poppins text-[20px] font-semibold leading-tight text-blue-50">
             🚀 Projets
@@ -92,7 +100,7 @@ function App() {
         className="backgroundColor relative z-10 m-0 box-border flex min-w-full pb-[180px] pt-[160px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
         <div className="relative m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-4 max-md:w-full max-md:px-[25px]">
-          <div className="sectionTitle m-auto flex w-fit rounded-lg px-5 py-2 font-poppins text-[22px] font-semibold leading-tight text-yellow-50">
+          <div className="sectionTitle m-auto flex w-fit rounded-lg px-5 py-2 font-poppins text-[22px] font-semibold leading-tight text-blue-50">
             Technologies
           </div>
           <SkillsGrid />

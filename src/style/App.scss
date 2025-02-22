@@ -23,7 +23,8 @@ $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 // galaxy theme
 $darkBackgroud: #00092a;
 $voidTextBordure: #5af3ff;
-$elementBackground: hsla(20, 0%, 6%, 0.31);
+$elementBackground: hsla(20, 0%, 6%, 0.31); // without border gradient
+// $elementBackground: #00092a; // with border gradient
 $radiantBackground: linear-gradient(120deg, #609bc214 30%, #5f89b524);
 $gradientText: -webkit-linear-gradient(160deg, #53c7e4 50%, rgb(52, 62, 153));
 $gradientBorder: linear-gradient(60deg, #00d9ff, #11e2f9);
@@ -49,6 +50,7 @@ $reactTypescriptGradient: linear-gradient(
 
 @mixin projectContainer {
   background-color: $elementBackground;
+  //   background-color: #02081f;
   border: 1px solid $darkBorder;
 }
 
@@ -74,29 +76,58 @@ $reactTypescriptGradient: linear-gradient(
 
 // =========================
 
+// TEST
+.borderGradient {
+  padding: 1.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, #000414, #292b47);
+  max-width: 1305px;
+  width: 87%;
+  margin: auto;
+  border-radius: 17px;
+}
+
+.positionPicOfMe {
+  position: relative;
+  top: 38.5px;
+}
+
 .sectionTitle {
   background-color: $sectionTitleBackground;
 }
 
+// override
 .mask {
-  mask-image: linear-gradient(to bottom right, #fff, transparent, transparent);
-  stroke: $maskStroke;
-  fill: rgb(156 163 175 / 0.3);
-  width: 100%;
-  height: 100%;
+  // mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)
+  mask-image: linear-gradient(
+    to bottom right,
+    white,
+    rgba(0, 0, 0, 0.18),
+    transparent
+  );
 }
 
 #arrow {
   margin: auto;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -20px;
   border-radius: 100%;
   transform: rotate(180deg);
   padding: 10px;
   height: 44px;
   filter: opacity(0.95);
+  z-index: 100;
+  //   position: relative;
+  //   top: -20px;
+  //   test
+  //   width: 45px;
+  //   height: 45px;
+  //   margin: 0px 10px 30px auto;
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
 }
 
 #arrow.hideArrow {
@@ -159,14 +190,6 @@ a:not(:active):focus {
 .projectGradient {
   background-image: linear-gradient(to top, hsl(38, 3%, 13%), hsl(43, 3%, 11%));
 }
-
-// .footerGradient {
-//     background-image: linear-gradient(
-//       to bottom,
-//       $darkBackgroud,
-//       hsl(180, 4%, 11%)
-//     );
-// }
 
 // texture border
 .gradientBorder {
@@ -290,14 +313,14 @@ a:not(:active):focus {
 .yellowButton {
   @include linkedInButton;
   padding: 4px 20px;
-  height: auto;
+  height: 39px;
 }
 
 .grayButton {
   background-color: #353535;
   color: #fffff5db;
   padding: 4px 20px;
-  height: auto;
+  height: 39px;
 }
 
 .yellowButton:hover,
@@ -340,7 +363,7 @@ a.yellowButton:hover {
 // header scrolled
 .scrolled {
   border-bottom: 1px solid black;
-  background-color: #181716a0;
+  background-color: #00092ad5;
   transition: background-color 300ms;
   backdrop-filter: blur(3px);
 }
@@ -374,6 +397,7 @@ a.yellowButton:hover {
 .skillsElement {
   border: 1px solid $darkBorder;
   background-color: $elementBackground;
+  //   background-color: #02081f;
 }
 
 .header {
@@ -434,11 +458,21 @@ a.yellowButton:hover {
   .backgroundTexture3 {
     background-size: 400% 400%;
   }
+
+  .positionPicOfMe {
+    position: relative;
+    top: 35.5px;
+  }
 }
 
 // responsive < 710px (md)
 @media screen and (max-width: 710px) {
   .gridSkills :nth-child(1) {
     grid-row: 2/2;
+  }
+
+  .positionPicOfMe {
+    position: relative;
+    top: 29.5px;
   }
 }
