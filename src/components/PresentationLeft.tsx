@@ -21,7 +21,7 @@ export default function PresentationLeft() {
       </div>
       <div
         id="developpeur"
-        className="z-10 font-poppins text-[75px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[70px] max-md:text-[62px] max-sm:text-[55px]"
+        className="z-10 font-poppins text-[75px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[70px] max-md:text-[62px] max-sm:text-[42px]"
       >
         Developpeur
       </div>
