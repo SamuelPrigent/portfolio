@@ -37,7 +37,7 @@ export default function PresentationLeft() {
           target="_blank"
           href="https://www.linkedin.com/in/samuel-prigent/"
         >
-          <img src={linkedin} height={17} width={17} alt="Code" />
+          <img src={linkedin} height={17} width={17} alt="logo linked in" />
           LinkedIn
         </a>
         <a
