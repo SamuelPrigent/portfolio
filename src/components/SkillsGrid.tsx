@@ -35,10 +35,27 @@ export default function SkillsGrid() {
     <>
       {/* grid */}
       <div className="grid grid-cols-3 gap-4 pt-[15px] max-lg:grid-cols-2 max-sm:grid-cols-1">
-        {/* === template for border gradient === */}
-        {/* <div className="borderGradient">  */}
-        {/* <div className="w-[100%]">element</div> */}
-        {/* </div> */}
+        {/* react : test border gradient */}
+        {/* <div className="borderGradient">
+          <div className="skillsElementTest flex min-h-full min-w-full flex-col gap-4 rounded-[14px] p-5 text-start text-white">
+            <BackgroundTextureFront className="relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#515b6e0f] py-3">
+              <div className="radiantBackgroundSmall2 z-10"></div>
+              <img
+                className="reactSpin lightYellowSvg z-20 mx-auto my-0 aspect-square"
+                src={react}
+                width={80}
+                alt="logo react"
+              />
+            </BackgroundTextureFront>
+            <div className="flex flex-col gap-1">
+              <div className="titleText text-xl font-semibold">React</div>
+              <div className="line-clamp-3 text-sm text-[#b5c1d1]">
+                Spécialisé en React et Next, je développe un code évolutif et
+                maintenable axé sur la scalabilité.
+              </div>
+            </div>
+          </div>
+        </div> */}
 
         {/* react */}
         <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">

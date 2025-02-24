@@ -86,9 +86,9 @@ function App() {
         className="backgroundColor m-0 mt-[60px] flex w-full pt-[260px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[25px]"
       >
         <img id="arrow" src={arrow} className=""></img>
-        <div className="projectContainer z-10 m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-6 rounded-[16px] px-[20px] pb-[35px] pt-[25px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
-          <div className="sectionTitle m-auto flex w-fit rounded-lg px-5 py-2 font-poppins text-[20px] font-semibold leading-tight text-blue-50">
-            🚀 Projets
+        <div className="projectContainer z-10 m-auto flex h-auto w-[90%] max-w-[1300px] flex-col rounded-[16px] px-[20px] pb-[35px] pt-[15px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
+          <div className="mb-2 ml-0 flex w-fit rounded-lg px-1 py-4 text-[30px] font-[500] leading-tight text-blue-50">
+            Projets
           </div>
           <div className="gridProject mt-2 grid h-[250px] w-full grid-cols-custom3 gap-4 rounded-xl max-lg:h-[340px] max-lg:grid-cols-custom2 max-md:h-[480px] max-md:grid-cols-custom1">
             <ProjectList />
@@ -99,8 +99,8 @@ function App() {
         id="Skills"
         className="backgroundColor relative z-10 m-0 box-border flex min-w-full pb-[180px] pt-[160px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
-        <div className="relative m-auto flex h-auto w-[87%] max-w-[1300px] flex-col gap-4 max-md:w-full max-md:px-[25px]">
-          <div className="sectionTitle m-auto flex w-fit rounded-lg px-5 py-2 font-poppins text-[22px] font-semibold leading-tight text-blue-50">
+        <div className="relative m-auto flex h-auto w-[90%] max-w-[1300px] flex-col max-md:w-full max-md:px-[25px]">
+          <div className="ml-0 flex w-fit rounded-lg px-5 py-2 text-[30px] font-[500] leading-tight text-blue-50">
             Technologies
           </div>
           <SkillsGrid />

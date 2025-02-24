@@ -5,7 +5,7 @@ import logo from "../assets/logosamux.svg";
 
 function Footer() {
   return (
-    <div className="mx-auto mb-[2px] mt-[30px] box-border flex h-[90px] w-full max-w-[1300px] items-center justify-between px-[28px] text-sm text-[#ebebf599]">
+    <div className="mx-auto mb-[2px] mt-[30px] box-border flex h-[90px] w-full max-w-[1300px] items-center justify-between px-[28px] text-sm text-[#ebebf599] max-sm:h-auto max-sm:flex-col max-sm:gap-8 max-sm:pb-7">
       <div className="flex gap-6">
         <a href="https://www.linkedin.com/in/samuel-prigent/" target="_blank">
           <img
@@ -32,13 +32,13 @@ function Footer() {
           />
         </a>
       </div>
-      <div className="flex items-center justify-center gap-[10px]">
+      <div className="flex items-center justify-center gap-[8px]">
         <img src={logo} alt="logo SamUX" className="whiteSvg h-[18px]" />
-        <div className="text-bold text-[1.1rem] font-semibold text-white">
+        <div className="text-bold text-[1rem] font-semibold text-white">
           SamUX
         </div>
       </div>
-      <div className="text-[0.9rem] text-white">Copyright ©SamUX 2025</div>
+      <div className="text-[1rem] text-white">Copyright ©SamUX 2025</div>
     </div>
   );
 }

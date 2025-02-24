@@ -7,7 +7,7 @@ export default function PresentationLeft() {
   return (
     <div className="presentationContainerLeft relative my-auto flex flex-col rounded-lg pt-[70px] text-start font-bold max-lg:pt-[50px] ">
       <img
-        className="presentationUnderline absolute left-[280px] top-[135px] rotate-[-2.5deg] max-lg:left-[332px] max-lg:top-[111px] max-lg:w-[173px] max-md:left-[58%] max-md:top-[105px] max-md:w-[170px] max-sm:left-[58%] max-sm:top-[101px] max-sm:h-[13px] max-sm:w-[144px]"
+        className="presentationUnderline absolute left-[268px] top-[137px] rotate-[-2.5deg] max-lg:left-[332px] max-lg:top-[111px] max-lg:w-[173px] max-md:left-[58%] max-md:top-[105px] max-md:w-[170px] max-sm:left-[58%] max-sm:top-[101px] max-sm:h-[13px] max-sm:w-[144px]"
         src={underline}
         height={30}
         width={187}
@@ -21,7 +21,7 @@ export default function PresentationLeft() {
       </div>
       <div
         id="developpeur"
-        className="z-10 font-poppins text-[75px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[70px] max-md:text-[62px] max-sm:text-[42px]"
+        className="specialFont z-10 text-[90px] font-semibold leading-tight text-white max-lg:text-center max-lg:text-[80px] max-md:text-[72px] max-sm:text-[62px]"
       >
         Developpeur
       </div>
@@ -31,7 +31,7 @@ export default function PresentationLeft() {
       >
         Fullstack
       </div>
-      <div className="linkPadding justify-left mb-2 mt-[20px] flex flex-wrap gap-2 gap-y-3 text-[15px] max-lg:justify-center max-lg:px-[16px]">
+      <div className="linkPadding justify-left mb-2 mt-[20px] flex flex-wrap gap-2 gap-y-3 text-[15px] max-lg:justify-center max-lg:px-[16px] max-md:mt-[40px] max-md:grid">
         <a
           className="yellowButton flex items-center justify-center gap-2 rounded-full font-semibold"
           target="_blank"

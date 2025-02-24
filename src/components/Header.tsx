@@ -21,23 +21,23 @@ function Header() {
         <div className="flex items-center gap-2">
           <img
             src={logo}
-            className="yellowSvg opacity-90"
+            className="whiteSvg"
             height={18}
             width={18}
             alt="logo SamUX"
           />
-          <div className="text-lg font-semibold text-white">SamUX</div>
+          <div className="text-[1rem] font-semibold text-white">SamUX</div>
         </div>
         <HeaderRightDiv className="flex max-sm:gap-[6px]">
           <a
             href="#Projects"
-            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-blue-50 hover:cursor-pointer"
+            className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"
           >
             Projets
           </a>
           <a
             href="#Skills"
-            className="rounded-lg px-1 py-1 text-[15px] font-[500] text-blue-50 hover:cursor-pointer"
+            className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"
           >
             Technologies
           </a>

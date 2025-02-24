@@ -7,7 +7,7 @@ const PicContainer = styled.div`
   justify-content: center;
   aspect-ratio: 1/1;
   width: 320px;
-  border: 5.5px solid white;
+  border: 7.5px solid white;
   overflow: hidden;
   border-radius: 50%;
 `;
@@ -20,7 +20,7 @@ const StyledImage = styled.img`
 
 export default function PresentationRight() {
   return (
-    <div className="composantContainer relative top-[50px] m-auto flex aspect-square items-center justify-center text-center max-lg:h-[300px] max-lg:min-w-[300px] max-sm:h-[250px] max-sm:min-w-[250px]">
+    <div className="composantContainer relative top-[62px] m-auto flex aspect-square items-center justify-center text-center max-lg:h-[300px] max-lg:min-w-[300px] max-sm:h-[250px] max-sm:min-w-[250px]">
       <PicContainer>
         <StyledImage
           src={picOfMe}
