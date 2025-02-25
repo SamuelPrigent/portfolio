@@ -100,7 +100,7 @@ function App() {
         className="backgroundColor relative z-10 m-0 box-border flex min-w-full pb-[180px] pt-[160px] max-lg:pt-[80px] max-md:pt-[70px] max-sm:pt-[60px]"
       >
         <div className="relative m-auto flex h-auto w-[90%] max-w-[1300px] flex-col max-md:w-full max-md:px-[25px]">
-          <div className="ml-0 flex w-fit rounded-lg px-5 py-2 text-[30px] font-[500] leading-tight text-blue-50">
+          <div className="ml-0 flex w-fit rounded-lg px-5 py-2 text-[30px] font-[500] leading-tight text-blue-50 max-md:px-0">
             Technologies
           </div>
           <SkillsGrid />

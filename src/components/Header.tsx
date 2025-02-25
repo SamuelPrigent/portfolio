@@ -26,9 +26,11 @@ function Header() {
             width={18}
             alt="logo SamUX"
           />
-          <div className="text-[1rem] font-semibold text-white">SamUX</div>
+          <div className="font-poppins text-[1rem] font-semibold text-white">
+            SamUX
+          </div>
         </div>
-        <HeaderRightDiv className="flex max-sm:gap-[6px]">
+        <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">
           <a
             href="#Projects"
             className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"

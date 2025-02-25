@@ -4,7 +4,6 @@ import ProjectElement from "./ProjectElement";
 import fifo from "../assets/preview-fifo.png";
 import kasa from "../assets/preview-kasa.png";
 import lespetitsplats from "../assets/preview-lespetitsplats.png";
-//
 
 function ProjectList() {
   return (
@@ -14,8 +13,7 @@ function ProjectList() {
         title="FIFO"
         desc="Conception d'un système de file d’attente prioritaire (FIFO : First
             In First Out), permettant l’ajout d’actions variées, consommant
-            différents types de crédits. Attention particulière apporté à la
-            scalabilité."
+            différents types de crédits."
         link="https://github.com/SamuelPrigent/FIFO"
       />
       <ProjectElement

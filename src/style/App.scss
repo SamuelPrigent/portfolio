@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='411' height='411' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23918936' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23C0B03B'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
 
 // paper theme
@@ -5,7 +7,6 @@ $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 // $elementBackground: hsla(20, 0%, 6%, 0.31);
 // $radiantBackground: linear-gradient(120deg, #c2ae6014 30%, #b5aa5f24);
 // $gradientText: -webkit-linear-gradient(160deg, #e4d853 50%, rgb(153 140 52));
-// $gradientBorder: linear-gradient(60deg, #ffd900, #f9de11);
 // $voidTextBordure: #ffeb5a;
 // $filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(16deg)
 //   saturate(7488%) saturate(0.6);
@@ -23,26 +24,18 @@ $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 // galaxy theme
 $darkBackgroud: #00092a;
 $elementBackground: hsla(20, 0%, 6%, 0.31); // without border gradient
-// $elementBackground: #00092a; // with border gradient
 $radiantBackground: linear-gradient(120deg, #609bc214 30%, #5f89b524);
-// $voidTextBordure: #5af3ff;
-// $gradientText: -webkit-linear-gradient(160deg, #53c7e4 50%, rgb(52, 62, 153));
-// $filterUnderline: saturate(0.9) brightness(1.2) hue-rotate(137deg) opacity(0.8);
-// $filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(145deg)
-//   saturate(7488%) saturate(0.6) brightness(2);
 $voidTextBordure: #88caff;
 $gradientText: -webkit-linear-gradient(160deg, #e47f53 50%, rgb(52, 62, 153));
 $filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
 $filterToColor: invert(39%) sepia(100%) hue-rotate(2.3deg) saturate(7488%)
   saturate(0.5) brightness(2);
-$gradientBorder: linear-gradient(60deg, #00d9ff, #11e2f9);
 $maskStroke: rgb(172 198 207 / 30%);
 $transparentBackground: rgb(17 24 41 / 83%);
 $titleText: #dcf1fc;
-$outlineColor: #42b7e5;
+$outlineColor: #5b8bde;
 $sectionTitleBackground: rgb(22, 23, 28);
 $darkBorder: #12192f;
-// $styleGradient: linear-gradient(60deg, #3b486a, #167ac2);
 $styleGradient: linear-gradient(60deg, #121c33, #1889db);
 $testGradient: linear-gradient(122deg, #620eff 30%, #13e7ffd0);
 $skillsSvg: invert(47%) sepia(1) hue-rotate(223deg) contrast(1000%)
@@ -64,7 +57,7 @@ $reactTypescriptGradient: linear-gradient(
   //   background-color: #f1d225;
   //   color: #362b00;
   //   white
-  background-color: #effaff;
+  background-color: white;
   color: black;
 }
 
@@ -81,7 +74,7 @@ $reactTypescriptGradient: linear-gradient(
 
 // =========================
 
-// TEST For skills grid gradient border
+// Test For skills grid gradient border
 .borderGradient {
   padding: 1px;
   display: flex;
@@ -99,7 +92,6 @@ $reactTypescriptGradient: linear-gradient(
 .skillsElement {
   border: 1px solid $darkBorder;
   background-color: $elementBackground;
-  // background-color: #02081f;
 }
 
 .positionPicOfMe {
@@ -112,7 +104,7 @@ $reactTypescriptGradient: linear-gradient(
 }
 
 .specialFont {
-  font-family: "abhaya Libre";
+  font-family: "Abhaya Libre";
   letter-spacing: -0.025rem;
 }
 
@@ -212,21 +204,6 @@ a:not(:active):focus {
     black 100%
   );
   mask-composite: exclude;
-}
-
-// texture border
-.gradientBorder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1px;
-  border-radius: 50%;
-  background: $gradientBorder;
-  z-index: -1;
-  transform: scale(1.1);
 }
 
 @keyframes texture-spin {
