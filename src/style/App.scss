@@ -302,6 +302,9 @@ a:not(:active):focus {
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: $voidTextBordure;
   color: transparent;
+//   text-shadow: 0 1px 15px #e90e0e1c;
+background: hsla(0, 0%, 0%, 0.06);
+background-clip: text;
 }
 
 .yellowButton {
