@@ -27,7 +27,7 @@ function Header() {
             alt="logo SamUX"
           />
           <div className="font-poppins text-[1rem] font-semibold text-white">
-            Sam.js
+            SamCode
           </div>
         </div>
         <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">
