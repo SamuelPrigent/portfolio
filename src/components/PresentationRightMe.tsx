@@ -7,7 +7,7 @@ const PicContainer = styled.div`
   justify-content: center;
   aspect-ratio: 1/1;
   width: 320px;
-  border: 7.5px solid white;
+  border: 7px solid white;
   overflow: hidden;
   border-radius: 50%;
 `;

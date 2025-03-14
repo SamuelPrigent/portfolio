@@ -22,12 +22,17 @@ $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 // $reactTypescriptGradient: linear-gradient(122deg, #6c5446 30%, #ffe0137c);
 
 // galaxy theme
-$darkBackgroud: #00092a;
+// $darkBackgroud: #00092a;
+$darkBackgroud: hsl(227, 60%, 8%);
+$darkBackgroud-transparent: hsla(227, 60%, 6%, 0.15); // Version transparente du fond sombre
 $elementBackground: hsla(20, 0%, 6%, 0.31); // without border gradient
 $radiantBackground: linear-gradient(120deg, #609bc214 30%, #5f89b524);
-$voidTextBordure: #88caff;
-$gradientText: -webkit-linear-gradient(160deg, #e47f53 50%, rgb(52, 62, 153));
-$filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
+// $voidTextBordure: #88caff;
+$voidTextBordure: #ff7e70;
+// $gradientText: -webkit-linear-gradient(160deg, #e47f53 50%, rgb(52, 62, 153));
+$gradientText: -webkit-linear-gradient(160deg, #e0685c 50%, rgb(52, 104, 153) 110%);
+// $filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
+$filterUnderline: saturate(1) brightness(0.72) hue-rotate(303deg) opacity(0.9);
 $filterToColor: invert(39%) sepia(100%) hue-rotate(2.3deg) saturate(7488%)
   saturate(0.5) brightness(2);
 $maskStroke: rgb(172 198 207 / 30%);
@@ -37,7 +42,7 @@ $outlineColor: #5b8bde;
 $sectionTitleBackground: rgb(22, 23, 28);
 $darkBorder: #12192f;
 $styleGradient: linear-gradient(60deg, #121c33, #1889db);
-$testGradient: linear-gradient(122deg, #620eff 30%, #13e7ffd0);
+$testGradient: linear-gradient(122deg, #0e33ff 30%, rgba(19, 231, 255, 0.8156862745));
 $skillsSvg: invert(47%) sepia(1) hue-rotate(223deg) contrast(1000%)
   saturate(0.1) brightness(0.94);
 $reactTypescriptGradient: linear-gradient(
@@ -46,11 +51,11 @@ $reactTypescriptGradient: linear-gradient(
   rgba(1, 1, 6, 0.49)
 );
 
-@mixin projectContainer {
-  background-color: $elementBackground;
+// @mixin projectContainer {
+//   background-color: $elementBackground;
   //   background-color: #02081f;
-  border: 1px solid $darkBorder;
-}
+//   border: 1px solid $darkBorder;
+// }
 
 @mixin linkedInButton {
   // yellow
@@ -294,7 +299,7 @@ a:not(:active):focus {
 }
 
 .voidTextWithBordure {
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: $voidTextBordure;
   color: transparent;
 }
@@ -352,9 +357,10 @@ a.yellowButton:hover {
 // header scrolled
 .scrolled {
   border-bottom: 1px solid black;
-  background-color: #00092ad5;
+//   background-color: #00092ad5;
+background-color: $darkBackgroud-transparent;
   transition: background-color 300ms;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2.5px);
 }
 
 // header not scrolled
@@ -379,9 +385,9 @@ a.yellowButton:hover {
   grid-template-columns: repeat(4, minmax(50px, 1fr));
   height: 170px;
 }
-.projectContainer {
-  @include projectContainer;
-}
+// .projectContainer {
+//   @include projectContainer;
+// }
 
 .header {
   padding: 8px 28px 8px;
