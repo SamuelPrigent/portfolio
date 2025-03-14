@@ -171,7 +171,7 @@ export default function SkillsGrid() {
             <div className="titleText text-xl font-semibold">Testing</div>
             <div className="line-clamp-3 text-sm text-[#b5c1d1]">
               Ecriture de test Back et Front à l'aide de librairies tel que
-              Jest, Cypress et Mocha.
+              Jest et Cypress.
             </div>
           </div>
         </div>
