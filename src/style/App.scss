@@ -27,6 +27,7 @@ $darkBackgroud: hsl(227, 60%, 8%);
 $darkBackgroud-transparent: hsla(227, 60%, 8%, 0.15); // Version transparente du fond sombre
 $elementBackground: hsla(20, 0%, 6%, 0.31); // without border gradient
 $radiantBackground: linear-gradient(120deg, #609bc214 30%, #5f89b524);
+$bigRadiantBackground: linear-gradient(122deg, rgba(255, 142, 14, 0.05) 30%, rgba(19, 231, 255, 0.04));
 // $voidTextBordure: #88caff;
 $voidTextBordure: #ff7e70;
 // $gradientText: -webkit-linear-gradient(160deg, #e47f53 50%, rgb(52, 62, 153));
@@ -36,7 +37,8 @@ $filterUnderline: saturate(1) brightness(0.72) hue-rotate(303deg) opacity(0.9);
 $filterToColor: invert(39%) sepia(100%) hue-rotate(2.3deg) saturate(7488%)
   saturate(0.5) brightness(2);
 $maskStroke: rgb(172 198 207 / 30%);
-$transparentBackground: rgb(17 24 41 / 83%);
+// $transparentBackground: rgb(17 24 41 / 83%);
+$transparentBackground: linear-gradient(45deg, rgb(12 12 35 / 90%), rgb(45 47 65 / 88%));
 $titleText: #dcf1fc;
 $outlineColor: #5b8bde;
 $sectionTitleBackground: rgb(22, 23, 28);
@@ -62,8 +64,10 @@ $reactTypescriptGradient: linear-gradient(
   //   background-color: #f1d225;
   //   color: #362b00;
   //   white
-  background-color: white;
   color: black;
+//   background-color: white;
+//   background: linear-gradient(45deg, #de6861 10%, #acceeb);
+  background: linear-gradient(45deg, white 10%, #ebc1ac);
 }
 
 // ==== Start OLD ====
@@ -78,6 +82,19 @@ $reactTypescriptGradient: linear-gradient(
 // ==== End OLD ====
 
 // =========================
+
+.bigRadiantBackground {
+    z-index: 1;
+    background: $bigRadiantBackground;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 300px;
+    filter: blur(60px);  
+}
 
 // Test For skills grid gradient border
 .borderGradient {
@@ -406,7 +423,7 @@ background-color: $darkBackgroud-transparent;
   background-color: $darkBackgroud;
 }
 .transparentBackground {
-  background-color: $transparentBackground;
+  background: $transparentBackground;
 }
 
 .reactSpin {
