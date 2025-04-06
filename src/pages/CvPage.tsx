@@ -1,6 +1,6 @@
+import pdfUrl from "../../public/CV.pdf" 
 
 const CvPage = () => {
-  const pdfUrl = '/CV.pdf'; 
 
   return (
     <div className="container mx-auto mt-[70px] py-8 px-4 h-screen">
