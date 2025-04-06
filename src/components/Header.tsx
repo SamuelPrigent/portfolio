@@ -1,5 +1,6 @@
 import logo from "../assets/logosamux.svg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HeaderText = styled.div`
   padding: 8px 28px 8px;
@@ -18,18 +19,18 @@ function Header() {
       className="top-position fixed top-0 z-40 flex w-full items-center justify-center"
     >
       <HeaderText className="z-40 flex w-full max-w-[1300px] items-center max-sm:h-[48px] max-sm:gap-[16px] max-sm:px-[12px] max-sm:py-[7px]">
-        <div className="flex items-center gap-2">
-          <img
-            src={logo}
-            className="whiteSvg"
-            height={18}
-            width={18}
-            alt="logo SamUX"
-          />
-          <div className="font-poppins text-[1rem] font-semibold text-white">
-            SamCode
-          </div>
-        </div>
+          <Link className="flex items-center gap-2 focusNotVisible" to="/">
+            <img
+              src={logo}
+              className="whiteSvg"
+              height={18}
+              width={18}
+              alt="logo SamUX"
+            />
+            <div className="font-poppins text-[1rem] font-semibold text-white">
+              SamCode
+            </div>
+          </Link>
         <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">
           <a
             href="#Projects"
@@ -41,7 +42,7 @@ function Header() {
             href="#Skills"
             className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"
           >
-            Technologies
+            Compétences
           </a>
         </HeaderRightDiv>
       </HeaderText>

@@ -1,4 +1,4 @@
-import picOfMe from "../assets/picOfMe.jpg";
+import picOfMe from "../assets/picOfMe2.png";
 import styled from "styled-components";
 
 const PicContainer = styled.div`
@@ -7,9 +7,10 @@ const PicContainer = styled.div`
   justify-content: center;
   aspect-ratio: 1/1;
   width: 320px;
-  border: 7px solid white;
   overflow: hidden;
+  border: 6.5px solid white;
   border-radius: 50%;
+  z-index: 20;
 `;
 
 const StyledImage = styled.img`
@@ -25,7 +26,7 @@ export default function PresentationRight() {
         <StyledImage
           src={picOfMe}
           alt="svg composant"
-          className="positionPicOfMe"
+        //   className="positionPicOfMe"
         />
       </PicContainer>
     </div>

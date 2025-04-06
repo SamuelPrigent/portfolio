@@ -1,6 +1,6 @@
 import linkedIn from "../assets/linkedInWhite.svg";
 import github from "../assets/github.svg";
-import mail from "../assets/mail.svg";
+import mail from "../assets/mail2.svg";
 import logo from "../assets/logosamux.svg";
 
 function Footer() {
@@ -33,7 +33,8 @@ function Footer() {
           <img
             src={mail}
             alt="logo mail"
-            className="whiteSvg aspect-square h-[22px]"
+            className=" aspect-square h-[25px]"
+            // className="whiteSvg aspect-square h-[22px]"
           />
         </a>
       </div>

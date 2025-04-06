@@ -60,6 +60,7 @@ $transparentBackground: linear-gradient(
 );
 $titleText: #dcf1fc;
 $outlineColor: #99e4ff;
+// $outlineColor: #126dff;
 $sectionTitleBackground: rgb(22, 23, 28);
 $darkBorder: #12192f;
 $styleGradient: linear-gradient(60deg, #121c33, #1889db);
@@ -207,8 +208,11 @@ $reactTypescriptGradient: linear-gradient(
   overflow: hidden;
 }
 
-a:not(:active):focus {
-  border: none;
+a:not(:active):not(.iconSocialPresentationDL):focus {
+    border: none;
+  }
+  
+a:not(:active):not(.iconSocialPresentationDL):focus {
   outline: none;
   outline: 2.5px solid $outlineColor;
   outline-offset: 2.5px;
@@ -340,6 +344,11 @@ a:not(:active):focus {
   filter: blur(40px);
 }
 
+.focusNotVisible:focus, .focusNotVisible:target {
+border: 0px solid transparent !important;
+outline: none !important;
+}
+
 .voidTextWithBordure {
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: $voidTextBordure;
@@ -457,11 +466,67 @@ a.yellowButton:hover {
 }
 
 .styleGradient {
-  background: $styleGradient;
+//   background: $styleGradient;
+  background-color: #081b4d6e;
 }
 
 .darkGradient {
   background: linear-gradient(60deg, #4c413e7d, #9b6e251c);
+}
+
+.iconSocialPresentation{
+transition: all 200ms ease-out;
+}
+
+.iconSocialPresentation:hover{
+    transition: all 200ms ease-out;
+    transform: scale(1.2);
+}
+
+.iconSocialPresentationMail {
+    background-color: white;
+    display: flex;
+    height: 34px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.iconSocialPresentationDL{
+    border: 2px solid #92d0ff;
+    padding: 16px 22px;
+    font-weight: normal;
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: all 200ms ease-out;
+}
+
+.iconSocialPresentationDL:hover{
+    transform: scale(1.03);
+    transition: all 200ms ease-out;
+}
+
+// A FINIR (une fois le design fait
+.iconSocialPresentationDL:focus {
+    transition: all 200ms ease-out;
+    background-color: #92d0ff;
+    border: 2px solid #92d0ff;
+    outline: none;
+    color: black;
+    // filter: brightness(0.9);
+  }
+
+  .iconSocialPresentationDL:focus img {
+    transition: all 200ms ease-out;
+    filter: invert(1);
+  }
+
+
+
+.iconSocialPresentationDL img {
+    height: 24px;
 }
 
 .polygon {
