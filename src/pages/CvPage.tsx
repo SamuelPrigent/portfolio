@@ -1,6 +1,6 @@
 
 const CvPage = () => {
-  const pdfUrl = 'samuelprigent/src/assets/cv.pdf'; 
+  const pdfUrl = '/CV.pdf'; 
 
   return (
     <div className="container mx-auto mt-[70px] py-8 px-4 h-screen">
