@@ -10,7 +10,7 @@ import mongodb from "../assets/logo-mongodb.svg";
 import node from "../assets/logo-node.svg";
 import jest from "../assets/jest.svg";
 // component
-import { CardTextContainer } from "./UI/StyledElements";
+import { CardTextContainer, SkillCard } from "./UI/StyledElements";
 
 // styled component
 const BackgroundTextureFront = styled.div`
@@ -42,8 +42,8 @@ export default function SkillsGrid() {
       {/* grid */}
       <div className="grid grid-cols-3 gap-4 pt-[15px] max-lg:grid-cols-2 max-sm:grid-cols-1">
         {/* react */}
-        <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
-          <BackgroundTextureFront className="relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#6e63510f] py-3">
+        <SkillCard>
+          <BackgroundTextureFront className="growThis relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#6e63510f] py-3">
             <div className="radiantBackgroundSmall2 z-10"></div>
             <div className="relative z-40 flex items-center justify-center gap-[25px]">
               <img
@@ -69,13 +69,13 @@ export default function SkillsGrid() {
               code.
             </div>
           </CardTextContainer>
-        </div>
+        </SkillCard>
         {/* Backend element */}
-        <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white max-lg:col-span-1">
-          <BackgroundTextureBack className="relative flex h-[120px] w-full items-center justify-center gap-[55px] overflow-hidden rounded-lg px-5 max-lg:gap-[40px] max-md:gap-[30px]">
+        <SkillCard>
+          <BackgroundTextureBack className="growThis relative flex h-[120px] w-full items-center justify-center gap-[55px] overflow-hidden rounded-lg px-5 max-lg:gap-[40px] max-md:gap-[30px]">
             <div className="radiantBackgroundSmall4 z-10"> </div>
             <img
-              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
+              className="lightYellowSvg z-20 aspect-square min-w-[56px] max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
               width={56}
               src={next}
               alt="logo express"
@@ -101,10 +101,11 @@ export default function SkillsGrid() {
               sécurisées.
             </div>
           </CardTextContainer>
-        </div>
+          {/* </div> */}
+        </SkillCard>
         {/* Style */}
-        <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
-          <div className="styleGradient flex h-[120px] w-full items-center justify-center gap-[25px] rounded-lg">
+        <SkillCard>
+          <div className="growThis styleGradient flex h-[120px] w-full items-center justify-center gap-[25px] rounded-lg">
             <img
               className="lightYellowSvg aspect-square"
               width={36}
@@ -126,10 +127,10 @@ export default function SkillsGrid() {
               du style in js.
             </div>
           </CardTextContainer>
-        </div>
+        </SkillCard>
         {/* Testing */}
-        <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
-          <div className="relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg">
+        <SkillCard>
+          <div className="growThis relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg">
             <div className="radiantBackgroundSmall z-10"> </div>
             <div className="relative z-40 flex items-center justify-center gap-[25px]">
               <img
@@ -154,7 +155,7 @@ export default function SkillsGrid() {
               l'aide de librairies tel que Jest, Jasmine et Cypress.
             </div>
           </CardTextContainer>
-        </div>
+        </SkillCard>
         {/* end grid skills */}
       </div>
     </>

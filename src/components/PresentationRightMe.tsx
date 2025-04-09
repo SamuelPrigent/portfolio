@@ -23,11 +23,7 @@ export default function PresentationRight() {
   return (
     <div className="composantContainer relative top-[62px] m-auto flex aspect-square items-center justify-center text-center max-lg:h-[300px] max-lg:min-w-[300px] max-sm:h-[250px] max-sm:min-w-[250px]">
       <PicContainer>
-        <StyledImage
-          src={picOfMe}
-          alt="svg composant"
-        //   className="positionPicOfMe"
-        />
+        <StyledImage src={picOfMe} alt="svg composant" />
       </PicContainer>
     </div>
   );

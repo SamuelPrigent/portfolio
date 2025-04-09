@@ -45,7 +45,11 @@ $voidTextBordure: #86e4ff;
 // v2 orange red
 // $gradientText: -webkit-linear-gradient(160deg, #e0685c 50%, rgb(52, 104, 153) 110%);
 // v2 light blue white
-$gradientText: -webkit-linear-gradient(160deg,#c0ddea 50%,rgb(52, 104, 153) 100%);
+$gradientText: -webkit-linear-gradient(
+  160deg,
+  #c0ddea 50%,
+  rgb(52, 104, 153) 100%
+);
 // $filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
 // $filterUnderline: saturate(1) brightness(0.72) hue-rotate(303deg) opacity(0.9);
 $filterUnderline: saturate(0.3) brightness(1.1) hue-rotate(153deg) opacity(0.82);
@@ -209,9 +213,9 @@ $reactTypescriptGradient: linear-gradient(
 }
 
 a:not(:active):not(.iconSocialPresentationDL):focus {
-    border: none;
-  }
-  
+  border: none;
+}
+
 a:not(:active):not(.iconSocialPresentationDL):focus {
   outline: none;
   outline: 2.5px solid $outlineColor;
@@ -344,9 +348,14 @@ a:not(:active):not(.iconSocialPresentationDL):focus {
   filter: blur(40px);
 }
 
-.focusNotVisible:focus, .focusNotVisible:target {
-border: 0px solid transparent !important;
-outline: none !important;
+.growThis {
+  transition: transform 0.1s ease-out;
+}
+
+.focusNotVisible:focus,
+.focusNotVisible:target {
+  border: 0px solid transparent !important;
+  outline: none !important;
 }
 
 .voidTextWithBordure {
@@ -466,7 +475,7 @@ a.yellowButton:hover {
 }
 
 .styleGradient {
-//   background: $styleGradient;
+  //   background: $styleGradient;
   background-color: #081b4d6e;
 }
 
@@ -474,59 +483,57 @@ a.yellowButton:hover {
   background: linear-gradient(60deg, #4c413e7d, #9b6e251c);
 }
 
-.iconSocialPresentation{
-transition: all 200ms ease-out;
+.iconSocialPresentation {
+  transition: all 200ms ease-out;
 }
 
-.iconSocialPresentation:hover{
-    transition: all 200ms ease-out;
-    transform: scale(1.2);
+.iconSocialPresentation:hover {
+  transition: all 200ms ease-out;
+  transform: scale(1.2);
 }
 
 .iconSocialPresentationMail {
-    background-color: white;
-    display: flex;
-    height: 34px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
+  background-color: white;
+  display: flex;
+  height: 34px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
-.iconSocialPresentationDL{
-    border: 2px solid #92d0ff;
-    padding: 16px 22px;
-    font-weight: normal;
-    display: flex;
-    gap: 2px;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    transition: all 200ms ease-out;
+.iconSocialPresentationDL {
+  border: 2px solid #92d0ff;
+  padding: 16px 22px;
+  font-weight: normal;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  transition: all 200ms ease-out;
 }
 
-.iconSocialPresentationDL:hover{
-    transform: scale(1.03);
-    transition: all 200ms ease-out;
+.iconSocialPresentationDL:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-out;
 }
 
 // A FINIR (une fois le design fait
 .iconSocialPresentationDL:focus {
-    transition: all 200ms ease-out;
-    background-color: #92d0ff;
-    border: 2px solid #92d0ff;
-    outline: none;
-    color: black;
-    // filter: brightness(0.9);
-  }
+  transition: all 200ms ease-out;
+  background-color: #92d0ff;
+  border: 2px solid #92d0ff;
+  outline: none;
+  color: black;
+  // filter: brightness(0.9);
+}
 
-  .iconSocialPresentationDL:focus img {
-    transition: all 200ms ease-out;
-    filter: invert(1);
-  }
-
-
+.iconSocialPresentationDL:focus img {
+  transition: all 200ms ease-out;
+  filter: invert(1);
+}
 
 .iconSocialPresentationDL img {
-    height: 24px;
+  height: 24px;
 }
 
 .polygon {
