@@ -15,11 +15,12 @@ export const SkillCard = styled.div.attrs({
 })`
   &:hover {
     /* border-color: #12192f; */
-    border-color: #242a37;
-    transition: all 200ms ease-out;
+    border-color: #222835;
+    transition: all 150ms ease-out;
   }
 
   &:hover > .growThis {
-    transform: scale(1.025);
+    transform: scale(1.027);
+    transition: transform 0.1s ease-out;
   }
 `;
