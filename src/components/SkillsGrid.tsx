@@ -1,13 +1,16 @@
 import styled from "styled-components";
 // assets
+import next from "../assets/next.svg";
+import cypress from "../assets/cypress.svg";
 import react from "../assets/logo-react.svg";
 import styledcomponent from "../assets/logo-styledcomponent.svg";
-// import typescript from "../assets/logo-typescript.svg";
+import typescript from "../assets/logo-typescript.svg";
 import radixui from "../assets/logo-radixui.svg";
-import express from "../assets/logo-express.svg";
 import mongodb from "../assets/logo-mongodb.svg";
 import node from "../assets/logo-node.svg";
 import jest from "../assets/jest.svg";
+// component
+import { CardTextContainer } from "./UI/StyledElements";
 
 // styled component
 const BackgroundTextureFront = styled.div`
@@ -38,47 +41,66 @@ export default function SkillsGrid() {
     <>
       {/* grid */}
       <div className="grid grid-cols-3 gap-4 pt-[15px] max-lg:grid-cols-2 max-sm:grid-cols-1">
-        {/* react : test border gradient */}
-        {/* <div className="borderGradient">
-          <div className="skillsElementTest flex min-h-full min-w-full flex-col gap-4 rounded-[14px] p-5 text-start text-white">
-            <BackgroundTextureFront className="relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#515b6e0f] py-3">
-              <div className="radiantBackgroundSmall2 z-10"></div>
-              <img
-                className="reactSpin lightYellowSvg z-20 mx-auto my-0 aspect-square"
-                src={react}
-                width={80}
-                alt="logo react"
-              />
-            </BackgroundTextureFront>
-            <div className="flex flex-col gap-1">
-              <div className="titleText text-xl font-semibold">React</div>
-              <div className="line-clamp-3 text-sm text-[#b5c1d1]">
-                Spécialisé en React et Next, je développe un code évolutif et
-                maintenable axé sur la scalabilité.
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         {/* react */}
         <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
           <BackgroundTextureFront className="relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#6e63510f] py-3">
             <div className="radiantBackgroundSmall2 z-10"></div>
-            <img
-              className="reactSpin lightYellowSvg z-20 mx-auto my-0 aspect-square"
-              src={react}
-              width={80}
-              alt="logo react"
-            />
+            <div className="relative z-40 flex items-center justify-center gap-[25px]">
+              <img
+                className="reactSpin lightYellowSvg z-20 mx-auto my-0 aspect-square"
+                src={react}
+                width={65}
+                alt="logo react"
+              />
+              <div className="text-4xl font-light text-[#cde8ef]">+</div>
+              <img
+                className="lightYellowSvg"
+                width={50}
+                src={typescript}
+                alt="typescript"
+              />
+            </div>
           </BackgroundTextureFront>
-          <div className="flex flex-col gap-1">
+          <CardTextContainer>
             <div className="titleText text-xl font-semibold">Frontend</div>
             <div className="line-clamp-3 text-sm text-[#b5c1d1]">
-              React et Next, me permet de concevoir des apps maintenables et
-              évolutives. Typescript me permet de repérer les erreurs pendant le
-              développement.
+              Maîtrise de React et Next.js pour créer des interfaces
+              interactives et performantes. Typescript assure la fiabilité du
+              code.
             </div>
-          </div>
+          </CardTextContainer>
+        </div>
+        {/* Backend element */}
+        <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white max-lg:col-span-1">
+          <BackgroundTextureBack className="relative flex h-[120px] w-full items-center justify-center gap-[55px] overflow-hidden rounded-lg px-5 max-lg:gap-[40px] max-md:gap-[30px]">
+            <div className="radiantBackgroundSmall4 z-10"> </div>
+            <img
+              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
+              width={56}
+              src={next}
+              alt="logo express"
+            />
+            <img
+              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
+              width={59}
+              src={node}
+              alt="logo node"
+            />
+            <img
+              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
+              width={56}
+              src={mongodb}
+              alt="logo mongodb"
+            />
+          </BackgroundTextureBack>
+          <CardTextContainer>
+            <div className="titleText text-xl font-semibold">Backend</div>
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
+              Avec Node.js, Next.js et MongoDB, je crée des solutions backend
+              qui sont à la fois flexibles dans la gestion des données et
+              sécurisées.
+            </div>
+          </CardTextContainer>
         </div>
         {/* Style */}
         <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
@@ -97,83 +119,41 @@ export default function SkillsGrid() {
               alt="logo styled component"
             />
           </div>
-          <div className="relative flex flex-col gap-1">
+          <CardTextContainer>
             <div className="titleText text-xl font-semibold">Design</div>
             <div className="line-clamp-3 text-sm text-[#b5c1d1]">
               Utilisation de la librairie Radix UI avec Styled-Components pour
               du style in js.
             </div>
-          </div>
+          </CardTextContainer>
         </div>
-        {/* Backend element */}
-        <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white max-lg:col-span-1">
-          <BackgroundTextureBack className="relative flex h-[120px] w-full items-center justify-center gap-[55px] overflow-hidden rounded-lg px-5 max-lg:gap-[40px] max-md:gap-[30px]">
-            <div className="radiantBackgroundSmall4 z-10"> </div>
-            <img
-              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
-              width={67}
-              src={node}
-              alt="logo node"
-            />
-            <img
-              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
-              width={65}
-              src={express}
-              alt="logo express"
-            />
-            <img
-              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
-              width={65}
-              src={mongodb}
-              alt="logo mongodb"
-            />
-          </BackgroundTextureBack>
-          <div className="flex flex-col gap-1">
-            <div className="titleText text-xl font-semibold">Backend</div>
-            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
-              Avec Node.js, Express et MongoDB, je crée des solutions backend
-              qui sont à la fois flexibles dans la gestion des données et
-              sécurisées.
-            </div>
-          </div>
-        </div>
-        {/* typescript */}
-        {/* <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white max-lg:area-2n2 max-sm:area-1n1">
-          <BackgroundTextureFront className="relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg bg-[#6e63510f]">
-            <div className="radiantBackgroundSmall2 z-10"></div>
-            <img
-              className="lightYellowSvg z-20 aspect-square"
-              width={65}
-              src={typescript}
-              alt="logo typescript"
-            />
-          </BackgroundTextureFront>
-          <div className="flex flex-col gap-1">
-            <div className="titleText text-xl font-semibold">Typescript</div>
-            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
-              Typescript me permet de repérer les erreurs plus rapidement tout
-              en restant productif.
-            </div>
-          </div>
-        </div> */}
         {/* Testing */}
         <div className="skillsElement flex flex-col gap-4 rounded-xl p-5 text-start text-white">
           <div className="relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg">
             <div className="radiantBackgroundSmall z-10"> </div>
-            <img
-              className="lightYellowSvg z-20 aspect-square"
-              width={70}
-              src={jest}
-              alt="logo vitest"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="titleText text-xl font-semibold">Testing</div>
-            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
-              Ecriture de test Back et Front à l'aide de librairies tel que Jest
-              et Cypress.
+            <div className="relative z-40 flex items-center justify-center gap-[25px]">
+              <img
+                className="lightYellowSvg z-20 aspect-square"
+                width={55}
+                src={jest}
+                alt="logo vitest"
+              />
+              <div className="text-4xl font-light text-[#cde8ef]">+</div>
+              <img
+                className="brightness-90 saturate-0"
+                width={50}
+                src={cypress}
+                alt="cypress"
+              />
             </div>
           </div>
+          <CardTextContainer>
+            <div className="titleText text-xl font-semibold">Testing</div>
+            <div className="line-clamp-3 text-sm text-[#b5c1d1]">
+              Ecriture de tout type de test pour le Backend et le Frontend à
+              l'aide de librairies tel que Jest, Jasmine et Cypress.
+            </div>
+          </CardTextContainer>
         </div>
         {/* end grid skills */}
       </div>
