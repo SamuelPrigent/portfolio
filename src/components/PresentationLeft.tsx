@@ -28,7 +28,7 @@ export default function PresentationLeft() {
         {/* New */}
         <Link
           className="iconSocialPresentationDL flex items-center justify-center gap-2 rounded-full font-semibold"
-          to="/cv"
+          to="samuelprigent/cv"
         >
           <div>Download CV</div>
           <img src={download} alt="icône de téléchargement" />

@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { Spotlight } from "../components/Spotlight.tsx";
 import PresentationLeft from "../components/PresentationLeft.tsx";
 import PresentationRight from "../components/PresentationRightMe.tsx";
 import ProjectList from "../components/ProjectList.tsx";
 import SkillsGrid from "../components/SkillsGrid.tsx";
 import arrow from "../assets/arrow.svg";
+import Header from "../components/Header.tsx";
+import BubbleBackground from "../components/BubbleBackground.tsx";
 
 const HomePage = () => {
   // scroll header - utilisation de useEffect pour éviter les problèmes de montage du composant
@@ -33,7 +35,7 @@ const HomePage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     // Nettoyer l'event listener quand le composant est démonté
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -42,6 +44,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Header></Header>
       <div className="overflow-hidden">
         <Spotlight className="left-[90px] top-[40px] z-50" fill="#dad5b6e2" />
       </div>
@@ -76,6 +79,7 @@ const HomePage = () => {
           <SkillsGrid />
         </div>
       </div>
+      <BubbleBackground />
     </>
   );
 };
