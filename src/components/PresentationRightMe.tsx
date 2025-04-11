@@ -11,6 +11,14 @@ const PicContainer = styled.div`
   border: 6.5px solid white;
   border-radius: 50%;
   z-index: 20;
+  & > img {
+    transition: all 200ms ease-out;
+  }
+
+  &:hover > img {
+    transition: all 200ms ease-in-out;
+    transform: scale(1.04);
+  }
 `;
 
 const StyledImage = styled.img`
