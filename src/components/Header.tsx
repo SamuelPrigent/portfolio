@@ -33,12 +33,14 @@ function Header() {
         </Link>
         <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">
           <a
+            id="projectLink"
             href="#Projects"
             className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"
           >
             Projets
           </a>
           <a
+            id="skillsLink"
             href="#Skills"
             className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"
           >

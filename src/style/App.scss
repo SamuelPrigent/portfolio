@@ -584,3 +584,11 @@ a.yellowButton:hover {
     top: 29.5px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  #projectLink,
+  #skillsLink {
+    display: none;
+    // font-size: 12px;
+  }
+}
