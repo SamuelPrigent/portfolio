@@ -1,4 +1,4 @@
-import pdfUrl from "../../public/CV.pdf";
+import pdfUrl from "../assets/CV.pdf";
 import back from "../assets/arrowBack.svg";
 import { Link } from "react-router-dom";
 import HeaderCv from "../components/HeaderCv";

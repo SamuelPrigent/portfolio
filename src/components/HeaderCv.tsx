@@ -28,7 +28,7 @@ function HeaderCv() {
             alt="logo SamUX"
           />
           <div className="font-poppins text-[1rem] font-semibold text-white">
-            SamCode
+            SamDev
           </div>
         </Link>
         <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">

@@ -28,7 +28,7 @@ export default function PresentationLeft() {
         {/* New */}
         <Link
           className="iconSocialPresentationDL flex items-center justify-center gap-2 rounded-full font-semibold"
-          to="samuelprigent/cv"
+          to="/cv"
           onClick={() => window.scrollTo(0, 0)}
         >
           <div>Download CV</div>

@@ -23,7 +23,8 @@ $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
 // galaxy theme
 // $darkBackgroud: #00092a;
-$darkBackgroud: hsl(227, 60%, 8%);
+// $darkBackgroud: hsl(227, 60%, 8%);
+$darkBackgroud: hsl(227, 10%, 8%);
 $darkBackgroud-transparent: hsla(
   227,
   60%,
@@ -45,10 +46,15 @@ $voidTextBordure: #86e4ff;
 // v2 orange red
 // $gradientText: -webkit-linear-gradient(160deg, #e0685c 50%, rgb(52, 104, 153) 110%);
 // v2 light blue white
+// $gradientText: -webkit-linear-gradient(
+//   160deg,
+//   #c0ddea 50%,
+//   rgb(52, 104, 153) 100%
+// );
 $gradientText: -webkit-linear-gradient(
   160deg,
-  #c0ddea 50%,
-  rgb(52, 104, 153) 100%
+  #2eb3ff 18%,
+  rgb(255, 177, 20) 100%
 );
 // $filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
 // $filterUnderline: saturate(1) brightness(0.72) hue-rotate(303deg) opacity(0.9);
@@ -57,14 +63,24 @@ $filterToColor: invert(39%) sepia(100%) hue-rotate(2.3deg) saturate(7488%)
   saturate(0.5) brightness(2);
 $maskStroke: rgb(172 198 207 / 30%);
 // $transparentBackground: rgb(17 24 41 / 83%);
+// $transparentBackground: linear-gradient(
+//   45deg,
+//   rgb(12 12 35 / 90%),
+//   rgb(45 47 65 / 88%)
+// );
+// $transparentBackground: linear-gradient(
+//   45deg,
+//   hsla(240, 10%, 9%, 0.9),
+//   hsla(234, 0%, 22%, 0.88)
+// );
 $transparentBackground: linear-gradient(
   45deg,
-  rgb(12 12 35 / 90%),
-  rgb(45 47 65 / 88%)
+  hsl(41.24deg 2.04% 8.23% / 90%),
+  hsla(214.01, 48.9%, 11.59%, 0.88)
 );
 $titleText: #dcf1fc;
-$outlineColor: #99e4ff;
-// $outlineColor: #126dff;
+// $outlineColor: #99e4ff;
+$outlineColor: #e7e7e7;
 $sectionTitleBackground: rgb(22, 23, 28);
 $darkBorder: #12192f;
 $styleGradient: linear-gradient(60deg, #121c33, #1889db);
@@ -182,13 +198,15 @@ $reactTypescriptGradient: linear-gradient(
   filter: opacity(0.95);
   z-index: 100;
   position: fixed;
+  //   right: 15px;
   bottom: 10px;
-  right: 15px;
+  transform: translateX(50%) rotate(180deg);
+  right: 50%;
 }
 
 #arrow.hideArrow {
   opacity: 0;
-  transform: translateY(40px) rotate(180deg);
+  transform: translateX(50%) translateY(10px) rotate(180deg);
   transition:
     opacity 0.2s ease,
     transform 0.2s ease;
@@ -217,9 +235,9 @@ a:not(:active):not(.iconSocialPresentationDL):focus {
 }
 
 a:not(:active):not(.iconSocialPresentationDL):focus {
-  outline: none;
   outline: 2.5px solid $outlineColor;
   outline-offset: 2.5px;
+  //   outline: none;
 }
 
 ::selection {
@@ -502,7 +520,8 @@ a.yellowButton:hover {
 }
 
 .iconSocialPresentationDL {
-  border: 2px solid #92d0ff;
+  //   border: 2px solid $outlineColor;
+  box-shadow: inset 0 0 0 2px white;
   padding: 16px 22px;
   font-weight: normal;
   display: flex;
@@ -519,12 +538,27 @@ a.yellowButton:hover {
 }
 
 // A FINIR (une fois le design fait
-.iconSocialPresentationDL:focus {
-  transition: all 200ms ease-out;
-  background-color: #92d0ff;
-  border: 2px solid #92d0ff;
+.iconSocialPresentationDL:focus,
+.iconSocialPresentationDL:focus-visible,
+.iconSocialPresentationDL:target {
+  // test
+  box-shadow: inset 0 0 0 0px white;
   outline: none;
+  background: white;
   color: black;
+  // original
+  //   transition: background-color 200ms ease-out;
+  //   box-shadow: inset 0 0 0 0px white;
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgb(46 173 254) 0%,
+  //     rgb(252, 212, 52) 100%
+  //   );
+  //   outline: none;
+  //   color: black;
+  //   old
+  //   background-color: #92d0ff;
+  //   border: 2px solid transparent;
   // filter: brightness(0.9);
 }
 
@@ -560,9 +594,9 @@ a.yellowButton:hover {
 
 // responsive < 950px
 @media screen and (max-width: 1020px) {
-  .gridProject :nth-child(3) {
-    grid-column: 1/-1;
-  }
+  //   .gridProject :nth-child(3) {
+  //     grid-column: 1/-1;
+  //   }
   .backgroundTexture3 {
     background-size: 400% 400%;
   }
@@ -591,4 +625,61 @@ a.yellowButton:hover {
     display: none;
     // font-size: 12px;
   }
+}
+
+.borderTopFooter {
+  border-top: 1px solid rgb(40, 40, 40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.yellowBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #2e2500;
+  color: #ffc401;
+}
+
+.yellowgreenBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #112e00;
+  color: #67ff01;
+}
+
+.greenBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #002e11;
+  color: #01ff23;
+}
+
+.purpleBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #2e0002;
+  color: #ff0188;
+}
+
+.lightblueBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #00252e;
+  color: #01c8ff;
+}
+
+.blueBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #00022e;
+  color: #0156ff;
+}
+
+.orangeBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #2e1a00;
+  color: #ff9501;
 }
