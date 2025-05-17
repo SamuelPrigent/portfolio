@@ -198,15 +198,16 @@ $reactTypescriptGradient: linear-gradient(
   filter: opacity(0.95);
   z-index: 100;
   position: fixed;
-  //   right: 15px;
+  right: 15px;
   bottom: 10px;
-  transform: translateX(50%) rotate(180deg);
-  right: 50%;
+  //   transform: translateX(50%) rotate(180deg);
+  //   right: 50%;
 }
 
 #arrow.hideArrow {
   opacity: 0;
-  transform: translateX(50%) translateY(10px) rotate(180deg);
+  transform: rotate(180deg);
+  //   transform: translateX(50%) translateY(10px) rotate(180deg);
   transition:
     opacity 0.2s ease,
     transform 0.2s ease;
