@@ -6,6 +6,7 @@ import kasa from "../assets/preview-kasa.png";
 import lespetitsplats from "../assets/preview-lespetitsplats.png";
 import mdd from "../assets/preview-mdd.png";
 import rentals from "../assets/preview-rentals.png";
+// import groupomania from "../assets/preview-groupomania.png";
 
 function ProjectList() {
   return (
@@ -43,17 +44,25 @@ function ProjectList() {
         appareils, ustensiles)."
         link="https://samuelprigent.github.io/LesPetitsPlats/"
         techNames={["Javascript"]}
-        techBadgeClasses={["yellowBadge"]}
+        techBadgeClasses={["darkyellowBadge"]}
       />
       <ProjectElement
         src={kasa}
         title="Kasa"
-        desc="Développement Front d'une SPA desktop et mobile avec React Router permettant une
+        desc="Développement Front d'une SPA desktop et mobile avec React Router avec une
         navigation fluide."
         techNames={["React", "Design"]}
-        techBadgeClasses={["lightblueBadge", "orangeBadge"]}
+        techBadgeClasses={["lightblueBadge", "bluepurpleBadge"]}
         link="https://samuelprigent.github.io/Kasa/"
       />
+      {/* <ProjectElement
+        src={groupomania}
+        title="Groupomania"
+        desc="Blog de création d'articles avec authentification JWT permettant de publier et commenter des posts entre utilisateurs."
+        techNames={["VueJS", "Express"]}
+        techBadgeClasses={["greenBadge", "whiteBadge"]}
+        link="https://samuelprigent.github.io/Kasa/"
+      /> */}
     </>
   );
 }
