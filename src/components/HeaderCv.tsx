@@ -19,7 +19,10 @@ function HeaderCv() {
       className="top-position top-0 z-40 flex w-full items-center justify-center"
     >
       <HeaderText className="z-40 flex w-full max-w-[1300px] items-center max-sm:h-[48px] max-sm:gap-[16px] max-sm:px-[12px] max-sm:py-[7px]">
-        <Link className="focusNotVisible flex items-center gap-2" to="/">
+        <Link
+          className="focusNotVisible flex items-center gap-2"
+          to="/samuelprigent"
+        >
           <img
             src={logo}
             className="whiteSvg"
