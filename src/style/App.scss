@@ -2,25 +2,6 @@
 
 $textureSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='411' height='411' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23918936' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23C0B03B'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
 
-// paper theme
-// $darkBackgroud: hsl(0deg 0% 11%);
-// $elementBackground: hsla(20, 0%, 6%, 0.31);
-// $radiantBackground: linear-gradient(120deg, #c2ae6014 30%, #b5aa5f24);
-// $gradientText: -webkit-linear-gradient(160deg, #e4d853 50%, rgb(153 140 52));
-// $voidTextBordure: #ffeb5a;
-// $filterToColor: invert(39%) grayscale(100%) sepia(100%) hue-rotate(16deg)
-//   saturate(7488%) saturate(0.6);
-// $transparentBackground: #1f1d18d4;
-// $titleText: #fcf4dc;
-// $outlineColor: #e5c242;
-// $sectionTitleBackground: rgb(22, 23, 28);
-// $projectContainerBorder: #252629;
-// $styleGradient : linear-gradient(60deg, #4c3e48, #9b6d25);
-// $testGradient: linear-gradient(122deg, #ffc60e 30%, #f313ffd0);
-// $skillsSvg : invert(47%) sepia(1) hue-rotate(12deg) contrast(1000%) saturate(0.1)
-// brightness(1);
-// $reactTypescriptGradient: linear-gradient(122deg, #6c5446 30%, #ffe0137c);
-
 // galaxy theme
 // $darkBackgroud: #00092a;
 // $darkBackgroud: hsl(227, 60%, 8%);
@@ -53,7 +34,7 @@ $voidTextBordure: #86e4ff;
 // );
 $gradientText: -webkit-linear-gradient(
   160deg,
-  #2eb3ff 18%,
+  #09a6ff 18%,
   rgb(255, 177, 20) 100%
 );
 // $filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
@@ -78,7 +59,7 @@ $transparentBackground: linear-gradient(
   hsl(41.24deg 2.04% 8.23% / 90%),
   hsla(214.01, 48.9%, 11.59%, 0.88)
 );
-$titleText: #dcf1fc;
+$titleText: white;
 // $outlineColor: #99e4ff;
 $outlineColor: #e7e7e7;
 $sectionTitleBackground: rgb(22, 23, 28);
@@ -439,7 +420,7 @@ a.yellowButton:hover {
 
 // header scrolled
 .scrolled {
-  border-bottom: 1px solid black;
+  //   border-bottom: 1px solid black;
   //   background-color: #00092ad5;
   background-color: $darkBackgroud-transparent;
   transition: background-color 300ms;

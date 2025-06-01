@@ -1,7 +1,7 @@
 import linkedIn from "../assets/linkedInWhite.svg";
 import github from "../assets/github.svg";
 import mail from "../assets/mail2.svg";
-import logo from "../assets/logosamux.svg";
+import logo from "../assets/logoSamDev.svg";
 
 function Footer() {
   return (
@@ -42,11 +42,11 @@ function Footer() {
         <div className="flex items-center justify-center gap-[8px]">
           <img src={logo} alt="logo SamUX" className="whiteSvg h-[18px]" />
           <div className="text-bold font-poppins text-[1rem] font-semibold text-white">
-            SamDev
+            Samuel. P
           </div>
         </div>
         <div className="font-poppins text-[15px] text-white">
-          Copyright © SamDev 2025
+          Copyright © Samuel. P 2025
         </div>
       </div>
     </div>

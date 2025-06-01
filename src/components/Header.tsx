@@ -1,4 +1,4 @@
-import logo from "../assets/logosamux.svg";
+import logo from "../assets/logoSamDev.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ function Header() {
       id="header"
       className="top-position fixed top-0 z-40 flex w-full items-center justify-center"
     >
-      <HeaderText className="z-40 flex w-full max-w-[1300px] items-center max-sm:h-[48px] max-sm:gap-[16px] max-sm:px-[12px] max-sm:py-[7px]">
+      <HeaderText className="z-40 flex w-full max-w-[1200px] items-center max-sm:h-[48px] max-sm:gap-[16px] max-sm:px-[12px] max-sm:py-[7px]">
         <Link
           className="focusNotVisible flex items-center gap-2"
           to="/samuelprigent/"
@@ -28,10 +28,10 @@ function Header() {
             className="whiteSvg"
             height={18}
             width={18}
-            alt="logo SamUX"
+            alt="logo SamDev"
           />
           <div className="font-poppins text-[1rem] font-semibold text-white">
-            SamDev
+            Samuel. P
           </div>
         </Link>
         <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">
@@ -47,7 +47,7 @@ function Header() {
             href="#Skills"
             className="rounded-lg px-1 py-1 text-[16px] font-[500] text-blue-50 hover:cursor-pointer"
           >
-            Compétences
+            Technologies
           </a>
         </HeaderRightDiv>
       </HeaderText>
