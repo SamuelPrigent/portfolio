@@ -134,12 +134,9 @@ $reactTypescriptGradient: linear-gradient(
   border-radius: 14px;
 }
 
-.skillsElementTest {
-  background-color: #050b21;
-}
-
 .skillsElement {
-  border: 1px solid $darkBorder;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.221);
+  //   border: 1px solid $darkBorder;
   background-color: $elementBackground;
 }
 
@@ -350,6 +347,8 @@ a:not(:active):not(.iconSocialPresentationDL):focus {
 
 .growThis {
   transition: transform 0.1s ease-out;
+  //   border: 1px solid #ffffff1c;
+  //   background: linear-gradient(168deg, black 50%, #ffffff12);
 }
 
 .focusNotVisible:focus,
@@ -511,7 +510,8 @@ a.yellowButton:hover {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  transition: all 200ms ease-out;
+  transition: background-color 200ms ease-out;
+  //   outline-offset: 3px;
 }
 
 .iconSocialPresentationDL:hover {
@@ -525,9 +525,12 @@ a.yellowButton:hover {
 .iconSocialPresentationDL:target {
   // test
   box-shadow: inset 0 0 0 0px white;
-  outline: none;
   background: white;
   color: black;
+  outline: none;
+  //   outline: 3px solid white;
+  //   outline-offset: 3px;
+
   // original
   //   transition: background-color 200ms ease-out;
   //   box-shadow: inset 0 0 0 0px white;
@@ -572,6 +575,16 @@ a.yellowButton:hover {
     76.1% 97.7%,
     74.1% 44.1%
   );
+}
+
+.gridProject {
+  gap: 18px;
+  row-gap: 28px;
+}
+
+.skillsGrid {
+  gap: 24px;
+  row-gap: 50px;
 }
 
 // responsive < 950px

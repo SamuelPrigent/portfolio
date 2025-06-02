@@ -11,7 +11,7 @@ export const CardTextContainer = styled.div.attrs(
 // Carte de compétence avec effet de hover
 export const SkillCard = styled.div.attrs({
   className:
-    "skillsElement flex flex-col gap-4 rounded-xl p-5 pb-8 text-start text-white",
+    "skillsElement flex flex-col gap-[32px] pb-8 text-start text-white",
 })`
   border-color: #212121;
 
