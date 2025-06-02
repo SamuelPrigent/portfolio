@@ -6,7 +6,7 @@ import logo from "../assets/logoSamDev.svg";
 function Footer() {
   return (
     <div className="borderTopFooter mt-2">
-      <div className="mx-auto box-border flex h-[80px] w-full max-w-[1300px] items-center justify-between px-[28px] pb-2 text-sm text-[#ebebf599] max-sm:h-auto max-sm:flex-col max-sm:gap-8 max-sm:pb-7 max-sm:pt-5">
+      <div className="mx-auto box-border flex h-[80px] w-full max-w-[1300px] items-center justify-between px-[28px] text-sm text-[#ebebf599] max-sm:h-auto max-sm:flex-col max-sm:gap-8 max-sm:pb-7 max-sm:pt-5">
         <div className="flex gap-5">
           <a
             className="rounded-full p-1"
