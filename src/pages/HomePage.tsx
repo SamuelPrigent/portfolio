@@ -58,7 +58,7 @@ const HomePage = () => {
         className="backgroundColor m-0 mt-[285px] flex w-full pt-[30px] max-lg:pt-[100px] max-md:pt-[80px] max-sm:pt-[25px]"
       >
         <img id="arrow" src={arrow} className=""></img>
-        <div className="projectContainer z-10 m-auto flex h-auto w-[87%] max-w-[1300px] flex-col rounded-[16px] px-[20px] pb-[35px] pt-[15px] max-md:w-full max-md:rounded-none max-md:border-0 max-md:bg-transparent">
+        <div className="projectContainer z-10 m-auto flex h-auto w-[87%] max-w-[1300px] flex-col rounded-[16px] pb-[35px] pt-[15px] max-[1200px]:w-full max-[1200px]:px-[20px] max-md:rounded-none max-md:border-0 max-md:bg-transparent">
           <div className="m-auto mb-6 flex w-fit rounded-lg px-1 py-4 text-[36px] font-[700] leading-tight text-blue-50">
             Projets personnels
           </div>
