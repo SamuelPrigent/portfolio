@@ -7,136 +7,159 @@ import styledcomponent from "../assets/logo-styledcomponent.svg";
 import typescript from "../assets/logo-typescript.svg";
 import shadcn from "../assets/logo-shadcn.svg";
 import prisma from "../assets/logo-prisma.svg";
-import node from "../assets/logo-node.svg";
+import express from "../assets/logo-express.svg";
 import jest from "../assets/jest.svg";
 // component
 import { CardTextContainer, SkillCard } from "./UI/StyledElements";
 
-// styled component
-const BackgroundTextureFront = styled.div`
-  background-position: center;
-  background-size: cover;
-  background-color: #000000;
+const BackgroundTexture = styled.div`
+  /* fond moins noir, léger dégradé et texture subtile */
+  background: linear-gradient(
+    160deg,
+    rgba(15, 23, 29, 0.85),
+    rgba(10, 14, 18, 0.92)
+  );
+  /* petite bande violette discrète en bas à gauche */
+  box-shadow: inset -120px -30px 80px -70px rgba(117, 0, 255, 0.18);
 `;
 
-const BackgroundTextureBack = styled.div`
-  background-color: #000000;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: saturate(0) brightness(1.4);
-`;
+// Ajout d'un petit composant local pour uniformiser les bulles/icônes
+function IconBubble({
+  src,
+  alt,
+  gradient = "bg-slate-700",
+  invert = false,
+}: {
+  src: string;
+  alt: string;
+  gradient?: string;
+  invert?: boolean;
+}) {
+  // l'inversion s'applique uniquement à l'image (évite d'inverser la bulle)
+  return (
+    <div
+      className={`flex h-14 w-14 items-center justify-center rounded-full ${gradient} p-2 shadow-sm`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className={`h-7 w-7 object-contain ${invert ? "invert filter" : ""}`}
+      />
+    </div>
+  );
+}
 
 // component
 export default function SkillsGrid() {
   return (
     <>
-      <div className="skillsGrid grid grid-cols-3 pt-[15px] max-lg:grid-cols-2 max-[670px]:grid-cols-1">
-        <SkillCard>
-          <BackgroundTextureFront className="growThis relative flex h-[120px] items-center justify-center gap-7 overflow-hidden rounded-lg bg-[#6e63510f] py-3 brightness-150">
-            <div className="relative z-40 flex items-center justify-center gap-[25px]">
-              <img
-                className="reactSpin lightYellowSvg z-20 mx-auto my-0 aspect-square"
+      {/* wrapper : fond un peu moins noir, plus d'espace et espacement homogène */}
+      <div className="skillsGrid grid grid-cols-3 gap-6 bg-transparent pt-4 max-lg:grid-cols-2 max-[670px]:grid-cols-1">
+        {/* Frontend */}
+        <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <BackgroundTexture className="relative flex h-[120px] items-center justify-center overflow-hidden bg-transparent p-4">
+            <div className="z-10 flex items-center gap-4">
+              {/* Remplacé par IconBubble (taille et img uniformisées) */}
+              <IconBubble
                 src={react}
-                width={52}
-                alt="logo react"
+                alt="react"
+                gradient="bg-gradient-to-br from-cyan-500 to-blue-600"
+                invert={true} // ex: logo dark -> invertion souhaitée
               />
-              <div className="text-4xl font-light text-[#ebebeb]">+</div>
-              <img
-                className="lightYellowSvg"
-                width={43}
+              <IconBubble
                 src={typescript}
                 alt="typescript"
+                gradient="bg-gradient-to-br from-sky-500 to-blue-600"
+                invert={true}
               />
             </div>
-          </BackgroundTextureFront>
+          </BackgroundTexture>
           <CardTextContainer>
-            <div className="titleText text-xl font-semibold">Frontend</div>
-            <div className="line-clamp-3 text-sm text-[#d3d3d3]">
-              Développement d'applications web en React & Next.js avec
-              TypeScript, en SPA ou avec rendu côté serveur (SSR), selon les
-              besoins du projet.
+            <div className="titleText text-lg font-semibold">Frontend</div>
+            <div className="text-xs text-[#cfcfcf]">
+              React · Next.js · TypeScript
             </div>
           </CardTextContainer>
         </SkillCard>
-        <SkillCard>
-          <BackgroundTextureBack className="growThis relative flex h-[120px] w-full items-center justify-center gap-[55px] overflow-hidden rounded-lg px-5 max-lg:gap-[40px] max-md:gap-[30px]">
-            <img
-              className="lightYellowSvg z-20 aspect-square min-w-[56px] max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
-              width={37}
-              src={next}
-              alt="logo express"
-            />
-            <img
-              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
-              width={45}
-              src={prisma}
-              alt="logo mongodb"
-            />
-            <img
-              className="lightYellowSvg z-20 aspect-square max-lg:size-[45px] max-md:size-[40px] max-sm:size-[50px]"
-              width={45}
-              src={node}
-              alt="logo node"
-            />
-          </BackgroundTextureBack>
+
+        {/* Backend */}
+        <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <BackgroundTexture className="relative flex h-[120px] items-center justify-center gap-6 overflow-hidden bg-transparent p-4">
+            <div className="z-10 flex items-center gap-6">
+              <IconBubble
+                src={express}
+                alt="express"
+                gradient="bg-gradient-to-br from-green-600 to-emerald-500"
+                invert={true} // ex: on inverse si le SVG est sombre
+              />
+              <IconBubble
+                src={next}
+                alt="next"
+                gradient="bg-gradient-to-br from-violet-600 to-fuchsia-600"
+                invert={false}
+              />
+              <IconBubble
+                src={prisma}
+                alt="prisma"
+                gradient="bg-gradient-to-br from-emerald-500 to-teal-600"
+                invert={true}
+              />
+            </div>
+          </BackgroundTexture>
           <CardTextContainer>
-            <div className="titleText text-xl font-semibold">Backend</div>
-            <div className="line-clamp-3 text-sm text-[#d3d3d3]">
-              Développement backend avec Next.js et ses server actions, Prisma
-              comme ORM pour une gestion typée des données, le tout dans un
-              environnement Node.js robuste et moderne.
+            <div className="titleText text-lg font-semibold">Backend</div>
+            <div className="text-xs text-[#cfcfcf]">
+              Express · Next.js · Prisma
             </div>
           </CardTextContainer>
         </SkillCard>
-        <SkillCard>
-          <div className="growThis flex h-[120px] w-full items-center justify-center gap-[25px] rounded-lg bg-black  brightness-150 saturate-0">
-            <img
-              className="lightYellowSvg aspect-square"
-              width={33}
-              src={shadcn}
-              alt="logo shadcn"
-            />
-            <div className="text-4xl font-light text-[#ececec]">+</div>
-            <img
-              className="lightYellowSvg aspect-square"
-              width={33}
-              src={styledcomponent}
-              alt="logo styled component"
-            />
-          </div>
+
+        {/* UI Components */}
+        <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <BackgroundTexture className="flex h-[120px] items-center justify-center gap-6 overflow-hidden bg-transparent p-4">
+            <div className="z-10 flex items-center gap-4">
+              <IconBubble
+                src={shadcn}
+                alt="shadcn"
+                invert={true}
+                gradient="bg-gradient-to-br from-sky-500 to-indigo-600"
+              />
+              <IconBubble
+                src={styledcomponent}
+                alt="styled-components"
+                gradient="bg-gradient-to-br from-rose-500 to-pink-500"
+                invert={false}
+              />
+            </div>
+          </BackgroundTexture>
           <CardTextContainer>
-            <div className="titleText text-xl font-semibold">Style</div>
-            <div className="line-clamp-3 text-sm text-[#d3d3d3]">
-              Interfaces modernes avec Shadcn UI, Tailwind CSS pour le
-              responsive et Styled-Components pour du CSS-in-JS dynamique.
+            <div className="titleText text-lg font-semibold">UI</div>
+            <div className="text-xs text-[#cfcfcf]">
+              Shadcn · Styled-Components
             </div>
           </CardTextContainer>
         </SkillCard>
-        <SkillCard>
-          <div className="growThis relative flex h-[120px] w-full justify-center overflow-hidden rounded-lg bg-black brightness-150 saturate-0">
-            <div className="relative z-40 flex items-center justify-center gap-[25px]">
-              <img
-                className="lightYellowSvg z-20 aspect-square"
-                width={52}
+
+        {/* Testing */}
+        <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <BackgroundTexture className="relative flex h-[120px] items-center justify-center gap-6 overflow-hidden bg-transparent p-4">
+            <div className="z-10 flex items-center gap-6">
+              <IconBubble
                 src={jest}
-                alt="logo vitest"
+                alt="jest"
+                gradient="bg-gradient-to-br from-yellow-500 to-orange-500"
+                invert={false}
               />
-              <div className="text-4xl font-light text-[#e8e8e8]">+</div>
-              <img
-                className="brightness-90 saturate-0"
-                width={47}
+              <IconBubble
                 src={cypress}
                 alt="cypress"
+                gradient="bg-gradient-to-br from-cyan-500 to-sky-600"
               />
             </div>
-          </div>
+          </BackgroundTexture>
           <CardTextContainer>
-            <div className="titleText text-xl font-semibold">Testing</div>
-            <div className="line-clamp-3 text-sm text-[#d3d3d3]">
-              Ecriture de tout type de test pour le Backend et le Frontend à
-              l'aide de librairies tel que Jest, Jasmine et Cypress.
-            </div>
+            <div className="titleText text-lg font-semibold">Testing</div>
+            <div className="text-xs text-[#cfcfcf]">Jest · Cypress</div>
           </CardTextContainer>
         </SkillCard>
       </div>
