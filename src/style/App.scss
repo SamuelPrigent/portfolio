@@ -32,10 +32,15 @@ $voidTextBordure: #86e4ff;
 //   #c0ddea 50%,
 //   rgb(52, 104, 153) 100%
 // );
+// $gradientText: -webkit-linear-gradient(
+//   160deg,
+//   #09a6ff 18%,
+//   rgb(255, 177, 20) 100%
+// );
 $gradientText: -webkit-linear-gradient(
   160deg,
   #09a6ff 18%,
-  rgb(255, 177, 20) 100%
+  rgb(224 20 255) 100%
 );
 // $filterUnderline: saturate(1) brightness(1) hue-rotate(325deg) opacity(0.9);
 // $filterUnderline: saturate(1) brightness(0.72) hue-rotate(303deg) opacity(0.9);
@@ -135,9 +140,18 @@ $reactTypescriptGradient: linear-gradient(
 }
 
 .skillsElement {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.221);
-  //   border: 1px solid $darkBorder;
-  background-color: $elementBackground;
+  background-color: transparent;
+  // Réserve l'espace, seules les bordures latérales/haute restent transparentes
+  border: 1px solid transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  transition:
+    border-bottom-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skillsElement:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.28);
 }
 
 .positionPicOfMe {
@@ -635,6 +649,13 @@ a.yellowButton:hover {
   border-radius: 8px;
   background-color: #2e2500;
   color: #ffc401;
+}
+
+.whiteBadge {
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #1c1c1c;
+  color: #eaeaea;
 }
 
 .yellowgreenBadge {

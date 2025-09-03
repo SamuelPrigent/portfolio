@@ -11,7 +11,7 @@ export const CardTextContainer = styled.div.attrs(
 // Carte de compétence avec effet de hover
 export const SkillCard = styled.div.attrs({
   className:
-    "skillsElement flex flex-col gap-[32px] pb-8 text-start text-white rounded-xl overflow-hidden border border-white/10 hover:border-white/20 hover:shadow-lg transition",
+    "skillsElement flex flex-col gap-[32px] pb-8 text-start text-white overflow-hidden hover:shadow-lg transition",
 })`
   &:hover > .growThis {
     transform: scale(1.03);

@@ -11,9 +11,13 @@ const PicContainer = styled.div`
   overflow: hidden;
   border-radius: 50%;
   z-index: 20;
-  background:
+  /* background:
     linear-gradient(#101112, #101112) padding-box,
-    linear-gradient(128deg, #019eff 1.35%, #ffc401 104.47%) border-box;
+    linear-gradient(128deg, #019eff 1.35%, #ffc401 104.47%) border-box; */
+  background:
+    linear-gradient(rgb(16, 17, 18), rgb(16, 17, 18)) padding-box padding-box,
+    linear-gradient(128deg, rgb(1, 158, 255) 1.35%, rgb(255 1 156) 104.47%)
+      border-box border-box;
   border: 8px solid transparent;
   /* border: 6.5px solid white; */
   /* border: 8.5px solid #13a2ff; */

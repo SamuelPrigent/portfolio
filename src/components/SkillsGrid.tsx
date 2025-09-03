@@ -13,17 +13,9 @@ import jest from "../assets/jest.svg";
 import { CardTextContainer, SkillCard } from "./UI/StyledElements";
 
 const BackgroundTexture = styled.div`
-  /* fond moins noir, léger dégradé et texture subtile */
-  background: linear-gradient(
-    160deg,
-    rgba(15, 23, 29, 0.85),
-    rgba(10, 14, 18, 0.92)
-  );
-  /* petite bande violette discrète en bas à gauche */
-  box-shadow: inset -120px -30px 80px -70px rgba(117, 0, 255, 0.18);
+  background: linear-gradient(160deg, rgb(29 29 29 / 85%), rgb(37 37 37 / 92%));
 `;
 
-// Ajout d'un petit composant local pour uniformiser les bulles/icônes
 function IconBubble({
   src,
   alt,
@@ -57,7 +49,7 @@ export default function SkillsGrid() {
       <div className="skillsGrid grid grid-cols-3 gap-6 bg-transparent pt-4 max-lg:grid-cols-2 max-[670px]:grid-cols-1">
         {/* Frontend */}
         <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
-          <BackgroundTexture className="relative flex h-[120px] items-center justify-center overflow-hidden bg-transparent p-4">
+          <BackgroundTexture className="relative flex h-[120px] items-center justify-center overflow-hidden rounded-md bg-transparent p-4">
             <div className="z-10 flex items-center gap-4">
               {/* Remplacé par IconBubble (taille et img uniformisées) */}
               <IconBubble
@@ -84,7 +76,7 @@ export default function SkillsGrid() {
 
         {/* Backend */}
         <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
-          <BackgroundTexture className="relative flex h-[120px] items-center justify-center gap-6 overflow-hidden bg-transparent p-4">
+          <BackgroundTexture className="relative flex h-[120px] items-center justify-center gap-6 overflow-hidden rounded-md bg-transparent p-4">
             <div className="z-10 flex items-center gap-6">
               <IconBubble
                 src={express}
@@ -116,7 +108,7 @@ export default function SkillsGrid() {
 
         {/* UI Components */}
         <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
-          <BackgroundTexture className="flex h-[120px] items-center justify-center gap-6 overflow-hidden bg-transparent p-4">
+          <BackgroundTexture className="flex h-[120px] items-center justify-center gap-6 overflow-hidden rounded-md bg-transparent p-4">
             <div className="z-10 flex items-center gap-4">
               <IconBubble
                 src={shadcn}
@@ -142,7 +134,7 @@ export default function SkillsGrid() {
 
         {/* Testing */}
         <SkillCard className="transform transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
-          <BackgroundTexture className="relative flex h-[120px] items-center justify-center gap-6 overflow-hidden bg-transparent p-4">
+          <BackgroundTexture className="relative flex h-[120px] items-center justify-center gap-6 overflow-hidden rounded-md bg-transparent p-4">
             <div className="z-10 flex items-center gap-6">
               <IconBubble
                 src={jest}

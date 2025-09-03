@@ -5,7 +5,7 @@ import PresentationRight from "../components/PresentationRightMe.tsx";
 import ProjectList from "../components/ProjectList.tsx";
 import arrow from "../assets/arrow.svg";
 import Header from "../components/Header.tsx";
-import SkillsGrid from "../components/SkillsGrid.tsx";
+import SkillsGrid from "@/components/SkillsGrid.tsx";
 
 const HomePage = () => {
   // scroll header - utilisation de useEffect pour éviter les problèmes de montage du composant

@@ -20,6 +20,7 @@ function ProjectList() {
         link="https://github.com/SamuelPrigent/FIFO"
         techNames={["React", "Express"]}
         techBadgeClasses={["lightblueBadge", "yellowgreenBadge"]}
+        // techBadgeClasses={["whiteBadge", "whiteBadge"]}
       />
       <ProjectElement
         src={mdd}
@@ -28,6 +29,7 @@ function ProjectList() {
         link="https://github.com/SamuelPrigent/MondeDeDev"
         techNames={["Angular", "Springboot"]}
         techBadgeClasses={["purpleBadge", "greenBadge"]}
+        // techBadgeClasses={["whiteBadge", "whiteBadge"]}
       />
       <ProjectElement
         src={rentals}
@@ -36,6 +38,7 @@ function ProjectList() {
         link="https://github.com/SamuelPrigent/Rentals-Backend"
         techNames={["Angular", "Springboot"]}
         techBadgeClasses={["purpleBadge", "greenBadge"]}
+        // techBadgeClasses={["whiteBadge", "whiteBadge"]}
       />
       <ProjectElement
         src={lespetitsplats}
@@ -45,6 +48,7 @@ function ProjectList() {
         link="https://samuelprigent.github.io/LesPetitsPlats/"
         techNames={["Javascript"]}
         techBadgeClasses={["darkyellowBadge"]}
+        // techBadgeClasses={["whiteBadge"]}
       />
       <ProjectElement
         src={kasa}
@@ -53,6 +57,7 @@ function ProjectList() {
         navigation fluide."
         techNames={["React", "Design"]}
         techBadgeClasses={["lightblueBadge", "bluepurpleBadge"]}
+        // techBadgeClasses={["whiteBadge", "whiteBadge"]}
         link="https://samuelprigent.github.io/Kasa/"
       />
       {/* <ProjectElement
