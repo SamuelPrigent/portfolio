@@ -31,7 +31,7 @@ function Header() {
             alt="logo SamDev"
           />
           <div className="font-poppins text-[1rem] font-semibold text-white">
-            SamDev
+            Samuel P
           </div>
         </Link>
         <HeaderRightDiv className="flex font-poppins max-sm:gap-[6px]">

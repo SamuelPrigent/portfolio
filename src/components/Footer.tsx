@@ -42,7 +42,7 @@ function Footer() {
         <div className="flex items-center justify-center gap-[8px]">
           <img src={logo} alt="logo SamUX" className="whiteSvg h-[18px]" />
           <div className="text-bold font-poppins text-[1rem] font-semibold text-white">
-            SamDev
+            Samuel P
           </div>
         </div>
         <div className="font-poppins text-[15px] text-white">

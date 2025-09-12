@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Footer from "./components/Footer.tsx"; // footer
 // style
 import "./style/App.scss";
 import "./style/index.css";
@@ -16,7 +15,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     >
       <BackgroundGrid />
       <App />
-      <Footer />
     </BrowserRouter>
   </React.StrictMode>,
 );
