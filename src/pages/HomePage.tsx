@@ -25,6 +25,7 @@ const heroTags = ["Développeur Full-Stack", "React & Node.js"];
 type NavItem = {
   label: string;
   target: string;
+  Icon: (props: { className?: string }) => JSX.Element;
 };
 
 type SocialLink = {
@@ -94,9 +95,6 @@ const MailIcon = ({ className = "" }: { className?: string }) => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth={1.8}
-    strokeLinecap="round"
-    strokeLinejoin="round"
     aria-hidden
     focusable="false"
   >
@@ -114,6 +112,39 @@ const DownloadIcon = ({ className = "" }: { className?: string }) => (
     focusable="false"
   >
     <path d="M12 16a1 1 0 0 1-.7-.29l-5-5a1 1 0 1 1 1.4-1.42L11 12.59V4a1 1 0 1 1 2 0v8.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-.7.29ZM5 20a3 3 0 0 1-3-3v-4a1 1 0 1 1 2 0v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3Z" />
+  </svg>
+);
+
+const ToolIcon = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="currentColor"
+      d="M5.33 3.272a3.5 3.5 0 0 1 4.472 4.473L20.647 18.59l-2.122 2.122L7.68 9.867a3.5 3.5 0 0 1-4.472-4.474L5.444 7.63a1.5 1.5 0 0 0 2.121-2.121zm10.367 1.883l3.182-1.768l1.414 1.415l-1.768 3.182l-1.768.353l-2.12 2.121l-1.415-1.414l2.121-2.121zm-7.071 7.778l2.121 2.122l-4.95 4.95A1.5 1.5 0 0 1 3.58 17.99l.097-.107z"
+    />
+  </svg>
+);
+
+const CapIcon = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+  >
+    <g fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="4">
+      <path d="M2 17.4L23.022 9l21.022 8.4l-21.022 8.4z" />
+      <path
+        strokeLinecap="round"
+        d="M44.044 17.51v9.223m-32.488-4.908v12.442S16.366 39 23.022 39c6.657 0 11.467-4.733 11.467-4.733V21.825"
+      />
+    </g>
   </svg>
 );
 
@@ -171,9 +202,9 @@ const StarIcon = ({ className = "" }: { className?: string }) => (
 );
 
 const navItems: NavItem[] = [
-  { label: "Compétences", target: "skills" },
-  { label: "Expériences", target: "parcours" },
-  { label: "Contact", target: "contact" },
+  { label: "Compétences", target: "skills", Icon: ToolIcon },
+  { label: "Expériences", target: "parcours", Icon: CapIcon },
+  { label: "Contact", target: "contact", Icon: MailIcon },
 ];
 
 const socialLinks: SocialLink[] = [
@@ -224,7 +255,7 @@ const softSkillWords: SoftSkillWord[] = [
   { text: "Curieux", className: "-rotate-3" },
   { text: "Esprit d'équipe", className: "rotate-3" },
   { text: "Communicant et réactif", className: "rotate-1" },
-  { text: "De la Bonne humeur", className: "-rotate-1" },
+  { text: "Bonne humeur", className: "-rotate-1" },
   { text: "Feedback lover", className: "-rotate-2" },
   { text: "Autonomie", className: "-rotate-3" },
   { text: "Résolution de problème", className: "rotate-1" },
@@ -309,18 +340,31 @@ const projects = [
 ];
 
 export default function HomePage() {
-  const [showNavBackground, setShowNavBackground] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("top");
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (typeof window !== "undefined") {
-        setShowNavBackground(window.scrollY > 120);
+      if (typeof window === "undefined" || typeof document === "undefined") {
+        return;
       }
+
+      const scrollPosition = window.scrollY + 200;
+      let current = "top";
+
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.target);
+        if (!section) return;
+        if (scrollPosition >= section.offsetTop) {
+          current = item.target;
+        }
+      });
+
+      setActiveSection((prev) => (prev === current ? prev : current));
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -329,40 +373,88 @@ export default function HomePage() {
     const element = document.getElementById(target);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveSection(target);
     }
   };
 
   const handleScrollTop = () => {
     if (typeof window === "undefined") return;
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveSection("top");
   };
 
   return (
     <div className="min-h-screen w-full bg-[#fdf9f3] text-slate-900">
-      <div
-        className={`fixed left-1/2 top-6 z-40 -translate-x-1/2 transition-all duration-500 ${
-          showNavBackground
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
-      >
-        <nav className="flex items-center gap-2 rounded-full border border-white/50 bg-white/40 px-6 py-3 text-sm font-semibold text-slate-600 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.6)] backdrop-blur-xl">
+      <aside className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-center gap-4 rounded-[28px] border border-white/70 bg-white/80 p-4 shadow-[0_28px_56px_-44px_rgba(15,23,42,0.65)] backdrop-blur-lg lg:flex">
+        <div className="group relative">
           <button
             type="button"
             onClick={handleScrollTop}
             aria-label="Revenir en haut"
-            className="mr-2 flex h-9 w-9 items-center justify-center rounded-full border border-white/60 bg-white/80 text-slate-600 transition hover:bg-white hover:text-[#ff7a18]"
+            className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 ${
+              activeSection === "top"
+                ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
+                : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+            }`}
           >
             <HomeIcon className="h-4 w-4" />
+            <span className="sr-only">Accueil</span>
+          </button>
+          <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
+            Accueil
+          </span>
+        </div>
+        <span className="h-8 w-px bg-slate-200/80" aria-hidden />
+        {navItems.map((item) => (
+          <div key={item.target} className="group relative">
+            <button
+              type="button"
+              onClick={() => handleNavClick(item.target)}
+              aria-label={item.label}
+              className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 ${
+                activeSection === item.target
+                  ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
+                  : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+              }`}
+            >
+              <item.Icon aria-hidden className="h-4 w-4" />
+              <span className="sr-only">{item.label}</span>
+            </button>
+            <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
+              {item.label}
+            </span>
+          </div>
+        ))}
+      </aside>
+
+      <div className="sticky top-4 z-30 px-6 lg:hidden">
+        <nav className="flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/90 px-4 py-3 text-sm font-semibold text-slate-600 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.45)] backdrop-blur">
+          <button
+            type="button"
+            onClick={handleScrollTop}
+            aria-label="Revenir en haut"
+            className={`flex h-9 w-9 items-center justify-center rounded-full border transition ${
+              activeSection === "top"
+                ? "border-[#ff7a18] bg-[#ff7a18] text-white"
+                : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+            }`}
+          >
+            <HomeIcon className="h-4 w-4" />
+            <span className="sr-only">Accueil</span>
           </button>
           {navItems.map((item) => (
             <button
               key={item.target}
               type="button"
               onClick={() => handleNavClick(item.target)}
-              className="rounded-full px-4 py-2 transition hover:bg-white/70 hover:text-[#ff7a18]"
+              className={`flex items-center gap-2 rounded-full px-4 py-2 transition ${
+                activeSection === item.target
+                  ? "bg-[#ff7a18] text-white shadow"
+                  : "bg-white/60 text-slate-600 hover:bg-white hover:text-[#ff7a18]"
+              }`}
             >
-              {item.label}
+              <item.Icon className="h-4 w-4" />
+              <span>{item.label}</span>
             </button>
           ))}
         </nav>
@@ -676,7 +768,7 @@ export default function HomePage() {
             Samuel Prigent
           </span>
           <span className="text-xs uppercase tracking-[0.45em] text-slate-500">
-            © {currentYear} Tous droits réservés
+            © Copyright Samuel Prigent {currentYear}
           </span>
           <div className="flex items-center gap-4 text-slate-900">
             <a
