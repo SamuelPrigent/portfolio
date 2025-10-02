@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { type ChangeEvent, type FormEvent, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // assets
 import photo from "../assets/proPhoto3.jpg";
@@ -302,7 +302,7 @@ const experiences = [
     title: "Développeur Fullstack, Dir IPS - Alternance",
     description:
       "Conception d'un algorithme générant des jeux de données pour automatiser la facturation. Évolution d'une API Go interfaçant les systèmes de santé (DMP, INS). Refonte du site Wordpress pour accélérer la communication.",
-    environment: ["Go", "PHP", "Symfony", "Wordpress", "OpenAI"],
+    environment: ["Go", "Javascript", "Wordpress", "PHP", "Symfony", "VBA"],
   },
   {
     period: "Janvier 2024 à Fevrier 2024 - 2 mois",
@@ -376,6 +376,17 @@ const projects = [
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState<string>("top");
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [contactStatus, setContactStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+  const [contactError, setContactError] = useState<string | null>(null);
+  const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT ?? "";
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -423,10 +434,99 @@ export default function HomePage() {
     }
   };
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (
+      contactStatus !== "success" &&
+      contactStatus !== "error" &&
+      !contactError
+    ) {
+      return;
+    }
+
+    const hideTimeout = window.setTimeout(() => {
+      setContactStatus((status) =>
+        status === "success" || status === "error" ? "idle" : status,
+      );
+      setContactError(null);
+    }, 7000);
+
+    return () => window.clearTimeout(hideTimeout);
+  }, [contactStatus, contactError]);
+
   const handleScrollTop = () => {
     if (typeof window === "undefined") return;
     window.scrollTo({ top: 0, behavior: "smooth" });
     setActiveSection("top");
+  };
+
+  const handleContactChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = event.target;
+    setContactForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (
+      !contactForm.name ||
+      !contactForm.email ||
+      !contactForm.subject ||
+      !contactForm.message
+    ) {
+      setContactStatus("error");
+      setContactError("Merci de renseigner tous les champs requis.");
+      return;
+    }
+
+    if (!formEndpoint) {
+      setContactStatus("error");
+      setContactError(
+        "Endpoint Formspree manquant. Ajoutez VITE_FORMSPREE_ENDPOINT.",
+      );
+      return;
+    }
+
+    try {
+      setContactStatus("sending");
+      setContactError(null);
+
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: contactForm.name,
+          email: contactForm.email,
+          subject: `Portfolio message - ${contactForm.subject}`,
+          rawSubject: contactForm.subject,
+          message: contactForm.message,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        const message =
+          (data && (data.error || data.message)) ||
+          "Une erreur est survenue lors de l'envoi.";
+        setContactStatus("error");
+        setContactError(message);
+        return;
+      }
+
+      setContactStatus("success");
+      setContactForm({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setContactStatus("error");
+      setContactError(
+        "Impossible d'envoyer le message. Merci de réessayer plus tard.",
+      );
+    }
   };
 
   return (
@@ -530,7 +630,7 @@ export default function HomePage() {
                 </div>
                 <p className="max-w-2xl text-[1.15rem] leading-relaxed text-slate-700">
                   Développeur passionné par le développement logiciel et le web.
-                  Je m'éppanouis dans les environnements dynamiques et réactif.
+                  Je m'épanouis dans les environnements dynamiques et évolutif.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-6">
@@ -736,7 +836,7 @@ export default function HomePage() {
             Projets
           </p>
           <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900">
-            Mes réalisations préférés
+            Mes réalisations préférées
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">
             Chaque projet est l'occasion d'appliquer une démarche produit :
@@ -790,25 +890,141 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className="mx-auto mt-28 max-w-6xl px-6">
-        <div className="rounded-[40px] bg-gradient-to-br from-[#ff9a45] via-[#ffb87a] to-[#ffd9a8] p-[1px] shadow-[0_35px_70px_-40px_rgba(249,115,22,0.55)]">
-          <div className="rounded-[40px] bg-white/95 p-12 text-slate-900">
-            <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
-              <div className="max-w-2xl space-y-3">
-                <h2 className="text-[clamp(2rem,3vw,2.8rem)] font-semibold">
-                  À l'écoute d'opportunités.
-                </h2>
-                <p className="text-base leading-relaxed text-slate-600">
-                  Parlons produit, tech ou croissance : je suis toujours partant
-                  pour explorer vos enjeux et imaginer la prochaine étape.
-                </p>
-              </div>
-              <a
-                href="mailto:samuel.prigent@yahoo.fr"
-                className="inline-flex items-center gap-3 rounded-full border-2 border-slate-900 bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-slate-900 transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18]"
-              >
-                Me contacter
-              </a>
+        <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e4] via-white to-[#ffe1c2] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)]">
+          <div className="relative rounded-[42px] bg-white/90 p-10 backdrop-blur-lg md:p-14">
+            <div
+              className="absolute inset-x-10 -top-24 h-48 rounded-full bg-[#ff7a18]/15 blur-3xl"
+              aria-hidden
+            />
+            <div
+              className="absolute -bottom-24 right-10 h-48 w-48 rounded-full bg-[#ffc285]/20 blur-3xl"
+              aria-hidden
+            />
+
+            <div className="relative mx-auto max-w-3xl text-center">
+              <p className="inline-flex items-center justify-center rounded-full bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff7a18] shadow-sm">
+                Prennons contact
+              </p>
+              <h2 className="mt-4 text-[clamp(2.2rem,3vw,3.2rem)] font-semibold text-slate-900">
+                Discutons de votre projet.
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-slate-600">
+                Laissez-moi un message, je vous réponds dès que possible.
+              </p>
             </div>
+
+            <form
+              className="relative mx-auto mt-10 grid max-w-3xl gap-5 text-left md:grid-cols-2"
+              onSubmit={handleContactSubmit}
+              noValidate
+            >
+              <div className="md:col-span-1">
+                <label
+                  htmlFor="contact-name"
+                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                >
+                  Nom complet
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  value={contactForm.name}
+                  onChange={handleContactChange}
+                  type="text"
+                  placeholder="Alice Belmont"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                />
+              </div>
+              <div className="md:col-span-1">
+                <label
+                  htmlFor="contact-email"
+                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                >
+                  Votre email
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  value={contactForm.email}
+                  onChange={handleContactChange}
+                  type="email"
+                  placeholder="exemple@domaine.com"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="contact-subject"
+                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                >
+                  Sujet
+                </label>
+                <input
+                  id="contact-subject"
+                  name="subject"
+                  value={contactForm.subject}
+                  onChange={handleContactChange}
+                  type="text"
+                  placeholder="Sujet du message"
+                  required
+                  className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <label
+                  htmlFor="contact-message"
+                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  value={contactForm.message}
+                  onChange={handleContactChange}
+                  rows={6}
+                  placeholder="Entrez un message"
+                  required
+                  className="mt-2 max-h-[300px] min-h-[80px] w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                />
+              </div>
+              {contactError && (
+                <p
+                  className="rounded-2xl border border-[#ff7a18]/30 bg-[#fff4ec] px-4 py-3 text-sm text-[#c2410c] md:col-span-2"
+                  role="alert"
+                >
+                  {contactError}
+                </p>
+              )}
+              {contactStatus === "success" && (
+                <p
+                  className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700 md:col-span-2"
+                  role="status"
+                >
+                  Merci pour votre message ! Je vous réponds très vite.
+                </p>
+              )}
+              {!formEndpoint && (
+                <p className="rounded-2xl border border-[#e6d5c2] bg-[#fff9f2] px-4 py-3 text-xs text-[#8a6b3c] md:col-span-2">
+                  Configurez
+                  <code className="rounded bg-[#f4ede4] px-1 py-0.5 text-[#8a6b3c]">
+                    VITE_FORMSPREE_ENDPOINT
+                  </code>
+                  pour activer l'envoi via Formspree.
+                </p>
+              )}
+              <div className="flex flex-col gap-3 md:col-span-2 md:flex-row md:items-center md:justify-between">
+                <button
+                  type="submit"
+                  disabled={contactStatus === "sending" || !formEndpoint}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#f97316] bg-[#fff6eb] px-8 py-3 text-sm font-semibold tracking-[0.16em] text-[#c2410c] shadow-[0_14px_28px_-24px_rgba(249,115,22,0.45)] transition hover:-translate-y-0.5 hover:border-[#ea580c] hover:bg-[#ffeeda] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] disabled:cursor-not-allowed disabled:border-[#f7b07f] disabled:bg-[#fff3e3] disabled:text-[#d97706] disabled:shadow-none"
+                >
+                  {contactStatus === "sending" ? "Envoi..." : "Envoyer"}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
