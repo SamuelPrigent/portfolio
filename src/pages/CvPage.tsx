@@ -1,28 +1,28 @@
-import pdfUrl from "../assets/CV.pdf";
-import back from "../assets/arrowBack.svg";
 import { Link } from "react-router-dom";
+import pdfUrl from "../assets/CV.pdf";
+import arrowBack from "../assets/arrowBack.svg";
 
-const CvPage = () => {
+export default function CvPage() {
   return (
-    <>
-      <div className="container relative mx-auto px-4 py-4">
+    <div className="min-h-screen w-full bg-[#fdf9f3] text-slate-900">
+      <div className="mx-auto flex min-h-screen w-full max-w-6xl items-start px-5 py-5 lg:gap-[1rem]">
         <Link
-          to="/samuelprigent/"
-          className="absolute left-[-45px] top-[16px] flex aspect-square h-[49px] items-center justify-center gap-2 rounded-full bg-[#32363996] p-3 transition-all hover:brightness-[1.15]"
+          to="/"
+          onClick={() => window.scrollTo(0, 0)}
+          aria-label="Retour à l'accueil"
+          className="group flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-slate-300 bg-white text-slate-900 transition hover:border-[#ff7a18] hover:text-[#ff7a18]"
         >
-          <img src={back} className=" z-40" />
+          <img src={arrowBack} alt="" className="h-4 w-4 invert transition" />
         </Link>
-        <div className="relative h-[95vh] w-full overflow-hidden rounded-xl">
+        <div className="relative flex-1 overflow-hidden rounded-[14px] border border-slate-200 bg-white shadow-[0_28px_56px_-46px_rgba(15,23,42,0.55)]">
           <iframe
             src={pdfUrl}
-            className="relative z-40 h-full w-full"
+            title="CV Samuel Prigent"
+            className="h-[93vh] w-full"
             style={{ border: "none" }}
-            title="CV PDF"
           />
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default CvPage;
+}

@@ -4,7 +4,8 @@ export default function BackgroundGrid() {
     <>
       <svg
         aria-hidden="true"
-        className="mask pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30"
+        // className="mask pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30"
+        className="mask pointer-events-none absolute inset-0 h-full w-full fill-[#a09b95] stroke-[#8d6f4e29]"
       >
         <defs>
           <pattern
