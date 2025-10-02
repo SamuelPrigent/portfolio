@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// assets
 import photo from "../assets/proPhoto3.jpg";
 import fifo from "../assets/preview-fifo.png";
 import kasa from "../assets/preview-kasa.png";
@@ -10,15 +11,18 @@ import reactLogo from "../assets/logo-react.svg";
 import typescriptLogo from "../assets/logo-typescript.svg";
 import tailwindLogo from "../assets/logo-tailwindcss.svg";
 import nextLogo from "../assets/nextBlack.svg";
-import nodeLogo from "../assets/logo-node.svg";
 import prismaLogo from "../assets/logo-prisma.svg";
 import expressLogo from "../assets/logo-express.svg";
-import mongodbLogo from "../assets/logo-mongodb.svg";
-import cypressLogo from "../assets/cypress.svg";
-import jestLogo from "../assets/jest.svg";
-import vitestLogo from "../assets/logo-vitest.svg";
-import figmaLogo from "../assets/logo-figma.svg";
-import gitLogo from "../assets/logo-git.svg";
+import cypressLogo from "../assets/cypressBlack.svg";
+import springboot from "../assets/springboot.svg";
+import jestLogo from "../assets/jestBlack.svg";
+import studyIcon from "../assets/study.svg";
+// import java from "../assets/java.svg";
+// import angularLogo from "../assets/angular.svg";
+// import mongodbLogo from "../assets/logo-mongodb.svg";
+// import gitLogo from "../assets/logo-git.svg";
+// import windsurfLogo from "../assets/windsurf.svg";
+// import insomniaLogo from "../assets/insomnia.svg";
 
 const heroTags = ["Développeur Full-Stack", "React & Node.js"];
 
@@ -94,12 +98,34 @@ const MailIcon = ({ className = "" }: { className?: string }) => (
     className={className}
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
     aria-hidden
     focusable="false"
   >
-    <rect x={3} y={5} width={18} height={14} rx={2} ry={2} />
-    <path d="m3 7 9 6 9-6" />
+    <path
+      d="M5.25 4h13.5a3.25 3.25 0 0 1 3.245 3.066L22 7.25v9.5a3.25 3.25 0 0 1-3.066 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75v-9.5a3.25 3.25 0 0 1 3.066-3.245Zm15.25 5.373-8.15 4.29a.75.75 0 0 1-.603.043l-.096-.042L3.5 9.374v7.376a1.75 1.75 0 0 0 1.606 1.744l.144.006h13.5a1.75 1.75 0 0 0 1.744-1.607l.006-.143Zm-1.75-3.873H5.25a1.75 1.75 0 0 0-1.744 1.606L3.5 7.25v.429l8.5 4.474 8.5-4.475V7.25a1.75 1.75 0 0 0-1.607-1.744Z"
+      fill="currentColor"
+      stroke="currentColor"
+      strokeWidth="0.2"
+    />
+  </svg>
+);
+
+const BriefcaseIcon = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.6}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+    focusable="false"
+  >
+    <path d="M3 7h18v11a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7Z" />
+    <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+    <path d="M3 12h18" />
+    <path d="M11 12h2" />
   </svg>
 );
 
@@ -204,6 +230,7 @@ const StarIcon = ({ className = "" }: { className?: string }) => (
 const navItems: NavItem[] = [
   { label: "Compétences", target: "skills", Icon: ToolIcon },
   { label: "Expériences", target: "parcours", Icon: CapIcon },
+  { label: "Projets", target: "projets", Icon: BriefcaseIcon },
   { label: "Contact", target: "contact", Icon: MailIcon },
 ];
 
@@ -223,32 +250,40 @@ const socialLinks: SocialLink[] = [
 
 const skillSections: SkillSection[] = [
   {
-    title: "Back-End",
-    gradient: "from-[#fff1df] via-[#fff6ec] to-[#fff8ef]",
-    border: "border-[#ff9a45]/35",
-    items: [
-      { label: "Node.js", icon: nodeLogo, level: 5 },
-      { label: "Express", icon: expressLogo, level: 4 },
-      { label: "Prisma", icon: prismaLogo, level: 4 },
-      { label: "MongoDB", icon: mongodbLogo, level: 3 },
-      { label: "Git", icon: gitLogo, level: 4 },
-      { label: "Vitest", icon: vitestLogo, level: 3 },
-    ],
-  },
-  {
     title: "Front-End",
     gradient: "from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
     border: "border-[#ffb347]/35",
     items: [
       { label: "React", icon: reactLogo, level: 5 },
-      { label: "TypeScript", icon: typescriptLogo, level: 5 },
-      { label: "Next.js", icon: nextLogo, level: 4 },
-      { label: "Tailwind CSS", icon: tailwindLogo, level: 4 },
-      { label: "Cypress", icon: cypressLogo, level: 3 },
+      { label: "TypeScript", icon: typescriptLogo, level: 4 },
+      //   { label: "Angular", icon: angularLogo, level: 4 },
       { label: "Jest", icon: jestLogo, level: 4 },
-      { label: "Figma", icon: figmaLogo, level: 2 },
+      { label: "Next", icon: nextLogo, level: 4 },
+      { label: "Tailwind", icon: tailwindLogo, level: 5 },
+      { label: "Cypress", icon: cypressLogo, level: 3 },
     ],
   },
+  {
+    title: "Back-End",
+    gradient: "from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
+    border: "border-[#ff9a45]/35",
+    items: [
+      { label: "Express", icon: expressLogo, level: 4 },
+      { label: "Prisma", icon: prismaLogo, level: 4 },
+      { label: "SpringBoot", icon: springboot, level: 3 },
+      //   { label: "Java", icon: java, level: 3 },
+    ],
+  },
+  //   {
+  //     title: "Divers",
+  //     gradient: "from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
+  //     border: "border-[#ff9a45]/35",
+  //     items: [
+  //       { label: "Git", icon: gitLogo, level: 4 },
+  //       { label: "Windsurf", icon: windsurfLogo, level: 4 },
+  //       { label: "Insomnia", icon: insomniaLogo, level: 3 },
+  //     ],
+  //   },
 ];
 
 const softSkillWords: SoftSkillWord[] = [
@@ -263,15 +298,15 @@ const softSkillWords: SoftSkillWord[] = [
 
 const experiences = [
   {
-    period: "2025 · 12 mois",
-    title: "Dir IPS, éditeur de logiciels — Alternance",
+    period: "Octobre 2024 à Septembre 2025 - 12 mois",
+    title: "Développeur Fullstack, Dir IPS - Alternance",
     description:
       "Conception d'un algorithme générant des jeux de données pour automatiser la facturation. Évolution d'une API Go interfaçant les systèmes de santé (DMP, INS). Refonte du site Wordpress pour accélérer la communication.",
     environment: ["Go", "PHP", "Symfony", "Wordpress", "OpenAI"],
   },
   {
-    period: "2024 · 2 mois",
-    title: "Dir IPS, éditeur de logiciels — Stage",
+    period: "Janvier 2024 à Fevrier 2024 - 2 mois",
+    title: "Développeur Fullstack, Dir IPS - Stage",
     description:
       "Création de fonctionnalités d'interface personnalisables (thèmes, darkmode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
     environment: ["PHP", "Symfony", "Bootstrap", "PostgreSQL"],
@@ -281,17 +316,17 @@ const experiences = [
 const education = [
   {
     period: "2025",
-    title: "(Bac+5) Développeur Full-Stack – Java & Angular",
+    title: "Bac+5, Développeur Full-Stack – Java & Angular",
     school: "OpenClassrooms",
   },
   {
     period: "2023",
-    title: "(Bac+3) Développeur d'Application JavaScript React",
+    title: "Bac+3, Développeur d'Application JavaScript React",
     school: "OpenClassrooms",
   },
   {
     period: "2019",
-    title: "(Licence) STAPS, Entraînement Sportif",
+    title: "Licence STAPS, Entraînement Sportif",
     school: "Université Paris-Saclay, site d'Orsay",
   },
 ];
@@ -300,7 +335,7 @@ const projects = [
   {
     title: "FIFO",
     description:
-      "File d'attente intelligente avec priorisation des crédits. Front React, backend Express, monitoring en temps réel.",
+      "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, Websocket pour l'affichage des données.",
     image: fifo,
     link: "https://github.com/SamuelPrigent/FIFO",
     tags: ["React", "Express"],
@@ -349,16 +384,27 @@ export default function HomePage() {
         return;
       }
 
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 260;
       let current = "top";
+
+      const contactSection = document.getElementById("contact");
+      const isNearBottom =
+        window.innerHeight + window.scrollY >=
+        (document.documentElement.scrollHeight || document.body.scrollHeight) -
+          140;
 
       navItems.forEach((item) => {
         const section = document.getElementById(item.target);
         if (!section) return;
-        if (scrollPosition >= section.offsetTop) {
+        const sectionTop = section.offsetTop - 160;
+        if (scrollPosition >= sectionTop) {
           current = item.target;
         }
       });
+
+      if (contactSection && isNearBottom) {
+        current = "contact";
+      }
 
       setActiveSection((prev) => (prev === current ? prev : current));
     };
@@ -391,33 +437,32 @@ export default function HomePage() {
             type="button"
             onClick={handleScrollTop}
             aria-label="Revenir en haut"
-            className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 ${
+            className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
               activeSection === "top"
                 ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
-                : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+                : "border-slate-200 bg-white text-slate-600 hover:border-[#ff7a18] hover:text-[#ff7a18]"
             }`}
           >
-            <HomeIcon className="h-4 w-4" />
+            <HomeIcon className="h-[1.2rem] w-[1.2rem]" />
             <span className="sr-only">Accueil</span>
           </button>
           <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
             Accueil
           </span>
         </div>
-        <span className="h-8 w-px bg-slate-200/80" aria-hidden />
         {navItems.map((item) => (
           <div key={item.target} className="group relative">
             <button
               type="button"
               onClick={() => handleNavClick(item.target)}
               aria-label={item.label}
-              className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 ${
+              className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
                 activeSection === item.target
                   ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
-                  : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-[#ff7a18] hover:text-[#ff7a18]"
               }`}
             >
-              <item.Icon aria-hidden className="h-4 w-4" />
+              <item.Icon aria-hidden className="h-[1.2rem] w-[1.2rem]" />
               <span className="sr-only">{item.label}</span>
             </button>
             <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
@@ -433,7 +478,7 @@ export default function HomePage() {
             type="button"
             onClick={handleScrollTop}
             aria-label="Revenir en haut"
-            className={`flex h-9 w-9 items-center justify-center rounded-full border transition ${
+            className={`flex h-9 w-9 items-center justify-center rounded-full border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
               activeSection === "top"
                 ? "border-[#ff7a18] bg-[#ff7a18] text-white"
                 : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
@@ -447,7 +492,7 @@ export default function HomePage() {
               key={item.target}
               type="button"
               onClick={() => handleNavClick(item.target)}
-              className={`flex items-center gap-2 rounded-full px-4 py-2 transition ${
+              className={`flex items-center gap-2 rounded-full px-4 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
                 activeSection === item.target
                   ? "bg-[#ff7a18] text-white shadow"
                   : "bg-white/60 text-slate-600 hover:bg-white hover:text-[#ff7a18]"
@@ -479,7 +524,7 @@ export default function HomePage() {
                   Bonjour, je m'appelle
                 </p>
                 <div className="flex flex-nowrap items-center gap-4">
-                  <h1 className="whitespace-nowrap text-[clamp(3.2rem,4.8vw,5.4rem)] font-semibold leading-[1.02] text-slate-900">
+                  <h1 className="specialFont whitespace-nowrap text-[clamp(3.2rem,4.8vw,55px)] font-semibold leading-[1.02] text-slate-900">
                     Samuel Prigent
                   </h1>
                 </div>
@@ -492,7 +537,7 @@ export default function HomePage() {
                 <Link
                   to="/CV"
                   onClick={() => window.scrollTo(0, 0)}
-                  className="inline-flex items-center gap-3 rounded-full border-2 border-slate-900 bg-white px-7 py-3 text-base font-semibold text-slate-900 shadow-[0_20px_40px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+                  className="inline-flex items-center gap-3 rounded-full border-2 border-slate-900 bg-white px-7 py-3 text-base font-semibold text-slate-900 shadow-[0_20px_40px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18] focus:border-[#ff7a18]"
                 >
                   Download CV
                   <DownloadIcon className="h-5 w-5" />
@@ -505,7 +550,7 @@ export default function HomePage() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-900/25 bg-white/70 text-slate-900 transition hover:-translate-y-0.5 hover:border-[#ff7a18]/60 hover:text-[#ff7a18]"
+                      className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-slate-900 bg-white/70 text-slate-900 transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18] focus:border-[#ff7a18]"
                     >
                       <Icon className="h-6 w-6" />
                     </a>
@@ -529,18 +574,18 @@ export default function HomePage() {
         </header>
       </div>
 
-      <section id="skills" className="mx-auto max-w-6xl px-6 pt-24">
+      <section id="skills" className="mx-auto mt-24 max-w-6xl px-6 pt-3">
         <div className="rounded-[40px] bg-white/95 p-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.35)]">
           <div className="space-y-4 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
               Stack principale
             </p>
             <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900">
-              Technologies préférées
+              Technologies favorites
             </h2>
             <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">
-              Je m'intéresse particulièrement à ces technologies front/back que
-              j'utilise au quotidien.
+              Je m'intéresse particulièrement à ces technologies que j'utilise
+              au quotidien.
             </p>
           </div>
           <div className="mt-12 space-y-8">
@@ -553,32 +598,33 @@ export default function HomePage() {
                   <h3 className="text-2xl font-semibold uppercase tracking-[0.3em] text-slate-900">
                     {section.title}
                   </h3>
-                  <span className="h-12 w-12 rounded-full border border-white/60 bg-white/50 backdrop-blur" />
                 </div>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {section.items.map((item) => (
                     <div
                       key={item.label}
-                      className="flex items-center gap-4 rounded-2xl border border-white/70 bg-white/80 px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                      className="flex items-center justify-between"
                     >
-                      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-inner">
-                        <img
-                          src={item.icon}
-                          alt={item.label}
-                          className="h-6 w-6"
-                        />
-                      </span>
-                      <p className="flex-1 text-sm font-semibold uppercase tracking-[0.25em] text-slate-800">
-                        {item.label}
-                      </p>
+                      <div className="flex items-center gap-[4px] rounded-2xl py-4">
+                        <span className="flex min-h-10 min-w-10 items-center justify-center rounded-xl">
+                          <img
+                            src={item.icon}
+                            alt={item.label}
+                            className="h-6 w-6"
+                          />
+                        </span>
+                        <p className="flex-1 text-sm font-semibold uppercase tracking-[0.25em] text-slate-800">
+                          {item.label}
+                        </p>
+                      </div>
                       <div className="flex min-w-[120px] max-w-[140px] gap-1">
                         {Array.from({ length: 5 }).map((_, idx) => (
                           <span
                             key={`${item.label}-${idx}`}
-                            className={`h-2 w-5 rounded-full transition ${
+                            className={`h-3 w-4 rounded-[3px] ${
                               idx < item.level
-                                ? "bg-gradient-to-r from-[#ff7a18] to-[#ffb347]"
-                                : "bg-slate-200/70"
+                                ? "bg-gradient-to-r from-[#ff7a18ed] to-[#ffce89de]"
+                                : "bg-[#f5ebdd]"
                             }`}
                           />
                         ))}
@@ -594,7 +640,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="parcours" className="mx-auto max-w-6xl px-6 pt-24">
+      <section id="parcours" className="mx-auto mt-20 max-w-6xl px-6 pt-6 ">
         <div className="space-y-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Parcours
@@ -633,20 +679,25 @@ export default function HomePage() {
             ))}
           </div>
           <div className="space-y-6">
-            <div className="rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)]">
-              <h3 className="text-xl font-semibold text-slate-900">
-                Formations
-              </h3>
+            <div className="relative rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)]">
+              <div className="flex w-full items-center justify-between">
+                <h3 className="text-xl font-semibold text-slate-900">
+                  Formations
+                </h3>
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#ff7a18]/15 text-[#ff7a18]">
+                  <img src={studyIcon} alt="" aria-hidden className="h-6 w-6" />
+                </span>
+              </div>
               <ul className="mt-6 space-y-5">
                 {education.map((edu) => (
                   <li
                     key={edu.title}
-                    className="rounded-2xl border border-slate-200 p-5"
+                    className="rounded-2xl border border-orange-100 bg-white p-5 shadow-[0_18px_35px_-32px_rgba(15,23,42,0.25)]"
                   >
-                    <span className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                    <span className="inline-flex items-center rounded-full bg-[#ff7a18]/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#ff7a18]">
                       {edu.period}
                     </span>
-                    <p className="mt-3 text-base font-semibold text-slate-900">
+                    <p className="mt-4 text-base font-semibold text-slate-900">
                       {edu.title}
                     </p>
                     <p className="text-sm text-slate-600">{edu.school}</p>
@@ -679,13 +730,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="projets" className="mx-auto mt-24 max-w-6xl px-6">
+      <section id="projets" className="mx-auto mt-20 max-w-6xl px-6 pt-6">
         <div className="space-y-4 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Projets
           </p>
           <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900">
-            Mes réalisations préférées
+            Mes réalisations préférés
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">
             Chaque projet est l'occasion d'appliquer une démarche produit :
@@ -727,7 +778,7 @@ export default function HomePage() {
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a18] transition hover:text-[#ff9a4d]"
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#ff7a18] transition hover:underline focus:underline focus-visible:underline"
                 >
                   Voir le projet
                   <span aria-hidden>↗</span>
@@ -753,7 +804,7 @@ export default function HomePage() {
               </div>
               <a
                 href="mailto:samuel.prigent@yahoo.fr"
-                className="inline-flex items-center gap-3 rounded-full border-2 border-slate-900 bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-slate-900 transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+                className="inline-flex items-center gap-3 rounded-full border-2 border-slate-900 bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-slate-900 transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18]"
               >
                 Me contacter
               </a>
@@ -762,31 +813,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="mt-32 border-t border-slate-200/60 bg-[#fdf9f3]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
-          <span className="font-semibold uppercase tracking-[0.35em] text-slate-900">
-            Samuel Prigent
-          </span>
-          <span className="text-xs uppercase tracking-[0.45em] text-slate-500">
-            © Copyright Samuel Prigent {currentYear}
-          </span>
-          <div className="flex items-center gap-4 text-slate-900">
-            <a
-              href="https://www.linkedin.com/in/samuel-prigent/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-900/20 bg-white/90 transition hover:-translate-y-0.5 hover:border-[#ff7a18]/60 hover:text-[#ff7a18]"
-            >
-              <LinkedInIcon className="h-5 w-5" />
-            </a>
-            <a
-              href="mailto:samuel.prigent@yahoo.fr"
-              aria-label="Email"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-900/20 bg-white/90 transition hover:-translate-y-0.5 hover:border-[#ff7a18]/60 hover:text-[#ff7a18]"
-            >
-              <MailIcon className="h-5 w-5" />
-            </a>
+      <footer className="relative mt-32 bg-[#fdf9f3]">
+        <div
+          className="pointer-events-none absolute left-1/2 top-0 h-px w-[min(90%,1220px)] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ffc583] to-transparent"
+          aria-hidden
+        />
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-9 pb-10 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-2 text-slate-800">
+            {socialLinks.map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[transparent] focus:border-[#ff7a18]"
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
+
+          <div className="flex flex-col items-center text-center text-slate-900">
+            <div className="flex items-center gap-3">
+              <span className="flex h-[25px] w-[25px] items-center justify-center rounded-full bg-gradient-to-br from-[#ff9a45]/90 via-[#ffb87a] to-[#ffd9a8] text-white shadow-[0_12px_25px_-12px_rgba(249,115,22,0.55)]">
+                <SparkleIcon className="relative top-[1px] h-full w-full scale-[1.34]" />
+              </span>
+              <span className="font-semibold uppercase tracking-[0.4em]">
+                SamDev
+              </span>
+            </div>
+          </div>
+
+          <div className="text-xs uppercase tracking-[0.35em] text-slate-900">
+            Portfolio — {currentYear}
           </div>
         </div>
       </footer>
