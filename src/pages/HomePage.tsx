@@ -287,13 +287,12 @@ const skillSections: SkillSection[] = [
 ];
 
 const softSkillWords: SoftSkillWord[] = [
-  { text: "Curieux", className: "-rotate-3" },
-  { text: "Esprit d'équipe", className: "rotate-3" },
-  { text: "Communicant et réactif", className: "rotate-1" },
-  { text: "Bonne humeur", className: "-rotate-1" },
-  { text: "Feedback lover", className: "-rotate-2" },
-  { text: "Autonomie", className: "-rotate-3" },
-  { text: "Résolution de problème", className: "rotate-1" },
+  { text: "Bonne humeur", className: "-rotate-3" },
+  { text: "Communicant et réactif", className: "rotate-2" },
+  { text: "Curieux", className: "-rotate-1" },
+  { text: "Feedback lover", className: "rotate-3" },
+  { text: "Autonomie", className: "-rotate-2" },
+  { text: "Recherche de solution", className: "rotate-1" },
 ];
 
 const experiences = [
@@ -606,10 +605,10 @@ export default function HomePage() {
       </div>
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-orange-100 via-white to-amber-50" />
-        <header className="mx-auto flex max-w-6xl flex-col gap-14 px-6 pb-24 pt-20 lg:flex-row lg:items-center">
+        <header className="mx-auto flex max-w-6xl flex-col items-center gap-14 px-6 pb-24 pt-20 text-center lg:flex-row lg:items-center lg:text-left">
           <div className="flex-1">
-            <div className="flex flex-col gap-8">
-              <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-col items-center gap-8 lg:items-start">
+              <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                 {heroTags.map((tag) => (
                   <span
                     key={tag}
@@ -619,25 +618,25 @@ export default function HomePage() {
                   </span>
                 ))}
               </div>
-              <div className="space-y-3 text-left">
+              <div className="space-y-3">
                 <p className="text-base font-semibold uppercase tracking-[0.35em] text-[#ff7a18]">
                   Bonjour, je m'appelle
                 </p>
-                <div className="flex flex-nowrap items-center gap-4">
+                <div className="flex flex-nowrap items-center justify-center gap-4 lg:justify-start">
                   <h1 className="specialFont whitespace-nowrap text-[clamp(3.2rem,4.8vw,55px)] font-semibold leading-[1.02] text-slate-900">
                     Samuel Prigent
                   </h1>
                 </div>
-                <p className="max-w-2xl text-[1.15rem] leading-relaxed text-slate-700">
+                <p className="mx-auto max-w-2xl text-[1.15rem] leading-relaxed text-slate-700 lg:mx-0">
                   Développeur passionné par le développement logiciel et le web.
                   Je m'épanouis dans les environnements dynamiques et évolutif.
                 </p>
               </div>
-              <div className="flex flex-wrap items-center gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
                 <Link
                   to="/CV"
                   onClick={() => window.scrollTo(0, 0)}
-                  className="inline-flex items-center gap-3 rounded-full border-2 border-slate-900 bg-white px-7 py-3 text-base font-semibold text-slate-900 shadow-[0_20px_40px_-24px_rgba(15,23,42,0.45)] transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18] focus:border-[#ff7a18]"
+                  className="btn-download"
                 >
                   Download CV
                   <DownloadIcon className="h-5 w-5" />
@@ -650,7 +649,7 @@ export default function HomePage() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-slate-900 bg-white/70 text-slate-900 transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:text-[#ff7a18] focus:border-[#ff7a18]"
+                      className="social-pill"
                     >
                       <Icon className="h-6 w-6" />
                     </a>
@@ -928,10 +927,11 @@ export default function HomePage() {
                 <input
                   id="contact-name"
                   name="name"
+                  autoComplete="name"
                   value={contactForm.name}
                   onChange={handleContactChange}
                   type="text"
-                  placeholder="Alice Belmont"
+                  placeholder="John Doe"
                   required
                   className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
                 />
@@ -946,6 +946,7 @@ export default function HomePage() {
                 <input
                   id="contact-email"
                   name="email"
+                  autoComplete="email"
                   value={contactForm.email}
                   onChange={handleContactChange}
                   type="email"
