@@ -22,6 +22,9 @@ import { cn } from "../utils/cn";
 
 const heroTags = ["React.js", "Node.js", "TypeScript"];
 
+const grainTextureDataUrl =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E";
+
 const SignatureUnderline = ({ className = "" }: { className?: string }) => (
   <svg
     className={className}
@@ -49,6 +52,56 @@ const SignatureUnderline = ({ className = "" }: { className?: string }) => (
         <stop stopColor="#ffc99a" stopOpacity="0.85" />
         <stop offset="0.6" stopColor="#ff9752" stopOpacity="0.78" />
         <stop offset="1" stopColor="#ff7a18" stopOpacity="0.7" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const PaperPlaneIconAlt = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    aria-hidden
+    focusable="false"
+  >
+    <path
+      d="M0 8l4.9 1.4H5v-.1L12.1 4 11 5.2l-6.2 6.6L5 15l2.9-3.2L10 16l6-16z"
+      stroke="currentColor"
+      strokeWidth="0.5"
+    />
+  </svg>
+);
+
+const PaperTrail = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 260 120"
+    fill="none"
+    aria-hidden
+    focusable="false"
+  >
+    <path
+      d="M8 90c38-34 82-36 120-24 42 13 67 0 116-40"
+      stroke="url(#trailGradient)"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeDasharray="10 14"
+    />
+    <defs>
+      <linearGradient
+        id="trailGradient"
+        x1="12"
+        y1="92"
+        x2="236"
+        y2="22"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#0f172a" stopOpacity="0.65" />
+        <stop offset="0.55" stopColor="#111827" stopOpacity="0.58" />
+        <stop offset="1" stopColor="#020617" stopOpacity="0.5" />
       </linearGradient>
     </defs>
   </svg>
@@ -295,7 +348,7 @@ const skillSections: SkillSection[] = [
     items: [
       { label: "Express", icon: expressLogo, level: 4 },
       { label: "Prisma", icon: prismaLogo, level: 4 },
-      { label: "SpringBoot", icon: springboot, level: 3 },
+      { label: "Spring Boot", icon: springboot, level: 3 },
     ],
   },
 ];
@@ -306,7 +359,7 @@ const softSkillWords: SoftSkillWord[] = [
   { text: "Curieux", className: "-rotate-1" },
   { text: "Feedback lover", className: "rotate-3" },
   { text: "Autonomie", className: "-rotate-2" },
-  { text: "Recherche de solution", className: "rotate-1" },
+  { text: "Recherche de solutions", className: "rotate-1" },
 ];
 
 const experiences = [
@@ -319,17 +372,17 @@ const experiences = [
     contract: "Alternance",
     description:
       "Conception d'un algorithme générant des jeux de données pour automatiser la facturation. Évolution d'une API Go interfaçant les systèmes de santé (DMP, INS). Refonte du site Wordpress pour accélérer la communication.",
-    environment: ["Go", "Javascript", "Wordpress", "PHP", "VBA"],
+    environment: ["Go", "JavaScript", "WordPress", "PHP", "VBA"],
   },
   {
     id: "2",
-    period: "Janvier 2024 - Fevrier 2024",
+    period: "Janvier 2024 - Février 2024",
     duration: "2 mois",
     title: "Développeur Fullstack",
     company: "Dir IPS",
     contract: "Stage",
     description:
-      "Création de fonctionnalités d'interface personnalisables (thèmes, darkmode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
+      "Création de fonctionnalités d'interface personnalisables (thèmes, dark mode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
     environment: ["PHP", "Symfony", "Bootstrap", "SQL"],
   },
 ];
@@ -356,7 +409,7 @@ const projects = [
   {
     title: "FIFO",
     description:
-      "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, Websocket pour l'affichage des données.",
+      "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, WebSocket pour l'affichage des données.",
     image: fifo,
     link: "https://github.com/SamuelPrigent/FIFO",
     tags: ["React", "Express"],
@@ -697,12 +750,12 @@ export default function HomePage() {
                 <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent">
                   Développeur Fullstack
                 </span>
-                <SignatureUnderline className="pointer-events-none absolute left-[22px] top-[77px] h-8 w-[230px] rotate-[5deg] scale-110 opacity-90" />
+                <SignatureUnderline className="pointer-events-none absolute left-[24px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90" />
               </h2>
               <p className="mx-auto mt-[35px] max-w-2xl text-[1.02rem] leading-relaxed text-slate-700">
-                Développeur passionné, par le développement logiciel et le web.
-                La reflexion de valeur sur un produit m'anime autant que son
-                aspect technique architecture et technologique.
+                Passionné par le développement logiciel et le web, j’aime créer
+                des produits utiles et bien pensés, où la clarté et la fluidité
+                font toute la différence.
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
@@ -829,7 +882,7 @@ export default function HomePage() {
             Expériences et formations marquantes
           </h2>
         </div>
-        <div className="mt-14 grid gap-[2.5rem] lg:grid-cols-[3fr_2.3fr]">
+        <div className="mt-14 grid gap-[2.5rem] min-[900px]:grid-cols-[3fr_2.3fr]">
           <div className="space-y-6">
             {experiences.map((experience) => (
               <article
@@ -980,31 +1033,43 @@ export default function HomePage() {
       </section>
 
       <section id="contact" className="mx-auto mt-28 max-w-6xl px-6 pt-6">
-        <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e4] via-white to-[#ffe1c2] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)]">
-          <div className="relative rounded-[42px] bg-white/90 p-10 backdrop-blur-lg md:p-14">
+        <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e3] via-white to-[#ffe9cf] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)]">
+          <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[#ffc488] opacity-35 blur-[220px]" />
+          <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_30%,rgba(255,212,176,0.9)_0%,rgba(255,176,110,0.55)_55%,rgba(255,142,62,0)_78%)] opacity-75" />
+          <div
+            className="opacity-28 pointer-events-none absolute left-1/2 top-[-200px] h-[360px] w-[360px] -translate-x-1/2 rounded-full mix-blend-soft-light"
+            style={{ backgroundImage: `url(${grainTextureDataUrl})` }}
+          />
+          <div className="bg-white/92 relative rounded-[42px] p-10 backdrop-blur-lg md:p-14">
             <div
-              className="absolute inset-x-10 -top-24 h-48 rounded-full bg-[#ff7a18]/15 blur-3xl"
+              className="bg-[#ff7a18]/18 absolute inset-x-10 -top-24 h-48 rounded-full blur-3xl"
               aria-hidden
             />
             <div
-              className="absolute -bottom-24 right-10 h-48 w-48 rounded-full bg-[#ffc285]/20 blur-3xl"
+              className="bg-[#ffc285]/24 absolute -bottom-24 right-10 h-48 w-48 rounded-full blur-3xl"
               aria-hidden
             />
 
-            <div className="relative mx-auto max-w-3xl text-center">
-              <p className="inline-flex items-center justify-center rounded-full bg-white/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff7a18] shadow-sm">
+            <div className="relative mx-auto max-w-4xl text-center">
+              <div className="inline-flex items-center justify-center rounded-full bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff7a18] shadow-sm">
                 Prennons contact
-              </p>
-              <h2 className="mt-4 text-[clamp(2.2rem,3vw,3.2rem)] font-semibold text-slate-900">
-                Discutons de votre projet.
-              </h2>
-              <p className="mt-3 text-base leading-relaxed text-slate-600">
-                Laissez-moi un message, je vous réponds rapidement.
-              </p>
+              </div>
+              <div className="relative mt-[30px] flex flex-col items-center gap-[10px]">
+                <h2 className="relative text-[clamp(2.2rem,3vw,3.2rem)] font-semibold text-slate-900">
+                  Ouvert aux échanges
+                  <span className="pointer-events-none absolute -top-8 right-[calc(-7rem)] hidden h-11 w-11 origin-top-right rotate-[8deg] md:block">
+                    <PaperTrail className="absolute right-[22px] top-[2px] h-[80px] w-[190px]" />
+                    <PaperPlaneIconAlt className="absolute right-0 top-[-20px] h-10 w-10 text-[#111827]" />
+                  </span>
+                </h2>
+                <p className="mt-2 max-w-2xl text-base leading-relaxed text-slate-600">
+                  Laissez-moi un message, je vous réponds rapidement.
+                </p>
+              </div>
             </div>
 
             <form
-              className="relative mx-auto mt-10 grid max-w-3xl gap-6 text-left md:grid-cols-2"
+              className="relative mx-auto mt-14 grid max-w-3xl gap-6 text-left md:grid-cols-2"
               onSubmit={handleContactSubmit}
               noValidate
             >
