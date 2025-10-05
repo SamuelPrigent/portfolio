@@ -17,14 +17,42 @@ import cypressLogo from "../assets/cypressBlack.svg";
 import springboot from "../assets/springboot.svg";
 import jestLogo from "../assets/jestBlack.svg";
 import studyIcon from "../assets/study.svg";
-// import java from "../assets/java.svg";
-// import angularLogo from "../assets/angular.svg";
-// import mongodbLogo from "../assets/logo-mongodb.svg";
-// import gitLogo from "../assets/logo-git.svg";
-// import windsurfLogo from "../assets/windsurf.svg";
-// import insomniaLogo from "../assets/insomnia.svg";
+// import logoWebsite from "../../public/logo.svg";
+import { cn } from "../utils/cn";
 
-const heroTags = ["Développeur Full-Stack", "React & Node.js"];
+const heroTags = ["React.js", "Node.js", "TypeScript"];
+
+const SignatureUnderline = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 240 42"
+    fill="none"
+    aria-hidden
+    focusable="false"
+  >
+    <path
+      d="M6 28c38-14 104-22 176-18"
+      stroke="url(#signatureStroke)"
+      strokeWidth="7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="signatureStroke"
+        x1="10"
+        y1="4"
+        x2="196"
+        y2="20"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#ffc99a" stopOpacity="0.85" />
+        <stop offset="0.6" stopColor="#ff9752" stopOpacity="0.78" />
+        <stop offset="1" stopColor="#ff7a18" stopOpacity="0.7" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
 
 type NavItem = {
   label: string;
@@ -42,7 +70,6 @@ type SkillSectionItem = { label: string; icon: string; level: number };
 
 type SkillSection = {
   title: string;
-  gradient: string;
   border: string;
   items: SkillSectionItem[];
 };
@@ -74,9 +101,9 @@ const SparkleIcon = ({ className = "" }: { className?: string }) => (
   >
     <path
       d="M12 5.5 13.45 9l3.55 1.45L13.45 11.9 12 15.4 10.55 11.9 7 10.45 10.55 9 12 5.5Z"
-      stroke="#ffb347"
-      strokeWidth="1.1"
       fill="#fff5eb"
+      stroke="#ff9a45"
+      strokeWidth="1.1"
     />
   </svg>
 );
@@ -165,7 +192,7 @@ const CapIcon = ({ className = "" }: { className?: string }) => (
     viewBox="0 0 48 48"
   >
     <g fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="4">
-      <path d="M2 17.4L23.022 9l21.022 8.4l-21.022 8.4z" />
+      <path d="M2 17.4L23.022 9l21.022 8.4-21.022 8.4z" />
       <path
         strokeLinecap="round"
         d="M44.044 17.51v9.223m-32.488-4.908v12.442S16.366 39 23.022 39c6.657 0 11.467-4.733 11.467-4.733V21.825"
@@ -251,7 +278,6 @@ const socialLinks: SocialLink[] = [
 const skillSections: SkillSection[] = [
   {
     title: "Front-End",
-    gradient: "from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
     border: "border-[#ffb347]/35",
     items: [
       { label: "React", icon: reactLogo, level: 5 },
@@ -265,25 +291,13 @@ const skillSections: SkillSection[] = [
   },
   {
     title: "Back-End",
-    gradient: "from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
     border: "border-[#ff9a45]/35",
     items: [
       { label: "Express", icon: expressLogo, level: 4 },
       { label: "Prisma", icon: prismaLogo, level: 4 },
       { label: "SpringBoot", icon: springboot, level: 3 },
-      //   { label: "Java", icon: java, level: 3 },
     ],
   },
-  //   {
-  //     title: "Divers",
-  //     gradient: "from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
-  //     border: "border-[#ff9a45]/35",
-  //     items: [
-  //       { label: "Git", icon: gitLogo, level: 4 },
-  //       { label: "Windsurf", icon: windsurfLogo, level: 4 },
-  //       { label: "Insomnia", icon: insomniaLogo, level: 3 },
-  //     ],
-  //   },
 ];
 
 const softSkillWords: SoftSkillWord[] = [
@@ -297,36 +311,44 @@ const softSkillWords: SoftSkillWord[] = [
 
 const experiences = [
   {
-    period: "Octobre 2024 à Septembre 2025 - 12 mois",
-    title: "Développeur Fullstack, Dir IPS - Alternance",
+    id: "1",
+    period: "Octobre 2024 - Septembre 2025",
+    duration: "12 mois",
+    title: "Développeur Fullstack",
+    company: "Dir IPS",
+    contract: "Alternance",
     description:
       "Conception d'un algorithme générant des jeux de données pour automatiser la facturation. Évolution d'une API Go interfaçant les systèmes de santé (DMP, INS). Refonte du site Wordpress pour accélérer la communication.",
-    environment: ["Go", "Javascript", "Wordpress", "PHP", "Symfony", "VBA"],
+    environment: ["Go", "Javascript", "Wordpress", "PHP", "VBA"],
   },
   {
-    period: "Janvier 2024 à Fevrier 2024 - 2 mois",
-    title: "Développeur Fullstack, Dir IPS - Stage",
+    id: "2",
+    period: "Janvier 2024 - Fevrier 2024",
+    duration: "2 mois",
+    title: "Développeur Fullstack",
+    company: "Dir IPS",
+    contract: "Stage",
     description:
       "Création de fonctionnalités d'interface personnalisables (thèmes, darkmode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
-    environment: ["PHP", "Symfony", "Bootstrap", "PostgreSQL"],
+    environment: ["PHP", "Symfony", "Bootstrap", "SQL"],
   },
 ];
 
 const education = [
   {
-    period: "2025",
-    title: "Bac+5, Développeur Full-Stack – Java & Angular",
-    school: "OpenClassrooms",
+    level: "Bac+5",
+    title: "Développeur Full-Stack Java et Angular",
+    school: "OpenClassrooms, 2025",
   },
   {
-    period: "2023",
-    title: "Bac+3, Développeur d'Application JavaScript React",
-    school: "OpenClassrooms",
+    level: "Bac+3",
+    title: "Développeur d'Application JavaScript React",
+    school: "OpenClassrooms, 2023",
   },
   {
-    period: "2019",
+    level: "Bac+3",
     title: "Licence STAPS, Entraînement Sportif",
-    school: "Université Paris-Saclay, site d'Orsay",
+    school: "Université Paris-Saclay, site d'Orsay, 2019",
   },
 ];
 
@@ -375,6 +397,10 @@ const projects = [
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState<string>("top");
+  const [isNavCondensed, setIsNavCondensed] = useState(false);
+  const [isWideLayout, setIsWideLayout] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth >= 1275 : false,
+  );
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -396,6 +422,11 @@ export default function HomePage() {
 
       const scrollPosition = window.scrollY + 260;
       let current = "top";
+
+      const shouldCondense = window.scrollY > 450;
+      setIsNavCondensed((prev) =>
+        prev === shouldCondense ? prev : shouldCondense,
+      );
 
       const contactSection = document.getElementById("contact");
       const isNearBottom =
@@ -420,8 +451,27 @@ export default function HomePage() {
     };
 
     handleScroll();
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleResize = () => {
+      setIsWideLayout(window.innerWidth >= 1275);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleNavClick = (target: string) => {
@@ -530,137 +580,163 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen w-full bg-[#fdf9f3] text-slate-900">
-      <aside className="fixed left-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-center gap-4 rounded-[28px] border border-white/70 bg-white/80 p-4 shadow-[0_28px_56px_-44px_rgba(15,23,42,0.65)] backdrop-blur-lg lg:flex">
-        <div className="group relative">
-          <button
-            type="button"
-            onClick={handleScrollTop}
-            aria-label="Revenir en haut"
-            className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
-              activeSection === "top"
-                ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
-                : "border-slate-200 bg-white text-slate-600 hover:border-[#ff7a18] hover:text-[#ff7a18]"
-            }`}
-          >
-            <HomeIcon className="h-[1.2rem] w-[1.2rem]" />
-            <span className="sr-only">Accueil</span>
-          </button>
-          <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
-            Accueil
-          </span>
-        </div>
-        {navItems.map((item) => (
-          <div key={item.target} className="group relative">
+      {isWideLayout && (
+        <aside className="fixed left-4 top-1/2 z-40 flex -translate-y-1/2 flex-col items-center gap-4 rounded-[28px] border border-white/70 bg-white/80 p-[6px] shadow-[0_28px_56px_-44px_rgba(15,23,42,0.65)] backdrop-blur-lg">
+          <div className="group relative">
             <button
               type="button"
-              onClick={() => handleNavClick(item.target)}
-              aria-label={item.label}
-              className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
-                activeSection === item.target
+              onClick={handleScrollTop}
+              aria-label="Revenir en haut"
+              className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
+                activeSection === "top"
                   ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
                   : "border-slate-200 bg-white text-slate-600 hover:border-[#ff7a18] hover:text-[#ff7a18]"
               }`}
             >
-              <item.Icon aria-hidden className="h-[1.2rem] w-[1.2rem]" />
-              <span className="sr-only">{item.label}</span>
+              <HomeIcon className="h-[1.2rem] w-[1.2rem]" />
+              <span className="sr-only">Accueil</span>
             </button>
-            <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
-              {item.label}
+            <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
+              Accueil
             </span>
           </div>
-        ))}
-      </aside>
-
-      <div className="sticky top-4 z-30 px-6 lg:hidden">
-        <nav className="flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/90 px-4 py-3 text-sm font-semibold text-slate-600 shadow-[0_20px_50px_-35px_rgba(15,23,42,0.45)] backdrop-blur">
-          <button
-            type="button"
-            onClick={handleScrollTop}
-            aria-label="Revenir en haut"
-            className={`flex h-9 w-9 items-center justify-center rounded-full border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
-              activeSection === "top"
-                ? "border-[#ff7a18] bg-[#ff7a18] text-white"
-                : "border-slate-200 bg-white text-slate-500 hover:border-[#ff7a18] hover:text-[#ff7a18]"
-            }`}
-          >
-            <HomeIcon className="h-4 w-4" />
-            <span className="sr-only">Accueil</span>
-          </button>
           {navItems.map((item) => (
-            <button
-              key={item.target}
-              type="button"
-              onClick={() => handleNavClick(item.target)}
-              className={`flex items-center gap-2 rounded-full px-4 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
-                activeSection === item.target
-                  ? "bg-[#ff7a18] text-white shadow"
-                  : "bg-white/60 text-slate-600 hover:bg-white hover:text-[#ff7a18]"
-              }`}
-            >
-              <item.Icon className="h-4 w-4" />
-              <span>{item.label}</span>
-            </button>
+            <div key={item.target} className="group relative">
+              <button
+                type="button"
+                onClick={() => handleNavClick(item.target)}
+                aria-label={item.label}
+                className={`flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] ${
+                  activeSection === item.target
+                    ? "border-[#ff7a18] bg-[#ff7a18] text-white shadow-[0_12px_26px_-12px_rgba(255,122,24,0.65)]"
+                    : "border-slate-200 bg-white text-slate-600 hover:border-[#ff7a18] hover:text-[#ff7a18]"
+                }`}
+              >
+                <item.Icon aria-hidden className="h-[1.2rem] w-[1.2rem]" />
+                <span className="sr-only">{item.label}</span>
+              </button>
+              <span className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-slate-900/90 px-3 py-1 text-xs font-semibold text-white opacity-0 shadow-sm transition group-hover:opacity-100">
+                {item.label}
+              </span>
+            </div>
           ))}
-        </nav>
-      </div>
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-orange-100 via-white to-amber-50" />
-        <header className="mx-auto flex max-w-6xl flex-col items-center gap-14 px-6 pb-24 pt-20 text-center lg:flex-row lg:items-center lg:text-left">
-          <div className="flex-1">
-            <div className="flex flex-col items-center gap-8 lg:items-start">
-              <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-                {heroTags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-[#d45805] bg-[#fff1e4] px-5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-[#c24800] shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="space-y-3">
-                <p className="text-base font-semibold uppercase tracking-[0.35em] text-[#ff7a18]">
-                  Bonjour, je m'appelle
-                </p>
-                <div className="flex flex-nowrap items-center justify-center gap-4 lg:justify-start">
-                  <h1 className="specialFont whitespace-nowrap text-[clamp(3.2rem,4.8vw,55px)] font-semibold leading-[1.02] text-slate-900">
-                    Samuel Prigent
-                  </h1>
-                </div>
-                <p className="mx-auto max-w-2xl text-[1.15rem] leading-relaxed text-slate-700 lg:mx-0">
-                  Développeur passionné par le développement logiciel et le web.
-                  Je m'épanouis dans les environnements dynamiques et évolutif.
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-                <Link
-                  to="/CV"
-                  onClick={() => window.scrollTo(0, 0)}
-                  className="btn-download"
+        </aside>
+      )}
+
+      {!isWideLayout && (
+        <header
+          className={cn(
+            "fixed top-0 z-30 w-full backdrop-blur transition-all duration-300 ease-out",
+            "border-b border-[#fce0c5] bg-[#fdf7f1]/90 shadow-[0_16px_40px_-34px_rgba(15,23,42,0.5)]",
+            isNavCondensed ? "py-1.5" : "py-3",
+          )}
+        >
+          <div className="mx-auto flex max-w-6xl items-center gap-6 px-4">
+            <button
+              type="button"
+              onClick={handleScrollTop}
+              className="flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18]"
+            >
+              <span className="text-base font-semibold uppercase tracking-[0.42em] text-slate-900">
+                SamDev
+              </span>
+            </button>
+            <nav className="ml-auto flex items-center gap-3 text-sm font-semibold text-slate-600">
+              {navItems.map((item) => (
+                <button
+                  key={item.target}
+                  type="button"
+                  onClick={() => handleNavClick(item.target)}
+                  className={cn(
+                    "rounded-full px-3 py-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18]",
+                    activeSection === item.target
+                      ? "text-[#ff7a18]"
+                      : "text-slate-600 hover:text-[#ff7a18]",
+                  )}
                 >
-                  Download CV
-                  <DownloadIcon className="h-5 w-5" />
-                </Link>
-                <div className="flex items-center gap-4">
-                  {socialLinks.map(({ href, label, Icon }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={label}
-                      className="social-pill"
-                    >
-                      <Icon className="h-6 w-6" />
-                    </a>
-                  ))}
-                </div>
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          </div>
+        </header>
+      )}
+
+      <div
+        className={cn(
+          "relative overflow-hidden pt-[4.5rem] max-[1275px]:pt-[6.5rem]",
+          isWideLayout ? "pl-[80px]" : undefined,
+        )}
+      >
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#fff7ef] via-white to-[#ffeeda]" />
+          <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#ffb567]/20 blur-[180px]" />
+          <div className="bg-[#ffd6ad]/28 absolute bottom-0 right-[12%] h-[320px] w-[320px] rounded-full blur-[140px]" />
+        </div>
+        <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-24 text-center lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:text-left">
+          <div className="relative flex flex-col gap-10">
+            <SparkleIcon
+              className="absolute -left-10 -top-10 hidden h-10 w-10 text-[#ff7a18] lg:block"
+              aria-hidden
+            />
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              {heroTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-[#d45805]/45 bg-[#fff3e7] px-5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-[#c24800] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div>
+              <h1 className="specialFont text-[clamp(3.5rem,5vw,62px)] leading-[1.03] text-slate-900">
+                Samuel Prigent
+              </h1>
+              <h2 className="relative inline-flex flex-col text-[clamp(2.1rem,3.6vw,2.6rem)] font-semibold text-slate-800">
+                <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent">
+                  Développeur Fullstack
+                </span>
+                <SignatureUnderline className="pointer-events-none absolute left-[22px] top-[77px] h-8 w-[230px] rotate-[5deg] scale-110 opacity-90" />
+              </h2>
+              <p className="mx-auto mt-[35px] max-w-2xl text-[1.02rem] leading-relaxed text-slate-700">
+                Développeur passionné, par le développement logiciel et le web.
+                La reflexion de valeur sur un produit m'anime autant que son
+                aspect technique architecture et technologique.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
+              <Link
+                to="/CV"
+                onClick={() => window.scrollTo(0, 0)}
+                className="btn-download"
+              >
+                Download CV
+                <DownloadIcon className="h-5 w-5" />
+              </Link>
+              <div className="flex items-center gap-4">
+                {socialLinks.map(({ href, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    className="social-pill"
+                  >
+                    <Icon className="h-6 w-6" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
           <div className="flex-1">
             <div className="relative mx-auto w-full max-w-lg">
-              <div className="absolute -inset-10 rounded-[52px] bg-gradient-to-br from-[#ff7a18]/15 via-transparent to-[#ffb347]/35 blur-3xl" />
+              <div
+                className="absolute inset-0 -translate-x-6 translate-y-6 rounded-[56px] border border-white/60 bg-gradient-to-br from-[#fff4e8] via-[#ffe9d4] to-[#ffd4a9] opacity-70 blur-2xl"
+                aria-hidden
+              />
+              <div className="from-[#ff7a18]/18 absolute -inset-12 rounded-[52px] bg-gradient-to-br via-transparent to-[#ffb347]/40 blur-3xl" />
               <div className="relative overflow-hidden rounded-[48px] border-[12px] border-white shadow-[0px_45px_90px_-50px_rgba(15,23,42,0.65)]">
                 <img
                   src={photo}
@@ -670,10 +746,10 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </header>
+        </div>
       </div>
 
-      <section id="skills" className="mx-auto mt-24 max-w-6xl px-6 pt-3">
+      <section id="skills" className="mx-auto mt-16 max-w-6xl px-6 pt-8">
         <div className="rounded-[40px] bg-white/95 p-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.35)]">
           <div className="space-y-4 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
@@ -691,7 +767,11 @@ export default function HomePage() {
             {skillSections.map((section) => (
               <article
                 key={section.title}
-                className={`relative overflow-hidden rounded-[32px] border ${section.border} bg-gradient-to-br ${section.gradient} p-8 shadow-[0_30px_60px_-45px_rgba(249,115,22,0.35)]`}
+                className={cn(
+                  "relative overflow-hidden rounded-[32px] border p-8 shadow-[0_30px_60px_-45px_rgba(249,115,22,0.35)]",
+                  `${section.border}`,
+                  "bg-gradient-to-br from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
+                )}
               >
                 <div className="flex items-center justify-between">
                   <h3 className="text-2xl font-semibold uppercase tracking-[0.3em] text-slate-900">
@@ -720,11 +800,12 @@ export default function HomePage() {
                         {Array.from({ length: 5 }).map((_, idx) => (
                           <span
                             key={`${item.label}-${idx}`}
-                            className={`h-3 w-4 rounded-[3px] ${
+                            className={cn(
+                              "h-3 w-4 rounded-[3px]",
                               idx < item.level
                                 ? "bg-gradient-to-r from-[#ff7a18ed] to-[#ffce89de]"
-                                : "bg-[#f5ebdd]"
-                            }`}
+                                : "bg-[#f5ebdd]",
+                            )}
                           />
                         ))}
                       </div>
@@ -739,7 +820,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="parcours" className="mx-auto mt-20 max-w-6xl px-6 pt-6 ">
+      <section id="parcours" className="mx-auto mt-16 max-w-6xl px-6 pt-20">
         <div className="space-y-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Parcours
@@ -748,23 +829,33 @@ export default function HomePage() {
             Expériences et formations marquantes
           </h2>
         </div>
-        <div className="mt-14 grid gap-12 lg:grid-cols-[3fr_2fr]">
+        <div className="mt-14 grid gap-[2.5rem] lg:grid-cols-[3fr_2.3fr]">
           <div className="space-y-6">
             {experiences.map((experience) => (
               <article
-                key={experience.title}
+                key={experience.id}
                 className="rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.45)]"
               >
-                <span className="inline-flex items-center rounded-full bg-[#ff7a18]/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#ff7a18]">
-                  {experience.period}
-                </span>
-                <h3 className="mt-4 text-2xl font-semibold text-slate-900">
+                <div className="flex flex-wrap items-center justify-between gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#ff7a18]">
+                  <span>{experience.period}</span>
+                  <span className="bg-[#ff7a18]/12 rounded-full px-3 py-1 text-[0.7rem] font-semibold tracking-[0.12em] text-[#d75806]">
+                    {experience.duration}
+                  </span>
+                </div>
+                <h3 className="mb-[8px] mt-[6px] text-[1.5rem] font-semibold text-slate-900">
                   {experience.title}
+                  <span className="text-[1.05rem] font-medium text-slate-600">
+                    {" · "}
+                    {experience.company}
+                  </span>
                 </h3>
+                <p className="mt-1 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  {experience.contract}
+                </p>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
                   {experience.description}
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   {experience.environment.map((tech) => (
                     <span
                       key={tech}
@@ -778,7 +869,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="space-y-6">
-            <div className="relative rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)]">
+            <div className="relative h-full rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)]">
               <div className="flex w-full items-center justify-between">
                 <h3 className="text-xl font-semibold text-slate-900">
                   Formations
@@ -794,7 +885,7 @@ export default function HomePage() {
                     className="rounded-2xl border border-orange-100 bg-white p-5 shadow-[0_18px_35px_-32px_rgba(15,23,42,0.25)]"
                   >
                     <span className="inline-flex items-center rounded-full bg-[#ff7a18]/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#ff7a18]">
-                      {edu.period}
+                      {edu.level}
                     </span>
                     <p className="mt-4 text-base font-semibold text-slate-900">
                       {edu.title}
@@ -829,15 +920,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="projets" className="mx-auto mt-20 max-w-6xl px-6 pt-6">
+      <section id="projets" className="mx-auto mt-16 max-w-6xl px-6 pt-20">
         <div className="space-y-4 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Projets
           </p>
-          <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900">
+          <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900 ">
             Mes réalisations préférées
           </h2>
-          <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600 ">
             Chaque projet est l'occasion d'appliquer une démarche produit :
             discovery rapide, cadrage technique, itérations courtes et mesures
             de succès.
@@ -888,7 +979,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto mt-28 max-w-6xl px-6">
+      <section id="contact" className="mx-auto mt-28 max-w-6xl px-6 pt-6">
         <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e4] via-white to-[#ffe1c2] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)]">
           <div className="relative rounded-[42px] bg-white/90 p-10 backdrop-blur-lg md:p-14">
             <div
@@ -908,19 +999,19 @@ export default function HomePage() {
                 Discutons de votre projet.
               </h2>
               <p className="mt-3 text-base leading-relaxed text-slate-600">
-                Laissez-moi un message, je vous réponds dès que possible.
+                Laissez-moi un message, je vous réponds rapidement.
               </p>
             </div>
 
             <form
-              className="relative mx-auto mt-10 grid max-w-3xl gap-5 text-left md:grid-cols-2"
+              className="relative mx-auto mt-10 grid max-w-3xl gap-6 text-left md:grid-cols-2"
               onSubmit={handleContactSubmit}
               noValidate
             >
               <div className="md:col-span-1">
                 <label
                   htmlFor="contact-name"
-                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                  className="text-sm font-semibold tracking-[0.08em] text-slate-900"
                 >
                   Nom complet
                 </label>
@@ -939,7 +1030,7 @@ export default function HomePage() {
               <div className="md:col-span-1">
                 <label
                   htmlFor="contact-email"
-                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                  className="text-sm font-semibold tracking-[0.08em] text-slate-900"
                 >
                   Votre email
                 </label>
@@ -958,7 +1049,7 @@ export default function HomePage() {
               <div className="md:col-span-2">
                 <label
                   htmlFor="contact-subject"
-                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                  className="text-sm font-semibold tracking-[0.08em] text-slate-900"
                 >
                   Sujet
                 </label>
@@ -970,13 +1061,13 @@ export default function HomePage() {
                   type="text"
                   placeholder="Sujet du message"
                   required
-                  className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                  className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50 "
                 />
               </div>
               <div className="md:col-span-2">
                 <label
                   htmlFor="contact-message"
-                  className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-600"
+                  className="text-sm font-semibold tracking-[0.08em] text-slate-900"
                 >
                   Message
                 </label>
@@ -1020,7 +1111,7 @@ export default function HomePage() {
                 <button
                   type="submit"
                   disabled={contactStatus === "sending" || !formEndpoint}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#f97316] bg-[#fff6eb] px-8 py-3 text-sm font-semibold tracking-[0.16em] text-[#c2410c] shadow-[0_14px_28px_-24px_rgba(249,115,22,0.45)] transition hover:-translate-y-0.5 hover:border-[#ea580c] hover:bg-[#ffeeda] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] disabled:cursor-not-allowed disabled:border-[#f7b07f] disabled:bg-[#fff3e3] disabled:text-[#d97706] disabled:shadow-none"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#f97316] bg-[#fff6eb] px-8 py-3 text-sm font-semibold tracking-[0.16em] text-[#c2410c] shadow-[0_14px_28px_-24px_rgba(249,115,22,0.45)] transition hover:-translate-y-0.5 hover:border-[#ea580c] hover:bg-[#ffeeda] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] disabled:cursor-not-allowed disabled:border-[#f7b07f] disabled:bg-[#fff3e3] disabled:text-[#d97706] disabled:shadow-none "
                 >
                   {contactStatus === "sending" ? "Envoi..." : "Envoyer"}
                 </button>
@@ -1030,13 +1121,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="relative mt-32 bg-[#fdf9f3]">
+      <footer className="relative mt-32 bg-[#fdf9f3] ">
         <div
-          className="pointer-events-none absolute left-1/2 top-0 h-px w-[min(90%,1220px)] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ffc583] to-transparent"
+          className="pointer-events-none absolute left-1/2 top-0 h-px w-[min(90%,1220px)] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ffc583] to-transparent "
           aria-hidden
         />
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-9 pb-10 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-2 text-slate-800">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-7 pb-8 text-sm text-slate-600  md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-[10px] text-black ">
             {socialLinks.map(({ href, label, Icon }) => (
               <a
                 key={label}
@@ -1044,25 +1135,22 @@ export default function HomePage() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}
-                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[transparent] focus:border-[#ff7a18]"
+                className="flex h-8 w-8 items-center justify-center rounded-full text-slate-900 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] "
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-[22px] w-[22px]" />
               </a>
             ))}
           </div>
 
-          <div className="flex flex-col items-center text-center text-slate-900">
+          <div className="flex flex-col items-center text-center text-slate-900 ">
             <div className="flex items-center gap-3">
-              <span className="flex h-[25px] w-[25px] items-center justify-center rounded-full bg-gradient-to-br from-[#ff9a45]/90 via-[#ffb87a] to-[#ffd9a8] text-white shadow-[0_12px_25px_-12px_rgba(249,115,22,0.55)]">
-                <SparkleIcon className="relative top-[1px] h-full w-full scale-[1.34]" />
-              </span>
               <span className="font-semibold uppercase tracking-[0.4em]">
                 SamDev
               </span>
             </div>
           </div>
 
-          <div className="text-xs uppercase tracking-[0.35em] text-slate-900">
+          <div className="text-xs uppercase tracking-[0.35em] text-slate-900 ">
             Portfolio — {currentYear}
           </div>
         </div>
