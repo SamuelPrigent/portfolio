@@ -1,4 +1,10 @@
-import { type ChangeEvent, type FormEvent, useEffect, useState } from "react";
+import {
+  type ChangeEvent,
+  type FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import { Link } from "react-router-dom";
 // assets
 import photo from "../assets/proPhoto3.jpg";
@@ -130,6 +136,47 @@ type SkillSection = {
 type SoftSkillWord = {
   text: string;
   className: string;
+};
+
+type Layout = "desktop" | "tablet" | "mobile";
+
+const HamburgerIcon = ({
+  className = "",
+  isOpen,
+}: {
+  className?: string;
+  isOpen: boolean;
+}) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+    focusable="false"
+  >
+    {isOpen ? (
+      <>
+        <line x1="5" y1="5" x2="19" y2="19" />
+        <line x1="19" y1="5" x2="5" y2="19" />
+      </>
+    ) : (
+      <>
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </>
+    )}
+  </svg>
+);
+
+const determineLayout = (width: number): Layout => {
+  if (width >= 1275) return "desktop";
+  if (width >= 750) return "tablet";
+  return "mobile";
 };
 
 const LinkedInIcon = ({ className = "" }: { className?: string }) => (
@@ -454,6 +501,11 @@ export default function HomePage() {
   const [isWideLayout, setIsWideLayout] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth >= 1275 : false,
   );
+  const [actualLayout, setActualLayout] = useState<Layout>(() => {
+    if (typeof window === "undefined") return "desktop";
+    return determineLayout(window.innerWidth);
+  });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -465,7 +517,13 @@ export default function HomePage() {
   >("idle");
   const [contactError, setContactError] = useState<string | null>(null);
   const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT ?? "";
-  const currentYear = new Date().getFullYear();
+
+  const handleSetLayout = useCallback((width: number) => {
+    const nextLayout = determineLayout(width);
+    setActualLayout((previousLayout) =>
+      previousLayout === nextLayout ? previousLayout : nextLayout,
+    );
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -516,7 +574,9 @@ export default function HomePage() {
     if (typeof window === "undefined") return;
 
     const handleResize = () => {
-      setIsWideLayout(window.innerWidth >= 1275);
+      const width = window.innerWidth;
+      setIsWideLayout(width >= 1275);
+      handleSetLayout(width);
     };
 
     handleResize();
@@ -525,7 +585,7 @@ export default function HomePage() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleSetLayout]);
 
   const handleNavClick = (target: string) => {
     if (typeof document === "undefined") return;
@@ -533,8 +593,21 @@ export default function HomePage() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       setActiveSection(target);
+      if (actualLayout === "mobile") {
+        setIsMobileMenuOpen(false);
+      }
     }
   };
+
+  const isDesktopLayout = actualLayout === "desktop" || isWideLayout; // isWideLAyout temporaire
+  const isTabletLayout = actualLayout === "tablet";
+  const isMobileLayout = actualLayout === "mobile";
+
+  useEffect(() => {
+    if (!isMobileLayout) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [isMobileLayout]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -633,7 +706,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen w-full bg-[#fdf9f3] text-slate-900">
-      {isWideLayout && (
+      {isDesktopLayout && (
         <aside className="fixed left-4 top-1/2 z-40 flex -translate-y-1/2 flex-col items-center gap-4 rounded-[28px] border border-white/70 bg-white/80 p-[6px] shadow-[0_28px_56px_-44px_rgba(15,23,42,0.65)] backdrop-blur-lg">
           <div className="group relative">
             <button
@@ -676,7 +749,7 @@ export default function HomePage() {
         </aside>
       )}
 
-      {!isWideLayout && (
+      {isTabletLayout && (
         <header
           className={cn(
             "fixed top-0 z-30 w-full backdrop-blur transition-all duration-300 ease-out",
@@ -715,10 +788,103 @@ export default function HomePage() {
         </header>
       )}
 
+      {isMobileLayout && (
+        <>
+          <header
+            className={cn(
+              "durée-300 fixed top-0 z-30 w-full backdrop-blur transition-all ease-out",
+              "border-b border-[#fce0c5] bg-[#fdf7f1]/90 shadow-[0_16px_40px_-34px_rgba(15,23,42,0.5)]",
+              isNavCondensed ? "py-1.5" : "py-3",
+            )}
+          >
+            <div className="relative mx-auto flex max-w-6xl items-center gap-6 px-4">
+              <button
+                type="button"
+                onClick={handleScrollTop}
+                className="flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18]"
+              >
+                <span className="text-base font-semibold uppercase tracking-[0.42em] text-slate-900">
+                  SamDev
+                </span>
+              </button>
+
+              <div className="ml-auto">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-[#ffdbc1] bg-white/90 text-slate-700 shadow-[0_14px_28px_-24px_rgba(15,23,42,0.28)] transition hover:border-[#ff7a18] hover:text-[#ff7a18] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18]"
+                  aria-label={
+                    isMobileMenuOpen
+                      ? "Fermer la navigation"
+                      : "Ouvrir la navigation"
+                  }
+                  aria-expanded={isMobileMenuOpen}
+                  aria-controls="mobile-nav-panel"
+                >
+                  <HamburgerIcon
+                    className="h-6 w-6"
+                    isOpen={isMobileMenuOpen}
+                  />
+                </button>
+
+                <div
+                  id="mobile-nav-panel"
+                  className={cn(
+                    "absolute right-0 top-full mt-3 w-[clamp(16rem,75vw,18rem)] overflow-hidden rounded-[24px] border border-[#ffd7b2] bg-white/95 shadow-[0_24px_48px_-32px_rgba(15,23,42,0.55)] backdrop-blur transition-all duration-200 ease-out",
+                    isMobileMenuOpen
+                      ? "pointer-events-auto translate-y-0 opacity-100"
+                      : "pointer-events-none translate-y-3 opacity-0",
+                  )}
+                >
+                  <nav className="flex flex-col divide-y divide-[#ffe6d1] text-left">
+                    {navItems.map((item) => (
+                      <button
+                        key={item.target}
+                        type="button"
+                        onClick={() => handleNavClick(item.target)}
+                        className={cn(
+                          "flex items-center justify-center px-5 py-3 text-sm font-semibold uppercase tracking-[0.22em] transition",
+                          activeSection === item.target
+                            ? "text-[#ff7a18]"
+                            : "text-slate-700 hover:text-[#ff7a18]",
+                        )}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          {isMobileMenuOpen && (
+            <button
+              type="button"
+              aria-label="Fermer la navigation"
+              className="fixed inset-0 z-20 bg-slate-900/10 backdrop-blur-sm"
+              onClick={() => setIsMobileMenuOpen(false)}
+              onKeyDown={(event) => {
+                if (
+                  event.key === "Escape" ||
+                  event.key === "Enter" ||
+                  event.key === " "
+                ) {
+                  event.preventDefault();
+                  setIsMobileMenuOpen(false);
+                }
+              }}
+            >
+              <span className="sr-only">Fermer la navigation</span>
+            </button>
+          )}
+        </>
+      )}
+
       <div
         className={cn(
-          "relative overflow-hidden pt-[4.5rem] max-[1275px]:pt-[6.5rem]",
-          isWideLayout ? "pl-[80px]" : undefined,
+          "relative overflow-hidden pt-[6.1rem] max-[1275px]:pt-[6.5rem]",
+          isDesktopLayout ? "pl-[80px]" : undefined,
         )}
       >
         <div className="absolute inset-0 -z-10">
@@ -729,7 +895,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-24 text-center lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:text-left">
           <div className="relative flex flex-col gap-10">
             <SparkleIcon
-              className="absolute -left-10 -top-10 hidden h-10 w-10 text-[#ff7a18] lg:block"
+              className="absolute -left-10 -top-10 hidden h-10 w-10 text-[#ff7a18] max-[1175px]:left-[-25px] lg:block"
               aria-hidden
             />
             <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
@@ -750,7 +916,7 @@ export default function HomePage() {
                 <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent">
                   Développeur Fullstack
                 </span>
-                <SignatureUnderline className="pointer-events-none absolute left-[24px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90" />
+                <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[5px] max-[1019px]:top-[70px]" />
               </h2>
               <p className="mx-auto mt-[35px] max-w-2xl text-[1.02rem] leading-relaxed text-slate-700">
                 Passionné par le développement logiciel et le web, j’aime créer
@@ -802,8 +968,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      <section id="skills" className="mx-auto mt-16 max-w-6xl px-6 pt-8">
-        <div className="rounded-[40px] bg-white/95 p-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.35)]">
+      <section
+        id="skills"
+        className="mx-auto mt-16 max-w-6xl px-0 pt-8 min-[750px]:px-6"
+      >
+        <div className="rounded-none bg-white/95 px-0 py-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.35)] sm:rounded-none md:rounded-[32px] md:px-8 min-[750px]:px-6 lg:rounded-[40px] lg:px-12">
           <div className="space-y-4 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
               Stack principale
@@ -821,7 +990,7 @@ export default function HomePage() {
               <article
                 key={section.title}
                 className={cn(
-                  "relative overflow-hidden rounded-[32px] border p-8 shadow-[0_30px_60px_-45px_rgba(249,115,22,0.35)]",
+                  "relative overflow-hidden rounded-[32px] border-y border-transparent px-4 py-6 shadow-[0_30px_60px_-45px_rgba(249,115,22,0.35)] max-[710px]:rounded-none max-[650px]:gap-0 min-[550px]:p-6 min-[710px]:rounded-[32px] min-[710px]:p-8",
                   `${section.border}`,
                   "bg-gradient-to-br from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
                 )}
@@ -831,11 +1000,11 @@ export default function HomePage() {
                     {section.title}
                   </h3>
                 </div>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-6 grid grid-cols-3 gap-4 max-[1020px]:grid-cols-2 max-[600px]:grid-cols-1">
                   {section.items.map((item) => (
                     <div
                       key={item.label}
-                      className="flex items-center justify-between"
+                      className="flex items-center justify-between px-1 max-[750px]:px-0"
                     >
                       <div className="flex items-center gap-[4px] rounded-2xl py-4">
                         <span className="flex min-h-10 min-w-10 items-center justify-center rounded-xl">
@@ -849,12 +1018,12 @@ export default function HomePage() {
                           {item.label}
                         </p>
                       </div>
-                      <div className="flex min-w-[120px] max-w-[140px] gap-1">
+                      <div className="flex min-w-[120px] max-w-[140px] gap-1 max-[550px]:justify-center max-[550px]:gap-[3px]">
                         {Array.from({ length: 5 }).map((_, idx) => (
                           <span
                             key={`${item.label}-${idx}`}
                             className={cn(
-                              "h-3 w-4 rounded-[3px]",
+                              "h-3 w-4 rounded-[3px] max-[550px]:w-[12px]",
                               idx < item.level
                                 ? "bg-gradient-to-r from-[#ff7a18ed] to-[#ffce89de]"
                                 : "bg-[#f5ebdd]",
@@ -1216,7 +1385,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-xs uppercase tracking-[0.35em] text-slate-900 ">
-            Portfolio — {currentYear}
+            Portfolio
           </div>
         </div>
       </footer>
