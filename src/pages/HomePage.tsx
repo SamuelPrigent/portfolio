@@ -401,11 +401,11 @@ const skillSections: SkillSection[] = [
 ];
 
 const softSkillWords: SoftSkillWord[] = [
-  { text: "Bonne humeur", className: "-rotate-3" },
-  { text: "Communicant et réactif", className: "rotate-2" },
+  { text: "Esprit positif", className: "-rotate-3" },
+  { text: "Communication claire", className: "rotate-2" },
+  { text: "En veille continue", className: "-rotate-2" },
+  { text: "Réactif", className: "rotate-3" },
   { text: "Curieux", className: "-rotate-1" },
-  { text: "Feedback lover", className: "rotate-3" },
-  { text: "Autonomie", className: "-rotate-2" },
   { text: "Recherche de solutions", className: "rotate-1" },
 ];
 
@@ -413,6 +413,7 @@ const experiences = [
   {
     id: "1",
     period: "Octobre 2024 - Septembre 2025",
+    periodShort: "10/2024 - 09/2025",
     duration: "12 mois",
     title: "Développeur Fullstack",
     company: "Dir IPS",
@@ -423,8 +424,9 @@ const experiences = [
   },
   {
     id: "2",
-    period: "Janvier 2024 - Février 2024",
-    duration: "2 mois",
+    period: "Janvier 2024 - Mars 2024",
+    periodShort: "01/2024 - 03/2024",
+    duration: "9 semaines",
     title: "Développeur Fullstack",
     company: "Dir IPS",
     contract: "Stage",
@@ -892,31 +894,46 @@ export default function HomePage() {
           <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#ffb567]/20 blur-[180px]" />
           <div className="bg-[#ffd6ad]/28 absolute bottom-0 right-[12%] h-[320px] w-[320px] rounded-full blur-[140px]" />
         </div>
-        <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-24 text-center lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:text-left">
-          <div className="relative flex flex-col gap-10">
+        <div className="mx-auto grid max-w-6xl items-center gap-16 px-6 pb-24 text-center max-[650px]:gap-[40px] max-[550px]:px-5 max-[450px]:px-4 max-[382px]:gap-[30px] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:text-left">
+          <div className="relative flex flex-col gap-10 max-[750px]:gap-7 max-[450px]:gap-5">
             <SparkleIcon
               className="absolute -left-10 -top-10 hidden h-10 w-10 text-[#ff7a18] max-[1175px]:left-[-25px] lg:block"
               aria-hidden
             />
-            <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+            <div className="flex flex-wrap items-center justify-center gap-3 max-[445px]:hidden max-[377px]:gap-[7px] lg:justify-start">
               {heroTags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-[#d45805]/45 bg-[#fff3e7] px-5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-[#c24800] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]"
+                  className="rounded-full border border-[#d45805]/45 bg-[#fff3e7] px-5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-[#c24800] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] max-[445px]:px-3 max-[445px]:text-[10px]"
                 >
                   {tag}
                 </span>
               ))}
             </div>
+
+            <div className="hidden items-center justify-center max-[445px]:flex">
+              <span className="inline-flex items-center rounded-full border border-[#d45805]/45 bg-[#fff3e7] px-5 py-2 text-[0.64rem] font-semibold uppercase tracking-[0.28em] text-[#c24800] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] max-[360px]:px-[14px]">
+                {heroTags.map((tag, index) => (
+                  <span key={tag} className="flex items-center">
+                    {tag}
+                    {index < heroTags.length - 1 && (
+                      <span aria-hidden className="mx-2 text-[#d45805]/70">
+                        |
+                      </span>
+                    )}
+                  </span>
+                ))}
+              </span>
+            </div>
             <div>
-              <h1 className="specialFont text-[clamp(3.5rem,5vw,62px)] leading-[1.03] text-slate-900">
+              <h1 className="specialFont text-[clamp(3.5rem,5vw,62px)] leading-[1.03] text-slate-900 max-[455px]:text-[50px] max-[411px]:text-[45px] max-[358px]:text-[40px]">
                 Samuel Prigent
               </h1>
               <h2 className="relative inline-flex flex-col text-[clamp(2.1rem,3.6vw,2.6rem)] font-semibold text-slate-800">
-                <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent">
+                <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent max-[450px]:mt-[15px] max-[386px]:text-[30px]">
                   Développeur Fullstack
                 </span>
-                <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[5px] max-[1019px]:top-[70px]" />
+                <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[5px] max-[1019px]:top-[70px] max-[386px]:left-[-5px] max-[386px]:left-[15px] max-[386px]:top-[65px]" />
               </h2>
               <p className="mx-auto mt-[35px] max-w-2xl text-[1.02rem] leading-relaxed text-slate-700">
                 Passionné par le développement logiciel et le web, j’aime créer
@@ -924,7 +941,7 @@ export default function HomePage() {
                 font toute la différence.
               </p>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
+            <div className="flex flex-wrap items-center justify-center gap-6 max-[550px]:gap-[15px] lg:justify-start">
               <Link
                 to="/CV"
                 onClick={() => window.scrollTo(0, 0)}
@@ -933,7 +950,7 @@ export default function HomePage() {
                 Download CV
                 <DownloadIcon className="h-5 w-5" />
               </Link>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 max-[420px]:gap-[8px]">
                 {socialLinks.map(({ href, label, Icon }) => (
                   <a
                     key={label}
@@ -970,17 +987,17 @@ export default function HomePage() {
 
       <section
         id="skills"
-        className="mx-auto mt-16 max-w-6xl px-0 pt-8 min-[750px]:px-6"
+        className="mx-auto mt-16 max-w-6xl px-0 pt-8 max-[650px]:mt-0 max-[650px]:pt-0 min-[750px]:px-6 "
       >
-        <div className="rounded-none bg-white/95 px-0 py-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.35)] sm:rounded-none md:rounded-[32px] md:px-8 min-[750px]:px-6 lg:rounded-[40px] lg:px-12">
-          <div className="space-y-4 text-center">
+        <div className="rounded-none bg-white/95 px-[14px] py-12 shadow-[0_35px_70px_-45px_rgba(15,23,42,0.35)] sm:rounded-none md:rounded-[32px] md:px-8 min-[750px]:px-6 lg:rounded-[40px] lg:px-12">
+          <div className="space-y-4 text-center max-[389px]:space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
               Stack principale
             </p>
-            <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900">
+            <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900 max-[389px]:top-[10px] max-[389px]:text-[30px]">
               Technologies favorites
             </h2>
-            <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">
+            <p className="mx-auto max-w-3xl px-2 text-base leading-relaxed text-slate-600">
               Je m'intéresse particulièrement à ces technologies que j'utilise
               au quotidien.
             </p>
@@ -990,13 +1007,13 @@ export default function HomePage() {
               <article
                 key={section.title}
                 className={cn(
-                  "relative overflow-hidden rounded-[32px] border-y border-transparent px-4 py-6 shadow-[0_30px_60px_-45px_rgba(249,115,22,0.35)] max-[710px]:rounded-none max-[650px]:gap-0 min-[550px]:p-6 min-[710px]:rounded-[32px] min-[710px]:p-8",
+                  "relative overflow-hidden rounded-[32px] border border-transparent px-4 py-6 shadow-[0_30px_60px_-45px_rgba(249,115,22,0.35)] max-[650px]:gap-0 min-[550px]:p-6 min-[710px]:rounded-[32px] min-[710px]:p-8",
                   `${section.border}`,
                   "bg-gradient-to-br from-[#fff1df] via-[#fff7ed] to-[#fffaf3]",
                 )}
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold uppercase tracking-[0.3em] text-slate-900">
+                  <h3 className="text-2xl font-semibold uppercase tracking-[0.3em] text-slate-900 max-[650px]:m-auto max-[389px]:text-[20px]">
                     {section.title}
                   </h3>
                 </div>
@@ -1042,35 +1059,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="parcours" className="mx-auto mt-16 max-w-6xl px-6 pt-20">
-        <div className="space-y-6 text-center">
+      <section
+        id="parcours"
+        className="mx-auto mt-16 max-w-6xl px-6 pt-20 max-[650px]:mt-[30px] max-[650px]:px-[14px]"
+      >
+        <div className="space-y-6 text-center max-[389px]:space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Parcours
           </p>
-          <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900">
+          <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900 max-[389px]:text-[30px]">
             Expériences et formations marquantes
           </h2>
         </div>
-        <div className="mt-14 grid gap-[2.5rem] min-[900px]:grid-cols-[3fr_2.3fr]">
+        <div className="mt-14 grid gap-[2.5rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
           <div className="space-y-6">
             {experiences.map((experience) => (
               <article
                 key={experience.id}
-                className="rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.45)]"
+                className="rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.45)] max-[470px]:rounded-[16px] max-[470px]:p-[22px]"
               >
                 <div className="flex flex-wrap items-center justify-between gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#ff7a18]">
-                  <span>{experience.period}</span>
-                  <span className="bg-[#ff7a18]/12 rounded-full px-3 py-1 text-[0.7rem] font-semibold tracking-[0.12em] text-[#d75806]">
+                  <span className="max-[450px]:hidden">
+                    {experience.period}
+                  </span>
+                  <span className="min-[451px]:hidden">
+                    {experience.periodShort}
+                  </span>
+                  <span className="bg-[#ff7a18]/12 rounded-full py-1 text-[0.7rem] font-semibold tracking-[0.12em] text-[#d75806]">
                     {experience.duration}
                   </span>
                 </div>
-                <h3 className="mb-[8px] mt-[6px] text-[1.5rem] font-semibold text-slate-900">
-                  {experience.title}
-                  <span className="text-[1.05rem] font-medium text-slate-600">
-                    {" · "}
+                <div className="flex items-baseline justify-between gap-[6px] max-[400px]:mb-[12px] max-[400px]:flex-col">
+                  <h3 className="mb-[8px] mt-[6px] whitespace-nowrap text-[1.5rem] font-semibold text-slate-900 max-[400px]:mb-0 max-[370px]:text-[1.4rem]">
+                    {experience.title}
+                  </h3>
+                  <span className="whitespace-nowrap text-[1.05rem] font-medium text-slate-600">
                     {experience.company}
                   </span>
-                </h3>
+                </div>
                 <p className="mt-1 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
                   {experience.contract}
                 </p>
@@ -1091,8 +1117,8 @@ export default function HomePage() {
             ))}
           </div>
           <div className="space-y-6">
-            <div className="relative h-full rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)]">
-              <div className="flex w-full items-center justify-between">
+            <div className="relative h-full rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)] max-[550px]:px-4 max-[500px]:border-none max-[500px]:bg-transparent max-[500px]:px-0 max-[500px]:shadow-none">
+              <div className="flex w-full items-center justify-between px-1 max-[500px]:px-2">
                 <h3 className="text-xl font-semibold text-slate-900">
                   Formations
                 </h3>
@@ -1104,12 +1130,12 @@ export default function HomePage() {
                 {education.map((edu) => (
                   <li
                     key={edu.title}
-                    className="rounded-2xl border border-orange-100 bg-white p-5 shadow-[0_18px_35px_-32px_rgba(15,23,42,0.25)]"
+                    className="rounded-2xl border border-orange-100 bg-white p-5 shadow-[0_18px_35px_-32px_rgba(15,23,42,0.25)] max-[550px]:px-4"
                   >
                     <span className="inline-flex items-center rounded-full bg-[#ff7a18]/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#ff7a18]">
                       {edu.level}
                     </span>
-                    <p className="mt-4 text-base font-semibold text-slate-900">
+                    <p className="mt-4 text-base font-semibold text-slate-900 max-[550px]:mt-[14px]">
                       {edu.title}
                     </p>
                     <p className="text-sm text-slate-600">{edu.school}</p>
@@ -1119,14 +1145,14 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="relative mt-[85px] overflow-hidden rounded-[32px] border border-orange-100 bg-gradient-to-br from-orange-50 via-white to-orange-100 p-12 shadow-[0_25px_45px_-40px_rgba(249,115,22,0.35)]">
+        <div className="relative mt-[85px] overflow-hidden rounded-[32px] border border-orange-100 bg-gradient-to-br from-orange-50 via-white to-orange-100 p-12 shadow-[0_25px_45px_-40px_rgba(249,115,22,0.35)] max-[550px]:px-8">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Soft skills
           </p>
           <h3 className="mt-3 text-center text-2xl font-semibold text-slate-900">
             L'état d'esprit que j'adopte dans une équipe
           </h3>
-          <div className="relative mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3 md:gap-5">
+          <div className="relative mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3 max-[700px]:gap-4 md:gap-5">
             {softSkillWords.map((word) => (
               <span
                 key={word.text}
@@ -1136,18 +1162,21 @@ export default function HomePage() {
               </span>
             ))}
           </div>
-          <SparkleIcon className="pointer-events-none absolute bottom-7 left-12 h-16 w-16 rotate-2" />
-          <StarIcon className="pointer-events-none absolute right-6 top-4 h-20 w-20" />
-          <SparkleIcon className="pointer-events-none absolute left-12 top-24 h-8 w-8 rotate-[-5deg]" />
+          <SparkleIcon className="pointer-events-none absolute bottom-7 left-12 h-16 w-16 rotate-2 max-[740px]:bottom-[24px] max-[740px]:left-[10px] max-[740px]:h-10 max-[740px]:w-10 max-[565px]:hidden" />
+          <StarIcon className="pointer-events-none absolute right-6 top-4 h-20 w-20 max-[900px]:h-14 max-[900px]:h-14 max-[750px]:w-10 max-[750px]:w-10" />
+          <SparkleIcon className="pointer-events-none absolute left-12 top-24 h-8 w-8 rotate-[-5deg] max-[740px]:left-[30px] max-[740px]:top-[37px]" />
         </div>
       </section>
 
-      <section id="projets" className="mx-auto mt-16 max-w-6xl px-6 pt-20">
-        <div className="space-y-4 text-center">
+      <section
+        id="projets"
+        className="mx-auto mt-16 max-w-6xl px-6 pt-20 max-[650px]:mt-11 max-[650px]:px-[14px]"
+      >
+        <div className="space-y-4 text-center max-[389px]:space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
             Projets
           </p>
-          <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900 ">
+          <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900 max-[389px]:text-[30px]">
             Mes réalisations préférées
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600 ">
@@ -1160,9 +1189,9 @@ export default function HomePage() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group flex h-full flex-col overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+              className="group flex h-full flex-col overflow-hidden rounded-[32px] border border-orange-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden max-[650px]:h-36">
                 <img
                   src={project.image}
                   alt={`Aperçu du projet ${project.title}`}
@@ -1201,15 +1230,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto mt-28 max-w-6xl px-6 pt-6">
-        <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e3] via-white to-[#ffe9cf] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)]">
+      <section
+        id="contact"
+        className="mx-auto mt-28 max-w-6xl px-6 pt-6 max-[650px]:mt-16 max-[650px]:px-[14px] max-[400px]:px-0"
+      >
+        <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e3] via-white to-[#ffe9cf] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)] max-[400px]:rounded-none max-[400px]:border-none">
           <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[#ffc488] opacity-35 blur-[220px]" />
           <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_30%,rgba(255,212,176,0.9)_0%,rgba(255,176,110,0.55)_55%,rgba(255,142,62,0)_78%)] opacity-75" />
           <div
             className="opacity-28 pointer-events-none absolute left-1/2 top-[-200px] h-[360px] w-[360px] -translate-x-1/2 rounded-full mix-blend-soft-light"
             style={{ backgroundImage: `url(${grainTextureDataUrl})` }}
           />
-          <div className="bg-white/92 relative rounded-[42px] p-10 backdrop-blur-lg md:p-14">
+          <div className="bg-white/92 relative rounded-[42px] p-14 backdrop-blur-lg max-md:p-10 max-sm:px-5">
             <div
               className="bg-[#ff7a18]/18 absolute inset-x-10 -top-24 h-48 rounded-full blur-3xl"
               aria-hidden
@@ -1220,11 +1252,11 @@ export default function HomePage() {
             />
 
             <div className="relative mx-auto max-w-4xl text-center">
-              <div className="inline-flex items-center justify-center rounded-full bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff7a18] shadow-sm">
+              <div className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff7a18] shadow-sm">
                 Prennons contact
               </div>
               <div className="relative mt-[30px] flex flex-col items-center gap-[10px]">
-                <h2 className="relative text-[clamp(2.2rem,3vw,3.2rem)] font-semibold text-slate-900">
+                <h2 className="relative text-[clamp(2.2rem,3vw,3.2rem)] font-semibold text-slate-900 max-[450px]:text-[30px]">
                   Ouvert aux échanges
                   <span className="pointer-events-none absolute -top-8 right-[calc(-7rem)] hidden h-11 w-11 origin-top-right rotate-[8deg] md:block">
                     <PaperTrail className="absolute right-[22px] top-[2px] h-[80px] w-[190px]" />

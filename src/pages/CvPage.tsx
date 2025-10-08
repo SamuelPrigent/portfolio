@@ -41,7 +41,7 @@ export default function CvPage() {
               Retour
             </Link>
           </div>
-          <div className="cv-preview relative flex-1 overflow-hidden rounded-[14px] border border-slate-200 bg-white shadow-[0_28px_56px_-46px_rgba(15,23,42,0.55)] ">
+          <div className="cv-preview relative flex-1 overflow-hidden rounded-[14px] border border-orange-100 bg-white shadow-[0_28px_56px_-46px_rgba(15,23,42,0.55)] ">
             <iframe
               src={pdfUrl}
               title="CV Samuel Prigent"
