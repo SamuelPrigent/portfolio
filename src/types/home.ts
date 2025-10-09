@@ -10,12 +10,10 @@ export type SocialLink = {
   Icon: (props: { className?: string }) => JSX.Element;
 };
 
-export type SkillSectionItem = { label: string; icon: string; level: number };
-
-export type SkillSection = {
-  title: string;
-  border: string;
-  items: SkillSectionItem[];
+export type Skill = {
+  label: string;
+  icon: string;
+  docUrl: string;
 };
 
 export type SoftSkillWord = {

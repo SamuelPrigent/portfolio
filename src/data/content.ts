@@ -3,15 +3,16 @@ import kasa from "../assets/preview-kasa.png";
 import lespetitsplats from "../assets/preview-lespetitsplats.png";
 import mdd from "../assets/preview-mdd.png";
 import rentals from "../assets/preview-rentals.png";
-import reactLogo from "../assets/logo-react.svg";
+import javascriptLogo from "../assets/logo-js.svg";
 import typescriptLogo from "../assets/logo-typescript.svg";
-import tailwindLogo from "../assets/logo-tailwindcss.svg";
+import reactLogo from "../assets/logo-react.svg";
 import nextLogo from "../assets/nextBlack.svg";
-import prismaLogo from "../assets/logo-prisma.svg";
+import tailwindLogo from "../assets/logo-tailwindcss.svg";
+import nodeLogo from "../assets/logo-node.svg";
 import expressLogo from "../assets/logo-express.svg";
-import cypressLogo from "../assets/cypressBlack.svg";
-import springboot from "../assets/springboot.svg";
-import jestLogo from "../assets/jestBlack.svg";
+import prismaLogo from "../assets/logo-prisma.svg";
+import gitLogo from "../assets/logo-git.svg";
+import githubLogo from "../assets/github.svg";
 
 import {
   BriefcaseIcon,
@@ -26,7 +27,7 @@ import type {
   Experience,
   NavItem,
   Project,
-  SkillSection,
+  Skill,
   SocialLink,
   SoftSkillWord,
 } from "../types/home";
@@ -54,27 +55,56 @@ export const socialLinks: SocialLink[] = [
   { href: "mailto:samuel.prigent@yahoo.fr", label: "Email", Icon: MailIcon },
 ];
 
-export const skillSections: SkillSection[] = [
+export const skills: Skill[] = [
   {
-    title: "Front-End",
-    border: "border-[#ffb347]/35",
-    items: [
-      { label: "React", icon: reactLogo, level: 5 },
-      { label: "TypeScript", icon: typescriptLogo, level: 4 },
-      { label: "Jest", icon: jestLogo, level: 4 },
-      { label: "Next", icon: nextLogo, level: 4 },
-      { label: "Tailwind", icon: tailwindLogo, level: 5 },
-      { label: "Cypress", icon: cypressLogo, level: 3 },
-    ],
+    label: "JavaScript",
+    icon: javascriptLogo,
+    docUrl: "https://developer.mozilla.org/docs/Web/JavaScript",
   },
   {
-    title: "Back-End",
-    border: "border-[#ff9a45]/35",
-    items: [
-      { label: "Express", icon: expressLogo, level: 4 },
-      { label: "Prisma", icon: prismaLogo, level: 4 },
-      { label: "Spring Boot", icon: springboot, level: 3 },
-    ],
+    label: "TypeScript",
+    icon: typescriptLogo,
+    docUrl: "https://www.typescriptlang.org/docs/",
+  },
+  {
+    label: "React",
+    icon: reactLogo,
+    docUrl: "https://react.dev/",
+  },
+  {
+    label: "Next.js",
+    icon: nextLogo,
+    docUrl: "https://nextjs.org/",
+  },
+  {
+    label: "Tailwind CSS",
+    icon: tailwindLogo,
+    docUrl: "https://tailwindcss.com/",
+  },
+  {
+    label: "Node.js",
+    icon: nodeLogo,
+    docUrl: "https://nodejs.org/fr",
+  },
+  {
+    label: "Express",
+    icon: expressLogo,
+    docUrl: "https://expressjs.com/",
+  },
+  {
+    label: "Prisma",
+    icon: prismaLogo,
+    docUrl: "https://www.prisma.io/docs",
+  },
+  {
+    label: "Git",
+    icon: gitLogo,
+    docUrl: "https://git-scm.com/",
+  },
+  {
+    label: "GitHub",
+    icon: githubLogo,
+    docUrl: "https://github.com/",
   },
 ];
 
