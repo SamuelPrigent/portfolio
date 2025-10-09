@@ -7,13 +7,10 @@
   );
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&display=swap");
-
 .specialFont {
-  font-family: "Carter One";
   letter-spacing: -0.025rem;
-  font-family: "Bricolage Grotesque", "Carter One", cursive;
+  font-family: "Bricolage Grotesque", "Open Sans", cursive;
+  font-weight: 600;
   letter-spacing: -0.015rem;
 }
 a:not(:active):focus {
