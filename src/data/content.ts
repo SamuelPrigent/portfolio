@@ -1,10 +1,10 @@
-import fifo from "../assets/preview-fifo.png";
-import kasa from "../assets/preview-kasa.png";
-import lespetitsplats from "../assets/preview-lespetitsplats.png";
-import mdd from "../assets/preview-mdd.png";
-import rentals from "../assets/preview-rentals.png";
+import fifo from "../assets/preview-fifo.webp";
+import kasa from "../assets/preview-kasa.webp";
+import lespetitsplats from "../assets/preview-lespetitsplats.webp";
+import mdd from "../assets/preview-mdd.webp";
+import rentals from "../assets/preview-rentals.webp";
 import javascriptLogo from "../assets/logo-js.svg";
-import typescriptLogo from "../assets/logo-typescript.svg";
+import typescriptLogo from "../assets/logo-ts.svg";
 import reactLogo from "../assets/logo-react.svg";
 import nextLogo from "../assets/nextBlack.svg";
 import tailwindLogo from "../assets/logo-tailwindcss.svg";
@@ -12,7 +12,9 @@ import nodeLogo from "../assets/logo-node.svg";
 import expressLogo from "../assets/logo-express.svg";
 import prismaLogo from "../assets/logo-prisma.svg";
 import gitLogo from "../assets/logo-git.svg";
-import githubLogo from "../assets/github.svg";
+import springbootLogo from "../assets/springboot.svg";
+// import githubLogo from "../assets/github.svg";
+// import angularLogo from "../assets/angular.svg";
 
 import {
   BriefcaseIcon,
@@ -97,23 +99,34 @@ export const skills: Skill[] = [
     docUrl: "https://www.prisma.io/docs",
   },
   {
+    label: "Springboot",
+    icon: springbootLogo,
+    docUrl: "https://github.com/",
+  },
+  {
     label: "Git",
     icon: gitLogo,
     docUrl: "https://git-scm.com/",
   },
-  {
-    label: "GitHub",
-    icon: githubLogo,
-    docUrl: "https://github.com/",
-  },
+  //   {
+  //     label: "Angular",
+  //     icon: angularLogo,
+  //     docUrl: "https://git-scm.com/",
+  //   },
+  //   {
+  //     label: "GitHub",
+  //     icon: githubLogo,
+  //     docUrl: "https://github.com/",
+  //   },
 ];
 
 export const softSkillWords: SoftSkillWord[] = [
   { text: "Bonne humeur", className: "-rotate-3" },
-  { text: "Communication claire", className: "rotate-2" },
-  { text: "Veille continue", className: "-rotate-2" },
-  { text: "Esprit moteur", className: "rotate-3" },
-  { text: "Recherche de solutions", className: "rotate-1" },
+  { text: "Communication claire", className: "rotate-1" },
+  { text: "Ecoute active", className: "rotate-2" },
+  { text: "Adaptabilité", className: "rotate-1" },
+  { text: "Curiosité insatiable", className: "-rotate-2" },
+  { text: "Esprit collaboratif", className: "-rotate-1" },
 ];
 
 export const experiences: Experience[] = [

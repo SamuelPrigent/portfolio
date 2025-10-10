@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 import { heroTags, socialLinks } from "../data/content";
-import photo from "../assets/proPhoto3.jpg";
+import photo from "../assets/proPhoto3.webp";
 import { DownloadIcon, SignatureUnderline, SparkleIcon } from "./icons";
+import OptimizedImage from "../utils/OptimizedImage";
 
 export default function HeroSection() {
   return (
@@ -13,9 +14,9 @@ export default function HeroSection() {
         <div className="bg-[#ffd6ad]/28 absolute bottom-0 right-[12%] h-[320px] w-[320px] rounded-full blur-[140px]" />
       </div>
       <div className="mx-auto grid max-w-[1200px] items-center gap-16 px-10 pb-24 text-center max-[650px]:gap-[40px] max-[550px]:px-5 max-[450px]:px-4 max-[382px]:gap-[30px] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:text-left">
-        <div className="relative flex flex-col gap-10 max-[750px]:gap-7 max-[450px]:gap-5">
+        <div className="relative flex flex-col gap-10 max-[750px]:gap-7 max-[450px]:gap-6">
           <SparkleIcon
-            className="absolute -left-10 -top-10 hidden h-10 w-10 text-[#ff7a18] max-[1175px]:left-[-25px] lg:block"
+            className="absolute left-[420px] top-[45px] hidden h-10 w-10 text-[#ff7a18] max-[1175px]:left-[-25px] lg:block"
             aria-hidden
           />
           <div className="flex flex-wrap items-center justify-center gap-3 max-[445px]:hidden max-[377px]:gap-[7px] lg:justify-start">
@@ -51,7 +52,7 @@ export default function HeroSection() {
               <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent max-[450px]:mt-[15px] max-[386px]:text-[30px]">
                 Développeur Fullstack
               </span>
-              <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[5px] max-[1019px]:top-[70px] max-[386px]:left-[-5px] max-[386px]:left-[15px] max-[386px]:top-[65px]" />
+              <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[-2px] max-[1019px]:top-[71px] max-[386px]:left-[-5px] max-[386px]:left-[15px] max-[386px]:top-[65px]" />
             </h2>
             <p className="mx-auto mt-[35px] max-w-2xl text-[1.02rem] leading-relaxed text-slate-700">
               Passionné par le développement logiciel et le web, j’aime créer
@@ -92,9 +93,10 @@ export default function HeroSection() {
             />
             <div className="from-[#ff7a18]/18 absolute -inset-12 rounded-[52px] bg-gradient-to-br via-transparent to-[#ffb347]/40 blur-3xl" />
             <div className="relative overflow-hidden rounded-[48px] border-[12px] border-white shadow-[0px_45px_90px_-50px_rgba(15,23,42,0.65)]">
-              <img
+              <OptimizedImage
                 src={photo}
                 alt="Portrait de Samuel Prigent"
+                preload
                 className="h-full w-full scale-[1.16] object-cover"
               />
             </div>

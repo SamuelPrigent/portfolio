@@ -1,4 +1,5 @@
 import { projects } from "../data/content";
+import OptimizedImage from "../utils/OptimizedImage";
 
 export default function ProjectsSection() {
   return (
@@ -14,7 +15,9 @@ export default function ProjectsSection() {
           Mes réalisations préférées
         </h2>
         <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600 ">
-          Chaque projet est l'occasion d'appliquer une démarche produit : discovery rapide, cadrage technique, itérations courtes et mesures de succès.
+          Chaque projet est l'occasion d'appliquer une démarche produit :
+          discovery rapide, cadrage technique, itérations courtes et mesures de
+          succès.
         </p>
       </div>
       <div className="mt-14 grid gap-8 lg:grid-cols-3">
@@ -24,7 +27,7 @@ export default function ProjectsSection() {
             className="group flex h-full flex-col overflow-hidden rounded-[32px] border border-orange-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
           >
             <div className="relative h-48 overflow-hidden max-[650px]:h-36">
-              <img
+              <OptimizedImage
                 src={project.image}
                 alt={`Aperçu du projet ${project.title}`}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
@@ -41,8 +44,12 @@ export default function ProjectsSection() {
                   </span>
                 ))}
               </div>
-              <h3 className="text-xl font-semibold text-slate-900">{project.title}</h3>
-              <p className="text-left text-sm text-slate-600">{project.description}</p>
+              <h3 className="text-xl font-semibold text-slate-900">
+                {project.title}
+              </h3>
+              <p className="text-left text-sm text-slate-600">
+                {project.description}
+              </p>
               <a
                 href={project.link}
                 target="_blank"

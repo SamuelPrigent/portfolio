@@ -15,19 +15,19 @@ export default function SkillsSection() {
             Technologies favorites
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">
-            Celles que j’utilise le plus souvent pour construire des produits
-            fiables et évolutifs.
+            Mes outils de prédilection pour concevoir des solutions robustes et
+            durables.
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-5 gap-10 max-[900px]:grid-cols-4 max-[650px]:grid-cols-3 max-[380px]:grid-cols-2">
+        <div className="mx-auto mb-6 mt-11 grid max-w-5xl grid-cols-5 gap-8 gap-y-14 max-[900px]:grid-cols-4 max-[650px]:grid-cols-3 max-[380px]:grid-cols-2">
           {skills.map(({ label, icon, docUrl }) => (
             <a
               key={label}
               href={docUrl}
               target="_blank"
               rel="noreferrer"
-              className="tech-card group flex flex-col items-center gap-2.5 rounded-[22px] px-3 py-5 text-center transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a18] focus-visible:ring-offset-4 focus-visible:ring-offset-white"
+              className="tech-card group flex flex-col items-center gap-2.5 rounded-[22px] p-1 text-center transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a18] focus-visible:ring-offset-4 focus-visible:ring-offset-white"
             >
               <span className="tech-bubble">
                 <img src={icon} alt={label} />
