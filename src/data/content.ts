@@ -121,12 +121,12 @@ export const skills: Skill[] = [
 ];
 
 export const softSkillWords: SoftSkillWord[] = [
-  { text: "Bonne humeur", className: "-rotate-3" },
-  { text: "Communication claire", className: "rotate-1" },
+  { text: "Bonne humeur", className: "-rotate-2" },
+  { text: "Esprit collaboratif", className: "rotate-1" },
+  { text: "Communication claire", className: "-rotate-1" },
   { text: "Ecoute active", className: "rotate-2" },
-  { text: "Adaptabilité", className: "rotate-1" },
-  { text: "Curiosité insatiable", className: "-rotate-2" },
-  { text: "Esprit collaboratif", className: "-rotate-1" },
+  { text: "Adaptabilité", className: "-rotate-1" },
+  { text: "Curiosité insatiable", className: "rotate-1" },
 ];
 
 export const experiences: Experience[] = [
