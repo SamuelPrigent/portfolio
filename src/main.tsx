@@ -11,7 +11,8 @@ import BackgroundGrid from "./components/BackgroundGrid.tsx";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter
-      basename="/samuelprigent/"
+      //   basename="/samuelprigent/"
+      basename="/"
       future={{ v7_relativeSplatPath: true, v7_startTransition: true }}
     >
       <BackgroundGrid />
