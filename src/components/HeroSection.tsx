@@ -52,7 +52,7 @@ export default function HeroSection() {
               <span className="mt-[20px] bg-gradient-to-r from-[#161616] via-[#1a1a1a] to-[#0b0b0b] bg-clip-text text-transparent max-[450px]:mt-[15px] max-[386px]:text-[30px]">
                 Développeur Fullstack
               </span>
-              <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[-2px] max-[1019px]:top-[71px] max-[386px]:left-[-5px] max-[386px]:left-[15px] max-[386px]:top-[65px]" />
+              <SignatureUnderline className="pointer-events-none absolute left-[23px] top-[79px] h-8 w-[230px] rotate-[5deg] scale-[1.12] opacity-90 max-[1019px]:left-[-2px] max-[1019px]:top-[71px] max-[386px]:left-[-5px] max-[386px]:top-[65px]" />
             </h2>
             <p className="mx-auto mt-[35px] max-w-2xl text-[1.02rem] leading-relaxed text-slate-700">
               Passionné par le développement logiciel et le web, j’aime créer
