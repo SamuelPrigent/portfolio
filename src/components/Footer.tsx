@@ -16,7 +16,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="flex h-8 w-8 items-center justify-center rounded-full text-slate-900 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] "
+              className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-transparent text-slate-900 transition focus-visible:border-[#ff7a18] focus-visible:outline-none"
             >
               <Icon className="h-[22px] w-[22px]" />
             </a>
