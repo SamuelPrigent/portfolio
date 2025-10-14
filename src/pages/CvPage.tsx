@@ -20,7 +20,7 @@ function ArrowBackIcon(props: SVGProps<SVGSVGElement>) {
 
 export default function CvPage() {
   return (
-    <div className="min-h-screen w-full bg-[#fdf9f3] text-slate-900 transition-colors duration-300 ease-out ">
+    <div className="min-h-screen w-full bg-[#fffcf7] text-slate-900 transition-colors duration-300 ease-out ">
       <div className="mx-auto min-h-screen w-full max-w-6xl px-5 py-5">
         <div className="cv-content-wrapper">
           <div className="cv-back-actions">

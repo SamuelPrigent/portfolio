@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { heroTags, socialLinks } from "../data/content";
-import photo from "../assets/proPhoto3.webp";
+import photo from "../assets/proPhotoTest2.webp";
 import { DownloadIcon, SignatureUnderline, SparkleIcon } from "./icons";
 import OptimizedImage from "../utils/OptimizedImage";
 
@@ -93,11 +93,17 @@ export default function HeroSection() {
             />
             <div className="from-[#ff7a18]/18 absolute -inset-12 rounded-[52px] bg-gradient-to-br via-transparent to-[#ffb347]/40 blur-3xl" />
             <div className="relative overflow-hidden rounded-[48px] border-[12px] border-white shadow-[0px_45px_90px_-50px_rgba(15,23,42,0.65)]">
-              <OptimizedImage
+              {/* <OptimizedImage
                 src={photo}
                 alt="Portrait de Samuel Prigent"
                 preload
                 className="h-full w-full scale-[1.16] object-cover"
+              /> */}
+              <OptimizedImage
+                src={photo}
+                alt="Portrait de Samuel Prigent"
+                preload
+                className="h-full w-full scale-[1.0] object-cover"
               />
             </div>
           </div>
