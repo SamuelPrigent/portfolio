@@ -30,7 +30,7 @@ export default function CvPage() {
               aria-label="Retour à l'accueil"
               className="cv-back-pill"
             >
-              <ArrowBackIcon className="cv-back-pill__icon" />
+              <ArrowBackIcon className="cv-back-pill__icon h-[22px] w-[22px]" />
             </Link>
             <Link
               to="/"
