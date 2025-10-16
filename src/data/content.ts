@@ -144,16 +144,28 @@ export const experiences: Experience[] = [
   },
   {
     id: "2",
-    period: "Janvier 2024 - Mars 2024",
+    period: "Octobre 2023 - Septembre 2024",
     periodShort: "01/2024 - 03/2024",
-    duration: "9 semaines",
+    duration: "12 mois",
     title: "Développeur Fullstack",
-    company: "Dir IPS",
-    contract: "Stage",
+    company: "Finestack",
+    contract: "Freelance",
     description:
-      "Création de fonctionnalités d'interface personnalisables (thèmes, dark mode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
-    environment: ["PHP", "Symfony", "Bootstrap", "SQL"],
+      "Développement d’un UI kit et d’un Storybook. Développement d’une App automatisant la génération de PDF standardisé de réponse à des appels d’offres. Itération du processus sur les sections du document. Script d'alerte activé par une tâche CRON, destiné à indexer les résultats de recherche obtenus via une API tierce. Méthodologie agile avec Jira et Confluence.",
+    environment: ["React", "NodeJS", "Express", "NextJS", "Jira"],
   },
+  //   {
+  //     id: "3",
+  //     period: "Janvier 2024 - Mars 2024",
+  //     periodShort: "01/2024 - 03/2024",
+  //     duration: "9 semaines",
+  //     title: "Développeur Fullstack",
+  //     company: "Dir IPS",
+  //     contract: "Stage",
+  //     description:
+  //       "Création de fonctionnalités d'interface personnalisables (thèmes, dark mode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
+  //     environment: ["PHP", "Symfony", "Bootstrap", "SQL"],
+  //   },
 ];
 
 export const education: Education[] = [
