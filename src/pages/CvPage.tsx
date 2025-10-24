@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 import { Link } from "react-router-dom";
-import pdfUrl from "../assets/CV.pdf";
+import pdfUrl from "../assets/CV-samuel-prigent.pdf";
 
 function ArrowBackIcon(props: SVGProps<SVGSVGElement>) {
   return (
