@@ -151,7 +151,7 @@ export const experiences: Experience[] = [
     company: "Finestack",
     contract: "Freelance",
     description:
-      "Développement d’un UI kit et d’un Storybook. Développement d’une App automatisant la génération de PDF standardisé de réponse à des appels d’offres. Itération du processus sur les sections du document. Script d'alerte activé par une tâche CRON, destiné à indexer les résultats de recherche obtenus via une API tierce. Méthodologie agile avec Jira et Confluence.",
+      "Développement d’un UI kit et d’un Storybook. Développement d’une App automatisant la génération de PDF personnalisé de réponse à des offres d'emploi. Itération du processus sur les sections du document. Itération du processus sur les sections du document. Script d'alerte activé par une tâche CRON, destiné à indexer les résultats de recherche obtenus via une API tierce. Méthodologie agile avec Jira et Confluence.",
     environment: ["React", "NodeJS", "Express", "NextJS", "Jira"],
   },
   //   {
