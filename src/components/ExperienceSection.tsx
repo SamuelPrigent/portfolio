@@ -1,7 +1,9 @@
 import { education, experiences } from "../data/content";
 import studyIcon from "../assets/study.svg";
-import SoftSkills from "./SoftSkills";
+// import SoftSkills from "./SoftSkills";
 import { formatPeriod } from "../utils/dateUtils";
+import SectionTitleSmall from "./sectionTitleSmall";
+import SectionTitleBig from "./sectionTitleBig";
 
 export default function ExperienceSection() {
   return (
@@ -9,27 +11,34 @@ export default function ExperienceSection() {
       id="parcours"
       className="mx-auto mt-16 max-w-6xl px-6 pt-20 max-[650px]:mt-[30px] max-[650px]:px-[14px]"
     >
-      <div className="space-y-6 text-center max-[389px]:space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#ff7a18]">
-          Parcours
-        </p>
-        <h2 className="text-[clamp(2.2rem,3vw,3.4rem)] font-semibold text-slate-900 max-[389px]:text-[30px]">
-          Expériences et formations marquantes
-        </h2>
+      <div className="text-left">
+        <SectionTitleSmall>Parcours</SectionTitleSmall>
+        <SectionTitleBig>Mes expériences</SectionTitleBig>
       </div>
       <div className="mt-14 grid gap-[2.5rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
         <div className="space-y-6">
           {experiences.map((experience) => (
             <article
               key={experience.id}
-              className="rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.45)] max-[470px]:rounded-[16px] max-[470px]:p-[22px]"
+              className="rounded-2xl border border-gray-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.45)] max-[470px]:rounded-xl max-[470px]:p-[22px]"
             >
-              <h3 className="text-[1.5rem] font-semibold text-slate-900 max-[370px]:text-[1.4rem]">
-                {experience.title}
-              </h3>
-              <p className="mt-1 text-[1.05rem] font-medium text-slate-600">
-                {experience.company} - {experience.contract}
-              </p>
+              <div className="flex justify-between align-top">
+                <div>
+                  <h3 className="text-[1.5rem] font-semibold text-slate-900 max-[370px]:text-[1.4rem]">
+                    {experience.title}
+                  </h3>
+                  <p className="mt-1 text-[1.05rem] font-medium text-slate-600">
+                    {experience.company} - {experience.contract}
+                  </p>
+                </div>
+                {/* border border-[#e5eaf0] */}
+                <div className="flex aspect-square h-[46px] items-center justify-center overflow-hidden rounded-lg p-[3.5px]">
+                  <img
+                    src={experience.logo}
+                    alt={`logo ${experience.company}`}
+                  />
+                </div>
+              </div>
               <p className="mt-1 text-sm text-slate-500">
                 {formatPeriod(experience.startDate, experience.endDate)}
               </p>
@@ -45,12 +54,19 @@ export default function ExperienceSection() {
                 ))}
               </ul>
               <div className="mt-4 flex flex-wrap gap-2">
-                {experience.environment.map((tech) => (
+                {experience.techStack.map((tech, index) => (
                   <span
-                    key={tech}
-                    className="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#ff7a18]"
+                    key={index}
+                    className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1"
                   >
-                    {tech}
+                    <img
+                      src={tech.logo}
+                      alt=""
+                      className="h-4 w-4 object-contain"
+                    />
+                    <span className="text-xs font-medium text-slate-700">
+                      {tech.name}
+                    </span>
                   </span>
                 ))}
               </div>
@@ -58,12 +74,12 @@ export default function ExperienceSection() {
           ))}
         </div>
         <div className="space-y-6">
-          <div className="relative h-auto rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)] max-[550px]:px-4 max-[500px]:border-none max-[500px]:bg-transparent max-[500px]:px-0 max-[500px]:shadow-none">
+          <div className="relative h-auto rounded-2xl border border-gray-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)] max-[550px]:px-4 max-[500px]:border-none max-[500px]:bg-transparent max-[500px]:px-0 max-[500px]:shadow-none">
             <div className="flex w-full items-center justify-between px-1 max-[500px]:px-2">
               <h3 className="text-xl font-semibold text-slate-900">
                 Formations
               </h3>
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#ff7a18]/15 text-[#ff7a18]">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100">
                 <img src={studyIcon} alt="" aria-hidden className="h-6 w-6" />
               </span>
             </div>
@@ -71,9 +87,9 @@ export default function ExperienceSection() {
               {education.map((edu) => (
                 <li
                   key={edu.title}
-                  className="rounded-2xl border border-orange-100 bg-white p-5 shadow-[0_18px_35px_-32px_rgba(15,23,42,0.25)] max-[550px]:px-4"
+                  className="rounded-2xl border border-gray-100 bg-white p-5 shadow-[0_18px_35px_-32px_rgba(15,23,42,0.25)] max-[550px]:px-4"
                 >
-                  <span className="inline-flex items-center rounded-full bg-[#ff7a18]/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#ff7a18]">
+                  <span className="inline-flex items-center rounded-full bg-slate-100 px-4 py-2 text-xs font-semibold uppercase text-gray-600">
                     {edu.level}
                   </span>
                   <p className="mt-4 text-base font-semibold text-slate-900 max-[550px]:mt-[14px]">
@@ -86,7 +102,7 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-      <SoftSkills />
+      {/* <SoftSkills /> */}
     </section>
   );
 }

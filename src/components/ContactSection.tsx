@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { PaperPlaneIconAlt, PaperTrail } from "./icons";
+import SectionTitleSmall from "./sectionTitleSmall";
 
 const grainTextureDataUrl =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E";
@@ -117,26 +118,26 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
       id="contact"
       className="mx-auto mt-28 max-w-6xl px-6 pt-6 max-[650px]:mt-16 max-[650px]:px-[14px] max-[400px]:px-0"
     >
-      <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-gradient-to-br from-[#fff1e3] via-white to-[#ffe9cf] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.45)] max-[400px]:rounded-none max-[400px]:border-none">
-        <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[#ffc488] opacity-35 blur-[220px]" />
-        <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_30%,rgba(255,212,176,0.9)_0%,rgba(255,176,110,0.55)_55%,rgba(255,142,62,0)_78%)] opacity-75" />
+      <div className="relative overflow-hidden rounded-2xl border border-white/70 bg-gradient-to-br from-[#fff5f7] via-white to-[#f5f8ff] p-[1px] shadow-[0_40px_80px_-50px_rgba(15,23,42,0.18)] max-[400px]:rounded-none max-[400px]:border-none">
+        <div className="pointer-events-none absolute left-1/2 top-[-260px] h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-rose-500/10 blur-[220px]" />
+        <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_30%,rgba(255,230,240,0.95)_0%,rgba(255,200,215,0.45)_52%,rgba(255,255,255,0)_78%)]" />
         <div
           className="opacity-28 pointer-events-none absolute left-1/2 top-[-200px] h-[360px] w-[360px] -translate-x-1/2 rounded-full mix-blend-soft-light"
           style={{ backgroundImage: `url(${grainTextureDataUrl})` }}
         />
         <div className="bg-white/92 relative rounded-[42px] p-14 backdrop-blur-lg max-md:p-10 max-sm:px-5">
           <div
-            className="bg-[#ff7a18]/18 absolute inset-x-10 -top-24 h-48 rounded-full blur-3xl"
+            className="absolute inset-x-10 -top-24 h-48 rounded-full bg-rose-500/10 blur-3xl"
             aria-hidden
           />
           <div
-            className="bg-[#ffc285]/24 absolute -bottom-24 right-10 h-48 w-48 rounded-full blur-3xl"
+            className="absolute -bottom-24 right-10 h-48 w-48 rounded-full bg-sky-500/10 blur-3xl"
             aria-hidden
           />
 
           <div className="relative mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff7a18] shadow-sm">
-              Prennons contact
+            <div className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-white/80 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary shadow-sm">
+              <SectionTitleSmall>Prennons contact</SectionTitleSmall>
             </div>
             <div className="relative mt-[30px] flex flex-col items-center gap-[10px]">
               <h2 className="relative text-[clamp(2.2rem,3vw,3.2rem)] font-semibold text-slate-900 max-[450px]:text-[30px]">
@@ -173,7 +174,7 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
                 type="text"
                 placeholder="Entrez votre nom"
                 required
-                className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                className="mt-2 w-full rounded-2xl border border-slate-200/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-300/40"
               />
             </div>
             <div className="md:col-span-1">
@@ -192,7 +193,7 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
                 type="email"
                 placeholder="exemple@domaine.com"
                 required
-                className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                className="mt-2 w-full rounded-2xl border border-slate-200/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-300/40"
               />
             </div>
             <div className="md:col-span-2">
@@ -210,7 +211,7 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
                 type="text"
                 placeholder="Sujet du message"
                 required
-                className="mt-2 w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50 "
+                className="mt-2 w-full rounded-2xl border border-slate-200/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-300/40"
               />
             </div>
             <div className="md:col-span-2">
@@ -228,12 +229,12 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
                 rows={6}
                 placeholder="Entrez un message"
                 required
-                className="mt-2 max-h-[300px] min-h-[80px] w-full rounded-2xl border border-orange-100/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-[#ff7a18] focus-visible:ring-2 focus-visible:ring-[#ff7a18]/50"
+                className="mt-2 max-h-[300px] min-h-[80px] w-full rounded-2xl border border-slate-200/80 bg-white/80 px-4 py-3 text-sm text-slate-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] outline-none transition focus:border-slate-400 focus-visible:ring-2 focus-visible:ring-slate-300/40"
               />
             </div>
             {contactError && (
               <p
-                className="rounded-2xl border border-[#ff7a18]/30 bg-[#fff4ec] px-4 py-3 text-sm text-[#c2410c] md:col-span-2"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 md:col-span-2"
                 role="alert"
               >
                 {contactError}
@@ -248,9 +249,9 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
               </p>
             )}
             {!formEndpoint && (
-              <p className="rounded-2xl border border-[#e6d5c2] bg-[#fff9f2] px-4 py-3 text-xs text-[#8a6b3c] md:col-span-2">
+              <p className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs text-slate-600 md:col-span-2">
                 Configurez
-                <code className="rounded bg-[#f4ede4] px-1 py-0.5 text-[#8a6b3c]">
+                <code className="rounded bg-slate-100 px-1 py-0.5 text-slate-700">
                   VITE_FORMSPREE_ENDPOINT
                 </code>
                 pour activer l'envoi via Formspree.
@@ -260,7 +261,7 @@ export default function ContactSection({ onSuccess }: ContactSectionProps) {
               <button
                 type="submit"
                 disabled={contactStatus === "sending" || !formEndpoint}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#f97316] bg-[#fff6eb] px-8 py-3 text-sm font-semibold tracking-[0.16em] text-[#c2410c] shadow-[0_14px_28px_-24px_rgba(249,115,22,0.45)] transition hover:-translate-y-0.5 hover:border-[#ea580c] hover:bg-[#ffeeda] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff7a18] disabled:cursor-not-allowed disabled:border-[#f7b07f] disabled:bg-[#fff3e3] disabled:text-[#d97706] disabled:shadow-none "
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white/80 px-8 py-3 text-sm font-semibold tracking-[0.16em] text-slate-900 shadow-[0_14px_28px_-24px_rgba(15,23,42,0.25)] transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400 disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-400 disabled:shadow-none"
               >
                 {contactStatus === "sending" ? "Envoi..." : "Envoyer"}
               </button>

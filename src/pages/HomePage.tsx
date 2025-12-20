@@ -4,16 +4,18 @@ import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import NavigationBar from "../components/NavigationBar";
 import ProjectsSection from "../components/ProjectsSection";
-import SkillsSection from "../components/SkillsSection";
+// import SkillsSection from "../components/SkillsSection";
+import WhatIBringSection from "../components/WhatIBringSection";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen w-full bg-[#fffcf7] text-slate-900">
+    <div className="min-h-screen w-full bg-[#FCFBF8] text-slate-900">
       <NavigationBar />
       <HeroSection />
-      <SkillsSection />
-      <ExperienceSection />
+      <WhatIBringSection />
       <ProjectsSection />
+      {/* <SkillsSection /> */}
+      <ExperienceSection />
       <ContactSection />
       <Footer />
     </div>

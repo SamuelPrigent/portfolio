@@ -3,7 +3,10 @@ import { useCallback, useEffect, useState } from "react";
 
 import { navItems } from "../data/content";
 import type { Layout } from "../types/home";
-import { HamburgerIcon, HomeIcon } from "./icons";
+import {
+  HamburgerIcon,
+  // HomeIcon
+} from "./icons";
 
 const determineLayout = (width: number): Layout => {
   if (width >= 1275) return "desktop";
@@ -14,7 +17,10 @@ const determineLayout = (width: number): Layout => {
 export default function NavigationBar() {
   const [activeSection, setActiveSection] = useState<string>("top");
   const [isNavCondensed, setIsNavCondensed] = useState(false);
-  const [isWideLayout, setIsWideLayout] = useState(() =>
+  const [
+    // isWideLayout,
+    // setIsWideLayout,
+  ] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth >= 1275 : false,
   );
   const [actualLayout, setActualLayout] = useState<Layout>(() => {
@@ -80,7 +86,7 @@ export default function NavigationBar() {
 
     const handleResize = () => {
       const width = window.innerWidth;
-      setIsWideLayout(width >= 1275);
+      //   setIsWideLayout(width >= 1275);
       handleSetLayout(width);
     };
 
@@ -92,7 +98,7 @@ export default function NavigationBar() {
     };
   }, [handleSetLayout]);
 
-  const isDesktopLayout = actualLayout === "desktop" || isWideLayout;
+  //   const isDesktopLayout = actualLayout === "desktop" || isWideLayout;
   const isTabletLayout = actualLayout === "tablet";
   const isMobileLayout = actualLayout === "mobile";
 
@@ -122,7 +128,7 @@ export default function NavigationBar() {
 
   return (
     <>
-      {isDesktopLayout && (
+      {/* {isDesktopLayout && (
         <aside className="fixed left-4 top-1/2 z-40 flex -translate-y-1/2 flex-col items-center gap-4 rounded-[28px] border border-white/70 bg-white/80 p-[6px] shadow-[0_28px_56px_-44px_rgba(15,23,42,0.65)] backdrop-blur-lg">
           <div className="group relative">
             <button
@@ -164,7 +170,7 @@ export default function NavigationBar() {
           ))}
         </aside>
       )}
-
+ */}
       {isTabletLayout && (
         <header
           className={cn(
@@ -237,7 +243,10 @@ export default function NavigationBar() {
                   aria-expanded={isMobileMenuOpen}
                   aria-controls="mobile-nav-panel"
                 >
-                  <HamburgerIcon className="h-6 w-6" isOpen={isMobileMenuOpen} />
+                  <HamburgerIcon
+                    className="h-6 w-6"
+                    isOpen={isMobileMenuOpen}
+                  />
                 </button>
 
                 <div

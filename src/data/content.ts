@@ -1,4 +1,4 @@
-// import kasa from "../assets/preview-kasa.webp";
+import kasa from "../assets/preview-kasa.webp";
 // import springbootLogo from "../assets/springboot.svg";
 // import lespetitsplats from "../assets/preview-lespetitsplats.webp";
 // import mdd from "../assets/preview-mdd.webp";
@@ -19,6 +19,15 @@ import expressLogo from "../assets/logo-express.svg";
 // import prismaLogo from "../assets/logo-prisma.svg";
 import adonisLogo from "../assets/logo-adonis-color.svg";
 import awsLogo from "../assets/logo-aws-color.svg";
+import goLogo from "../assets/logo-go-color.svg";
+import phpLogo from "../assets/logo-php-color.svg";
+import symfonyLogo from "../assets/logo-symfony-color.svg";
+import wordpressLogo from "../assets/logo-wordpress-color.svg";
+import openaiLogo from "../assets/logo-openai-color.svg";
+// company logo
+import cola from "../assets/cola-square.jpeg";
+import dirips from "../assets/dirips-square.jpeg";
+import finestack from "../assets/finestack-square.png";
 
 import {
   BriefcaseIcon,
@@ -140,13 +149,19 @@ export const experiences: Experience[] = [
     endDate: null, // Poste actuel
     title: "Développeur Fullstack",
     company: "Groupe Cola",
+    logo: cola,
     contract: "CDI",
     missions: [
       "Développement de l'intranet en React, Next.js et Node.js.",
       "Participation à la modernisation du SI et aux travaux de refonte technique.",
       "Conception et évolution des interfaces entre applications (intégrations, API).",
     ],
-    environment: ["React", "Next.js", "Node.js"],
+    techStack: [
+      { logo: reactLogo, name: "React" },
+      { logo: nextLogo, name: "Next.js" },
+      { logo: adonisLogo, name: "Adonis" },
+      { logo: nodeLogo, name: "Node.Js" },
+    ],
   },
   {
     id: "2",
@@ -154,13 +169,20 @@ export const experiences: Experience[] = [
     endDate: "2025-09",
     title: "Développeur Fullstack",
     company: "Dir IPS",
+    logo: dirips,
     contract: "Alternance",
     missions: [
       "Conception d'un algorithme de production de données afin de tester le moteur de calculs du produit DirIgami Facturation.",
       "Évolution d'une API en Go permettant la communication entre DirIgami Usager et le DMP concernant des documents santé.",
       "Proposition d'une base de refonte pour le site Dir IPS sous Wordpress.",
     ],
-    environment: ["JavaScript", "Go", "PHP", "Symfony", "WordPress"],
+    techStack: [
+      { logo: javascriptLogo, name: "JavaScript" },
+      { logo: goLogo, name: "Go" },
+      { logo: phpLogo, name: "PHP" },
+      { logo: symfonyLogo, name: "Symfony" },
+      { logo: wordpressLogo, name: "WordPress" },
+    ],
   },
   {
     id: "3",
@@ -168,12 +190,19 @@ export const experiences: Experience[] = [
     endDate: "2024-09",
     title: "Développeur Fullstack",
     company: "FineStack",
+    logo: finestack,
     contract: "Freelance",
     missions: [
       "Développement d'une App automatisant la génération de PDF personnalisé de réponse à des offres d'emploi. Itération et reformulation sur les sections du document.",
       "Développement d'un UI kit et d'un Storybook pour le collectif.",
     ],
-    environment: ["React", "Next.js", "Node.js", "OpenAI"],
+    techStack: [
+      { logo: reactLogo, name: "React" },
+      { logo: nextLogo, name: "Next.js" },
+      { logo: expressLogo, name: "Express" },
+      { logo: nodeLogo, name: "Node.js" },
+      { logo: openaiLogo, name: "OpenAI" },
+    ],
   },
 ];
 
@@ -191,7 +220,7 @@ export const education: Education[] = [
   {
     level: "Bac+2",
     title: "Développeur Web",
-    school: "OpenClassrooms, 2023",
+    school: "OpenClassrooms, 2022",
   },
   //   {
   //     level: "Bac+3",
@@ -206,16 +235,25 @@ export const projects: Project[] = [
     description:
       "Application permettant la création et le partage de watchlists de films & séries. Les données sont obtenu par une API tierce.",
     image: watchlisthub,
-    link: "https://watchlist-hub-ivory.vercel.app/",
-    tags: ["React", "NodeJS"],
+    vercelLink: "https://watchlist-hub-ivory.vercel.app/",
+    githubLink: "https://github.com/SamuelPrigent/WatchlistHub",
+    techStack: [
+      { logo: reactLogo, name: "React" },
+      { logo: expressLogo, name: "Express" },
+      { logo: typescriptLogo, name: "TypeScript" },
+    ],
   },
   {
     title: "FIFO",
     description:
       "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, WebSocket pour l'affichage des données.",
     image: fifo,
-    link: "https://github.com/SamuelPrigent/FIFO",
-    tags: ["React", "Express"],
+    githubLink: "https://github.com/SamuelPrigent/FIFO",
+    techStack: [
+      { logo: reactLogo, name: "React" },
+      { logo: expressLogo, name: "Express" },
+      { logo: typescriptLogo, name: "TypeScript" },
+    ],
   },
   //   {
   //     title: "MDD",
@@ -238,15 +276,21 @@ export const projects: Project[] = [
   //     description:
   //       "Moteur de recherche performant avec filtrage multi-critères et UI responsive, 100% Vanilla JS.",
   //     image: lespetitsplats,
-  //     link: "https://samuelprigent.github.io/LesPetitsPlats/",
-  //     tags: ["JavaScript", "Algorithme"],
+  //     vercelLink: "https://samuelprigent.github.io/LesPetitsPlats/",
+  //     techStack: [
+  //       { logo: reactLogo, name: "React" },
+  //       { logo: javascriptLogo, name: "JavaScript" },
+  //     ],
   //   },
-  //   {
-  //     title: "Kasa",
-  //     description:
-  //       "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
-  //     image: kasa,
-  //     link: "https://samuelprigent.github.io/Kasa/",
-  //     tags: ["React", "Design"],
-  //   },
+  {
+    title: "Kasa",
+    description:
+      "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
+    image: kasa,
+    vercelLink: "https://samuelprigent.github.io/Kasa/",
+    techStack: [
+      { logo: reactLogo, name: "React" },
+      { logo: javascriptLogo, name: "JavaScript" },
+    ],
+  },
 ];

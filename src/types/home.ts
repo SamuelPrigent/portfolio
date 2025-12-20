@@ -30,8 +30,12 @@ export type Experience = {
   title: string;
   company: string;
   contract: string;
+  logo?: string;
   missions: string[];
-  environment: string[];
+  techStack: Array<{
+    logo: string;
+    name: string;
+  }>;
 };
 
 export type Education = {
@@ -44,8 +48,12 @@ export type Project = {
   title: string;
   description: string;
   image: string;
-  link: string;
-  tags: string[];
+  vercelLink?: string; // Optional Vercel/live demo link
+  githubLink?: string;
+  techStack: Array<{
+    logo: string;
+    name: string;
+  }>;
 };
 
 export type ContactFormState = {
