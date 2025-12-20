@@ -1,10 +1,10 @@
-import HeroSection from "../components/HeroSection";
-import SkillsSection from "../components/SkillsSection";
-import ExperienceSection from "../components/ExperienceSection";
-import ProjectsSection from "../components/ProjectsSection";
 import ContactSection from "../components/ContactSection";
-import NavigationBar from "../components/NavigationBar";
+import ExperienceSection from "../components/ExperienceSection";
 import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
+import NavigationBar from "../components/NavigationBar";
+import ProjectsSection from "../components/ProjectsSection";
+import SkillsSection from "../components/SkillsSection";
 
 export default function HomePage() {
   return (

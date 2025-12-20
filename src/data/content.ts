@@ -1,20 +1,24 @@
-import fifo from "../assets/preview-fifo.webp";
-import kasa from "../assets/preview-kasa.webp";
-import lespetitsplats from "../assets/preview-lespetitsplats.webp";
-import mdd from "../assets/preview-mdd.webp";
-import rentals from "../assets/preview-rentals.webp";
-import javascriptLogo from "../assets/logo-js.svg";
-import typescriptLogo from "../assets/logo-ts.svg";
-import reactLogo from "../assets/logo-react.svg";
-import nextLogo from "../assets/nextBlack.svg";
-import tailwindLogo from "../assets/logo-tailwindcss.svg";
-import nodeLogo from "../assets/logo-node.svg";
-import expressLogo from "../assets/logo-express.svg";
-import prismaLogo from "../assets/logo-prisma.svg";
-import gitLogo from "../assets/logo-git.svg";
-import springbootLogo from "../assets/springboot.svg";
+// import kasa from "../assets/preview-kasa.webp";
+// import springbootLogo from "../assets/springboot.svg";
+// import lespetitsplats from "../assets/preview-lespetitsplats.webp";
+// import mdd from "../assets/preview-mdd.webp";
+// import rentals from "../assets/preview-rentals.webp";
 // import githubLogo from "../assets/github.svg";
 // import angularLogo from "../assets/angular.svg";
+import fifo from "../assets/preview-fifo.webp";
+import watchlisthub from "../assets/preview-watchlisthub.png";
+// logo
+import gitLogo from "../assets/logo-git-color.svg";
+import javascriptLogo from "../assets/logo-js-color.svg";
+import typescriptLogo from "../assets/logo-ts-color.svg";
+import reactLogo from "../assets/logo-react-color.svg";
+import nextLogo from "../assets/logo-next-color.svg";
+import tailwindLogo from "../assets/logo-tailwind-color.svg";
+import nodeLogo from "../assets/logo-node-color.svg";
+import expressLogo from "../assets/logo-express.svg";
+// import prismaLogo from "../assets/logo-prisma.svg";
+import adonisLogo from "../assets/logo-adonis-color.svg";
+import awsLogo from "../assets/logo-aws-color.svg";
 
 import {
   BriefcaseIcon,
@@ -94,14 +98,14 @@ export const skills: Skill[] = [
     docUrl: "https://expressjs.com/",
   },
   {
-    label: "Prisma",
-    icon: prismaLogo,
-    docUrl: "https://www.prisma.io/docs",
+    label: "Adonis",
+    icon: adonisLogo,
+    docUrl: "https://docs.adonisjs.com/guides/preface/introduction",
   },
   {
-    label: "Springboot",
-    icon: springbootLogo,
-    docUrl: "https://github.com/",
+    label: "AWS",
+    icon: awsLogo,
+    docUrl: "https://docs.aws.amazon.com/",
   },
   {
     label: "Git",
@@ -132,61 +136,79 @@ export const softSkillWords: SoftSkillWord[] = [
 export const experiences: Experience[] = [
   {
     id: "1",
-    period: "Octobre 2024 - Septembre 2025",
-    periodShort: "10/2024 - 09/2025",
-    duration: "12 mois",
+    startDate: "2025-11",
+    endDate: null, // Poste actuel
     title: "Développeur Fullstack",
-    company: "Dir IPS",
-    contract: "Alternance",
-    description:
-      "Conception d'un algorithme générant des jeux de données pour automatiser la facturation. Évolution d'une API Go interfaçant les systèmes de santé (DMP, INS). Refonte du site Wordpress pour accélérer la communication.",
-    environment: ["Go", "JavaScript", "WordPress", "PHP", "VBA"],
+    company: "Groupe Cola",
+    contract: "CDI",
+    missions: [
+      "Développement de l'intranet en React, Next.js et Node.js.",
+      "Participation à la modernisation du SI et aux travaux de refonte technique.",
+      "Conception et évolution des interfaces entre applications (intégrations, API).",
+    ],
+    environment: ["React", "Next.js", "Node.js"],
   },
   {
     id: "2",
-    period: "Octobre 2023 - Septembre 2024",
-    periodShort: "01/2024 - 03/2024",
-    duration: "12 mois",
+    startDate: "2024-10",
+    endDate: "2025-09",
     title: "Développeur Fullstack",
-    company: "Finestack",
-    contract: "Freelance",
-    description:
-      "Développement d’un UI kit et d’un Storybook. Développement d’une App automatisant la génération de PDF personnalisé de réponse à des offres d'emploi. Itération du processus sur les sections du document. Itération du processus sur les sections du document. Script d'alerte activé par une tâche CRON, destiné à indexer les résultats de recherche obtenus via une API tierce. Méthodologie agile avec Jira et Confluence.",
-    environment: ["React", "NodeJS", "Express", "NextJS", "Jira"],
+    company: "Dir IPS",
+    contract: "Alternance",
+    missions: [
+      "Conception d'un algorithme de production de données afin de tester le moteur de calculs du produit DirIgami Facturation.",
+      "Évolution d'une API en Go permettant la communication entre DirIgami Usager et le DMP concernant des documents santé.",
+      "Proposition d'une base de refonte pour le site Dir IPS sous Wordpress.",
+    ],
+    environment: ["JavaScript", "Go", "PHP", "Symfony", "WordPress"],
   },
-  //   {
-  //     id: "3",
-  //     period: "Janvier 2024 - Mars 2024",
-  //     periodShort: "01/2024 - 03/2024",
-  //     duration: "9 semaines",
-  //     title: "Développeur Fullstack",
-  //     company: "Dir IPS",
-  //     contract: "Stage",
-  //     description:
-  //       "Création de fonctionnalités d'interface personnalisables (thèmes, dark mode) et d'un module de déconnexion automatique. Participation aux revues de code et au suivi qualité.",
-  //     environment: ["PHP", "Symfony", "Bootstrap", "SQL"],
-  //   },
+  {
+    id: "3",
+    startDate: "2023-10",
+    endDate: "2024-09",
+    title: "Développeur Fullstack",
+    company: "FineStack",
+    contract: "Freelance",
+    missions: [
+      "Développement d'une App automatisant la génération de PDF personnalisé de réponse à des offres d'emploi. Itération et reformulation sur les sections du document.",
+      "Développement d'un UI kit et d'un Storybook pour le collectif.",
+    ],
+    environment: ["React", "Next.js", "Node.js", "OpenAI"],
+  },
 ];
 
 export const education: Education[] = [
   {
     level: "Bac+5",
-    title: "Développeur Full-Stack Java et Angular",
+    title: "Expert en développement logiciel",
     school: "OpenClassrooms, 2025",
   },
   {
     level: "Bac+3",
-    title: "Développeur d'Application JavaScript React",
+    title: "Développeur concepteur logiciel",
     school: "OpenClassrooms, 2023",
   },
   {
-    level: "Bac+3",
-    title: "Licence STAPS, Entraînement Sportif",
-    school: "Université Paris-Saclay, site d'Orsay, 2019",
+    level: "Bac+2",
+    title: "Développeur Web",
+    school: "OpenClassrooms, 2023",
   },
+  //   {
+  //     level: "Bac+3",
+  //     title: "Licence STAPS, Entraînement Sportif",
+  //     school: "Université Paris-Saclay, site d'Orsay, 2019",
+  //   },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "WatchlistHub",
+    description:
+      "Application permettant la création et le partage de watchlists de films & séries. Les données sont obtenu par une API tierce.",
+    image: watchlisthub,
+    link: "https://watchlist-hub-ivory.vercel.app/",
+    tags: ["React", "NodeJS"],
+  },
   {
     title: "FIFO",
     description:
@@ -195,36 +217,36 @@ export const projects: Project[] = [
     link: "https://github.com/SamuelPrigent/FIFO",
     tags: ["React", "Express"],
   },
-  {
-    title: "MDD",
-    description:
-      "Plateforme éditoriale Angular + Spring Boot. Gestion des abonnements thématiques et modération avancée.",
-    image: mdd,
-    link: "https://github.com/SamuelPrigent/MondeDeDev",
-    tags: ["Angular", "Spring Boot"],
-  },
-  {
-    title: "Rentals",
-    description:
-      "API REST sécurisée JWT pour la gestion de locations. Upload média via Cloudinary et dashboard Angular.",
-    image: rentals,
-    link: "https://github.com/SamuelPrigent/Rentals-Backend",
-    tags: ["Angular", "Spring Boot"],
-  },
-  {
-    title: "Les Petits Plats",
-    description:
-      "Moteur de recherche performant avec filtrage multi-critères et UI responsive, 100% Vanilla JS.",
-    image: lespetitsplats,
-    link: "https://samuelprigent.github.io/LesPetitsPlats/",
-    tags: ["JavaScript", "Algorithme"],
-  },
-  {
-    title: "Kasa",
-    description:
-      "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
-    image: kasa,
-    link: "https://samuelprigent.github.io/Kasa/",
-    tags: ["React", "Design"],
-  },
+  //   {
+  //     title: "MDD",
+  //     description:
+  //       "Plateforme éditoriale Angular + Spring Boot. Gestion des abonnements thématiques et modération avancée.",
+  //     image: mdd,
+  //     link: "https://github.com/SamuelPrigent/MondeDeDev",
+  //     tags: ["Angular", "Spring Boot"],
+  //   },
+  //   {
+  //     title: "Rentals",
+  //     description:
+  //       "API REST sécurisée JWT pour la gestion de locations. Upload média via Cloudinary et dashboard Angular.",
+  //     image: rentals,
+  //     link: "https://github.com/SamuelPrigent/Rentals-Backend",
+  //     tags: ["Angular", "Spring Boot"],
+  //   },
+  //   {
+  //     title: "Les Petits Plats",
+  //     description:
+  //       "Moteur de recherche performant avec filtrage multi-critères et UI responsive, 100% Vanilla JS.",
+  //     image: lespetitsplats,
+  //     link: "https://samuelprigent.github.io/LesPetitsPlats/",
+  //     tags: ["JavaScript", "Algorithme"],
+  //   },
+  //   {
+  //     title: "Kasa",
+  //     description:
+  //       "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
+  //     image: kasa,
+  //     link: "https://samuelprigent.github.io/Kasa/",
+  //     tags: ["React", "Design"],
+  //   },
 ];

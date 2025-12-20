@@ -1,6 +1,7 @@
 import { education, experiences } from "../data/content";
 import studyIcon from "../assets/study.svg";
 import SoftSkills from "./SoftSkills";
+import { formatPeriod } from "../utils/dateUtils";
 
 export default function ExperienceSection() {
   return (
@@ -23,29 +24,26 @@ export default function ExperienceSection() {
               key={experience.id}
               className="rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.45)] max-[470px]:rounded-[16px] max-[470px]:p-[22px]"
             >
-              <div className="flex flex-wrap items-center justify-between gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#ff7a18]">
-                <span className="max-[450px]:hidden">{experience.period}</span>
-                <span className="min-[451px]:hidden">
-                  {experience.periodShort}
-                </span>
-                <span className="bg-[#ff7a18]/12 rounded-full py-1 text-[0.7rem] font-semibold tracking-[0.12em] text-[#d75806]">
-                  {experience.duration}
-                </span>
-              </div>
-              <div className="flex items-baseline justify-between gap-[6px] max-[400px]:mb-[12px] max-[400px]:flex-col">
-                <h3 className="mb-[8px] mt-[6px] whitespace-nowrap text-[1.5rem] font-semibold text-slate-900 max-[400px]:mb-0 max-[370px]:text-[1.4rem]">
-                  {experience.title}
-                </h3>
-                <span className="whitespace-nowrap text-[1.05rem] font-medium text-slate-600">
-                  {experience.company}
-                </span>
-              </div>
-              <p className="mt-1 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                {experience.contract}
+              <h3 className="text-[1.5rem] font-semibold text-slate-900 max-[370px]:text-[1.4rem]">
+                {experience.title}
+              </h3>
+              <p className="mt-1 text-[1.05rem] font-medium text-slate-600">
+                {experience.company} - {experience.contract}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                {experience.description}
+              <p className="mt-1 text-sm text-slate-500">
+                {formatPeriod(experience.startDate, experience.endDate)}
               </p>
+              <ul className="mt-4 space-y-2">
+                {experience.missions.map((mission, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-sm leading-relaxed text-slate-600"
+                  >
+                    <span className="relative top-[4.5px] mt-1.5  h-[1.5px] w-[7px] shrink-0 bg-slate-400" />
+                    <span>{mission}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="mt-4 flex flex-wrap gap-2">
                 {experience.environment.map((tech) => (
                   <span
@@ -60,7 +58,7 @@ export default function ExperienceSection() {
           ))}
         </div>
         <div className="space-y-6">
-          <div className="relative h-full rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)] max-[550px]:px-4 max-[500px]:border-none max-[500px]:bg-transparent max-[500px]:px-0 max-[500px]:shadow-none">
+          <div className="relative h-auto rounded-[28px] border border-orange-100 bg-white/95 p-8 text-left shadow-[0_25px_45px_-40px_rgba(15,23,42,0.35)] max-[550px]:px-4 max-[500px]:border-none max-[500px]:bg-transparent max-[500px]:px-0 max-[500px]:shadow-none">
             <div className="flex w-full items-center justify-between px-1 max-[500px]:px-2">
               <h3 className="text-xl font-semibold text-slate-900">
                 Formations

@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 // style
 import "./style/App.scss";
 import "./style/index.css";
+import { BrowserRouter } from "react-router-dom";
 // Router
 import App from "./App.tsx";
-import { BrowserRouter } from "react-router-dom";
 import BackgroundGrid from "./components/BackgroundGrid.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -25,13 +25,12 @@ export type Layout = "desktop" | "tablet" | "mobile";
 
 export type Experience = {
   id: string;
-  period: string;
-  periodShort?: string;
-  duration: string;
+  startDate: string; // Format: YYYY-MM
+  endDate: string | null; // Format: YYYY-MM or null if current position
   title: string;
   company: string;
   contract: string;
-  description: string;
+  missions: string[];
   environment: string[];
 };
 
