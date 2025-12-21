@@ -54,15 +54,10 @@ export default function AboutMe() {
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600">
             Développeur Full-Stack passionné par le logiciel. Je transforme des
             besoins métiers en applications impactantes. Je valorise l'UX pour
-            accélérer l'adoption et faciliter l'exécution. Aillant un attrait
-            particulier pour les SaaS PLG. Je questionne les leviers business de
-            mon marché et anticipe les défis techniques futures.
+            accélérer l'adoption et faciliter l'exécution. Je questionne les
+            leviers business de mon marché et anticipe les défis techniques
+            futures.
           </p>
-          {/* <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600">
-            De part un attrait particulier pour l'écosystème des SaaS PLG. Je
-            m'intéresse aux leviers business et anticipe les défis auxquels mon
-            code devra faire face.
-          </p> */}
 
           <div className="mt-7">
             <button
