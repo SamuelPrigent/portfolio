@@ -63,7 +63,7 @@ export const socialLinks: SocialLink[] = [
     Icon: LinkedInIcon,
   },
   {
-    href: "https://github.com/SamuelPrigent?tab=repositories",
+    href: "https://github.com/SamuelPrigent",
     label: "GitHub",
     Icon: GitHubIcon,
   },

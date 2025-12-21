@@ -28,7 +28,7 @@ export default function CvPage() {
               to="/"
               onClick={() => window.scrollTo(0, 0)}
               aria-label="Retour à l'accueil"
-              className="cv-back-pill"
+              className="cv-back-pill hover:border-primary"
             >
               <ArrowBackIcon className="cv-back-pill__icon h-[22px] w-[22px]" />
             </Link>

@@ -1,20 +1,21 @@
-import ContactSection from "../components/ContactSection";
-import ExperienceSection from "../components/ExperienceSection";
-import Footer from "../components/Footer";
+// import NavigationBar from "../components/NavigationBar";
 import HeroSection from "../components/HeroSection";
-import NavigationBar from "../components/NavigationBar";
-import ProjectsSection from "../components/ProjectsSection";
-// import SkillsSection from "../components/SkillsSection";
+import CompanyBanner from "../components/CompanyBanner";
+import AboutMe from "../components/AboutMe";
 import WhatIBringSection from "../components/WhatIBringSection";
+import ProjectsSection from "../components/ProjectsSection";
+import ExperienceSection from "../components/ExperienceSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen w-full bg-[#FCFBF8] text-slate-900">
-      <NavigationBar />
       <HeroSection />
+      <CompanyBanner />
+      <AboutMe />
       <WhatIBringSection />
       <ProjectsSection />
-      {/* <SkillsSection /> */}
       <ExperienceSection />
       <ContactSection />
       <Footer />

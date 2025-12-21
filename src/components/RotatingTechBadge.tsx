@@ -74,7 +74,7 @@ export default function RotatingTechBadge() {
           setIsAnimating(true);
         }, 200);
       }, 500);
-    }, 3500);
+    }, 3100);
 
     return () => clearInterval(interval);
   }, []);

@@ -7,11 +7,11 @@ export default function WhatIBringSection() {
   return (
     <section
       id="what-i-bring"
-      className="mx-auto mt-16 max-w-6xl px-6 pt-20 max-[650px]:mt-11 max-[650px]:px-[14px]"
+      className="mx-auto mb-4 mt-10 max-w-6xl px-6 pt-10 max-[650px]:mt-11 max-[650px]:px-[14px]"
     >
       <div className="space-y-6">
         <div className="grid gap-6 max-[900px]:gap-4 min-[900px]:grid-cols-2">
-          <div className="text-left max-[900px]:text-center">
+          <div className="text-left">
             <SectionTitleSmall>Compétences</SectionTitleSmall>
             <div className="flex items-center gap-6">
               <SectionTitleBig>Ce que j'apporte</SectionTitleBig>

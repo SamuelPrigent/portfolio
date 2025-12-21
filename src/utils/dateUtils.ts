@@ -32,7 +32,7 @@ export function formatDate(dateString: string): string {
  */
 export function calculateDuration(
   startDate: string,
-  endDate: string | null
+  endDate: string | null,
 ): string {
   const [startYear, startMonth] = startDate.split("-").map(Number);
 
@@ -45,10 +45,10 @@ export function calculateDuration(
     [endYear, endMonth] = endDate.split("-").map(Number);
   }
 
-  let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
+  let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth) + 1;
 
   // Si on est dans le même mois, on compte quand même 1 mois
-  if (totalMonths === 0) {
+  if (totalMonths <= 0) {
     totalMonths = 1;
   }
 
@@ -73,7 +73,7 @@ export function calculateDuration(
  */
 export function formatPeriod(
   startDate: string,
-  endDate: string | null
+  endDate: string | null,
 ): string {
   const start = formatDate(startDate);
   const end = endDate ? formatDate(endDate) : "Aujourd'hui";

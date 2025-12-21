@@ -18,13 +18,13 @@ export default function ProjectsSection() {
           Quelques projets sur lesquels j'ai travaillé
         </p>
       </div>
-      <div className="mt-10 grid gap-6 max-[1024px]:grid-cols-2 max-[650px]:grid-cols-1 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 max-[1024px]:grid-cols-2 max-[650px]:grid-cols-1 lg:grid-cols-3">
         {projects.map((project) => (
           <article
             key={project.title}
-            className="group flex h-[380px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:translate-y-[-3px] hover:border-slate-300 hover:shadow-md"
+            className="group flex h-[390px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:translate-y-[-3px] hover:border-primary hover:shadow-md"
           >
-            <div className="relative h-0 w-full overflow-hidden pb-[47%]">
+            <div className="relative h-[49%] w-full overflow-hidden object-cover">
               <OptimizedImage
                 src={project.image}
                 alt={`Aperçu du projet ${project.title}`}
@@ -42,7 +42,7 @@ export default function ProjectsSection() {
                       href={project.vercelLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-primary hover:bg-slate-50 hover:text-slate-900"
                       aria-label="Voir le projet en ligne"
                     >
                       <ExternalLinkIcon className="h-4 w-4" />
@@ -53,7 +53,7 @@ export default function ProjectsSection() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-primary hover:bg-slate-50 hover:text-slate-900"
                       aria-label="Voir le code sur GitHub"
                     >
                       <img

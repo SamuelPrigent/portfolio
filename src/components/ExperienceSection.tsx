@@ -15,7 +15,7 @@ export default function ExperienceSection() {
         <SectionTitleSmall>Parcours</SectionTitleSmall>
         <SectionTitleBig>Mes expériences</SectionTitleBig>
       </div>
-      <div className="mt-14 grid gap-[2.5rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
+      <div className="mt-8 grid gap-[2rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
         <div className="space-y-6">
           {experiences.map((experience) => (
             <article
@@ -102,7 +102,6 @@ export default function ExperienceSection() {
           </div>
         </div>
       </div>
-      {/* <SoftSkills /> */}
     </section>
   );
 }
