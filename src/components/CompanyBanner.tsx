@@ -10,7 +10,7 @@ export default function CompanyBanner() {
         <p className=" text-[10px] font-medium uppercase tracking-widest text-slate-500">
           Collaboration avec
         </p>
-        <div className="relative right-[8px] flex items-center justify-center gap-11 pt-6 max-[650px]:gap-7">
+        <div className="relative right-[7px] flex items-center justify-center gap-11 pt-6 max-[650px]:gap-7">
           <img
             src={workedForDirips}
             alt="Dirips"
