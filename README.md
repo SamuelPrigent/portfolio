@@ -1,9 +1,10 @@
-## Samuel Prigent - Website
+# Portfolio - Samuel Prigent
 
-Welcome on my website, here u can found different informations : how to contact me (Mail, LinkedIn), differents projects i made and more.
+Personal portfolio website built with React, TypeScript and Tailwind CSS.
 
 ## Run project
 
-- npm install
-- npm run dev
-- Listening by default on : http://localhost:5173/
+```bash
+npm install
+npm run dev
+```
