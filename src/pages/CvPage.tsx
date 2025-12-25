@@ -36,7 +36,7 @@ export default function CvPage() {
               to="/"
               onClick={() => window.scrollTo(0, 0)}
               aria-label="Retour à l'accueil"
-              className="cv-back-button"
+              className="cv-back-pill-text hover:border-primary"
             >
               Retour
             </Link>
