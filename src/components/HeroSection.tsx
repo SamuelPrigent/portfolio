@@ -7,7 +7,7 @@ import OptimizedImage from "../utils/OptimizedImage";
 
 export default function HeroSection() {
   return (
-    <div className="xl:pl-[80px] relative pt-[6.1rem] max-[1275px]:pt-[6.5rem]">
+    <div className="xl:pl-[80px] relative pb-3 pt-[7.7rem] max-[1275px]:pt-[6.5rem]">
       <div className="mx-auto max-w-[1200px] px-10 pb-24 max-[550px]:px-5 max-[450px]:px-4">
         <div className="grid items-center gap-16 text-center max-[650px]:gap-[40px] max-[382px]:gap-[30px] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:text-left">
           <div className="relative flex flex-col gap-10 max-[750px]:gap-7 max-[450px]:gap-6">
@@ -116,13 +116,13 @@ export default function HeroSection() {
           </div>
           <div className="relative bottom-[7px] isolate flex-1">
             <div className="relative mx-auto w-full max-w-lg">
-              <div className="relative z-10 aspect-square h-[425px] rounded-[28px] bg-transparent">
-                <div className="absolute left-[-1%] top-[-10px] aspect-square h-[420px] rotate-[45deg] overflow-hidden rounded-full bg-gradient-to-r from-[#d3d9dd94] to-transparent"></div>
+              <div className="relative z-10 aspect-square h-[414px] rounded-[28px] bg-transparent">
+                <div className="absolute left-[-2%] top-[-20px] aspect-square h-[420px] overflow-hidden rounded-full bg-[linear-gradient(135deg,#d3d9dd94_0%,transparent_70%)]"></div>
                 <OptimizedImage
                   src={photoSolid}
                   alt="Portrait de Samuel Prigent"
                   preload
-                  className="relative h-full w-full object-cover drop-shadow-[0_28px_42px_rgba(15,23,42,0.16)]"
+                  className="relative -mt-[20px] h-full w-full object-cover drop-shadow-[0_28px_42px_rgba(15,23,42,0.16)]"
                 />
               </div>
             </div>

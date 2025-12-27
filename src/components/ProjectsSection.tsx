@@ -4,6 +4,7 @@ import { ExternalLinkIcon } from "./icons";
 import githubSvg from "../assets/github.svg";
 import SectionTitleSmall from "./sectionTitleSmall";
 import SectionTitleBig from "./sectionTitleBig";
+import ProjectBadge from "./ProjectBadge";
 
 export default function ProjectsSection() {
   return (
@@ -13,9 +14,12 @@ export default function ProjectsSection() {
     >
       <div className="text-left">
         <SectionTitleSmall>Projets</SectionTitleSmall>
-        <SectionTitleBig>Mes créations</SectionTitleBig>
+        <div className="flex items-center gap-6">
+          <SectionTitleBig>Mes créations</SectionTitleBig>
+          <ProjectBadge />
+        </div>
         <p className="max-w-3xl text-left text-base leading-relaxed text-slate-600">
-          Quelques projets sur lesquels j'ai travaillé
+          Des projets que j'ai conçus et développés
         </p>
       </div>
       <div className="mt-8 grid gap-5 max-[1024px]:grid-cols-2 max-[650px]:grid-cols-1 lg:grid-cols-3">

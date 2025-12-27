@@ -35,7 +35,7 @@ export default function WhatIBringSection() {
                   href={skill.docUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 rounded-lg border border-border bg-gray-100/10 px-3 py-2 transition-colors hover:border-primary/50"
+                  className="flex items-center gap-2 rounded-lg border border-border bg-gray-100/60 px-3 py-2 transition-colors hover:border-primary/50"
                 >
                   <img
                     src={skill.icon}

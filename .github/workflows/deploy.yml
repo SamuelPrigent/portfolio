@@ -38,8 +38,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          VITE_FORMSPREE_ENDPOINT: ${{ secrets.VITE_FORMSPREE_ENDPOINT }}
 
       - name: SPA fallback
         run: cp dist/index.html dist/404.html

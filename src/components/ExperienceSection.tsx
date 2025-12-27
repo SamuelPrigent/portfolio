@@ -4,6 +4,7 @@ import studyIcon from "../assets/study.svg";
 import { formatPeriod } from "../utils/dateUtils";
 import SectionTitleSmall from "./sectionTitleSmall";
 import SectionTitleBig from "./sectionTitleBig";
+import ExperienceBadge from "./ExperienceBadge";
 
 export default function ExperienceSection() {
   return (
@@ -13,7 +14,10 @@ export default function ExperienceSection() {
     >
       <div className="text-left">
         <SectionTitleSmall>Parcours</SectionTitleSmall>
-        <SectionTitleBig>Mes expériences</SectionTitleBig>
+        <div className="flex items-center gap-6">
+          <SectionTitleBig>Mes expériences</SectionTitleBig>
+          <ExperienceBadge />
+        </div>
       </div>
       <div className="mt-8 grid gap-[2rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
         <div className="space-y-6">
@@ -79,7 +83,7 @@ export default function ExperienceSection() {
               <h3 className="text-xl font-semibold text-slate-900">
                 Formations
               </h3>
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full">
                 <img src={studyIcon} alt="" aria-hidden className="h-6 w-6" />
               </span>
             </div>

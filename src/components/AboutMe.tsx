@@ -53,10 +53,10 @@ export default function AboutMe() {
 
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600">
             Développeur Full-Stack passionné par le logiciel. Je transforme des
-            besoins métiers en applications impactantes. Je valorise l'UX pour
-            accélérer l'adoption et faciliter l'exécution. Je questionne les
-            leviers business de mon marché et anticipe les défis techniques
-            futures.
+            besoins métiers en applications impactantes. Je valorise
+            l'expérience utilisateur pour accélérer l'adoption et l'exécution.
+            Je questionne les caractéristiques business de mon secteur et
+            anticipe les défis techniques futures.
           </p>
 
           <div className="mt-7">
