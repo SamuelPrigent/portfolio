@@ -6,7 +6,7 @@ import kasa from "../assets/preview-kasa.webp";
 // import githubLogo from "../assets/github.svg";
 // import angularLogo from "../assets/angular.svg";
 import fifo from "../assets/preview-fifo.webp";
-import watchlisthub from "../assets/preview-watchlisthub.png";
+import poplist from "../assets/preview-poplist.png";
 // logo
 import gitLogo from "../assets/logo-git-color.svg";
 import javascriptLogo from "../assets/logo-js-color.svg";
@@ -233,9 +233,9 @@ export const projects: Project[] = [
   {
     title: "Poplist",
     description:
-      "Application permettant la création et le partage de watchlists de films & séries. Les données sont obtenu par une API tierce.",
-    image: watchlisthub,
-    vercelLink: "https://watchlist-hub-ivory.vercel.app/",
+      "Application permettant la création et le partage de listes de films & séries. Les données sont obtenu par une API tierce.",
+    image: poplist,
+    vercelLink: "https://poplist-omega.vercel.app/",
     githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
       { logo: reactLogo, name: "React" },
