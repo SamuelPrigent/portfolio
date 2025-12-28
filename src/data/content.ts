@@ -231,12 +231,12 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    title: "WatchlistHub",
+    title: "Poplist",
     description:
       "Application permettant la création et le partage de watchlists de films & séries. Les données sont obtenu par une API tierce.",
     image: watchlisthub,
     vercelLink: "https://watchlist-hub-ivory.vercel.app/",
-    githubLink: "https://github.com/SamuelPrigent/WatchlistHub",
+    githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
       { logo: reactLogo, name: "React" },
       { logo: expressLogo, name: "Express" },
