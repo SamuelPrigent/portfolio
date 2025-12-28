@@ -28,8 +28,8 @@ export default function AboutMe() {
 
   return (
     <section className="mx-auto mt-28 max-w-6xl px-6 pb-8 max-[650px]:mt-10 max-[650px]:px-[14px]">
-      <div className="flex items-start gap-16">
-        <div className="shadow-[0_35px_70px_-60px_rgba(42, 29, 15, 0.55)] relative aspect-square h-[300px] bg-white">
+      <div className="flex items-start gap-16 max-lg:flex-col max-lg:items-center max-lg:gap-10">
+        <div className="shadow-[0_35px_70px_-60px_rgba(42, 29, 15, 0.55)] relative aspect-square h-[300px] max-[450px]:h-[240px] bg-white flex-shrink-0">
           <div className="absolute right-[-20px] top-[-14px] z-[100]">
             <span className="relative inline-flex h-10 items-center rounded-[6px] border border-yellow-300/25 bg-[#15120d] px-2.5 py-1.5 font-mono text-[12px] font-bold leading-none text-yellow-200 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.25)] ring-1 ring-amber-400/15">
               <span className="text-yellow-300">$</span>
@@ -47,11 +47,11 @@ export default function AboutMe() {
           />
         </div>
 
-        <div className="text-left">
+        <div className="text-left max-lg:text-center">
           <SectionTitleSmall>À propos</SectionTitleSmall>
           <SectionTitleBig>Qui suis-je ?</SectionTitleBig>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 max-lg:mx-auto">
             Développeur Full-Stack passionné par le logiciel. Je transforme des
             besoins métiers en applications impactantes. Je valorise
             l'expérience utilisateur pour accélérer l'adoption et l'exécution.
@@ -59,7 +59,7 @@ export default function AboutMe() {
             anticipe les défis techniques futures.
           </p>
 
-          <div className="mt-7">
+          <div className="mt-7 max-lg:flex max-lg:justify-center">
             <button
               type="button"
               onClick={handleCopyEmail}

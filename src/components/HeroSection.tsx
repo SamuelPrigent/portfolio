@@ -114,15 +114,15 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative bottom-[7px] isolate flex-1">
+          <div className="relative isolate flex-1 max-lg:mx-auto max-lg:w-full max-lg:max-w-[280px] max-[450px]:max-w-[240px]">
             <div className="relative mx-auto w-full max-w-lg">
-              <div className="relative z-10 aspect-square h-[414px] rounded-[28px] bg-transparent">
-                <div className="absolute left-[-2%] top-[-20px] aspect-square h-[420px] overflow-hidden rounded-full bg-[linear-gradient(135deg,#d3d9dd94_0%,transparent_70%)]"></div>
+              <div className="relative z-10 aspect-square h-[414px] max-lg:h-[280px] max-[450px]:h-[240px] rounded-[28px] bg-transparent">
+                <div className="absolute left-[-2%] top-[-20px] aspect-square h-[420px] max-lg:hidden overflow-hidden rounded-full bg-[linear-gradient(135deg,#d3d9dd94_0%,transparent_70%)]"></div>
                 <OptimizedImage
                   src={photoSolid}
                   alt="Portrait de Samuel Prigent"
                   preload
-                  className="relative -mt-[20px] h-full w-full object-cover drop-shadow-[0_28px_42px_rgba(15,23,42,0.16)]"
+                  className="relative max-lg:mt-0 -mt-[20px] h-full w-full object-cover drop-shadow-[0_28px_42px_rgba(15,23,42,0.16)]"
                 />
               </div>
             </div>
