@@ -6,6 +6,8 @@ import me from "../assets/me.jpg";
 export default function Footer() {
   const [isCopied, setIsCopied] = useState(false);
 
+  const currentYear = new Date().getFullYear();
+
   const linkedinHref =
     socialLinks.find((link) => link.label === "LinkedIn")?.href ?? "#";
   const githubHref =
@@ -114,7 +116,7 @@ export default function Footer() {
         </div>
 
         <div className="mb-2 mt-9 flex flex-col items-center justify-between gap-2 border-t border-slate-200 pt-7 text-xs text-slate-500 md:flex-row">
-          <span>© 2025 Samuel Prigent. Tous droits réservés.</span>
+          <span>© {currentYear} Samuel Prigent. Tous droits réservés.</span>
           <span className="inline-flex items-center gap-2 text-xs text-slate-500">
             Created with
             <svg viewBox="0 0 24 24" aria-hidden className="h-4 w-4">
