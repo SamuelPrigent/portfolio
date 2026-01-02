@@ -4,7 +4,7 @@ import studyIcon from "../assets/study.svg";
 import { formatPeriod } from "../utils/dateUtils";
 import SectionTitleSmall from "./sectionTitleSmall";
 import SectionTitleBig from "./sectionTitleBig";
-import ExperienceBadge from "./ExperienceBadge";
+// import ExperienceBadge from "./ExperienceBadge";
 
 export default function ExperienceSection() {
   return (
@@ -16,7 +16,7 @@ export default function ExperienceSection() {
         <SectionTitleSmall>Parcours</SectionTitleSmall>
         <div className="flex items-center gap-6">
           <SectionTitleBig>Mes expériences</SectionTitleBig>
-          <ExperienceBadge />
+          {/* <ExperienceBadge /> */}
         </div>
       </div>
       <div className="mt-8 grid gap-[2rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
