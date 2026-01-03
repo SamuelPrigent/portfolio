@@ -238,7 +238,7 @@ export const projects: Project[] = [
     vercelLink: "https://poplist-omega.vercel.app/",
     githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
-      { logo: reactLogo, name: "React" },
+      { logo: nextLogo, name: "Next.js" },
       { logo: expressLogo, name: "Express" },
       { logo: typescriptLogo, name: "TypeScript" },
     ],
