@@ -1,4 +1,6 @@
-import kasa from "../assets/preview-kasa.webp";
+// import kasa from "../assets/preview-kasa.webp";
+import shadcn from "../assets/preview-shadcn.png";
+import npmLogo from "../assets/npm.svg";
 // import springbootLogo from "../assets/springboot.svg";
 // import lespetitsplats from "../assets/preview-lespetitsplats.webp";
 // import mdd from "../assets/preview-mdd.webp";
@@ -244,6 +246,19 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "shadcn-pass-strength",
+    description:
+      "Package npm offrant un composant personnalisable indiquant la robustesse du mot de passe d'un input.",
+    image: shadcn,
+    githubLink: "https://github.com/SamuelPrigent/shadcn-password-strength",
+    vercelLink: "https://shadcn-password-strength.vercel.app/",
+    techStack: [
+      { logo: nextLogo, name: "Next.js" },
+      { logo: typescriptLogo, name: "Typescript" },
+      { logo: npmLogo, name: "Npm" },
+    ],
+  },
+  {
     title: "FIFO",
     description:
       "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, WebSocket pour l'affichage des données.",
@@ -282,15 +297,15 @@ export const projects: Project[] = [
   //       { logo: javascriptLogo, name: "JavaScript" },
   //     ],
   //   },
-  {
-    title: "Kasa",
-    description:
-      "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
-    image: kasa,
-    vercelLink: "https://samuelprigent.github.io/Kasa/",
-    techStack: [
-      { logo: reactLogo, name: "React" },
-      { logo: javascriptLogo, name: "JavaScript" },
-    ],
-  },
+  //   {
+  //     title: "Kasa",
+  //     description:
+  //       "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
+  //     image: kasa,
+  //     vercelLink: "https://samuelprigent.github.io/Kasa/",
+  //     techStack: [
+  //       { logo: reactLogo, name: "React" },
+  //       { logo: javascriptLogo, name: "JavaScript" },
+  //     ],
+  //   },
 ];
