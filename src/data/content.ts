@@ -6,7 +6,7 @@ import kasa from "../assets/preview-kasa.webp";
 // import githubLogo from "../assets/github.svg";
 // import angularLogo from "../assets/angular.svg";
 import fifo from "../assets/preview-fifo.webp";
-import poplist from "../assets/preview-poplist.png";
+import poplist from "../assets/preview-poplist.webp";
 // logo
 import gitLogo from "../assets/logo-git-color.svg";
 import javascriptLogo from "../assets/logo-js-color.svg";
