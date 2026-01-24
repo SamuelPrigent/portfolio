@@ -7,7 +7,7 @@ import npmLogo from "../assets/npm.svg";
 // import rentals from "../assets/preview-rentals.webp";
 // import githubLogo from "../assets/github.svg";
 // import angularLogo from "../assets/angular.svg";
-import fifo from "../assets/preview-fifo.webp";
+// import fifo from "../assets/preview-fifo.webp";
 import poplist from "../assets/preview-poplist.webp";
 // logo
 import gitLogo from "../assets/logo-git-color.svg";
@@ -258,18 +258,18 @@ export const projects: Project[] = [
       { logo: npmLogo, name: "Npm" },
     ],
   },
-  {
-    title: "FIFO",
-    description:
-      "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, WebSocket pour l'affichage des données.",
-    image: fifo,
-    githubLink: "https://github.com/SamuelPrigent/FIFO",
-    techStack: [
-      { logo: reactLogo, name: "React" },
-      { logo: expressLogo, name: "Express" },
-      { logo: typescriptLogo, name: "TypeScript" },
-    ],
-  },
+  //   {
+  //     title: "FIFO",
+  //     description:
+  //       "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, WebSocket pour l'affichage des données.",
+  //     image: fifo,
+  //     githubLink: "https://github.com/SamuelPrigent/FIFO",
+  //     techStack: [
+  //       { logo: reactLogo, name: "React" },
+  //       { logo: expressLogo, name: "Express" },
+  //       { logo: typescriptLogo, name: "TypeScript" },
+  //     ],
+  //   },
   //   {
   //     title: "MDD",
   //     description:
