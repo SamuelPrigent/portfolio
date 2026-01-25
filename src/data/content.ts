@@ -241,7 +241,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
       { logo: nextLogo, name: "Next.js" },
-      { logo: expressLogo, name: "Express" },
+      { logo: adonisLogo, name: "Adonis" },
       { logo: typescriptLogo, name: "TypeScript" },
     ],
   },
