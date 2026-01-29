@@ -237,7 +237,7 @@ export const projects: Project[] = [
     description:
       "Application permettant la création et le partage de listes de films & séries. Les données sont obtenu par une API tierce.",
     image: poplist,
-    vercelLink: "https://poplist-omega.vercel.app/",
+    vercelLink: "https://poplist.me",
     githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
       { logo: nextLogo, name: "Next.js" },
