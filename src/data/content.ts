@@ -1,13 +1,5 @@
-// import kasa from "../assets/preview-kasa.webp";
-import shadcn from "../assets/preview-shadcn.png";
+import pass from "../assets/preview-passl.webp";
 import npmLogo from "../assets/npm.svg";
-// import springbootLogo from "../assets/springboot.svg";
-// import lespetitsplats from "../assets/preview-lespetitsplats.webp";
-// import mdd from "../assets/preview-mdd.webp";
-// import rentals from "../assets/preview-rentals.webp";
-// import githubLogo from "../assets/github.svg";
-// import angularLogo from "../assets/angular.svg";
-// import fifo from "../assets/preview-fifo.webp";
 import poplist from "../assets/preview-poplist.webp";
 // logo
 import gitLogo from "../assets/logo-git-color.svg";
@@ -246,12 +238,12 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "shadcn-pass-strength",
+    title: "pass-strength-indicator",
     description:
       "Package npm offrant un composant personnalisable indiquant la robustesse du mot de passe d'un input.",
-    image: shadcn,
-    githubLink: "https://github.com/SamuelPrigent/shadcn-password-strength",
-    vercelLink: "https://shadcn-password-strength.vercel.app/",
+    image: pass,
+    githubLink: "https://github.com/SamuelPrigent/pass-strength-indicator",
+    vercelLink: "https://pass-strength-indicator.vercel.app/",
     techStack: [
       { logo: nextLogo, name: "Next.js" },
       { logo: typescriptLogo, name: "Typescript" },
