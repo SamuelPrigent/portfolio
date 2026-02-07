@@ -1,14 +1,21 @@
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-// pages
 import HomePage from "./pages/HomePage";
-import CvPage from "./pages/CvPage";
+const CvPage = lazy(() => import("./pages/CvPage"));
 
 function App() {
   return (
     <Routes>
       <Route path="" element={<HomePage />} />
-      <Route path="/cv" element={<CvPage />} />
+      <Route
+        path="/cv"
+        element={
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <CvPage />
+          </Suspense>
+        }
+      />
       <Route path="*" element={<HomePage />} />
     </Routes>
   );

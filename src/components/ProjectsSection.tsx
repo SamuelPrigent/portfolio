@@ -26,12 +26,14 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="group flex h-[390px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:translate-y-[-3px] hover:border-primary hover:shadow-md"
+            className="group flex h-[390px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-[transform,border-color,box-shadow] duration-200 ease-out hover:translate-y-[-3px] hover:border-primary hover:shadow-md"
           >
             <div className="relative h-[49%] w-full overflow-hidden object-cover">
               <OptimizedImage
                 src={project.image}
                 alt={`Aperçu du projet ${project.title}`}
+                width={670}
+                height={349}
                 className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-105"
               />
             </div>
@@ -46,7 +48,7 @@ export default function ProjectsSection() {
                       href={project.vercelLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-primary hover:bg-slate-50 hover:text-slate-900"
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-[transform,border-color,background-color] duration-150 ease-out hover:border-primary hover:bg-slate-50 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       aria-label="Voir le projet en ligne"
                     >
                       <ExternalLinkIcon className="h-4 w-4" />
@@ -57,7 +59,7 @@ export default function ProjectsSection() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-primary hover:bg-slate-50 hover:text-slate-900"
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-[transform,border-color,background-color] duration-150 ease-out hover:border-primary hover:bg-slate-50 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       aria-label="Voir le code sur GitHub"
                     >
                       <img
@@ -73,9 +75,9 @@ export default function ProjectsSection() {
                 {project.description}
               </p>
               <div className="mt-auto flex flex-wrap gap-2">
-                {project.techStack.map((tech, index) => (
+                {project.techStack.map((tech) => (
                   <span
-                    key={index}
+                    key={tech.name}
                     className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1"
                   >
                     <img

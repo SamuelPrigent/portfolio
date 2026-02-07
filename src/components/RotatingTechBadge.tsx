@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useReducedMotion } from "framer-motion";
 import { skills } from "../data/content";
 
 const techColors = {
@@ -39,11 +40,6 @@ const rotatingTechs = [
     logo: skills.find((s) => s.label === "Tailwind CSS")?.icon,
     ...techColors["Tailwind CSS"],
   },
-  //   {
-  //     name: "Node.js",
-  //     logo: skills.find((s) => s.label === "Node.js")?.icon,
-  //     ...techColors["Node.js"],
-  //   },
   {
     name: "Adonis",
     logo: skills.find((s) => s.label === "Adonis")?.icon,
@@ -61,23 +57,38 @@ const rotatingTechs = [
   },
 ].filter((tech) => tech.logo);
 
+const TRANSITION_IN = {
+  transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
+};
+const TRANSITION_OUT = {
+  transition: "all 0.5s cubic-bezier(0.4, 0, 1, 1)",
+};
+
 export default function RotatingTechBadge() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
+    if (prefersReducedMotion) return;
+    const timeouts: number[] = [];
     const interval = setInterval(() => {
       setIsAnimating(false);
-      setTimeout(() => {
+      const t1 = window.setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % rotatingTechs.length);
-        setTimeout(() => {
+        const t2 = window.setTimeout(() => {
           setIsAnimating(true);
         }, 200);
+        timeouts.push(t2);
       }, 500);
+      timeouts.push(t1);
     }, 3100);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      clearInterval(interval);
+      timeouts.forEach(clearTimeout);
+    };
+  }, [prefersReducedMotion]);
 
   const currentTech = rotatingTechs[currentIndex];
 
@@ -86,11 +97,7 @@ export default function RotatingTechBadge() {
   return (
     <div className="flex items-center justify-end max-[900px]:justify-center">
       <div
-        style={{
-          transition: isAnimating
-            ? "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)"
-            : "all 0.5s cubic-bezier(0.4, 0, 1, 1)",
-        }}
+        style={isAnimating ? TRANSITION_IN : TRANSITION_OUT}
         className={`flex aspect-square items-center gap-2 rounded-lg border p-2 ${currentTech.border} ${currentTech.bg} ${
           isAnimating ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}

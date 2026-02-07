@@ -31,7 +31,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className="group"
         >
-          <div className="flex h-full items-center gap-4 rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 p-4 transition-all hover:bg-[#25D366]/10">
+          <div className="flex h-full items-center gap-4 rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 p-4 transition-[transform,border-color,background-color,box-shadow] duration-200 ease-out hover:bg-[#25D366]/10">
             <div className="flex-shrink-0 rounded-lg bg-[#25D366] p-2.5">
               <svg
                 className="h-6 w-6 text-white"
@@ -70,7 +70,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className="group"
         >
-          <div className="flex h-full items-center gap-4 rounded-xl border border-[#0A66C2]/30 bg-[#0A66C2]/5 p-4 transition-all hover:bg-[#0A66C2]/10">
+          <div className="flex h-full items-center gap-4 rounded-xl border border-[#0A66C2]/30 bg-[#0A66C2]/5 p-4 transition-[transform,border-color,background-color,box-shadow] duration-200 ease-out hover:bg-[#0A66C2]/10">
             <div className="flex-shrink-0 rounded-lg bg-[#0A66C2] p-2.5">
               <svg
                 className="h-6 w-6 text-white"
@@ -104,7 +104,7 @@ export default function ContactSection() {
 
         {/* Carte Email */}
         <a href={`mailto:${email}`} className="group">
-          <div className="flex h-full items-center gap-4 rounded-xl border border-gray-300 bg-gray-100 p-4 transition-all hover:border-gray-400 hover:bg-gray-200">
+          <div className="flex h-full items-center gap-4 rounded-xl border border-gray-300 bg-gray-100 p-4 transition-[transform,border-color,background-color,box-shadow] duration-200 ease-out hover:border-gray-400 hover:bg-gray-200">
             <div className="flex-shrink-0 rounded-lg bg-primary/90 p-2.5">
               <svg
                 className="h-6 w-6 text-white"

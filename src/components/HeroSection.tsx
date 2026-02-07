@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { socialLinks } from "../data/content";
-import photoSolid from "../assets/4-transparent.png";
+import photoSolid from "../assets/4-transparent.webp";
 import { DownloadIcon } from "./icons";
 import OptimizedImage from "../utils/OptimizedImage";
 
@@ -21,7 +21,7 @@ export default function HeroSection() {
               <div className="mt-4 flex items-center justify-center gap-3 lg:justify-start">
                 <div className="flex items-center gap-2">
                   <span className="relative inline-flex h-9 w-9 items-center justify-center">
-                    <span className="absolute inline-flex h-8 w-8 animate-[ping_3.2s_cubic-bezier(0.16,1,0.3,1)_infinite] rounded-full bg-primary/10" />
+                    <span className="absolute inline-flex h-8 w-8 animate-[ping_3.2s_cubic-bezier(0.16,1,0.3,1)_infinite] rounded-full bg-primary/10 motion-reduce:animate-none" />
                     <span className="absolute inline-flex h-8 w-8 rounded-full bg-primary/5" />
                     <svg
                       viewBox="0 0 24 24"
@@ -122,6 +122,9 @@ export default function HeroSection() {
                   src={photoSolid}
                   alt="Portrait de Samuel Prigent"
                   preload
+                  width={512}
+                  height={512}
+                  fetchPriority="high"
                   className="relative max-lg:mt-0 -mt-[20px] h-full w-full object-cover drop-shadow-[0_28px_42px_rgba(15,23,42,0.16)]"
                 />
               </div>

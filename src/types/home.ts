@@ -1,9 +1,3 @@
-export type NavItem = {
-  label: string;
-  target: string;
-  Icon: (props: { className?: string }) => JSX.Element;
-};
-
 export type SocialLink = {
   href: string;
   label: string;
@@ -20,8 +14,6 @@ export type SoftSkillWord = {
   text: string;
   className: string;
 };
-
-export type Layout = "desktop" | "tablet" | "mobile";
 
 export type Experience = {
   id: string;
@@ -55,12 +47,3 @@ export type Project = {
     name: string;
   }>;
 };
-
-export type ContactFormState = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
-export type ContactStatus = "idle" | "sending" | "success" | "error";

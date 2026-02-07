@@ -1,34 +1,17 @@
 import { socialLinks } from "@/data/content";
 import OptimizedImage from "@/utils/OptimizedImage";
-import { useEffect, useState } from "react";
+import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 import me from "../assets/me.jpg";
 
+const EMAIL = "contact@samuelprigent.com";
+const linkedinHref =
+  socialLinks.find((link) => link.label === "LinkedIn")?.href ?? "#";
+const githubHref =
+  socialLinks.find((link) => link.label === "GitHub")?.href ?? "#";
+
 export default function Footer() {
-  const [isCopied, setIsCopied] = useState(false);
-
+  const { isCopied, copy: handleCopyEmail } = useCopyToClipboard(EMAIL);
   const currentYear = new Date().getFullYear();
-
-  const linkedinHref =
-    socialLinks.find((link) => link.label === "LinkedIn")?.href ?? "#";
-  const githubHref =
-    socialLinks.find((link) => link.label === "GitHub")?.href ?? "#";
-
-  const email = "contact@samuelprigent.com";
-
-  useEffect(() => {
-    if (!isCopied) return;
-    const timeout = window.setTimeout(() => setIsCopied(false), 1000);
-    return () => window.clearTimeout(timeout);
-  }, [isCopied]);
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setIsCopied(true);
-    } catch {
-      setIsCopied(false);
-    }
-  };
 
   return (
     <footer className="mt-28 border-t border-slate-200 bg-white">
@@ -41,6 +24,8 @@ export default function Footer() {
                   className="aspect-square"
                   src={me}
                   alt="pic of me"
+                  width={44}
+                  height={44}
                 />
               </div>
               <div className="flex flex-col ">
@@ -59,7 +44,7 @@ export default function Footer() {
               type="button"
               onClick={handleCopyEmail}
               className="group -mx-2 inline-flex items-center gap-2 rounded-xl px-2 py-1.5 font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
-              aria-label="Copier l'adresse email"
+              aria-label="Copier l'adresse email contact@samuelprigent.com"
             >
               <span className="flex h-5 w-5 items-center justify-center text-slate-700 transition group-hover:text-slate-900">
                 {isCopied ? (
@@ -91,7 +76,7 @@ export default function Footer() {
                   </svg>
                 )}
               </span>
-              <span>{email}</span>
+              <span>{EMAIL}</span>
             </button>
 
             <div className="text-gray-300">|</div>

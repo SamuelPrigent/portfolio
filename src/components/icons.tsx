@@ -1,10 +1,6 @@
-import { Fragment } from "react";
-
 type SvgProps = {
   className?: string;
 };
-
-type HamburgerIconProps = SvgProps & { isOpen: boolean };
 
 export const SignatureUnderline = ({ className = "" }: SvgProps) => (
   <svg
@@ -85,36 +81,6 @@ export const PaperTrail = ({ className = "" }: SvgProps) => (
         <stop offset="1" stopColor="#020617" stopOpacity="0.5" />
       </linearGradient>
     </defs>
-  </svg>
-);
-
-export const HamburgerIcon = ({
-  className = "",
-  isOpen,
-}: HamburgerIconProps) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden
-    focusable="false"
-  >
-    {isOpen ? (
-      <Fragment>
-        <line x1="5" y1="5" x2="19" y2="19" />
-        <line x1="19" y1="5" x2="5" y2="19" />
-      </Fragment>
-    ) : (
-      <Fragment>
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="18" x2="21" y2="18" />
-      </Fragment>
-    )}
   </svg>
 );
 

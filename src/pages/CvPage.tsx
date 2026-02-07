@@ -45,8 +45,7 @@ export default function CvPage() {
             <iframe
               src={pdfUrl}
               title="CV Samuel Prigent"
-              className="cv-preview-frame"
-              style={{ border: "none" }}
+              className="cv-preview-frame border-none"
             />
           </div>
         </div>

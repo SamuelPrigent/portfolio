@@ -1,35 +1,18 @@
-import { useEffect, useState } from "react";
-
 import photo from "../assets/proPhotoTest2.webp";
-// import photo from "../assets/4.jpg";
+import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 import OptimizedImage from "../utils/OptimizedImage";
-// import { MailIcon } from "./icons";
 import SectionTitleBig from "./sectionTitleBig";
 import SectionTitleSmall from "./sectionTitleSmall";
 
+const EMAIL = "contact@samuelprigent.com";
+
 export default function AboutMe() {
-  const [isCopied, setIsCopied] = useState(false);
-  const email = "contact@samuelprigent.com";
-
-  useEffect(() => {
-    if (!isCopied) return;
-    const timeout = window.setTimeout(() => setIsCopied(false), 1000);
-    return () => window.clearTimeout(timeout);
-  }, [isCopied]);
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setIsCopied(true);
-    } catch {
-      setIsCopied(false);
-    }
-  };
+  const { isCopied, copy: handleCopyEmail } = useCopyToClipboard(EMAIL);
 
   return (
     <section className="mx-auto mt-28 max-w-6xl px-6 pb-8 max-[650px]:mt-10 max-[650px]:px-[14px]">
       <div className="flex items-start gap-16 max-lg:flex-col max-lg:items-center max-lg:gap-10">
-        <div className="shadow-[0_35px_70px_-60px_rgba(42, 29, 15, 0.55)] relative aspect-square h-[300px] max-[450px]:h-[240px] bg-white flex-shrink-0">
+        <div className="shadow-[0_35px_70px_-60px_rgba(42,29,15,0.55)] relative aspect-square h-[300px] max-[450px]:h-[240px] bg-white flex-shrink-0">
           <div className="absolute right-[-20px] top-[-14px] z-[100]">
             <span className="relative inline-flex h-10 items-center rounded-[6px] border border-yellow-300/25 bg-[#15120d] px-2.5 py-1.5 font-mono text-[12px] font-bold leading-none text-yellow-200 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.25)] ring-1 ring-amber-400/15">
               <span className="text-yellow-300">$</span>
@@ -63,10 +46,9 @@ export default function AboutMe() {
             <button
               type="button"
               onClick={handleCopyEmail}
-              className="bg- group inline-flex items-center gap-3 rounded-xl bg-gray-400/5 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.25)] transition hover:-translate-y-0.5  hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
-              aria-label="Copier l'adresse email"
+              className="group inline-flex items-center gap-3 rounded-xl bg-gray-400/5 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_18px_40px_-36px_rgba(15,23,42,0.25)] transition hover:-translate-y-0.5 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400"
+              aria-label="Copier l'adresse email contact@samuelprigent.com"
             >
-              {/* <MailIcon className="h-4 w-4 text-slate-700" /> */}
               <span className="ml-1 flex h-5 w-5 items-center justify-center text-slate-700 transition group-hover:text-slate-900">
                 {isCopied ? (
                   <svg
@@ -97,7 +79,7 @@ export default function AboutMe() {
                   </svg>
                 )}
               </span>
-              <span className="text-primary">{email}</span>
+              <span className="text-primary">{EMAIL}</span>
             </button>
           </div>
         </div>

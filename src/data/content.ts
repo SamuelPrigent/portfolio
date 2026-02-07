@@ -12,7 +12,6 @@ import nodeLogo from "../assets/logo-node-color.svg";
 import expressLogo from "../assets/logo-express.svg";
 import prismaLogo from "../assets/logo-prisma.svg";
 import honoLogo from "../assets/logo-hono-color.svg";
-// import awsLogo from "../assets/logo-aws-color.svg";
 import goLogo from "../assets/logo-go-color.svg";
 import phpLogo from "../assets/logo-php-color.svg";
 import symfonyLogo from "../assets/logo-symfony-color.svg";
@@ -21,34 +20,21 @@ import openaiLogo from "../assets/logo-openai-color.svg";
 // company logo
 import cola from "../assets/cola-square.jpeg";
 import dirips from "../assets/dirips-square.jpeg";
-import finestack from "../assets/finestack-square.png";
+import finestack from "../assets/finestack-square.webp";
 
 import {
-  BriefcaseIcon,
-  CapIcon,
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
-  ToolIcon,
 } from "../components/icons";
 import type {
   Education,
   Experience,
-  NavItem,
   Project,
   Skill,
   SocialLink,
   SoftSkillWord,
 } from "../types/home";
-
-export const heroTags = ["React.js", "Node.js", "TypeScript"];
-
-export const navItems: NavItem[] = [
-  { label: "Compétences", target: "skills", Icon: ToolIcon },
-  { label: "Expériences", target: "parcours", Icon: CapIcon },
-  { label: "Projets", target: "projets", Icon: BriefcaseIcon },
-  { label: "Contact", target: "contact", Icon: MailIcon },
-];
 
 export const socialLinks: SocialLink[] = [
   {

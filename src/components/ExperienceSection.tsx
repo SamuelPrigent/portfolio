@@ -1,10 +1,8 @@
 import { education, experiences } from "../data/content";
 import studyIcon from "../assets/study.svg";
-// import SoftSkills from "./SoftSkills";
 import { formatPeriod } from "../utils/dateUtils";
 import SectionTitleSmall from "./sectionTitleSmall";
 import SectionTitleBig from "./sectionTitleBig";
-// import ExperienceBadge from "./ExperienceBadge";
 
 export default function ExperienceSection() {
   return (
@@ -16,7 +14,6 @@ export default function ExperienceSection() {
         <SectionTitleSmall>Parcours</SectionTitleSmall>
         <div className="flex items-center gap-6">
           <SectionTitleBig>Mes expériences</SectionTitleBig>
-          {/* <ExperienceBadge /> */}
         </div>
       </div>
       <div className="mt-8 grid gap-[2rem] max-[650px]:mt-[30px] min-[900px]:grid-cols-[3fr_2.3fr]">
@@ -35,11 +32,12 @@ export default function ExperienceSection() {
                     {experience.company} - {experience.contract}
                   </p>
                 </div>
-                {/* border border-[#e5eaf0] */}
                 <div className="flex aspect-square h-[46px] items-center justify-center overflow-hidden rounded-lg p-[3.5px]">
                   <img
                     src={experience.logo}
                     alt={`logo ${experience.company}`}
+                    width={39}
+                    height={39}
                   />
                 </div>
               </div>
@@ -47,9 +45,9 @@ export default function ExperienceSection() {
                 {formatPeriod(experience.startDate, experience.endDate)}
               </p>
               <ul className="mt-4 space-y-2">
-                {experience.missions.map((mission, index) => (
+                {experience.missions.map((mission) => (
                   <li
-                    key={index}
+                    key={mission}
                     className="flex items-start gap-2 text-sm leading-relaxed text-slate-600"
                   >
                     <span className="relative top-[4.5px] mt-1.5  h-[1.5px] w-[7px] shrink-0 bg-slate-400" />
@@ -58,9 +56,9 @@ export default function ExperienceSection() {
                 ))}
               </ul>
               <div className="mt-4 flex flex-wrap gap-2">
-                {experience.techStack.map((tech, index) => (
+                {experience.techStack.map((tech) => (
                   <span
-                    key={index}
+                    key={tech.name}
                     className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1"
                   >
                     <img
