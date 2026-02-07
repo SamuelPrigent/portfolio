@@ -10,9 +10,9 @@ import nextLogo from "../assets/logo-next-color.svg";
 import tailwindLogo from "../assets/logo-tailwind-color.svg";
 import nodeLogo from "../assets/logo-node-color.svg";
 import expressLogo from "../assets/logo-express.svg";
-// import prismaLogo from "../assets/logo-prisma.svg";
-import adonisLogo from "../assets/logo-adonis-color.svg";
-import awsLogo from "../assets/logo-aws-color.svg";
+import prismaLogo from "../assets/logo-prisma.svg";
+import honoLogo from "../assets/logo-hono-color.svg";
+// import awsLogo from "../assets/logo-aws-color.svg";
 import goLogo from "../assets/logo-go-color.svg";
 import phpLogo from "../assets/logo-php-color.svg";
 import symfonyLogo from "../assets/logo-symfony-color.svg";
@@ -101,14 +101,14 @@ export const skills: Skill[] = [
     docUrl: "https://expressjs.com/",
   },
   {
-    label: "Adonis",
-    icon: adonisLogo,
-    docUrl: "https://docs.adonisjs.com/guides/preface/introduction",
+    label: "Hono",
+    icon: honoLogo,
+    docUrl: "https://hono.dev/docs/",
   },
   {
-    label: "AWS",
-    icon: awsLogo,
-    docUrl: "https://docs.aws.amazon.com/",
+    label: "Prisma",
+    icon: prismaLogo,
+    docUrl: "https://www.prisma.io/docs",
   },
   {
     label: "Git",
@@ -146,14 +146,14 @@ export const experiences: Experience[] = [
     logo: cola,
     contract: "CDI",
     missions: [
-      "Développement de l'intranet en React, Next.js et Node.js.",
-      "Participation à la modernisation du SI et aux travaux de refonte technique.",
-      "Conception et évolution des interfaces entre applications (intégrations, API).",
+      "Développement d'extranets d'automatisation des ouvertures de compte avec signature électronique et OCR pour les 4 sociétés du groupe.",
+      "Digitalisation des commandes papier via un extranet avec compilation des données en fichier compatible ERP de production.",
+      "Conception et développement de solutions logicielles sur mesure dans le cadre de la modernisation du SI.",
     ],
     techStack: [
       { logo: reactLogo, name: "React" },
       { logo: nextLogo, name: "Next.js" },
-      { logo: adonisLogo, name: "Adonis" },
+      { logo: honoLogo, name: "Hono" },
       { logo: nodeLogo, name: "Node.Js" },
     ],
   },
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
       { logo: nextLogo, name: "Next.js" },
-      { logo: adonisLogo, name: "Adonis" },
+      { logo: honoLogo, name: "Hono" },
       { logo: typescriptLogo, name: "TypeScript" },
     ],
   },
