@@ -27,13 +27,14 @@ export default function BlogCard({
       <Link href={`/blog/${post.slug}`} className="group block">
         <article className="flex gap-5 rounded-xl border border-transparent px-4 py-5 transition-all duration-200 hover:border-border hover:bg-accent/50 max-sm:flex-col">
           {post.image && (
-            <div className="flex w-[200px] shrink-0 items-center max-sm:w-full">
+            <div className="relative h-[120px] w-[200px] shrink-0 max-sm:w-full">
               <Image
                 src={post.image}
                 alt={`Aperçu : ${post.title}`}
-                width={200}
-                height={120}
-                className="h-[120px] w-full rounded-lg object-cover"
+                fill
+                sizes="(max-width: 549px) 100vw, 200px"
+                className="rounded-lg object-cover"
+                priority={index === 0}
               />
             </div>
           )}

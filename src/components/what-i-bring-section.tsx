@@ -62,7 +62,7 @@ export default function WhatIBringSection() {
               {softSkillWords.map((word) => (
                 <span
                   key={word.text}
-                  className="rounded-md border border-border bg-accent px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:bg-accent/80"
+                  className="rounded-md border border-border bg-gray-100 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:bg-gray-200 dark:bg-accent dark:hover:bg-accent/80"
                 >
                   {word.text}
                 </span>

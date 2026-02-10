@@ -29,7 +29,7 @@ export default function ProjectsSection() {
                       href={project.vercelLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-7 w-7 items-center justify-center rounded-md border hover:border-white/30 border-border text-muted-foreground transition-colors hover:text-foreground"
+                      className="flex h-7 w-7 items-center justify-center rounded-md border hover:border-gray-400 dark:hover:border-white/30 border-border text-muted-foreground transition-colors hover:text-foreground"
                       aria-label="Voir le projet en ligne"
                     >
                       <ExternalLinkIcon className="h-3.5 w-3.5 text-foreground/70" />
@@ -40,7 +40,7 @@ export default function ProjectsSection() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex h-7 w-7 items-center hover:border-white/30 justify-center rounded-md border border-border text-muted-foreground transition-colors hover:text-foreground"
+                      className="flex h-7 w-7 items-center hover:border-gray-400 dark:hover:border-white/30 justify-center rounded-md border border-border text-muted-foreground transition-colors hover:text-foreground"
                       aria-label="Voir le code sur GitHub"
                     >
                       <img
@@ -75,13 +75,13 @@ export default function ProjectsSection() {
             </div>
 
             {/* Right preview image */}
-            <div className="flex w-[260px] shrink-0 items-center max-sm:w-full">
+            <div className="relative h-[168px] w-[260px] shrink-0 max-sm:w-full">
               <Image
                 src={project.image}
                 alt={`Aperçu du projet ${project.title}`}
-                width={260}
-                height={168}
-                className="h-[168px] w-full rounded-lg object-cover"
+                fill
+                sizes="(max-width: 549px) 100vw, 260px"
+                className="rounded-lg object-cover"
               />
             </div>
           </article>

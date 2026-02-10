@@ -25,7 +25,7 @@ export function formatPeriod(
   const start = parseYearMonth(startDate);
   const startLabel = `${MONTHS_FR[start.month - 1]} ${start.year}`;
 
-  if (!endDate) return `${startLabel} — Aujourd'hui`;
+  if (!endDate) return `${startLabel} à Aujourd'hui`;
 
   const end = parseYearMonth(endDate);
   const endLabel = `${MONTHS_FR[end.month - 1]} ${end.year}`;
@@ -40,5 +40,5 @@ export function formatPeriod(
   if (years > 0 && months > 0) duration += " et ";
   if (months > 0) duration += `${months} mois`;
 
-  return `${startLabel} — ${endLabel} · ${duration}`;
+  return `${startLabel} à ${endLabel} · ${duration}`;
 }

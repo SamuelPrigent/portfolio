@@ -97,7 +97,8 @@ export const experiences: Experience[] = [
     endDate: null,
     title: "Développeur Fullstack",
     company: "Groupe Cola",
-    logo: "/logos/cola-square.jpeg",
+    logo: "/logos/company-cola.svg",
+    logoClassName:"p-[13px]",
     contract: "CDI",
     missions: [
       "Développement d'extranets d'automatisation des ouvertures de compte avec signature électronique et OCR pour les 4 sociétés du groupe.",
@@ -117,7 +118,8 @@ export const experiences: Experience[] = [
     endDate: "2025-09",
     title: "Développeur Fullstack",
     company: "Dir IPS",
-    logo: "/logos/dirips-square.jpeg",
+    logo: "/logos/company-dirips.svg",
+    logoClassName:"p-[11px]",
     contract: "Alternance",
     missions: [
       "Conception d'un algorithme de production de données afin de tester le moteur de calculs du produit DirIgami Facturation.",
@@ -138,7 +140,7 @@ export const experiences: Experience[] = [
     endDate: "2024-09",
     title: "Développeur Fullstack",
     company: "FineStack",
-    logo: "/logos/finestack-square.webp",
+    logo: "/logos/company-finestack.webp",
     contract: "Freelance",
     missions: [
       "Développement d'une App automatisant la génération de PDF personnalisé de réponse à des offres d'emploi. Itération et reformulation sur les sections du document.",
@@ -149,7 +151,7 @@ export const experiences: Experience[] = [
       { logo: "/logos/logo-next-color.svg", name: "Next.js" },
       { logo: "/logos/logo-express.svg", darkLogo: "/logos/logo-express-dark.svg", name: "Express" },
       { logo: "/logos/logo-node-color.svg", name: "Node.js" },
-      { logo: "/logos/logo-openai-color.svg", darkLogo: "/logos/logo-openai-dark.svg", name: "OpenAI" },
+    //   { logo: "/logos/logo-openai-color.svg", darkLogo: "/logos/logo-openai-dark.svg", name: "OpenAI" },
     ],
   },
 ];

@@ -15,8 +15,8 @@ export function Navbar() {
           href="/"
           className="flex items-center text-lg text-foreground transition-colors hover:text-foreground/80"
         >
-          <span className="font-sans font-medium">samuelprigent</span>
-          <span className="font-mono font-medium">.com</span>
+          <span className="font-sans font-medium max-[350px]:text-[16px] max-[320px]:text-[14.5px]">samuelprigent</span>
+          <span className="font-mono font-medium max-[350px]:text-[16px] max-[320px]:text-[14.5px]">.com</span>
         </Link>
 
         <div className="flex items-center gap-5">

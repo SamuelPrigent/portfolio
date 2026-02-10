@@ -23,6 +23,7 @@ export type Experience = {
   company: string;
   contract: string;
   logo: string;
+  logoClassName?: string;
   missions: string[];
   techStack: Array<{ logo: string; darkLogo?: string; name: string }>;
 };
