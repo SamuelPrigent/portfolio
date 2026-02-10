@@ -1,32 +1,8 @@
-import pass from "../assets/preview-passl.webp";
-import npmLogo from "../assets/npm.svg";
-import poplist from "../assets/preview-poplist.webp";
-// logo
-import gitLogo from "../assets/logo-git-color.svg";
-import javascriptLogo from "../assets/logo-js-color.svg";
-import typescriptLogo from "../assets/logo-ts-color.svg";
-import reactLogo from "../assets/logo-react-color.svg";
-import nextLogo from "../assets/logo-next-color.svg";
-import tailwindLogo from "../assets/logo-tailwind-color.svg";
-import nodeLogo from "../assets/logo-node-color.svg";
-import expressLogo from "../assets/logo-express.svg";
-import prismaLogo from "../assets/logo-prisma.svg";
-import honoLogo from "../assets/logo-hono-color.svg";
-import goLogo from "../assets/logo-go-color.svg";
-import phpLogo from "../assets/logo-php-color.svg";
-import symfonyLogo from "../assets/logo-symfony-color.svg";
-import wordpressLogo from "../assets/logo-wordpress-color.svg";
-import openaiLogo from "../assets/logo-openai-color.svg";
-// company logo
-import cola from "../assets/cola-square.jpeg";
-import dirips from "../assets/dirips-square.jpeg";
-import finestack from "../assets/finestack-square.webp";
-
 import {
   GitHubIcon,
   LinkedInIcon,
   MailIcon,
-} from "../components/icons";
+} from "@/components/icons";
 import type {
   Education,
   Experience,
@@ -34,7 +10,7 @@ import type {
   Skill,
   SocialLink,
   SoftSkillWord,
-} from "../types/home";
+} from "@/types";
 
 export const socialLinks: SocialLink[] = [
   {
@@ -53,83 +29,75 @@ export const socialLinks: SocialLink[] = [
 export const skills: Skill[] = [
   {
     label: "JavaScript",
-    icon: javascriptLogo,
+    icon: "/logos/logo-js-color.svg",
     docUrl: "https://developer.mozilla.org/docs/Web/JavaScript",
   },
   {
     label: "TypeScript",
-    icon: typescriptLogo,
+    icon: "/logos/logo-ts-color.svg",
     docUrl: "https://www.typescriptlang.org/docs/",
   },
   {
     label: "React",
-    icon: reactLogo,
+    icon: "/logos/logo-react-color.svg",
     docUrl: "https://react.dev/",
   },
   {
     label: "Next.js",
-    icon: nextLogo,
+    icon: "/logos/logo-next-color.svg",
     docUrl: "https://nextjs.org/",
   },
   {
     label: "Tailwind CSS",
-    icon: tailwindLogo,
+    icon: "/logos/logo-tailwind-color.svg",
     docUrl: "https://tailwindcss.com/",
   },
   {
     label: "Node.js",
-    icon: nodeLogo,
+    icon: "/logos/logo-node-color.svg",
     docUrl: "https://nodejs.org/fr",
   },
   {
     label: "Express",
-    icon: expressLogo,
+    icon: "/logos/logo-express.svg",
+    darkIcon: "/logos/logo-express-dark.svg",
     docUrl: "https://expressjs.com/",
   },
   {
     label: "Hono",
-    icon: honoLogo,
+    icon: "/logos/logo-hono-color.svg",
     docUrl: "https://hono.dev/docs/",
   },
   {
     label: "Prisma",
-    icon: prismaLogo,
+    icon: "/logos/logo-prisma.svg",
+    darkIcon: "/logos/logo-prisma-dark.svg",
     docUrl: "https://www.prisma.io/docs",
   },
   {
     label: "Git",
-    icon: gitLogo,
+    icon: "/logos/logo-git-color.svg",
     docUrl: "https://git-scm.com/",
   },
-  //   {
-  //     label: "Angular",
-  //     icon: angularLogo,
-  //     docUrl: "https://git-scm.com/",
-  //   },
-  //   {
-  //     label: "GitHub",
-  //     icon: githubLogo,
-  //     docUrl: "https://github.com/",
-  //   },
 ];
 
 export const softSkillWords: SoftSkillWord[] = [
-  { text: "Bonne humeur", className: "-rotate-2" },
-  { text: "Communication claire", className: "-rotate-1" },
-  { text: "Esprit collaboratif", className: "rotate-1" },
-  { text: "Ecoute active", className: "rotate-2" },
-  { text: "Adaptabilité", className: "-rotate-1" },
-  { text: "Curiosité insatiable", className: "rotate-1" },
+  { text: "Bonne humeur" },
+  { text: "Communication claire" },
+  { text: "Esprit collaboratif" },
+  { text: "Ecoute active" },
+  { text: "Adaptabilité" },
+  { text: "Curiosité insatiable" },
 ];
 
 export const experiences: Experience[] = [
   {
     id: "1",
     startDate: "2025-11",
-    endDate: null, // Poste actuel
+    endDate: null,
     title: "Développeur Fullstack",
     company: "Groupe Cola",
-    logo: cola,
+    logo: "/logos/cola-square.jpeg",
     contract: "CDI",
     missions: [
       "Développement d'extranets d'automatisation des ouvertures de compte avec signature électronique et OCR pour les 4 sociétés du groupe.",
@@ -137,10 +105,10 @@ export const experiences: Experience[] = [
       "Conception et développement de solutions logicielles sur mesure dans le cadre de la modernisation du SI.",
     ],
     techStack: [
-      { logo: reactLogo, name: "React" },
-      { logo: nextLogo, name: "Next.js" },
-      { logo: honoLogo, name: "Hono" },
-      { logo: nodeLogo, name: "Node.Js" },
+      { logo: "/logos/logo-react-color.svg", name: "React" },
+      { logo: "/logos/logo-next-color.svg", name: "Next.js" },
+      { logo: "/logos/logo-hono-color.svg", name: "Hono" },
+      { logo: "/logos/logo-node-color.svg", name: "Node.Js" },
     ],
   },
   {
@@ -149,7 +117,7 @@ export const experiences: Experience[] = [
     endDate: "2025-09",
     title: "Développeur Fullstack",
     company: "Dir IPS",
-    logo: dirips,
+    logo: "/logos/dirips-square.jpeg",
     contract: "Alternance",
     missions: [
       "Conception d'un algorithme de production de données afin de tester le moteur de calculs du produit DirIgami Facturation.",
@@ -157,11 +125,11 @@ export const experiences: Experience[] = [
       "Proposition d'une base de refonte pour le site Dir IPS sous Wordpress.",
     ],
     techStack: [
-      { logo: javascriptLogo, name: "JavaScript" },
-      { logo: goLogo, name: "Go" },
-      { logo: phpLogo, name: "PHP" },
-      { logo: symfonyLogo, name: "Symfony" },
-      { logo: wordpressLogo, name: "WordPress" },
+      { logo: "/logos/logo-js-color.svg", name: "JavaScript" },
+      { logo: "/logos/logo-go-color.svg", name: "Go" },
+      { logo: "/logos/logo-php-color.svg", name: "PHP" },
+      { logo: "/logos/logo-symfony-color.svg", name: "Symfony" },
+      { logo: "/logos/logo-wordpress-color.svg", name: "WordPress" },
     ],
   },
   {
@@ -170,18 +138,18 @@ export const experiences: Experience[] = [
     endDate: "2024-09",
     title: "Développeur Fullstack",
     company: "FineStack",
-    logo: finestack,
+    logo: "/logos/finestack-square.webp",
     contract: "Freelance",
     missions: [
       "Développement d'une App automatisant la génération de PDF personnalisé de réponse à des offres d'emploi. Itération et reformulation sur les sections du document.",
       "Développement d'un UI kit et d'un Storybook pour le collectif.",
     ],
     techStack: [
-      { logo: reactLogo, name: "React" },
-      { logo: nextLogo, name: "Next.js" },
-      { logo: expressLogo, name: "Express" },
-      { logo: nodeLogo, name: "Node.js" },
-      { logo: openaiLogo, name: "OpenAI" },
+      { logo: "/logos/logo-react-color.svg", name: "React" },
+      { logo: "/logos/logo-next-color.svg", name: "Next.js" },
+      { logo: "/logos/logo-express.svg", darkLogo: "/logos/logo-express-dark.svg", name: "Express" },
+      { logo: "/logos/logo-node-color.svg", name: "Node.js" },
+      { logo: "/logos/logo-openai-color.svg", darkLogo: "/logos/logo-openai-dark.svg", name: "OpenAI" },
     ],
   },
 ];
@@ -192,21 +160,6 @@ export const education: Education[] = [
     title: "Expert en développement logiciel",
     school: "OpenClassrooms, 2025",
   },
-  {
-    level: "Bac+3",
-    title: "Développeur concepteur logiciel",
-    school: "OpenClassrooms, 2023",
-  },
-  {
-    level: "Bac+2",
-    title: "Développeur Web",
-    school: "OpenClassrooms, 2022",
-  },
-  //   {
-  //     level: "Bac+3",
-  //     title: "Licence STAPS, Entraînement Sportif",
-  //     school: "Université Paris-Saclay, site d'Orsay, 2019",
-  //   },
 ];
 
 export const projects: Project[] = [
@@ -214,76 +167,26 @@ export const projects: Project[] = [
     title: "Poplist",
     description:
       "Application permettant la création et le partage de listes de films & séries. Les données sont obtenu par une API tierce.",
-    image: poplist,
+    image: "/images/preview-poplist.webp",
     vercelLink: "https://poplist.me",
     githubLink: "https://github.com/SamuelPrigent/Poplist",
     techStack: [
-      { logo: nextLogo, name: "Next.js" },
-      { logo: honoLogo, name: "Hono" },
-      { logo: typescriptLogo, name: "TypeScript" },
+      { logo: "/logos/logo-next-color.svg", name: "Next.js" },
+      { logo: "/logos/logo-hono-color.svg", name: "Hono" },
+      { logo: "/logos/logo-ts-color.svg", name: "TypeScript" },
     ],
   },
   {
-    title: "pass-strength-indicator",
+    title: "Password indicator",
     description:
       "Package npm offrant un composant personnalisable indiquant la robustesse du mot de passe d'un input.",
-    image: pass,
+    image: "/images/preview-passl.webp",
     githubLink: "https://github.com/SamuelPrigent/pass-strength-indicator",
     vercelLink: "https://pass-strength-indicator.vercel.app/",
     techStack: [
-      { logo: nextLogo, name: "Next.js" },
-      { logo: typescriptLogo, name: "Typescript" },
-      { logo: npmLogo, name: "Npm" },
+      { logo: "/logos/logo-next-color.svg", name: "Next.js" },
+      { logo: "/logos/logo-ts-color.svg", name: "TypeScript" },
+      { logo: "/icons/npm.svg", name: "Npm" },
     ],
   },
-  //   {
-  //     title: "FIFO",
-  //     description:
-  //       "File d'attente intelligente avec priorisation des crédits. Front React, Backend Express, WebSocket pour l'affichage des données.",
-  //     image: fifo,
-  //     githubLink: "https://github.com/SamuelPrigent/FIFO",
-  //     techStack: [
-  //       { logo: reactLogo, name: "React" },
-  //       { logo: expressLogo, name: "Express" },
-  //       { logo: typescriptLogo, name: "TypeScript" },
-  //     ],
-  //   },
-  //   {
-  //     title: "MDD",
-  //     description:
-  //       "Plateforme éditoriale Angular + Spring Boot. Gestion des abonnements thématiques et modération avancée.",
-  //     image: mdd,
-  //     link: "https://github.com/SamuelPrigent/MondeDeDev",
-  //     tags: ["Angular", "Spring Boot"],
-  //   },
-  //   {
-  //     title: "Rentals",
-  //     description:
-  //       "API REST sécurisée JWT pour la gestion de locations. Upload média via Cloudinary et dashboard Angular.",
-  //     image: rentals,
-  //     link: "https://github.com/SamuelPrigent/Rentals-Backend",
-  //     tags: ["Angular", "Spring Boot"],
-  //   },
-  //   {
-  //     title: "Les Petits Plats",
-  //     description:
-  //       "Moteur de recherche performant avec filtrage multi-critères et UI responsive, 100% Vanilla JS.",
-  //     image: lespetitsplats,
-  //     vercelLink: "https://samuelprigent.github.io/LesPetitsPlats/",
-  //     techStack: [
-  //       { logo: reactLogo, name: "React" },
-  //       { logo: javascriptLogo, name: "JavaScript" },
-  //     ],
-  //   },
-  //   {
-  //     title: "Kasa",
-  //     description:
-  //       "Application de location immersive avec animations, gestion d'état fine et navigation fluide.",
-  //     image: kasa,
-  //     vercelLink: "https://samuelprigent.github.io/Kasa/",
-  //     techStack: [
-  //       { logo: reactLogo, name: "React" },
-  //       { logo: javascriptLogo, name: "JavaScript" },
-  //     ],
-  //   },
 ];

@@ -10,6 +10,7 @@ archives
 node_modules
 dist
 dist-ssr
+.next
 *.local
 private
 .agents
