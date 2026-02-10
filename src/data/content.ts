@@ -127,9 +127,9 @@ export const experiences: Experience[] = [
     techStack: [
       { logo: "/logos/logo-js-color.svg", name: "JavaScript" },
       { logo: "/logos/logo-go-color.svg", name: "Go" },
-      { logo: "/logos/logo-php-color.svg", name: "PHP" },
-      { logo: "/logos/logo-symfony-color.svg", name: "Symfony" },
       { logo: "/logos/logo-wordpress-color.svg", name: "WordPress" },
+      { logo: "/logos/logo-php-color.svg", name: "PHP" },
+    //   { logo: "/logos/logo-symfony-color.svg", name: "Symfony" },
     ],
   },
   {
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     title: "Password indicator",
     description:
       "Package npm offrant un composant personnalisable indiquant la robustesse du mot de passe d'un input.",
-    image: "/images/preview-passl.webp",
+    image: "/images/preview-passld.webp",
     githubLink: "https://github.com/SamuelPrigent/pass-strength-indicator",
     vercelLink: "https://pass-strength-indicator.vercel.app/",
     techStack: [
