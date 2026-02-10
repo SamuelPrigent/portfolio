@@ -45,7 +45,7 @@ export default function HeroSection() {
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="rounded-md border border-border px-3 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:text-foreground dark:text-muted-foreground"
+            className="rounded-md border border-border px-3 py-1.5 text-sm font-medium text-gray-600 dark:hover:text-gray-200 transition-colors hover:text-foreground dark:text-muted-foreground"
           >
             {label}
           </a>
