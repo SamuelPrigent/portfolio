@@ -38,7 +38,7 @@ export default function Footer() {
               href={linkedinHref}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-900 transition hover:text-foreground dark:text-muted-foreground"
+              className="text-gray-900 transition hover:text-foreground dark:hover:text-white dark:text-muted-foreground"
             >
               LinkedIn
             </a>
@@ -47,7 +47,7 @@ export default function Footer() {
               href={githubHref}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-900 transition hover:text-foreground dark:text-muted-foreground"
+              className="text-gray-900 transition hover:text-foreground dark:hover:text-white dark:text-muted-foreground"
             >
               GitHub
             </a>
@@ -56,7 +56,7 @@ export default function Footer() {
 
             <Link
               href="/cv"
-              className="inline-flex items-center gap-1.5 text-gray-900 transition hover:text-foreground dark:text-muted-foreground"
+              className="inline-flex items-center gap-1.5 text-gray-900 transition hover:text-foreground dark:hover:text-white dark:text-muted-foreground"
             >
               <DownloadIcon className="h-4 w-4" />
               CV
@@ -68,32 +68,9 @@ export default function Footer() {
           <span>
             &copy; {currentYear} Samuel Prigent. Tous droits réservés.
           </span>
-          <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
             Created with
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden
-              className="h-4 w-4 text-muted-foreground"
-            >
-              <defs>
-                <linearGradient
-                  id="footerHeartGradient"
-                  x1="0"
-                  y1="0"
-                  x2="1"
-                  y2="1"
-                >
-                  <stop offset="0" stopColor="currentColor" stopOpacity="1" />
-                  <stop offset="1" stopColor="currentColor" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M12 21s-7-4.35-9.5-8.46C.82 9.8 2.18 6.5 5.6 5.4c2.02-.65 3.82.12 4.9 1.52 1.08-1.4 2.88-2.17 4.9-1.52 3.42 1.1 4.78 4.4 3.1 7.14C19 16.65 12 21 12 21Z"
-                fill="url(#footerHeartGradient)"
-                stroke="currentColor"
-                strokeWidth="1"
-              />
-            </svg>
+            <div className="text-base pl-0.5">♥</div>
           </span>
         </div>
       </div>

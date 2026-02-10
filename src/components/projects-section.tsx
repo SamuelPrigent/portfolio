@@ -75,13 +75,13 @@ export default function ProjectsSection() {
             </div>
 
             {/* Right preview image */}
-            <div className="relative h-[168px] w-[260px] shrink-0 max-sm:w-full">
+            <div className="relative h-[168px] w-[260px] shrink-0 overflow-hidden rounded-lg max-sm:w-full">
               <Image
                 src={project.image}
                 alt={`Aperçu du projet ${project.title}`}
                 fill
                 sizes="(max-width: 549px) 100vw, 260px"
-                className="rounded-lg object-cover"
+                className="object-cover transition-transform duration-300 ease-in-out hover:scale-[1.04]"
               />
             </div>
           </article>

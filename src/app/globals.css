@@ -19,6 +19,8 @@
   --radius-sm: calc(0.5rem - 4px);
 
   --animate-spotlight: spotlight 1.2s ease 0.75s 1 forwards;
+  --animate-scanline-left: scanline-left 450ms ease-out forwards;
+  --animate-scanline-right: scanline-right 450ms ease-out forwards;
 
   @keyframes spotlight {
     0% {
@@ -28,6 +30,28 @@
     100% {
       opacity: 1;
       transform: translate(-50%, -40%) scale(1);
+    }
+  }
+
+  @keyframes scanline-left {
+    0%, 20% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scanline-right {
+    0%, 20% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
     }
   }
 }
