@@ -104,7 +104,7 @@ export const experiences: Experience[] = [
     title: "Développeur Fullstack",
     company: "Groupe Cola",
     logo: "/logos/company-cola.svg",
-    logoClassName:"p-[13px]",
+    logoClassName:"p-[14px]",
     contract: "CDI",
     missions: [
       "Développement d'extranets d'automatisation des ouvertures de compte avec signature électronique et OCR pour les 4 sociétés du groupe.",
@@ -125,7 +125,7 @@ export const experiences: Experience[] = [
     title: "Développeur Fullstack",
     company: "Dir IPS",
     logo: "/logos/company-dirips.svg",
-    logoClassName:"p-[11px]",
+    logoClassName:"p-[12px]",
     contract: "Alternance",
     missions: [
       "Conception d'un algorithme de production de données afin de tester le moteur de calculs du produit DirIgami Facturation.",

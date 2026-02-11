@@ -23,7 +23,7 @@ export default function ExperienceSection() {
                   {experience.company} &mdash; {experience.contract}
                 </p>
               </div>
-              <div className={`flex aspect-square h-[46px] items-center justify-center overflow-hidden rounded-lg bg-gray-100 dark:bg-zinc-800 ${experience.logoClassName ?? "p-2"}`}>
+              <div className={`flex aspect-square max-[600px]:h-[39px] h-[46px] items-center justify-center overflow-hidden rounded-lg bg-gray-100 dark:bg-zinc-800 ${experience.logoClassName ?? "p-2.5"}`}>
                 <img
                   src={experience.logo}
                   alt={`logo ${experience.company}`}

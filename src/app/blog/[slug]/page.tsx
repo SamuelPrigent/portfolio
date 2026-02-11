@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: Props) {
               alt={post.title}
               width={768}
               height={400}
-              className="w-[400px] rounded-lg object-cover"
+              className="w-[340px] rounded-lg object-cover"
               priority
             />
           )}

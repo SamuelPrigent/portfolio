@@ -8,7 +8,7 @@ export default function WhatIBringSection() {
   return (
     <section className="mx-auto mt-10 max-w-3xl px-6 pt-10">
       <div className="space-y-6">
-        <div className="grid gap-6 max-sm:gap-4 sm:grid-cols-2">
+        <div className="grid gap-6 max-sm:gap-6 sm:grid-cols-2">
           <div className="text-left">
             <SectionLabel>Technos</SectionLabel>
             <div className="flex items-center gap-6">
@@ -18,7 +18,7 @@ export default function WhatIBringSection() {
           </div>
         </div>
 
-        <div className="grid gap-8 max-sm:gap-6 sm:grid-cols-2">
+        <div className="grid gap-8 max-sm:gap-12 sm:grid-cols-2">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 rounded-full bg-muted-foreground" />
