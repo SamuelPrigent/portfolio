@@ -79,6 +79,12 @@ export const skills: Skill[] = [
     icon: "/logos/logo-git-color.svg",
     docUrl: "https://git-scm.com/",
   },
+//     {
+//     label: "Docker",
+//     icon: "/logos/logo-docker.svg",
+//     docUrl: "https://www.docker.com/",
+//   },
+
 ];
 
 export const softSkillWords: SoftSkillWord[] = [
