@@ -1,5 +1,4 @@
 import type { BlogPost } from "@/types";
-import comands from "../../public/images/blog/commands.png"
 
 export const blogPosts: BlogPost[] = [
   {
@@ -13,11 +12,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "claude-code-commandes-custom",
-    title: "La puissance des commandes custom Claude Code",
-    date: "2026-02-09",
+    title: "Utilise Claude Code à 100% : commands, skills et agents",
+    date: "2026-02-14",
     excerpt:
-      "Les skills font le buzz, mais les commandes custom sont la vraie fonctionnalité qui change la manière de travailler avec l'IA. Workflows reproductibles, contrôle total.",
-    tags: ["claude-code", "productivité"],
+      "MCP, skills, commands, agents — chaque couche de personnalisation résout un problème précis. Mon setup complet et ce que j'ai appris en le construisant.",
+    tags: ["claude-code", "productivité", "setup"],
     image: "/images/blog/claude-code-commandes-custom.webp",
   },
 ];
