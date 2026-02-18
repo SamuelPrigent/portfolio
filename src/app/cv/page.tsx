@@ -12,7 +12,7 @@ export default function CvPage() {
         <div className="flex items-start gap-3 lg:flex-col">
           <Link
             href="/"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-card text-foreground transition hover:border-foreground/20"
+            className="max-lg:hidden flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-card text-foreground transition hover:border-foreground/20"
             aria-label="Retour"
           >
             <svg
@@ -42,7 +42,7 @@ export default function CvPage() {
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
-            Retour au portfolio
+            Retour
           </Link>
         </div>
         <iframe
